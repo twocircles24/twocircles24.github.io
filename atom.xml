@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-08-11T18:58:39.111Z</updated>
+    <updated>2020-08-11T19:41:14.096Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -15,10 +15,10 @@
         <id>https://twocircles24.github.io/post/how-long-for-xafs/</id>
         <link href="https://twocircles24.github.io/post/how-long-for-xafs/">
         </link>
-        <updated>2020-08-07T00:54:07.000Z</updated>
-        <summary type="html"><![CDATA[<p>(7 min 33 s Reading) 很多人想在开始学之前知道这个问题的答案，可惜不是一个很短的时间。</p>
+        <updated>2020-08-06T09:54:07.000Z</updated>
+        <summary type="html"><![CDATA[<p>(7 min 33 s reading) 很多人想在开始学之前知道这个问题的答案，可惜不是一个很短的时间。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>(7 min 33 s Reading) 很多人想在开始学之前知道这个问题的答案，可惜不是一个很短的时间。</p>
+        <content type="html"><![CDATA[<p>(7 min 33 s reading) 很多人想在开始学之前知道这个问题的答案，可惜不是一个很短的时间。</p>
 <!-- more -->
 <br/>
 <br/>
@@ -77,14 +77,14 @@
         <id>https://twocircles24.github.io/post/youask-ianswer-1/</id>
         <link href="https://twocircles24.github.io/post/youask-ianswer-1/">
         </link>
-        <updated>2020-08-03T09:56:19.000Z</updated>
-        <summary type="html"><![CDATA[<p>这是我目前想到比较合适且自由度较高的一种方式来归纳大家问过的问题。也许你的问题已经有人问过了。(5 min 38 s)</p>
+        <updated>2020-08-02T18:56:19.000Z</updated>
+        <summary type="html"><![CDATA[<p>(5 min 38 s reading) 这是我目前想到比较合适且自由度较高的一种方式来归纳大家问过的问题。也许你的问题已经有人问过了。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>这是我目前想到比较合适且自由度较高的一种方式来归纳大家问过的问题。也许你的问题已经有人问过了。(5 min 38 s)</p>
+        <content type="html"><![CDATA[<p>(5 min 38 s reading) 这是我目前想到比较合适且自由度较高的一种方式来归纳大家问过的问题。也许你的问题已经有人问过了。</p>
 <!-- more -->
 <br/>
 <p><strong>阅读提示1：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
-<p><strong>阅读提示2：问题来源于B站or微博，问题有可能被重新整理，先后顺序不代表任何重要程度，如果你的提问被收入但觉得不合适，请联系我。</strong></p>
+<p><strong>阅读提示2：问题来源于 B 站 or 微博，问题有可能被重新整理，先后顺序不代表任何重要程度，如果你的提问被收入但觉得不合适，请联系我。</strong></p>
 <hr>
 <blockquote>
 <p>Q1: 有没有相关书推荐看一下</p>
@@ -96,34 +96,34 @@
 <br/>
 <br/>
 <blockquote>
-<p>Q2：张三材料在R空间中出峰位置在1.4 Å，我需要调节Rbkg的值吗？如果不调节直接在Artemis里面拟合，那个R范围太小了，独立参数不够4个，增加Rmax的值拟合效果又不好</p>
+<p>Q2：张三材料在R空间中出峰位置在 1.4 Å，我需要调节 Rbkg 的值吗？如果不调节直接在 Artemis 里面拟合，那个R范围太小了，独立参数不够 4 个，增加 Rmax 的值拟合效果又不好</p>
 </blockquote>
 <p><strong>A2:</strong></p>
 <ol>
-<li><strong>Rbkg</strong>的通常的选择标准是是1.0 Å 或者是第一层的一半（1.4 Å /2 = 0.7 Å），很少有大于1.0 Å的情况；</li>
-<li>在<em>Artemis</em>里面，<strong>Rmin</strong> 的选择是受限于<em>Athena</em>里面的<strong>Rbkg</strong>，也就是<strong>Rmin</strong> ≥ <strong>Rbkg</strong>。例如张三选择了1.4 Å，他在Artemis里只能从1.4 Å开始拟合；</li>
-<li>要解决独立参数不够，需要回到<em>Athena</em>里重新设定<strong>Bbkg</strong>。然后在<em>Artemis</em>里面加载修改过后的数据进行拟合。</li>
+<li><strong>Rbkg</strong> 的通常的选择标准是是 1.0 Å 或者是第一层的一半 (1.4 Å /2 = 0.7 Å)，很少有大于 1.0 Å 的情况；</li>
+<li>在 <em>Artemis</em> 里面，<strong>Rmin</strong> 的选择是受限于 <em>Athena</em> 里面的 <strong>Rbkg</strong>，也就是 <strong>Rmin</strong> ≥ <strong>Rbkg</strong>。例如张三选择了 1.4 Å，他在 <em>Artemis</em> 里只能从 1.4 Å 开始拟合；</li>
+<li>要解决独立参数不够，需要回到 <em>Athena</em> 里重新设定 <strong>Bbkg</strong>。然后在 <em>Artemis</em> 里面加载修改过后的数据进行拟合。</li>
 </ol>
 <br/>
 <br/>
 <blockquote>
-<p>Q3. 如果张三现在只有一张归一化以后的oringin图，没有原始数据。横坐标是Photon Energy 纵坐标是Normatlized intensity(arb. units)，但是可以知道每一条曲线的点的具体坐标，这种情况下可以分析吗？</p>
+<p>Q3. 如果张三现在只有一张归一化以后的 oringi图，没有原始数据。横坐标是Photon Energy 纵坐标是Normatlized intensity(arb. units)，但是可以知道每一条曲线的点的具体坐标，这种情况下可以分析吗？</p>
 </blockquote>
 <p><strong>A3:</strong></p>
 <ol>
-<li>张三可。取出数据保存为txt，然后到<em>Athena</em>里面<u>import data</u>。Y轴对Y轴，X轴对X轴。把<u>data type</u>选为<strong>norm(E)</strong>；</li>
-<li>在<em>Athena</em>界面中，因为已经加载为<strong>norm(E)</strong>，无法修改做背景消除和归一化操作，但可以修改<u>Fourier Transform</u>的参数。</li>
+<li>张三可。取出数据保存为 txt，然后到 <em>Athena</em> 里面 <u>import data</u>。Y 轴对 Y 轴，X 轴对 X 轴。把 <u>data type</u> 选为 <strong>norm(E)</strong>；</li>
+<li>在 <em>Athena</em> 界面中，因为已经加载为 <strong>norm(E)</strong>，无法修改做背景消除和归一化操作，但可以修改 <u>Fourier Transform</u> 的参数。</li>
 </ol>
 <br/>
 <br/>
 <blockquote>
-<p>Q4. 在<em>Athena</em>一开始加载原始数据的时候。能量列和分子、分母的模块出现了十几个方框，张三将能量选为1，分子分母分别选择I<sub>0</sub>、I<sub>t</sub>得到的谱图有非常多的峰，并且看不到明显的吸收边，</p>
+<p>Q4. 在 <em>Athena</em> 一开始加载原始数据的时候。能量列和分子、分母的模块出现了十几个方框，张三将能量选为 1，分子分母分别选择 I<sub>0</sub>、I<sub>t</sub> 得到的谱图有非常多的峰，并且看不到明显的吸收边，</p>
 </blockquote>
 <p><strong>A4:</strong></p>
 <ol>
-<li>由于各个同步辐射实验室的程序不同，它们写入XAFS的数据也是会有差别的。所以经常会出现“I<sub>0</sub>”不是真I<sub>0</sub>的事情，不能完全相信文本里面的标签；</li>
-<li>最理想的情况是应当询问beamline的工作人员或者是采样的人，搞清楚到底哪一列是什么数据；</li>
-<li>如果第二条无法实现，那么先回想一下这个数据用的是吸收谱还是荧光谱，再回到数据文本里面去寻找or猜测。</li>
+<li>由于各个同步辐射实验室的程序不同，它们写入 XAFS 的数据也是会有差别的。所以经常会出现“I<sub>0</sub>”不是真 I<sub>0</sub> 的事情，不能完全相信文本里面的标签；</li>
+<li>最理想的情况是应当询问 beamline 的工作人员或者是采样的人，搞清楚到底哪一列是什么数据；</li>
+<li>如果第二条无法实现，那么先回想一下这个数据用的是吸收谱还是荧光谱，再回到数据文本里面去寻找 or 猜测。</li>
 </ol>
 <br/>
 <br/>
@@ -132,8 +132,8 @@
 </blockquote>
 <p><strong>A5:</strong></p>
 <ol>
-<li><strong>E<sub>0</sub></strong> 位置的定义是人为的，所以理论来说这两个地方都可以。到后期做<em>Artemis</em>拟合会有修正项。</li>
-<li>如果第一个峰不是最强的，我猜测是有<strong>pre-edge</strong>，那么我个人习惯是不用第一个峰，而是用最强的。因为<strong>pre-edge</strong>是由于<strong>1s-nd</strong>跃迁，而真正的XANES是<strong>1s-np</strong>跃迁。</li>
+<li><strong>E<sub>0</sub></strong> 位置的定义是人为的，所以理论来说这两个地方都可以。到后期做 <em>Artemis</em> 拟合会有修正项。</li>
+<li>如果第一个峰不是最强的，我猜测是有 <strong>pre-edge</strong>，那么我个人习惯是不用第一个峰，而是用最强的。因为 <strong>pre-edge</strong> 是由于 <strong>1s-nd</strong> 跃迁，而真正的 XANES 是 <strong>1s-np</strong> 跃迁。</li>
 </ol>
 <br/>
 <br/>
@@ -142,27 +142,27 @@
 </blockquote>
 <p><strong>A6:</strong></p>
 <ol>
-<li><u>Calibrate Energy</u>通常是指利用校正一个已知样品的<strong>E<sub>0</sub></strong>，比如纯金属（metal foil），从而修正自己未知样品的能量偏移。因为在实验中，能量可能存在偏移。可以类比在<a href="https://en.wikipedia.org/wiki/X-ray_photoelectron_spectroscopy">XPS</a>技术中大家经常用Carbon 1s的284.8 eV来进行校正。</li>
-<li><strong>E<sub>0</sub></strong> 理论来讲是样品受到X射线后，内层电子吸收射线后逃逸出的阈值，然而在实际经验中大家是人为在<em>Athena</em>里面人为定义这个阈值，也就是<em>Athena</em>里面的<strong>E<sub>0</sub></strong>。完了之后去<em>Artemis</em>里面微调。</li>
+<li><u>Calibrate Energy</u> 通常是指利用校正一个已知样品的 <strong>E<sub>0</sub></strong>，比如纯金属 （metal foil)，从而修正自己未知样品的能量偏移。因为在实验中，能量可能存在偏移。可以类比在 <a href="https://en.wikipedia.org/wiki/X-ray_photoelectron_spectroscopy">XPS</a> 技术中大家经常用 Carbon 1s 的 284.8 eV 来进行校正。</li>
+<li><strong>E<sub>0</sub></strong> 理论来讲是样品受到X射线后，内层电子吸收射线后逃逸出的阈值，然而在实际经验中大家是人为在 <em>Athena</em> 里面人为定义这个阈值，也就是 <em>Athena</em> 里面的 <strong>E<sub>0</sub></strong>。完了之后去 <em>Artemis</em> 里面微调。</li>
 </ol>
 <br/>
 <br/>
 <blockquote>
-<p>Q7: FEFF 或者是Artemis 中的.inp文件可以自己进行修改吗？或者自己构建的模型，怎么可以得到相应的inp文件？</p>
+<p>Q7: FEFF 或者是 Artemis 中的 .inp 文件可以自己进行修改吗？或者自己构建的模型，怎么可以得到相应的 inp 文件？</p>
 </blockquote>
 <p><strong>A7:</strong></p>
 <ol>
-<li>可。保存为<strong>inp</strong>文件，然后用<em>notepad</em>打开直接文本修改。也可以拖到<em>Originlab</em>里面直接好给你断列做点加减法；</li>
-<li>如果想在<em>Artemis</em>里面加载自己的模型，最低要求是需要拿到<strong>xyz</strong>文件。利用<em>Vesta</em>软件打开，然后保存为<strong>cif</strong>文件格式即可去<em>Artemis</em>加载了。</li>
+<li>可。保存为 <strong>inp</strong> 文件，然后用 <em>notepad</em> 打开直接文本修改。也可以拖到 <em>Originlab</em> 里面直接好给你断列做点加减法；</li>
+<li>如果想在 <em>Artemis</em> 里面加载自己的模型，最低要求是需要拿到 <strong>xyz</strong> 文件。利用 <em>Vesta</em> 软件打开，然后保存为 <strong>cif</strong> 文件格式即可去 <em>Artemis</em> 加载了。</li>
 </ol>
 <br/>
 <br/>
 <blockquote>
-<p>Q8: 张三用DFT计算的xyz文件用vesta导出了cif，但是在artemis里运行feff时，显示 you have defined ipot 2 but not used it in the atom list，是为什么呢？2也是中心原子的元素</p>
+<p>Q8: 张三 DFT计算的 xyz 文件用vesta导出了cif，但是在artemis里运行feff时，显示 you have defined ipot 2 but not used it in the atom list，是为什么呢？2也是中心原子的元素</p>
 </blockquote>
 <p><strong>A8:</strong></p>
 <ol>
-<li>导出来<strong>inp</strong>文件，用<em>Excel</em>或者是<em>Orginlab</em>来修改。把<strong>ipot 2</strong>的位置删掉后，再让后面的ipots往前推一位。完了再复制回FEFF窗口运行就行了；</li>
+<li>导出来 <strong>inp</strong> 文件，用 <em>Excel</em> 或者是 <em>Orginlab</em> 来修改。把 <strong>ipot 2</strong> 的位置删掉后，再让后面的 ipots 往前推一位。完了再复制回 FEFF 窗口运行就行了；</li>
 <li>这是一个常见的问题，不要害怕。</li>
 </ol>
 <blockquote>
@@ -180,7 +180,7 @@
 <ol>
 <li>思路以结构类似为准。先保证结构足够类似，原子距离足够接近；</li>
 <li>优先一个晶体能全部拿下，那是最好的；</li>
-<li>如果一个晶体拿不下（常见情况），完全可以取不同的晶体结构，但依然需要满足条件1。</li>
+<li>如果一个晶体拿不下（常见情况），完全可以取不同的晶体结构，但依然需要满足条件 1。</li>
 </ol>
 ]]></content>
     </entry>
@@ -189,10 +189,10 @@
         <id>https://twocircles24.github.io/post/xafs-reading/</id>
         <link href="https://twocircles24.github.io/post/xafs-reading/">
         </link>
-        <updated>2020-07-28T10:18:10.000Z</updated>
-        <summary type="html"><![CDATA[<p>There is a high learning curve for XAFS technique, be patient.</p>
+        <updated>2020-08-01T04:18:10.000Z</updated>
+        <summary type="html"><![CDATA[<p>(2 min 56 s reading) There is a high learning curve for XAFS technique, be patient.</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>There is a high learning curve for XAFS technique, be patient.</p>
+        <content type="html"><![CDATA[<p>(2 min 56 s reading) There is a high learning curve for XAFS technique, be patient.</p>
 <!-- more -->
 <br/>
 <br/>
@@ -218,12 +218,12 @@
 <ul>
 <li><a href="https://www.amazon.com/Introduction-XAFS-Practical-Absorption-Spectroscopy-ebook/dp/B00AKE1WEY/ref=sr_1_2?dchild=1&amp;keywords=xafs&amp;qid=1596575312&amp;s=books&amp;sr=1-2">Introduction to XAFS: A Practical Guide to X-ray Absorption Fine Structure Spectroscopy</a></li>
 </ul>
-<p>    一本篇幅不多的好书。在数理方面对XAFS技术的阐述更为透彻，值得一读。</p>
+<p>    一本篇幅不多的好书。在数理方面对 XAFS 技术的阐述更为透彻，值得一读。</p>
 <br/>
 <ul>
 <li><a href="https://www.amazon.com/X-Ray-Absorption-Emission-Spectroscopy-Applications-dp-1118844238/dp/1118844238/ref=mt_other?_encoding=UTF8&amp;me=&amp;qid=1596575341">X-Ray Absorption and X-Ray Emission Spectroscopy: Theory and Applications</a></li>
 </ul>
-<p>    虽然书名有<em>Absorption</em>和<em>Emission</em>，我个人感觉对<em>Emission</em>的内容侧重更多。我读了一部分，内容相对难磕。但是你有做发射谱的需求，同样安利。这本书给我讲懂了<em>phase correction</em>。</p>
+<p>    虽然书名有 <em>Absorption</em> 和 <em>Emission</em>，我个人感觉对 <em>Emission</em> 的内容侧重更多。我读了一部分，内容相对难磕。但是你有做发射谱的需求，同样安利。这本书给我讲懂了 <em>phase correction</em>。</p>
 <br/>
 <p>    <strong>To be continued</strong></p>
 <br/>
@@ -233,22 +233,22 @@
 <br/>
 <ul>
 <li>
-<p>怎样算作比较严谨的发表EXAFS数据：<a href="https://doi.org/10.1021/acscatal.8b00936"><em>ACS Catal.</em> <strong>2018</strong>, 8, 8, 7566–7577</a></p>
+<p>怎样算作比较严谨的发表 EXAFS 数据：<a href="https://doi.org/10.1021/acscatal.8b00936"><em>ACS Catal.</em> <strong>2018</strong>, 8, 8, 7566–7577</a></p>
 </li>
 <li>
-<p>为什么我说单单比较吸收边(edge position, aka. E<sub>0</sub>)的相对位置不能得到氧化态差异的结论：<a href="https://doi.org/10.1039/C6CY00698A"><em>Catal. Sci. Technol.</em> <strong>2016</strong>,6, 6339-6353</a></p>
+<p>为什么我说单单比较吸收边 (edge position, aka. E<sub>0</sub>) 的相对位置不能得到氧化态差异的结论：<a href="https://doi.org/10.1039/C6CY00698A"><em>Catal. Sci. Technol.</em> <strong>2016</strong>,6, 6339-6353</a></p>
 </li>
 <li>
-<p>小波转换EXAFS的原理以及Morlet function参数考量：<a href="https://link.aps.org/doi/10.1103/PhysRevB.71.094110"><em>Physical Review B</em> <strong>2005</strong>, 71 (9), 094110.</a></p>
+<p>小波转换 EXAFS 的原理以及 Morlet function 参数考量：<a href="https://link.aps.org/doi/10.1103/PhysRevB.71.094110"><em>Physical Review B</em> <strong>2005</strong>, 71 (9), 094110.</a></p>
 </li>
 <li>
-<p>关于过渡金属pre-edge的综述，文献比较老但可以当做参考图来看：<a href="https://doi.org/10.1002/xrs.1103"><em>X‐Ray Spectrom.</em>, <strong>2008</strong>, 37: 572-584.</a></p>
+<p>关于过渡金属 pre-edge 的综述，文献比较老但可以当做参考图来看：<a href="https://doi.org/10.1002/xrs.1103"><em>X‐Ray Spectrom.</em>, <strong>2008</strong>, 37: 572-584.</a></p>
 </li>
 <li>
-<p>Modulated exciation EXAFS的应用，适用于活性位点比例低的可逆反应。我个人很喜欢的一篇：<a href="https://doi.org/10.1039/C5CP00609K"><em>Phys. Chem. Chem. Phys.</em>, <strong>2015</strong>,17, 10579-10591</a></p>
+<p>Modulated exciation EXAFS 的应用，适用于活性位点比例低的可逆反应。我个人很喜欢的一篇：<a href="https://doi.org/10.1039/C5CP00609K"><em>Phys. Chem. Chem. Phys.</em>, <strong>2015</strong>,17, 10579-10591</a></p>
 </li>
 <li>
-<p>如果你好奇in-situ cell的设计还有价格：<a href="https://doi.org/10.1107/S1600577518013942"><em>J. Synchrotron Rad</em>. <strong>2018</strong>. 25, 1673–1682</a></p>
+<p>如果你好奇 in-situ cell 的设计还有价格：<a href="https://doi.org/10.1107/S1600577518013942"><em>J. Synchrotron Rad</em>. <strong>2018</strong>. 25, 1673–1682</a></p>
 </li>
 </ul>
 <br/>
@@ -280,10 +280,10 @@
         <id>https://twocircles24.github.io/post/athena-basic-tutorial/</id>
         <link href="https://twocircles24.github.io/post/athena-basic-tutorial/">
         </link>
-        <updated>2020-06-23T06:21:36.000Z</updated>
-        <summary type="html"><![CDATA[<p>为了可以更好的归档问题<s>懒得出视频</s>，在这里动态更新Blog记录大家的问题还有回复。</p>
+        <updated>2020-06-30T09:21:36.000Z</updated>
+        <summary type="html"><![CDATA[<p>(4 min 55 s reading) 为了可以更好的归档问题<s>懒得出视频</s>，在这里动态更新 Blog 记录大家的问题还有回复。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>为了可以更好的归档问题<s>懒得出视频</s>，在这里动态更新Blog记录大家的问题还有回复。</p>
+        <content type="html"><![CDATA[<p>(4 min 55 s reading) 为了可以更好的归档问题<s>懒得出视频</s>，在这里动态更新 Blog 记录大家的问题还有回复。</p>
 <!-- more -->
 <br/>
 <br/>
@@ -294,15 +294,15 @@
 <h2 id="个人认为最容易出现问题的地方">个人认为最容易出现问题的地方</h2>
 <br/>
 <br/>
-<h4 id="-1-敲黑板重点所有路径包括安装文件所有文件均使用英文且任何文件夹文件名使用下划线_来替代空格space-否则demeter系列的软件会报错无法处理数据">-1. 敲黑板重点：所有路径（包括安装文件）所有文件均使用英文，且任何文件夹/文件名使用下划线&quot;_&quot;来替代空格space。否则Demeter系列的软件会报错，无法处理数据</h4>
+<h4 id="-1-敲黑板重点所有路径包括安装文件所有文件均使用英文且任何文件夹文件名使用下划线_来替代空格-space-否则-demeter-系列的软件会报错无法处理数据">-1. 敲黑板重点：所有路径（包括安装文件）所有文件均使用英文，且任何文件夹/文件名使用下划线&quot;_&quot;来替代空格 space。否则 Demeter 系列的软件会报错，无法处理数据</h4>
 <br/>
 <br/>
-<h4 id="0-在athena中加载数据的前一步建议你去main-window下面的plugin-registry-勾选上所有方框这样以后就可以加载大部分来自不同beamline的实验初始数据">0. 在<strong>Athena</strong>中加载数据的前一步，建议你去<em>Main window</em>下面的<em>Plugin registry</em> 勾选上所有方框，这样以后就可以加载大部分来自不同beamline的实验初始数据。</h4>
+<h4 id="0-在-athena-中加载数据的前一步建议你去-main-window-下面的-plugin-registry-勾选上所有方框这样以后就可以加载大部分来自不同-beamline-的实验初始数据">0. 在 <strong>Athena</strong> 中加载数据的前一步，建议你去 <em>Main window</em> 下面的 <em>Plugin registry</em> 勾选上所有方框，这样以后就可以加载大部分来自不同 beamline 的实验初始数据。</h4>
 <figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/08/05/zVA4tOlgK67Wbcp.png" alt="plug register.png" loading="lazy"></figure>
 <p><strong>Figure 1.</strong> Athena 主界面<br>
 <br/><br>
 <img src="https://i.loli.net/2020/08/05/nvu7Q4yjpImoHDF.png" alt="plug register2.png" loading="lazy"></p>
-<p><strong>Figure2.</strong> Plugin registry界面<br>
+<p><strong>Figure2.</strong> Plugin registry 界面<br>
 <br/><br>
 <br/></p>
 <h4 id="1-加载数据时的若干细节-figure-3">1. 加载数据时的若干细节 (<strong>Figure 3</strong>)</h4>
@@ -310,52 +310,56 @@
 <p><strong>Figure 3.</strong> Import data 界面</p>
 <br/>
 <br/>
-<p>    <u>红线：</u> 很多时候原始数据标注的名字，eg. I<sub>t</sub>和I<sub>o</sub>，并非是真的实验环境中的透射光或者是入射光。你需要：<br>
-        (1) 如果是你负责采数据，你需要在实验的过程中记录每列数据的真正含义，询问beamline staff就可以得到答案；<br>
-         (2) 如果是别人采集的数据，问TA or 自己试。</p>
+<p>    <u>红线：</u> 很多时候原始数据标注的名字，eg. I<sub>t</sub> 和 I<sub>o</sub>，并非是真的实验环境中的透射光或者是入射光。你需要：<br>
+        (1) 如果是你负责采数据，你需要在实验的过程中记录每列数据的真正含义，询问 beamline staff 就可以得到答案；<br>
+         (2) 如果是别人采集的数据，问 TA or 自己试。</p>
 <br/>
-<p>    <u>蓝线：</u>如果是透射谱，遵循<a href="https://en.wikipedia.org/wiki/Beer%E2%80%93Lambert_law">Beer–Lambert law</a>，记得勾选上<em>Natural log</em>。也可通过下放的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span></span></span></span>(E)表达式来确认是否勾选成功了。如果是荧光谱，则<strong>不要</strong>勾选<em>Natural log</em>。</p>
+<p>    <u>蓝线：</u>如果是透射谱，遵循 <a href="https://en.wikipedia.org/wiki/Beer%E2%80%93Lambert_law">Beer–Lambert law</a>，记得勾选上 <em>Natural log</em>。也可通过下放的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span></span></span></span>(E) 表达式来确认是否勾选成功了。如果是荧光谱，则<strong>不要</strong>勾选 <em>Natural log</em>。</p>
 <br/>
-<p>    <u>黄线：</u> <em>Data type</em>允许你加载不同的XAFS文件：<br>
-       (1)  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span></span></span></span>(E)：XAFS最原始的数据，你需要加减乘除来得到初始数据；<br>
-       (2) XANES：顾名思义，能量范围比较短，没有EXAFS region；<br>
-       (3) norm(E)：已经归一化之后的数据，也就是说通过这样的形式加载，你无法做XAFS数据的背景调整，只能从k空间开始；<br>
-       (4) chi(k)：k空间数据，没有k<sup>n</sup>加权；<br>
-       (5) xmu.dat：从FEFF软件里面导出的文件。</p>
+<p>    <u>黄线：</u> <em>Data type</em> 允许你加载不同的 XAFS 文件：<br>
+       (1)  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span></span></span></span>(E)：XAFS 最原始的数据，你需要加减乘除来得到初始数据；<br>
+       (2) XANES：顾名思义，能量范围比较短，没有 EXAFS region；<br>
+       (3) norm(E)：已经归一化之后的数据，也就是说通过这样的形式加载，你无法做 XAFS 数据的背景调整，只能从 <em>k</em> 空间开始；<br>
+       (4) chi(k)：<em>k</em> 空间数据，没有 <em>k<sup>n</sup></em> 加权；<br>
+       (5) xmu.dat：从 <em>FEFF</em> 软件里面导出的文件。</p>
 <br/>
-<p>    <u>绿线：</u> 一定一定一定要加载参照谱图（reference spectra），否则无法进行能量校正。</p>
+<p>    <u>绿线：</u> 一定一定一定要加载参照谱图 (reference spectra)，否则无法进行能量校正。</p>
 <br/>
 <br/>
-<h4 id="2-e0的选择">2. E<sub>0</sub>的选择</h4>
+<h4 id="2-e0-的选择">2. E<sub>0</sub> 的选择</h4>
 <br/>
-<p>在这里先引用在Bilibili下面的Q&amp;A，之后对E<sub>0</sub>有独立讨论。<s>又是一个Flag</s></p>
+<p>在这里先引用在 Bilibil i下面的 Q&amp;A，之后对 E<sub>0</sub> 有独立讨论。<s>又是一个 Flag</s></p>
 <blockquote>
-<p>Q：E0和你Calibrate的E有啥区别呢<br>
-A：Calibrate Energy通常是指校正一个已知样品的E<sub>0</sub>,比如金属。E<sub>0</sub>理论来讲是样品中内层电子吸收光能逃逸出的阈值，然而在实际经验中大家是人为在Athena里面人为定义这个阈值，也就是Athena里面的E<sub>0</sub>。完了之后去Artemis里面微调。</p>
+<p>Q：E0 和你 Calibrate 的 E 有啥区别呢<br>
+A：Calibrate Energy 通常是指校正一个已知样品的 E<sub>0</sub>，比如金属。E<sub>0</sub> 理论来讲是样品中内层电子吸收光能逃逸出的阈值，然而在实际经验中大家是人为在Athena里面人为定义这个阈值，也就是 <em>Athena</em> 里面的 E<sub>0</sub>。完了之后去 <em>Artemis</em> 里面微调。</p>
 </blockquote>
 <blockquote>
 <p>Q：在能量矫正的时候，我的第一微分图里面第一个峰不是最强峰，那么我该选择第一个峰还是最强峰？<br>
-A：E<sub>0</sub>位置的定义是人为的，所以理论来说这两个地方都可以。你到后期做Artemis拟合会有修正项。如果第一个峰不是最强的，我猜测是有<em>pre-edge</em>，那么我个人习惯是不用第一个峰，而是用最强的。因为pre-edge是由于<strong>1s-nd</strong>跃迁，而真正的XANES是<strong>1s-np</strong>跃迁。</p>
+A：E<sub>0</sub> 位置的定义是人为的，所以理论来说这两个地方都可以。你到后期做 <em>Artemis</em> 拟合会有修正项。如果第一个峰不是最强的，我猜测是有 pre-edge，那么我个人习惯是不用第一个峰，而是用最强的。因为 pre-edge 是由于 <strong>1s→nd</strong> 跃迁，而真正的 XANES 是 <strong>1s→np</strong> 跃迁。</p>
 </blockquote>
 <br/>
 <br/>
-<h3 id="2-去除图里面的尖刺参照视频p7">2. 去除图里面的尖刺（参照视频P7）</h3>
+<h3 id="2-去除图里面的尖刺参照视频-p7">2. 去除图里面的尖刺（参照视频 P7）</h3>
 <figure data-type="image" tabindex="3"><img src="https://i.loli.net/2020/08/05/EDvVNwMdQ7sqYiU.jpg" alt="Inkedglitch_LI.jpg" loading="lazy"></figure>
 <p><strong>Figure 4.</strong> Glitches at ca. 10 Å<sup>-1</sup></p>
 <br/>
 <br/>
 <h3 id="3-保存数据作图">3. 保存数据作图</h3>
 <figure data-type="image" tabindex="4"><img src="https://i.loli.net/2020/08/05/WlzH48dOEKPIFbx.png" alt="export.png" loading="lazy"></figure>
-<p><strong>Figure 5.</strong> 到左上角<em>File</em>去保存数据</p>
+<p><strong>Figure 5.</strong> 到左上角 <em>File</em> 去保存数据</p>
 <br/>
-<p>    <u>红线：</u>你可以保存的文件格式，包含了（从上往下）一阶微分XANES，XANES，k<sup>3</sup>加权k空间，EXAFS R空间，EXAFS R空间的虚部。</p>
-<p>    <u>红线：</u>如果从<em>Save marked group as...</em> 选择数据，你会保存在右边所有勾选的数据。R空间的权重，是由右方<em>Plotting k-weights</em> 决定的，建议在保存数据前先用右边的展示功能键刷新下。</p>
-<p>    <u>蓝线：</u> <em>Save current group as...</em> 代表你只会保存右边蓝色高亮的数据，比如图中的<em>Fe_lepidocrocite.000</em>。</p>
+<p>    <u>红线：</u>你可以保存的文件格式，包含了（从上往下）一阶微分 XANES，XANES，<em>k<sup>3</sup></em> 加权 <em>k</em> 空间，EXAFS R空间，EXAFS R空间的虚部。</p>
+<p>    <u>红线：</u>如果从 <em>Save marked group as...</em> 选择数据，你会保存在右边所有勾选的数据。R空间的权重，是由右方 <em>Plotting k-weights</em> 决定的，建议在保存数据前先用右边的展示功能键刷新下。</p>
+<p>    <u>蓝线：</u> <em>Save current group as...</em> 代表你只会保存右边蓝色高亮的数据，比如图中的 <em>Fe_lepidocrocite.000</em>。</p>
 <br/>
 <figure data-type="image" tabindex="5"><img src="https://i.loli.net/2020/08/05/RemycGYiBVTg1WP.png" alt="format.png" loading="lazy"></figure>
-<p><strong>Figure 6.</strong> 保存文件为.txt后缀</p>
+<p><strong>Figure 6.</strong> 保存文件为 .txt 后缀</p>
 <br/>
-<p>大部分输出的数据会有奇奇怪怪的后缀，这是作者为了区分数据的类型（XANES，k空间，R空间 and so on）。但是大部分数据都是可以通过notepad（也就是经常读.txt）打开的。建议直接保留数据类型，把后缀名改成.txt，方便后续数据转移和画图，<strong>Figure. 6</strong>。</p>
+<p>大部分输出的数据会有奇奇怪怪的后缀，这是作者为了区分数据的类型（XANES，k空间，R空间 and so on）。但是大部分数据都是可以通过 notepad（也就是经常读 .txt）打开的。建议直接保留数据类型，把后缀名改成 .txt，方便后续数据转移和画图，<strong>Figure. 6</strong>。</p>
+<br/>
+<br/>
+<pre><code>感谢你的阅读。
+</code></pre>
 ]]></content>
     </entry>
     <entry>
