@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-08-12T19:42:11.882Z</updated>
+    <updated>2020-08-13T03:42:36.966Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -11,11 +11,11 @@
     <icon>https://twocircles24.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 两个圈 Two Circles</rights>
     <entry>
-        <title type="html"><![CDATA[学 XAFS 的难点在哪里]]></title>
+        <title type="html"><![CDATA[学习 XAFS 的困境]]></title>
         <id>https://twocircles24.github.io/post/why-xafs-difficult/</id>
         <link href="https://twocircles24.github.io/post/why-xafs-difficult/">
         </link>
-        <updated>2020-08-12T04:41:41.000Z</updated>
+        <updated>2020-08-12T12:42:10.000Z</updated>
         <summary type="html"><![CDATA[<p>(7 min 50 s reading) 写着写着变成了吐槽大会……</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>(7 min 50 s reading) 写着写着变成了吐槽大会……</p>
@@ -28,9 +28,6 @@
 <hr>
 <br/>
 <br/>
-<blockquote>
-<p>问：学 XAFS 难在哪里？</p>
-</blockquote>
 <br/>
 <h3 id="学-xafs-沉不住气">学 XAFS “沉不住气”</h3>
 <p>    XAFS 在我看来是高度集成的学科交叉技术，学习到位了你可以掌握的技能点包含但不限于化学，生物，环境，物理（量子，光学），工程（机械，电路，自动化，3D 打印），计算机（Python，算法，machine learning）等等等等。需要多维度的知识层面来了解这门技术，而且越学你觉得你越不懂，越不懂你会更想去学在你专业以外的知识。很多人看到要学这么多，就差没直接两眼一黑晕过去，下一秒就被劝退。<strong>这门技术耗时耗力，投入（尤其是前期）巨大，全凭自觉而且收效难以预估。</strong></p>
