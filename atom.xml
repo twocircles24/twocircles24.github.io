@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-08-14T04:25:27.064Z</updated>
+    <updated>2020-08-14T04:55:59.999Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://twocircles24.github.io/post/edge-energy/</id>
         <link href="https://twocircles24.github.io/post/edge-energy/">
         </link>
-        <updated>2020-08-13T13:25:09.000Z</updated>
+        <updated>2020-08-13T13:55:56.000Z</updated>
         <summary type="html"><![CDATA[<p>(16 min 37 s reading) 什么是 <em>E<sub>0</sub></em>？怎么选 <em>E<sub>0</sub></em>？</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>(16 min 37 s reading) 什么是 <em>E<sub>0</sub></em>？怎么选 <em>E<sub>0</sub></em>？</p>
@@ -47,7 +47,7 @@ c. XANES 中起跳后第一个峰 (1st peak in white line region)。</li>
 <p><strong>Figure 2.</strong> 选择<em>E<sub>0</sub></em> 的 b 点（一阶微分中最高）。</p>
 <br/>
 <ol start="3">
-<li>严格来说，<em>E<sub>0</sub></em> <strong>不可以</strong> 作为判断氧化态相对高低的<strong>唯一标准</strong>。</li>
+<li>严格来说，<em>E<sub>0</sub></em> <strong>不可以</strong>作为判断氧化态相对高低的<strong>唯一标准</strong>。</li>
 <li>在报告 edge energy 的时候，例如写文章，<strong>仍用 <em>Athena</em> 中选择的 <em>E<sub>0</sub></em> 数值</strong>。</li>
 <li>在 <em>Athena</em> 中使用任一标准理论上都可以，但要注意：<br>
     a. 在后续 <em>Artemis</em> 拟合时，|<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Δ</mi></mrow><annotation encoding="application/x-tex">\Delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span></span></span></span><em>E<sub>0</sub></em>| ≤ 10 eV；<br>
