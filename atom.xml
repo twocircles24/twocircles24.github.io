@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-08-14T04:55:59.999Z</updated>
+    <updated>2020-08-17T16:09:25.339Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -197,7 +197,7 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <id>https://twocircles24.github.io/post/why-xafs-difficult/</id>
         <link href="https://twocircles24.github.io/post/why-xafs-difficult/">
         </link>
-        <updated>2020-08-12T12:42:10.000Z</updated>
+        <updated>2020-08-11T21:42:10.000Z</updated>
         <summary type="html"><![CDATA[<p>(7 min 50 s reading) 写着写着变成了吐槽大会……</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>(7 min 50 s reading) 写着写着变成了吐槽大会……</p>
@@ -236,7 +236,7 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
 <h3 id="xafs-依赖实验经验">XAFS 依赖实验经验</h3>
 <p>    跟其他表征相比， XAFS 存在“实验影响数据处理”的难点。举个例子，假设样品浓度是 10 wt% 但用了荧光检测器 (fluorescence data)，谱图会存在荧光自吸收的问题 (<a href="https://bruceravel.github.io/demeter/aug/process/sa.html">self-absorption</a>)。这个来源于实验操作的问题是不会在数据处理的过程中轻易发现的。只学数据处理不顾实验细节，出来的结果很有误导性，或者拟合结果出现很诡异的数值。 同步辐射实验不像 <a href="https://en.wikipedia.org/wiki/Inductively_coupled_plasma_atomic_emission_spectroscopy">ICP-AES</a> 或者是 <a href="https://www.jeol.co.jp/en/products/nmr/basics.html#:~:text=NMR%20is%20an%20abbreviation%20for,in%20a%20powerful%20magnetic%20field.">solution-state NMR</a>，即使不亲手操作独自处理数据也不会出现太多问题。再结合之前的两个点，形成了一个闭环，外面的人很难能加入到这个“环”里面。</p>
 <p>    我也见过“A 做样品，B 采 XAFS数据，C 来拟合”的合作模式，中间出现了太多的问题。文章到最后发出来了，但是数据质量真是一言难尽……A 全程“我是谁，我在哪里，我在做什么”的状态。<br>
-                <br>
+  <br>
 <br/><br>
 <br/></p>
 <h3 id="迷信同步辐射技术">迷信“同步辐射技术”</h3>
