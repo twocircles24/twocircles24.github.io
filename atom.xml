@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-08-17T16:09:25.339Z</updated>
+    <updated>2020-08-17T16:11:38.037Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -15,14 +15,14 @@
         <id>https://twocircles24.github.io/post/edge-energy/</id>
         <link href="https://twocircles24.github.io/post/edge-energy/">
         </link>
-        <updated>2020-08-13T13:55:56.000Z</updated>
+        <updated>2020-08-12T22:55:56.000Z</updated>
         <summary type="html"><![CDATA[<p>(16 min 37 s reading) 什么是 <em>E<sub>0</sub></em>？怎么选 <em>E<sub>0</sub></em>？</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>(16 min 37 s reading) 什么是 <em>E<sub>0</sub></em>？怎么选 <em>E<sub>0</sub></em>？</p>
 <!-- more -->
 <br/>
 <br/>
-<p><strong>视频：E0, Edge Energy &amp; 吸收边 | XAFS数据处理参数讨论</strong> Bilibili, YouTube</p>
+<p><strong>视频：E0, Edge Energy &amp; 吸收边 | XAFS数据处理参数讨论</strong> <a href="https://www.bilibili.com/video/BV1jK4y1Y71X/">Bilibili</a>, <a href="https://youtu.be/e0TwlNPTnik">YouTube</a></p>
 <br/>
 <br/>
 <p><strong>阅读提示1：参考阅读有 <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/xrs.1103"><em>X‐Ray Spectrom.</em>, 37: 572-584.</a>, <a href="https://www.amazon.com/XAFS-Everyone-Scott-Calvin/dp/1439878633">《XAFS for Everyone》</a> 和 <a href="https://www.amazon.com/Introduction-XAFS-Practical-Absorption-Spectroscopy-ebook/dp/B00AKE1WEY">《Introduction to XAFS: A Practical Guide to X-ray Absorption Fine Structure Spectroscopy》</a>。</strong></p>
