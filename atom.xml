@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-08-18T04:08:05.323Z</updated>
+    <updated>2020-08-18T04:12:36.534Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://twocircles24.github.io/post/rbkg/</id>
         <link href="https://twocircles24.github.io/post/rbkg/">
         </link>
-        <updated>2020-08-17T13:06:54.000Z</updated>
+        <updated>2020-08-16T07:06:54.000Z</updated>
         <summary type="html"><![CDATA[<p>Rbkg 选起来快，但是选错了就是灾难性的……</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>Rbkg 选起来快，但是选错了就是灾难性的……</p>
@@ -108,7 +108,7 @@
 <p><strong>Figure 7.</strong> <em>Artemis</em> 中 <em>Rmin</em> 的位置。（红线）</p>
 <br/>
 <p>    <strong>在 <em>Artemis</em> 里面 <em>Rmin</em> 的值必须要大于等于在 <em>Athena</em> 中的 <em>Rbkg</em></strong>。假设在一开始选择了 <em>Rbkg</em> = 1.0 Å，那么 <em>Artemis</em> 拟合 EXAFS 时只可能从 R = 1.0 Å 起拟合。假设强行把 <em>Rmin</em>设置为 0.2 Å，就会得到如下报错。要解决这个问题要不然调高 <em>Rmin</em> 要不然回到 <em>Athena</em> 重新设置  <em>Rbkg</em> 再加载修改后的 .prj 文件到  <em>Artemis</em> 中。</p>
-<figure data-type="image" tabindex="6"><img src="https://i.loli.net/2020/08/18/YyKP5cqAouLtJw7.png" alt="wrong.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://i.loli.net/2020/08/18/YyKP5cqAouLtJw7.png" alt="wrong.png" width="535" height="640" loading="lazy"></figure>
 <p><strong>Figure 8.</strong> 当 <em>Rmin</em> 小于 <em>Rbkg</em> 时。</p>
 <Br/>
 <br/>
