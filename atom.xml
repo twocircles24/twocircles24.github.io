@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-08-31T18:35:45.374Z</updated>
+    <updated>2020-08-31T18:40:36.734Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -15,8 +15,19 @@
         <id>https://twocircles24.github.io/post/energy-calibration/</id>
         <link href="https://twocircles24.github.io/post/energy-calibration/">
         </link>
-        <updated>2020-08-31T03:35:06.000Z</updated>
-        <content type="html"><![CDATA[<p>目前收到被问最多的问题，今天来仔细讲下。最初这个问题是从 <em>Athena</em> 的教程里面引出：在加载原始数据到 <em>Athena</em> 后，到 <em>Calibration</em> 窗口进行校正。<strong>在已经看过 <em>Athena</em> 新手教程到基础上</strong>，我们来进一步了解这个“校正”这个操作。</p>
+        <updated>2020-08-31T03:40:32.000Z</updated>
+        <summary type="html"><![CDATA[<p>(7 min 30 s reading) 真没想过这个问题能成日经问答了……</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>(7 min 30 s reading) 真没想过这个问题能成日经问答了……</p>
+<!-- more -->
+<p>涉及到的视频有：</p>
+<ol>
+<li><a href="https://www.bilibili.com/video/BV1364y1F7tw">《能量校正 Calibration |  XAFS 数据处理》</a></li>
+<li><a href="https://www.bilibili.com/video/BV1yz411e7gu">《Athena新手教程 | 同步辐射吸收谱(XAS)数据处理》</a></li>
+<li><a href="https://www.bilibili.com/video/BV1jK4y1Y71X/">《E0, Edge Energy &amp; 吸收边 | XAFS数据处理参数讨论》</a></li>
+</ol>
+<br/>
+<p>目前收到被问最多的问题，今天来仔细讲下。最初这个问题是从 <em>Athena</em> 的教程里面引出：在加载原始数据到 <em>Athena</em> 后，到 <em>Calibration</em> 窗口进行校正。<strong>在已经看过 <em>Athena</em> 新手教程到基础上</strong>，我们来进一步了解这个“校正”这个操作。</p>
 <p>先说明的是，这一个概念完全可以类比 XPS 里面的数据处理。在早前教程里面没有过多涉及这个问题是因为这个点跟实验操作相关性很大，在没有做过相关实验的前提下，理解起来会有难度。</p>
 <p><strong>需要留意的是，在这里我指的未知样品是你测得的透射谱 ln(I<sub>0</sub>/I<sub>1</sub>) 和荧光谱 (I<sub>f</sub>/I<sub>0</sub>)，它可能是你真的正儿八经不知道这个样品是什么，需要你去拟合。比如一个 Fe 负载在 CeO<sub>2</sub> 载体上的催化剂；也可能是你会拿来做线性拟合之类已知样品，比如你要拟合含铁样品 XANES，你会测得 Fe<sub>2</sub>O<sub>3</sub>，FeO，Fe<sub>3</sub>O<sub>4</sub> 云云，在这篇文展里面也归属于未知样品。或者可以理解为是放在 I<sub>0</sub> 之后，I<sub>1</sub> (or I<sub>t</sub>) 之前的样品均在该文算作未知样品。以及标准样品（reference spectra）是指用来校正的样品，通常是利用未知样品之后的光 (I<sub>1</sub> or I<sub>t</sub>)再打过一个标准样品，得到一张透射谱 ln(I<sub>1</sub>/I<sub>2</sub>)。这里说它标准，是因为我知道其准确的 E<sub>0</sub> 数值。</strong></p>
 <br/>
