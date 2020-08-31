@@ -1,70 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://twocircles24.github.io</id>
+    <id>http://localhost:4001</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-08-31T18:44:53.978Z</updated>
+    <updated>2020-08-31T18:45:40.089Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://twocircles24.github.io"/>
-    <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
+    <link rel="alternate" href="http://localhost:4001"/>
+    <link rel="self" href="http://localhost:4001/atom.xml"/>
     <subtitle>My anger matters, so does yours. </subtitle>
-    <logo>https://twocircles24.github.io/images/avatar.png</logo>
-    <icon>https://twocircles24.github.io/favicon.ico</icon>
+    <logo>http://localhost:4001/images/avatar.png</logo>
+    <icon>http://localhost:4001/favicon.ico</icon>
     <rights>All rights reserved 2020, 两个圈 Two Circles</rights>
     <entry>
-        <title type="html"><![CDATA[能量校准 Calibration]]></title>
-        <id>https://twocircles24.github.io/post/energy-calibration/</id>
-        <link href="https://twocircles24.github.io/post/energy-calibration/">
-        </link>
-        <updated>2020-08-31T03:44:49.000Z</updated>
-        <summary type="html"><![CDATA[<p>(7 min 30 s reading) 真没想过这个问题能成日经问答了……</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>(7 min 30 s reading) 真没想过这个问题能成日经问答了……</p>
-<!-- more -->
-<br/>
-<p>涉及到的视频有：<a href="https://www.bilibili.com/video/BV1364y1F7tw">《能量校正 Calibration |  XAFS 数据处理》</a>、<a href="https://www.bilibili.com/video/BV1yz411e7gu">《Athena新手教程 | 同步辐射吸收谱(XAS)数据处理》</a>和<a href="https://www.bilibili.com/video/BV1jK4y1Y71X/">《E0, Edge Energy &amp; 吸收边 | XAFS数据处理参数讨论》</a></p>
-<p>目前收到被问最多的问题，今天来仔细讲下。最初这个问题是从 <em>Athena</em> 的教程里面引出：在加载原始数据到 <em>Athena</em> 后，到 <em>Calibration</em> 窗口进行校正。<strong>在已经看过 <em>Athena</em> 新手教程到基础上</strong>，我们来进一步了解这个“校正”这个操作。</p>
-<p>先说明的是，这一个概念完全可以类比 XPS 里面的数据处理。在早前教程里面没有过多涉及这个问题是因为这个点跟实验操作相关性很大，在没有做过相关实验的前提下，理解起来会有难度。</p>
-<p><strong>需要留意的是，在这里我指的未知样品是你测得的透射谱 ln(I<sub>0</sub>/I<sub>1</sub>) 和荧光谱 (I<sub>f</sub>/I<sub>0</sub>)，它可能是你真的正儿八经不知道这个样品是什么，需要你去拟合。比如一个 Fe 负载在 CeO<sub>2</sub> 载体上的催化剂；也可能是你会拿来做线性拟合之类已知样品，比如你要拟合含铁样品 XANES，你会测得 Fe<sub>2</sub>O<sub>3</sub>，FeO，Fe<sub>3</sub>O<sub>4</sub> 云云，在这篇文展里面也归属于未知样品。或者可以理解为是放在 I<sub>0</sub> 之后，I<sub>1</sub> (or I<sub>t</sub>) 之前的样品均在该文算作未知样品。以及标准样品（reference spectra）是指用来校正的样品，通常是利用未知样品之后的光 (I<sub>1</sub> or I<sub>t</sub>)再打过一个标准样品，得到一张透射谱 ln(I<sub>1</sub>/I<sub>2</sub>)。这里说它标准，是因为我知道其准确的 E<sub>0</sub> 数值。</strong></p>
-<br/>
-<hr>
-<h2 id="做-calibration-的原因">做 Calibration 的原因</h2>
-<p>这完全是出于实验硬件的原因，简单来说负责调整入射能量值的 monochromator 是有一点误差，会导致显示的数值不是正确的能量数值。比如测量铁片的 K-edge，扫出来它的 E<sub>0</sub> （也就是一阶微分 XANES 中的第一个峰）是 7112.58 eV ，但是上网一查 Fe foil 的 E<sub>0</sub> 是 7,112.00 eV。这就是我们需要去校正铁片样品数据的时候了。由于只跟能量值相关，相当于是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span></span></span></span> (E) 整个平移零点几个 eV 值，就把整张图数平移回去就好。</p>
-<h2 id="如何知道误差值">如何知道误差值</h2>
-<p>那么知道 Calibration 的根本原因后，下一个问题是如何知道能量值跟真实距离相差了多少？</p>
-<p><strong>由于每次测量硬件都会有所区别，不能用不同批次采集得到的数据来相互校正</strong>。像是利用网上的数据或是去年采的数据来校正这个月的数据，这都是大忌。正确的做法是：每次扫未知样品时候，都会在未知样品之后放一个标准样品，利用穿过样品的透射光，在扫描未知样品 XAFS 谱图时也可以同时获得一张标准样品的谱图。因为未知和标准样品使用的均是来源于同一入射光源，两个样品的能量值与真实能量值的误差是可以可以认作一样的（标准样品误差了多少，未知样品误差值也是这个值）。</p>
-<p>既然如此，我们就需要标准样品来确定误差值。常见的选择就是对应元素单质，比如我测 Fe<sub>2</sub>O<sub>3</sub>，那么就使用 Fe foil。标准样品的选择绝不仅仅限于相同元素单质，因为有不少元素单质不容易获得或者是其他原因，所以选择元素对应的化合物非常常见。比如我也可以在测 Fe<sub>2</sub>O<sub>3</sub> 时，我也可以用 Fe<sub>3</sub>O<sub>4</sub> 来作为标准样品进行校正，as long as 我知道 Fe<sub>3</sub>O<sub>4</sub> 的 E<sub>0</sub> 是多少（可以从文献或者是其他地方知道）。我甚至可以用 monochromator 上面的 glitch 来校正（因为 glitch 的出现是由于缺陷导致的，这个值是不受实验条件影响）。总的来说这个选择很灵活。</p>
-<p>一个比较特殊的例子：硫的标准样品是一个难点，因为硫单质存在多项的情况，能量值 (E<sub>0</sub>) 很模糊。在一次讨论中，Ritimukta Sarangi (beamline scientist at SSRL) 是<a href="https://www.mail-archive.com/ifeffit@millenia.cars.aps.anl.gov/msg06924.html">推荐使用硫代硫酸钠</a> (Sodium Thiosulfate)：</p>
-<blockquote>
-<p>In my experience, it is best to stay away from sulfate which has a hugely intense peak subject to self absorption. At SSRL, we advice users to choose Sodium Thiosulfate with the low lying and sharp S-S sigma star peak at 2472.02 eV and Tetraphenyl phosphonium bromide at 2146.96 eV for Phosphorus (see Scott's paper at: J. Synchrotron Rad. <a href="http://journals.iucr.org/s">http://journals.iucr.org/s</a> (2018). <em>25</em> <a href="http://journals.iucr.org/s/contents/backissues.html">http://journals.iucr.org/s/contents/backissues.html</a>, 529-536)</p>
-</blockquote>
-<h2 id="使用标准样品校正-reference-spectra-的必要性">使用标准样品校正 (reference spectra) 的必要性</h2>
-<p>有人问过：我可以不校正嘛？我的答案是：必须校正。在计划实验一开始就会注意标准样品的选择，硬件上面的误差是常有翻车出现，哪怕是现在大部分同步辐射光源的质量已经相当不错的情况下，同时采得标准样品的谱图是一种双层保险。在做完实验后处理数据才发现能量误差太大但也没有取得标准谱图，那个时候数据已经失去了可靠性，于事无补。所以一定要在做实验的时候用上标准样品。</p>
-<p>使用标准样品校正的另一个动机是帮助我在比较从不同时间段的实验中取得的数据。因为每次实验的能量偏移数值是有区别的，如果要比较未知样品的谱图，先确保各自标准样品已经校正好。甚至是要确保标准样品是完整的，毕竟见过不少标准样品变质导致能量改变，做了几年之后才发现导致所有数据没法比较的事故。</p>
-<br/>
-<hr>
-<h2 id="分情况举例">分情况举例</h2>
-<h3 id="1-同一个样品多次连续扫描">1. 同一个样品多次连续扫描</h3>
-<p>加载原始数据的时候把未知样品对应的标准样品一起加载进去。（参考 <a href="https://www.bilibili.com/video/BV1yz411e7gu?p=3">Athena 新手教程</a>）</p>
-<p>通常是先校正一个标准样品的谱图（Calibration），然后把剩下的标准样品谱图跟已经校正后的对齐（Alignment）。</p>
-<h3 id="2-对比-a-样品和-b-样品-常见于展示-xanes">2. 对比 A 样品和 B 样品 （常见于展示 XANES）</h3>
-<p>把情况 1 的操作对各自 A 和 B 样品做好后，merge 得到各自的图像。</p>
-<p>把 A 和 B 样品以及对应的标准样品加载在一起，先比较标准样品（A 和 B 都用的同一个标准样品）。确认标准样品的谱图 (reference spectra) 是一样的，包括形状还有能量值。这是为了确保标准样品的consistency。有时候会发现标准样品是有变化，如果看到了标准样品变质，必须立刻换掉。（参考<a href="https://www.bilibili.com/video/BV1364y1F7tw">能量校正 Calibration</a>）</p>
-<h3 id="3-软线低能样品比如氧硫磷一类">3. 软线低能样品，比如氧硫磷一类</h3>
-<p>因为能量极低的时候光线无法穿过样品，所以标准样品的谱图无从谈起。能做的是单独先测标准样品，然后再测未知样品。处理数据的时候，只能分开处理。（参考<a href="https://www.bilibili.com/video/BV1364y1F7tw">能量校正 Calibration</a>）</p>
-<p><strong>先校正标准样品，知道误差值有多大。再把同样的差值用到未知样品上，手动校正。</strong></p>
-<p>这种做法只限于低能软线，比如氧硫磷这样的（&lt; 3000 eV)。过渡元素的测量仍然遵循情况 1 和 2。只可能在自己没有同步采得标准样品不得已情况下，可以参考这样的操作。（仍然不建议，风险太大，有 manipulate data 的嫌疑）</p>
-<br/>
-<br/>
-<br/>
-<br/>
-<pre><code>感谢你的阅读。
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[肝 XAFS 实验的小细节 | Podcast Ep. 3]]></title>
-        <id>https://twocircles24.github.io/post/podcast-ep3/</id>
-        <link href="https://twocircles24.github.io/post/podcast-ep3/">
+        <id>http://localhost:4001/post/podcast-ep3/</id>
+        <link href="http://localhost:4001/post/podcast-ep3/">
         </link>
         <updated>2020-08-30T13:46:12.000Z</updated>
         <summary type="html"><![CDATA[<p>(8 min 27 s reading) 爱惜身体，爆肝做实验不可取。</p>
@@ -143,9 +92,60 @@
 ]]></content>
     </entry>
     <entry>
+        <title type="html"><![CDATA[能量校准 Calibration]]></title>
+        <id>http://localhost:4001/post/energy-calibration/</id>
+        <link href="http://localhost:4001/post/energy-calibration/">
+        </link>
+        <updated>2020-08-30T12:44:49.000Z</updated>
+        <summary type="html"><![CDATA[<p>(7 min 30 s reading) 真没想过这个问题能成日经问答了……</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>(7 min 30 s reading) 真没想过这个问题能成日经问答了……</p>
+<!-- more -->
+<br/>
+<p>涉及到的视频有：<a href="https://www.bilibili.com/video/BV1364y1F7tw">《能量校正 Calibration |  XAFS 数据处理》</a>、<a href="https://www.bilibili.com/video/BV1yz411e7gu">《Athena新手教程 | 同步辐射吸收谱(XAS)数据处理》</a>和<a href="https://www.bilibili.com/video/BV1jK4y1Y71X/">《E0, Edge Energy &amp; 吸收边 | XAFS数据处理参数讨论》</a></p>
+<p>目前收到被问最多的问题，今天来仔细讲下。最初这个问题是从 <em>Athena</em> 的教程里面引出：在加载原始数据到 <em>Athena</em> 后，到 <em>Calibration</em> 窗口进行校正。<strong>在已经看过 <em>Athena</em> 新手教程到基础上</strong>，我们来进一步了解这个“校正”这个操作。</p>
+<p>先说明的是，这一个概念完全可以类比 XPS 里面的数据处理。在早前教程里面没有过多涉及这个问题是因为这个点跟实验操作相关性很大，在没有做过相关实验的前提下，理解起来会有难度。</p>
+<p><strong>需要留意的是，在这里我指的未知样品是你测得的透射谱 ln(I<sub>0</sub>/I<sub>1</sub>) 和荧光谱 (I<sub>f</sub>/I<sub>0</sub>)，它可能是你真的正儿八经不知道这个样品是什么，需要你去拟合。比如一个 Fe 负载在 CeO<sub>2</sub> 载体上的催化剂；也可能是你会拿来做线性拟合之类已知样品，比如你要拟合含铁样品 XANES，你会测得 Fe<sub>2</sub>O<sub>3</sub>，FeO，Fe<sub>3</sub>O<sub>4</sub> 云云，在这篇文展里面也归属于未知样品。或者可以理解为是放在 I<sub>0</sub> 之后，I<sub>1</sub> (or I<sub>t</sub>) 之前的样品均在该文算作未知样品。以及标准样品（reference spectra）是指用来校正的样品，通常是利用未知样品之后的光 (I<sub>1</sub> or I<sub>t</sub>)再打过一个标准样品，得到一张透射谱 ln(I<sub>1</sub>/I<sub>2</sub>)。这里说它标准，是因为我知道其准确的 E<sub>0</sub> 数值。</strong></p>
+<br/>
+<hr>
+<h2 id="做-calibration-的原因">做 Calibration 的原因</h2>
+<p>这完全是出于实验硬件的原因，简单来说负责调整入射能量值的 monochromator 是有一点误差，会导致显示的数值不是正确的能量数值。比如测量铁片的 K-edge，扫出来它的 E<sub>0</sub> （也就是一阶微分 XANES 中的第一个峰）是 7112.58 eV ，但是上网一查 Fe foil 的 E<sub>0</sub> 是 7,112.00 eV。这就是我们需要去校正铁片样品数据的时候了。由于只跟能量值相关，相当于是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span></span></span></span> (E) 整个平移零点几个 eV 值，就把整张图数平移回去就好。</p>
+<h2 id="如何知道误差值">如何知道误差值</h2>
+<p>那么知道 Calibration 的根本原因后，下一个问题是如何知道能量值跟真实距离相差了多少？</p>
+<p><strong>由于每次测量硬件都会有所区别，不能用不同批次采集得到的数据来相互校正</strong>。像是利用网上的数据或是去年采的数据来校正这个月的数据，这都是大忌。正确的做法是：每次扫未知样品时候，都会在未知样品之后放一个标准样品，利用穿过样品的透射光，在扫描未知样品 XAFS 谱图时也可以同时获得一张标准样品的谱图。因为未知和标准样品使用的均是来源于同一入射光源，两个样品的能量值与真实能量值的误差是可以可以认作一样的（标准样品误差了多少，未知样品误差值也是这个值）。</p>
+<p>既然如此，我们就需要标准样品来确定误差值。常见的选择就是对应元素单质，比如我测 Fe<sub>2</sub>O<sub>3</sub>，那么就使用 Fe foil。标准样品的选择绝不仅仅限于相同元素单质，因为有不少元素单质不容易获得或者是其他原因，所以选择元素对应的化合物非常常见。比如我也可以在测 Fe<sub>2</sub>O<sub>3</sub> 时，我也可以用 Fe<sub>3</sub>O<sub>4</sub> 来作为标准样品进行校正，as long as 我知道 Fe<sub>3</sub>O<sub>4</sub> 的 E<sub>0</sub> 是多少（可以从文献或者是其他地方知道）。我甚至可以用 monochromator 上面的 glitch 来校正（因为 glitch 的出现是由于缺陷导致的，这个值是不受实验条件影响）。总的来说这个选择很灵活。</p>
+<p>一个比较特殊的例子：硫的标准样品是一个难点，因为硫单质存在多项的情况，能量值 (E<sub>0</sub>) 很模糊。在一次讨论中，Ritimukta Sarangi (beamline scientist at SSRL) 是<a href="https://www.mail-archive.com/ifeffit@millenia.cars.aps.anl.gov/msg06924.html">推荐使用硫代硫酸钠</a> (Sodium Thiosulfate)：</p>
+<blockquote>
+<p>In my experience, it is best to stay away from sulfate which has a hugely intense peak subject to self absorption. At SSRL, we advice users to choose Sodium Thiosulfate with the low lying and sharp S-S sigma star peak at 2472.02 eV and Tetraphenyl phosphonium bromide at 2146.96 eV for Phosphorus (see Scott's paper at: J. Synchrotron Rad. <a href="http://journals.iucr.org/s">http://journals.iucr.org/s</a> (2018). <em>25</em> <a href="http://journals.iucr.org/s/contents/backissues.html">http://journals.iucr.org/s/contents/backissues.html</a>, 529-536)</p>
+</blockquote>
+<h2 id="使用标准样品校正-reference-spectra-的必要性">使用标准样品校正 (reference spectra) 的必要性</h2>
+<p>有人问过：我可以不校正嘛？我的答案是：必须校正。在计划实验一开始就会注意标准样品的选择，硬件上面的误差是常有翻车出现，哪怕是现在大部分同步辐射光源的质量已经相当不错的情况下，同时采得标准样品的谱图是一种双层保险。在做完实验后处理数据才发现能量误差太大但也没有取得标准谱图，那个时候数据已经失去了可靠性，于事无补。所以一定要在做实验的时候用上标准样品。</p>
+<p>使用标准样品校正的另一个动机是帮助我在比较从不同时间段的实验中取得的数据。因为每次实验的能量偏移数值是有区别的，如果要比较未知样品的谱图，先确保各自标准样品已经校正好。甚至是要确保标准样品是完整的，毕竟见过不少标准样品变质导致能量改变，做了几年之后才发现导致所有数据没法比较的事故。</p>
+<br/>
+<hr>
+<h2 id="分情况举例">分情况举例</h2>
+<h3 id="1-同一个样品多次连续扫描">1. 同一个样品多次连续扫描</h3>
+<p>加载原始数据的时候把未知样品对应的标准样品一起加载进去。（参考 <a href="https://www.bilibili.com/video/BV1yz411e7gu?p=3">Athena 新手教程</a>）</p>
+<p>通常是先校正一个标准样品的谱图（Calibration），然后把剩下的标准样品谱图跟已经校正后的对齐（Alignment）。</p>
+<h3 id="2-对比-a-样品和-b-样品-常见于展示-xanes">2. 对比 A 样品和 B 样品 （常见于展示 XANES）</h3>
+<p>把情况 1 的操作对各自 A 和 B 样品做好后，merge 得到各自的图像。</p>
+<p>把 A 和 B 样品以及对应的标准样品加载在一起，先比较标准样品（A 和 B 都用的同一个标准样品）。确认标准样品的谱图 (reference spectra) 是一样的，包括形状还有能量值。这是为了确保标准样品的consistency。有时候会发现标准样品是有变化，如果看到了标准样品变质，必须立刻换掉。（参考<a href="https://www.bilibili.com/video/BV1364y1F7tw">能量校正 Calibration</a>）</p>
+<h3 id="3-软线低能样品比如氧硫磷一类">3. 软线低能样品，比如氧硫磷一类</h3>
+<p>因为能量极低的时候光线无法穿过样品，所以标准样品的谱图无从谈起。能做的是单独先测标准样品，然后再测未知样品。处理数据的时候，只能分开处理。（参考<a href="https://www.bilibili.com/video/BV1364y1F7tw">能量校正 Calibration</a>）</p>
+<p><strong>先校正标准样品，知道误差值有多大。再把同样的差值用到未知样品上，手动校正。</strong></p>
+<p>这种做法只限于低能软线，比如氧硫磷这样的（&lt; 3000 eV)。过渡元素的测量仍然遵循情况 1 和 2。只可能在自己没有同步采得标准样品不得已情况下，可以参考这样的操作。（仍然不建议，风险太大，有 manipulate data 的嫌疑）</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<pre><code>感谢你的阅读。
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[我用到的付费订阅制软件 | App Subscriptions ]]></title>
-        <id>https://twocircles24.github.io/post/app-sharing/</id>
-        <link href="https://twocircles24.github.io/post/app-sharing/">
+        <id>http://localhost:4001/post/app-sharing/</id>
+        <link href="http://localhost:4001/post/app-sharing/">
         </link>
         <updated>2020-08-22T16:56:20.000Z</updated>
         <summary type="html"><![CDATA[<p>划水闲聊的博客出现了！</p>
@@ -270,8 +270,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[你问我不一定答 | 第二期]]></title>
-        <id>https://twocircles24.github.io/post/youask-ianswer-2/</id>
-        <link href="https://twocircles24.github.io/post/youask-ianswer-2/">
+        <id>http://localhost:4001/post/youask-ianswer-2/</id>
+        <link href="http://localhost:4001/post/youask-ianswer-2/">
         </link>
         <updated>2020-08-18T09:15:10.000Z</updated>
         <summary type="html"><![CDATA[<p>(5 min 22 s reading)</p>
@@ -393,8 +393,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Rbkg ]]></title>
-        <id>https://twocircles24.github.io/post/rbkg/</id>
-        <link href="https://twocircles24.github.io/post/rbkg/">
+        <id>http://localhost:4001/post/rbkg/</id>
+        <link href="http://localhost:4001/post/rbkg/">
         </link>
         <updated>2020-08-17T13:55:11.000Z</updated>
         <summary type="html"><![CDATA[<p>(11 min 26 s reading) Rbkg 选起来快，但是选错了就是灾难性的……</p>
@@ -511,8 +511,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Edge Energy & 吸收边]]></title>
-        <id>https://twocircles24.github.io/post/edge-energy/</id>
-        <link href="https://twocircles24.github.io/post/edge-energy/">
+        <id>http://localhost:4001/post/edge-energy/</id>
+        <link href="http://localhost:4001/post/edge-energy/">
         </link>
         <updated>2020-08-13T07:55:56.000Z</updated>
         <summary type="html"><![CDATA[<p>(16 min 37 s reading) 什么是 <em>E<sub>0</sub></em>？怎么选 <em>E<sub>0</sub></em>？</p>
@@ -693,8 +693,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
     </entry>
     <entry>
         <title type="html"><![CDATA[学习 XAFS 的困境]]></title>
-        <id>https://twocircles24.github.io/post/why-xafs-difficult/</id>
-        <link href="https://twocircles24.github.io/post/why-xafs-difficult/">
+        <id>http://localhost:4001/post/why-xafs-difficult/</id>
+        <link href="http://localhost:4001/post/why-xafs-difficult/">
         </link>
         <updated>2020-08-11T21:42:10.000Z</updated>
         <summary type="html"><![CDATA[<p>(7 min 50 s reading) 写着写着变成了吐槽大会……</p>
@@ -745,8 +745,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
     </entry>
     <entry>
         <title type="html"><![CDATA[学 XAFS 要多久]]></title>
-        <id>https://twocircles24.github.io/post/how-long-for-xafs/</id>
-        <link href="https://twocircles24.github.io/post/how-long-for-xafs/">
+        <id>http://localhost:4001/post/how-long-for-xafs/</id>
+        <link href="http://localhost:4001/post/how-long-for-xafs/">
         </link>
         <updated>2020-08-05T18:54:07.000Z</updated>
         <summary type="html"><![CDATA[<p>(7 min 33 s reading) 很多人想在开始学之前知道这个问题的答案，可惜不是一个很短的时间。</p>
@@ -807,8 +807,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
     </entry>
     <entry>
         <title type="html"><![CDATA[你问我不一定答 | 第一期]]></title>
-        <id>https://twocircles24.github.io/post/youask-ianswer-1/</id>
-        <link href="https://twocircles24.github.io/post/youask-ianswer-1/">
+        <id>http://localhost:4001/post/youask-ianswer-1/</id>
+        <link href="http://localhost:4001/post/youask-ianswer-1/">
         </link>
         <updated>2020-08-02T18:56:19.000Z</updated>
         <summary type="html"><![CDATA[<p>(5 min 38 s reading) 这是我目前想到比较合适且自由度较高的一种方式来归纳大家问过的问题。也许你的问题已经有人问过了。</p>
@@ -919,8 +919,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
     </entry>
     <entry>
         <title type="html"><![CDATA[安利一些XAFS读物]]></title>
-        <id>https://twocircles24.github.io/post/xafs-reading/</id>
-        <link href="https://twocircles24.github.io/post/xafs-reading/">
+        <id>http://localhost:4001/post/xafs-reading/</id>
+        <link href="http://localhost:4001/post/xafs-reading/">
         </link>
         <updated>2020-08-01T04:18:10.000Z</updated>
         <summary type="html"><![CDATA[<p>(2 min 56 s reading) There is a high learning curve for XAFS technique, be patient.</p>
