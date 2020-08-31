@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-08-31T05:48:18.166Z</updated>
+    <updated>2020-08-31T18:35:45.374Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -10,6 +10,51 @@
     <logo>https://twocircles24.github.io/images/avatar.png</logo>
     <icon>https://twocircles24.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 两个圈 Two Circles</rights>
+    <entry>
+        <title type="html"><![CDATA[能量校准 Calibration]]></title>
+        <id>https://twocircles24.github.io/post/energy-calibration/</id>
+        <link href="https://twocircles24.github.io/post/energy-calibration/">
+        </link>
+        <updated>2020-08-31T03:35:06.000Z</updated>
+        <content type="html"><![CDATA[<p>目前收到被问最多的问题，今天来仔细讲下。最初这个问题是从 <em>Athena</em> 的教程里面引出：在加载原始数据到 <em>Athena</em> 后，到 <em>Calibration</em> 窗口进行校正。<strong>在已经看过 <em>Athena</em> 新手教程到基础上</strong>，我们来进一步了解这个“校正”这个操作。</p>
+<p>先说明的是，这一个概念完全可以类比 XPS 里面的数据处理。在早前教程里面没有过多涉及这个问题是因为这个点跟实验操作相关性很大，在没有做过相关实验的前提下，理解起来会有难度。</p>
+<p><strong>需要留意的是，在这里我指的未知样品是你测得的透射谱 ln(I<sub>0</sub>/I<sub>1</sub>) 和荧光谱 (I<sub>f</sub>/I<sub>0</sub>)，它可能是你真的正儿八经不知道这个样品是什么，需要你去拟合。比如一个 Fe 负载在 CeO<sub>2</sub> 载体上的催化剂；也可能是你会拿来做线性拟合之类已知样品，比如你要拟合含铁样品 XANES，你会测得 Fe<sub>2</sub>O<sub>3</sub>，FeO，Fe<sub>3</sub>O<sub>4</sub> 云云，在这篇文展里面也归属于未知样品。或者可以理解为是放在 I<sub>0</sub> 之后，I<sub>1</sub> (or I<sub>t</sub>) 之前的样品均在该文算作未知样品。以及标准样品（reference spectra）是指用来校正的样品，通常是利用未知样品之后的光 (I<sub>1</sub> or I<sub>t</sub>)再打过一个标准样品，得到一张透射谱 ln(I<sub>1</sub>/I<sub>2</sub>)。这里说它标准，是因为我知道其准确的 E<sub>0</sub> 数值。</strong></p>
+<br/>
+<hr>
+<h2 id="做-calibration-的原因">做 Calibration 的原因</h2>
+<p>这完全是出于实验硬件的原因，简单来说负责调整入射能量值的 monochromator 是有一点误差，会导致显示的数值不是正确的能量数值。比如测量铁片的 K-edge，扫出来它的 E<sub>0</sub> （也就是一阶微分 XANES 中的第一个峰）是 7112.58 eV ，但是上网一查 Fe foil 的 E<sub>0</sub> 是 7,112.00 eV。这就是我们需要去校正铁片样品数据的时候了。由于只跟能量值相关，相当于是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span></span></span></span> (E) 整个平移零点几个 eV 值，就把整张图数平移回去就好。</p>
+<h2 id="如何知道误差值">如何知道误差值</h2>
+<p>那么知道 Calibration 的根本原因后，下一个问题是如何知道能量值跟真实距离相差了多少？</p>
+<p><strong>由于每次测量硬件都会有所区别，不能用不同批次采集得到的数据来相互校正</strong>。像是利用网上的数据或是去年采的数据来校正这个月的数据，这都是大忌。正确的做法是：每次扫未知样品时候，都会在未知样品之后放一个标准样品，利用穿过样品的透射光，在扫描未知样品 XAFS 谱图时也可以同时获得一张标准样品的谱图。因为未知和标准样品使用的均是来源于同一入射光源，两个样品的能量值与真实能量值的误差是可以可以认作一样的（标准样品误差了多少，未知样品误差值也是这个值）。</p>
+<p>既然如此，我们就需要标准样品来确定误差值。常见的选择就是对应元素单质，比如我测 Fe<sub>2</sub>O<sub>3</sub>，那么就使用 Fe foil。标准样品的选择绝不仅仅限于相同元素单质，因为有不少元素单质不容易获得或者是其他原因，所以选择元素对应的化合物非常常见。比如我也可以在测 Fe<sub>2</sub>O<sub>3</sub> 时，我也可以用 Fe<sub>3</sub>O<sub>4</sub> 来作为标准样品进行校正，as long as 我知道 Fe<sub>3</sub>O<sub>4</sub> 的 E<sub>0</sub> 是多少（可以从文献或者是其他地方知道）。我甚至可以用 monochromator 上面的 glitch 来校正（因为 glitch 的出现是由于缺陷导致的，这个值是不受实验条件影响）。总的来说这个选择很灵活。</p>
+<p>一个比较特殊的例子：硫的标准样品是一个难点，因为硫单质存在多项的情况，能量值 (E<sub>0</sub>) 很模糊。在一次讨论中，Ritimukta Sarangi (beamline scientist at SSRL) 是<a href="https://www.mail-archive.com/ifeffit@millenia.cars.aps.anl.gov/msg06924.html">推荐使用硫代硫酸钠</a> (Sodium Thiosulfate)：</p>
+<blockquote>
+<p>In my experience, it is best to stay away from sulfate which has a hugely intense peak subject to self absorption. At SSRL, we advice users to choose Sodium Thiosulfate with the low lying and sharp S-S sigma star peak at 2472.02 eV and Tetraphenyl phosphonium bromide at 2146.96 eV for Phosphorus (see Scott's paper at: J. Synchrotron Rad. <a href="http://journals.iucr.org/s">http://journals.iucr.org/s</a> (2018). <em>25</em> <a href="http://journals.iucr.org/s/contents/backissues.html">http://journals.iucr.org/s/contents/backissues.html</a>, 529-536)</p>
+</blockquote>
+<h2 id="使用标准样品校正-reference-spectra-的必要性">使用标准样品校正 (reference spectra) 的必要性</h2>
+<p>有人问过：我可以不校正嘛？我的答案是：必须校正。在计划实验一开始就会注意标准样品的选择，硬件上面的误差是常有翻车出现，哪怕是现在大部分同步辐射光源的质量已经相当不错的情况下，同时采得标准样品的谱图是一种双层保险。在做完实验后处理数据才发现能量误差太大但也没有取得标准谱图，那个时候数据已经失去了可靠性，于事无补。所以一定要在做实验的时候用上标准样品。</p>
+<p>使用标准样品校正的另一个动机是帮助我在比较从不同时间段的实验中取得的数据。因为每次实验的能量偏移数值是有区别的，如果要比较未知样品的谱图，先确保各自标准样品已经校正好。甚至是要确保标准样品是完整的，毕竟见过不少标准样品变质导致能量改变，做了几年之后才发现导致所有数据没法比较的事故。</p>
+<br/>
+<hr>
+<h2 id="分情况举例">分情况举例</h2>
+<h3 id="1-同一个样品多次连续扫描">1. 同一个样品多次连续扫描</h3>
+<p>加载原始数据的时候把未知样品对应的标准样品一起加载进去。（参考 <a href="https://www.bilibili.com/video/BV1yz411e7gu?p=3">Athena 新手教程</a>）</p>
+<p>通常是先校正一个标准样品的谱图（Calibration），然后把剩下的标准样品谱图跟已经校正后的对齐（Alignment）。</p>
+<h3 id="2-对比-a-样品和-b-样品-常见于展示-xanes">2. 对比 A 样品和 B 样品 （常见于展示 XANES）</h3>
+<p>把情况 1 的操作对各自 A 和 B 样品做好后，merge 得到各自的图像。</p>
+<p>把 A 和 B 样品以及对应的标准样品加载在一起，先比较标准样品（A 和 B 都用的同一个标准样品）。确认标准样品的谱图 (reference spectra) 是一样的，包括形状还有能量值。这是为了确保标准样品的consistency。有时候会发现标准样品是有变化，如果看到了标准样品变质，必须立刻换掉。（参考<a href="https://www.bilibili.com/video/BV1364y1F7tw">能量校正 Calibration</a>）</p>
+<h3 id="3-软线低能样品比如氧硫磷一类">3. 软线低能样品，比如氧硫磷一类</h3>
+<p>因为能量极低的时候光线无法穿过样品，所以标准样品的谱图无从谈起。能做的是单独先测标准样品，然后再测未知样品。处理数据的时候，只能分开处理。（参考<a href="https://www.bilibili.com/video/BV1364y1F7tw">能量校正 Calibration</a>）</p>
+<p><strong>先校正标准样品，知道误差值有多大。再把同样的差值用到未知样品上，手动校正。</strong></p>
+<p>这种做法只限于低能软线，比如氧硫磷这样的（&lt; 3000 eV)。过渡元素的测量仍然遵循情况 1 和 2。只可能在自己没有同步采得标准样品不得已情况下，可以参考这样的操作。（仍然不建议，风险太大，有 manipulate data 的嫌疑）</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<pre><code>感谢你的阅读。
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[肝 XAFS 实验的小细节 | Podcast Ep. 3]]></title>
         <id>https://twocircles24.github.io/post/podcast-ep3/</id>
@@ -955,93 +1000,6 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
 <p><a href="https://www.flickr.com/people/slaclab/">SLAC National Accelerator Laboratory</a></p>
 </li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ Athena新手教程 | 补充说明和讨论]]></title>
-        <id>https://twocircles24.github.io/post/athena-basic-tutorial/</id>
-        <link href="https://twocircles24.github.io/post/athena-basic-tutorial/">
-        </link>
-        <updated>2020-06-30T09:21:36.000Z</updated>
-        <summary type="html"><![CDATA[<p>(4 min 55 s reading) 为了可以更好的归档问题<s>懒得出视频</s>，在这里动态更新 Blog 记录大家的问题还有回复。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>(4 min 55 s reading) 为了可以更好的归档问题<s>懒得出视频</s>，在这里动态更新 Blog 记录大家的问题还有回复。</p>
-<!-- more -->
-<br/>
-<br/>
-<p><strong>视频：Athena新手教程 | 同步辐射吸收谱(XAS)数据处理 <a href="https://www.bilibili.com/video/BV1yz411e7gu/">Bilibili</a>，<a href="https://www.youtube.com/playlist?list=PLpaQuvNA9-EvP_o9wSa336hveS1O46dtn">YouTube</a></strong></p>
-<br/>
-<br/>
-<br/>
-<h2 id="个人认为最容易出现问题的地方">个人认为最容易出现问题的地方</h2>
-<br/>
-<br/>
-<h4 id="-1-敲黑板重点所有路径包括安装文件所有文件均使用英文且任何文件夹文件名使用下划线_来替代空格-space-否则-demeter-系列的软件会报错无法处理数据">-1. 敲黑板重点：所有路径（包括安装文件）所有文件均使用英文，且任何文件夹/文件名使用下划线&quot;_&quot;来替代空格 space。否则 Demeter 系列的软件会报错，无法处理数据</h4>
-<br/>
-<br/>
-<h4 id="0-在-athena-中加载数据的前一步建议你去-main-window-下面的-plugin-registry-勾选上所有方框这样以后就可以加载大部分来自不同-beamline-的实验初始数据">0. 在 <strong>Athena</strong> 中加载数据的前一步，建议你去 <em>Main window</em> 下面的 <em>Plugin registry</em> 勾选上所有方框，这样以后就可以加载大部分来自不同 beamline 的实验初始数据。</h4>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/08/05/zVA4tOlgK67Wbcp.png" alt="plug register.png" loading="lazy"></figure>
-<p><strong>Figure 1.</strong> Athena 主界面<br>
-<br/><br>
-<img src="https://i.loli.net/2020/08/05/nvu7Q4yjpImoHDF.png" alt="plug register2.png" loading="lazy"></p>
-<p><strong>Figure2.</strong> Plugin registry 界面<br>
-<br/><br>
-<br/></p>
-<h4 id="1-加载数据时的若干细节-figure-3">1. 加载数据时的若干细节 (<strong>Figure 3</strong>)</h4>
-<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2020/08/05/BVS5DI2jbfZktXO.jpg" alt="import_li.jpg" loading="lazy"></figure>
-<p><strong>Figure 3.</strong> Import data 界面</p>
-<br/>
-<br/>
-<p>    <u>红线：</u> 很多时候原始数据标注的名字，eg. I<sub>t</sub> 和 I<sub>o</sub>，并非是真的实验环境中的透射光或者是入射光。你需要：<br>
-        (1) 如果是你负责采数据，你需要在实验的过程中记录每列数据的真正含义，询问 beamline staff 就可以得到答案；<br>
-         (2) 如果是别人采集的数据，问 TA or 自己试。</p>
-<br/>
-<p>    <u>蓝线：</u>如果是透射谱，遵循 <a href="https://en.wikipedia.org/wiki/Beer%E2%80%93Lambert_law">Beer–Lambert law</a>，记得勾选上 <em>Natural log</em>。也可通过下放的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span></span></span></span>(E) 表达式来确认是否勾选成功了。如果是荧光谱，则<strong>不要</strong>勾选 <em>Natural log</em>。</p>
-<br/>
-<p>    <u>黄线：</u> <em>Data type</em> 允许你加载不同的 XAFS 文件：<br>
-       (1)  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span></span></span></span>(E)：XAFS 最原始的数据，你需要加减乘除来得到初始数据；<br>
-       (2) XANES：顾名思义，能量范围比较短，没有 EXAFS region；<br>
-       (3) norm(E)：已经归一化之后的数据，也就是说通过这样的形式加载，你无法做 XAFS 数据的背景调整，只能从 <em>k</em> 空间开始；<br>
-       (4) chi(k)：<em>k</em> 空间数据，没有 <em>k<sup>n</sup></em> 加权；<br>
-       (5) xmu.dat：从 <em>FEFF</em> 软件里面导出的文件。</p>
-<br/>
-<p>    <u>绿线：</u> 一定一定一定要加载参照谱图 (reference spectra)，否则无法进行能量校正。</p>
-<br/>
-<br/>
-<h4 id="2-e0-的选择">2. E<sub>0</sub> 的选择</h4>
-<br/>
-<p>在这里先引用在 Bilibil i下面的 Q&amp;A，之后对 E<sub>0</sub> 有独立讨论。<s>又是一个 Flag</s></p>
-<blockquote>
-<p>Q：E0 和你 Calibrate 的 E 有啥区别呢<br>
-A：Calibrate Energy 通常是指校正一个已知样品的 E<sub>0</sub>，比如金属。E<sub>0</sub> 理论来讲是样品中内层电子吸收光能逃逸出的阈值，然而在实际经验中大家是人为在Athena里面人为定义这个阈值，也就是 <em>Athena</em> 里面的 E<sub>0</sub>。完了之后去 <em>Artemis</em> 里面微调。</p>
-</blockquote>
-<blockquote>
-<p>Q：在能量矫正的时候，我的第一微分图里面第一个峰不是最强峰，那么我该选择第一个峰还是最强峰？<br>
-A：E<sub>0</sub> 位置的定义是人为的，所以理论来说这两个地方都可以。你到后期做 <em>Artemis</em> 拟合会有修正项。如果第一个峰不是最强的，我猜测是有 pre-edge，那么我个人习惯是不用第一个峰，而是用最强的。因为 pre-edge 是由于 <strong>1s→nd</strong> 跃迁，而真正的 XANES 是 <strong>1s→np</strong> 跃迁。</p>
-</blockquote>
-<br/>
-<br/>
-<h3 id="2-去除图里面的尖刺参照视频-p7">2. 去除图里面的尖刺（参照视频 P7）</h3>
-<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2020/08/05/EDvVNwMdQ7sqYiU.jpg" alt="Inkedglitch_LI.jpg" loading="lazy"></figure>
-<p><strong>Figure 4.</strong> Glitches at ca. 10 Å<sup>-1</sup></p>
-<br/>
-<br/>
-<h3 id="3-保存数据作图">3. 保存数据作图</h3>
-<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2020/08/05/WlzH48dOEKPIFbx.png" alt="export.png" loading="lazy"></figure>
-<p><strong>Figure 5.</strong> 到左上角 <em>File</em> 去保存数据</p>
-<br/>
-<p>    <u>红线：</u>你可以保存的文件格式，包含了（从上往下）一阶微分 XANES，XANES，<em>k<sup>3</sup></em> 加权 <em>k</em> 空间，EXAFS R空间，EXAFS R空间的虚部。</p>
-<p>    <u>红线：</u>如果从 <em>Save marked group as...</em> 选择数据，你会保存在右边所有勾选的数据。R空间的权重，是由右方 <em>Plotting k-weights</em> 决定的，建议在保存数据前先用右边的展示功能键刷新下。</p>
-<p>    <u>蓝线：</u> <em>Save current group as...</em> 代表你只会保存右边蓝色高亮的数据，比如图中的 <em>Fe_lepidocrocite.000</em>。</p>
-<br/>
-<figure data-type="image" tabindex="5"><img src="https://i.loli.net/2020/08/05/RemycGYiBVTg1WP.png" alt="format.png" loading="lazy"></figure>
-<p><strong>Figure 6.</strong> 保存文件为 .txt 后缀</p>
-<br/>
-<p>大部分输出的数据会有奇奇怪怪的后缀，这是作者为了区分数据的类型（XANES，k空间，R空间 and so on）。但是大部分数据都是可以通过 notepad（也就是经常读 .txt）打开的。建议直接保留数据类型，把后缀名改成 .txt，方便后续数据转移和画图，<strong>Figure. 6</strong>。</p>
-<br/>
-<br/>
-<pre><code>感谢你的阅读。
-</code></pre>
 ]]></content>
     </entry>
 </feed>
