@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-08-31T04:36:09.489Z</updated>
+    <updated>2020-08-31T04:46:22.301Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -15,14 +15,15 @@
         <id>https://twocircles24.github.io/post/podcast-ep3/</id>
         <link href="https://twocircles24.github.io/post/podcast-ep3/">
         </link>
-        <updated>2020-08-30T13:36:05.000Z</updated>
+        <updated>2020-08-30T13:46:12.000Z</updated>
         <summary type="html"><![CDATA[<p>(8 min 27 s reading) 爱惜身体，爆肝做实验不可取。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>(8 min 27 s reading) 爱惜身体，爆肝做实验不可取。</p>
 <!-- more -->
 <br/>
 <br/>
-<p><strong>阅读提示1：该文是B站音频的文字版本，内容会有少量出入。</strong></p>
+<p><strong>阅读提示1：该文是<a href="https://www.bilibili.com/audio/au1818517">B站音频</a>的文字版本，内容会有少量出入。</strong></p>
+<iframe src="https://anchor.fm/twocircles24/embed/episodes/Vol-4-eitcrb" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
 <br/>
 <br/>
 <hr>
