@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-08-31T18:50:09.006Z</updated>
+    <updated>2020-09-02T00:15:26.045Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://twocircles24.github.io/post/energy-calibration/</id>
         <link href="https://twocircles24.github.io/post/energy-calibration/">
         </link>
-        <updated>2020-08-31T03:50:04.000Z</updated>
+        <updated>2020-08-31T03:50:38.000Z</updated>
         <summary type="html"><![CDATA[<p>(7 min 30 s reading) 真没想过这个问题能成日经问答了……</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>(7 min 30 s reading) 真没想过这个问题能成日经问答了……</p>
@@ -28,7 +28,7 @@
 <br/>
 <hr>
 <h2 id="做-calibration-的原因">做 Calibration 的原因</h2>
-<p>这完全是出于实验硬件的原因，简单来说负责调整入射能量值的 monochromator 是有一点误差，会导致显示的数值不是正确的能量数值。比如测量铁片的 K-edge，扫出来它的 E<sub>0</sub> （也就是一阶微分 XANES 中的第一个峰）是 7112.58 eV ，但是上网一查 Fe foil 的 E<sub>0</sub> 是 7,112.00 eV。这就是我们需要去校正铁片样品数据的时候了。由于只跟能量值相关，相当于是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span></span></span></span> (E) 整个平移零点几个 eV 值，就把整张图数平移回去就好。</p>
+<p>这完全是出于实验硬件的原因，简单来说负责调整入射能量值的 monochromator 是有一点误差，会导致显示的数值不是正确的能量数值。比如测量铁片的 K-edge，扫出来它的 E<sub>0</sub> （也就是一阶微分 XANES 中的第一个峰）是 7112.58 eV ，但是上网一查 Fe foil 的 E<sub>0</sub> 是 7,112.00 eV。这就是我们需要去校正铁片样品数据的时候了。由于只跟能量值相关，相当于是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span></span></span></span>(E) 整个平移零点几个 eV 值，就把整张图数平移回去就好。</p>
 <h2 id="如何知道误差值">如何知道误差值</h2>
 <p>那么知道 Calibration 的根本原因后，下一个问题是如何知道能量值跟真实距离相差了多少？</p>
 <p><strong>由于每次测量硬件都会有所区别，不能用不同批次采集得到的数据来相互校正</strong>。像是利用网上的数据或是去年采的数据来校正这个月的数据，这都是大忌。正确的做法是：每次扫未知样品时候，都会在未知样品之后放一个标准样品，利用穿过样品的透射光，在扫描未知样品 XAFS 谱图时也可以同时获得一张标准样品的谱图。因为未知和标准样品使用的均是来源于同一入射光源，两个样品的能量值与真实能量值的误差是可以可以认作一样的（标准样品误差了多少，未知样品误差值也是这个值）。</p>
