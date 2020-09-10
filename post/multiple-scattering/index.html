@@ -1,0 +1,286 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Multiple Scattering | 两个圈 Two Circles</title>
+
+<link rel="shortcut icon" href="https://twocircles24.github.io/favicon.ico?v=1599779673264">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://twocircles24.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174490678-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-174490678-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            两个圈 Two Circles
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            Home
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            Archives
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            Tag
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            Link
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://anchor.fm/twocircles24" class="menu gt-a-link" target="_blank">
+                            Podcast
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            About
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1599779673264" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    Multiple Scattering
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-09-10 ·
+                    </time>
+                    
+                        <a href="https://twocircles24.github.io/tag/HWJlUHp6k/" class="post-tags">
+                            # Terminology
+                        </a>
+                    
+                        <a href="https://twocircles24.github.io/tag/EESs-vLM1L/" class="post-tags">
+                            # XAFS
+                        </a>
+                    
+                        <a href="https://twocircles24.github.io/tag/vvYMcBDX6w/" class="post-tags">
+                            # Tutorial
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>(12 min 30 s reading) 可能很多人看到过，但是从没细想过的一个问题~</p>
+<!-- more -->
+<br/>
+<p><strong>视频：</strong></p>
+<br/>
+<br/>
+<p><strong>阅读提示1：该文只用于参考和建议，非标准。各个课题遭遇的数据差异巨大，我的建议不一定适合你的数据处理，请谨慎使用。</strong></p>
+<p><strong>阅读提示2：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
+<br/>
+<hr>
+<h2 id="太长不看">太长不看</h2>
+<blockquote>
+<ol>
+<li>Single scattering 是指光电子发生在中心原子和一个邻近原子之间的散射路径；而 multiple scattering 是指在光电子回到中心原子前还有经过其他的邻近原子。</li>
+<li>Multiple scattering 的强度主要与对应的键角相关，越接近 180° 强度越大。<strong>通常来说</strong>，键角低于 150° 的时候其贡献很小，可以忽略。（也有例外）</li>
+</ol>
+</blockquote>
+<br/>
+<hr>
+<p>如果把 cif 文件放到 Artemis 里面的时候，你会发现在计算好的 paths 中包含了 Degeneracy （简并度）、Reff（有效半径），Scattering path （散射路径）、Rank（排名）、L（脚数量）和 Type（种类）。我们今天来讲讲他们分别代表了什么，以及这跟 multiple scattering 的关系是什么。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/09/02/HblOaAxU8V3mrjS.png" alt="example.png" loading="lazy"></figure>
+<p><strong>Figure 1.</strong> FeS<sub>2</sub> cif 文件（CCDC# 1755449）在 <em>Artemis</em> 演示。</p>
+<br/>
+<h2 id="scattering-路径的分类和命名">Scattering 路径的分类和命名</h2>
+<p>先来回想下 EXAFS 的理论：当中心原子（比如 FeS<sub>2</sub> 中的 Fe）受到了足够的能量（比如大于 7,112 eV）后，内层电子（1s e<sup>-</sup>）激发逃逸成为了光电子到邻近原子发生了散射行为（比如 S 或另一个 Fe 原子），接着光电子再散射回中心原子，我们通过检测中心原子的变化来获得 XAFS 信息。</p>
+<p>今天讲述的重点就是在光电子从中心原子逃逸到邻近原子再回到中心原子的过程。可以下意识的想到最简单的<strong>逃逸-返回</strong>的路径是中心原子到任一邻近原子再直接返回，整 scattering 过程<strong>只发生在了两个原子之间，其中一个必须是中心原子</strong>，这就是 <strong>single scattering</strong>。不难想象，光电子的运动并不会只发生在指定的两个原子之间，邻近原子受到的光电子还能再散射出去到它的“邻近原子”，然后再回到中心原子。那么<strong>包含了三个原子及其以上的 scattering 过程（其中必有中心原子）就是 multiple scattering</strong>。</p>
+<br/>
+<h3 id="single-scattering">Single Scattering</h3>
+<br/>
+<p>Single scattering 的定义非常简单：中心原子 + 邻近原子（可远可近）。<strong>Figure 2</strong> 中的原子 1 和 2 就是不同距离的 single scattering。 也可以看到在中心原子 （Abs，蓝色圆圈）附近有两个相同的原子 1（一左一右），在测量 EXAFS 数据时，就会收到两倍的原子 1 光电子。这就是我们能够测得它们配位数的信息，或者更准确地说是 degeneracy （简并度）。由于一进一出的简单过程，我们可以对 single scattering 的 Reff （有效半径）能认作是两个原子之间的距离。在这样的假定前提下，我们可以从 EXAFS 中得到原子之间的距离信息。在 <em>Artemis</em> 中的 rank 只是一个粗略代表了这条 path 强度，没有任何实际的物理意义。L 代表了 Leg 的数量，一个 leg 是指光电子在两个原子间的一次转移。对于 single scattering，进行了中心原子到一个邻近原子（leg × 1），再回到了中心原子（leg × 1），总和 L = 2。也可以从 scattering path 里面读出来，以第一个为例：@S1.1 @，指的是从硫原子到中心铁原子，S1.1 是从晶体结构文件里面出来的，可以打开 <em>Vesta</em> 去寻找，最后只有 @ 但没有原子符号，直接代表了中心原子。</p>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2020/09/02/FKqyY61WgTMex5w.png" alt="collinear.png" loading="lazy"></figure>
+<p><strong>Figure 2.</strong> This diagram demonstrates the various kinds of collinear MS paths and how they relate to the corresponding SS path. (from <a href="https://bruceravel.github.io/demeter/documents/Artemis/extended/ss.html">Artemis manual</a>)</p>
+<br/>
+<h3 id="multiple-scattering">Multiple Scattering</h3>
+<br/>
+<p>Multiple scattering 一定程度上可以跟 single scattering 类比，无非是在回到中心原子之前经历了多于一个邻近原子。在 <strong>Figure 1</strong> 的 Type 中但凡不是 single scattering 的名字，<strong>都是 multiple scattering</strong>。这个说起来就很头疼了，一方面是种类太多，另一方面它们给了拟合不小的麻烦。我这里只能做一点点地解释。</p>
+<p><strong>Figure 2</strong> 里列举了部分 multiple scattering，可以发现大部分开头都是以 Collinear （共线）开头，这里代表所有涉及的原子均在一条直线上，每个之间的键角均为 180°。可以看到：</p>
+<ol>
+<li>Collinear double scattering 涉及了三个原子：中心原子 → 原子 1 → 原子 2 → 中心原子 。 3 legs。</li>
+<li>Collinear triple scattering 涉及了三个原子：中心原子 → 原子 1 → 原子 2 → 原子 1 → 中心原子 。4 legs。</li>
+<li>Double scattering (DS) or triple scattering (TS) through absorber：散射路径经过了中心原子。legs 数量还是对应为 3 和 4。</li>
+<li>Rattle：通常指在两个原子之间来回反复横跳，legs 数量取决于跳了多少次 。 <s>（就跟坂本大佬一样）</s></li>
+</ol>
+<br/>
+<h2 id="multiple-scattering-强度受键角影响">Multiple Scattering 强度受键角影响</h2>
+<p>在上述粗略介绍里我强调了 <strong>collinear</strong> 是因为 Multiple scattering的强度受涉及的原子间键角影响。 简单来说，键角越接近 180°，mutiple scattering 的角度。拿一个在视频里面举的例子，K<sub>3</sub>Fe(CN)<sub>6</sub> 中 Fe-C-N 键角为 178° （几乎接近为直线）。我们可以看到它的 Fe-C-N-Fe 和 Fe-C-N-C-Fe 路径不仅强度完全碾压了 Fe-N-Fe single scattering，连 Reff 都是一样的。因为它们都经过了同样的路径<s>像是一根线上的蚂蚱</s>。</p>
+<p><img src="https://i.loli.net/2020/09/02/oibHrjKxeMGAOJc.png" alt="linear artemis.png" loading="lazy"><br>
+<img src="https://i.loli.net/2020/09/02/wvT4Gr1RF5WgD82.png" alt="feff linear.png" loading="lazy"></p>
+<p><strong>Figure 3.</strong> K<sub>3</sub>Fe(CN)<sub>6</sub> 中两个 multiple scattering 已经比 single scattering 明显了。</p>
+<br/>
+<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2020/09/02/vkLTqSuMOVDmEIe.png" alt="pic.png" loading="lazy"></figure>
+<p><strong>Figure 4.</strong> 用 <em>Avogadro</em> 把 Fe-C-N 的键角修改成 150° 再重新投到 <em>Artemis</em> 里面计算。（左：未修改；右：修改键角后。橘色：Fe；灰色：C；蓝色：N；紫色：K）</p>
+<br/>
+<p>但如果我用 <em>Avogadro</em> 把所有的 Fe-C-N 键角改成了 150°（保持 C-N 距离不变的情况下），就会看到两个 multiple scattering 的强度降低，Fe-N single scattering 反而强度略有增多（因为 Fe-N path 距离近了一点）。不仅如此，连 Fe-C-N-Fe multiple scattering 的名字从 foward scattering 改成了 obtuse  scattering。一方面可以证明强度与键角关系，另一方面也说明 multiple scattering 的命名是很灵活的，在实际运用的过程中它们的名字常常用“multiple scattering”就能一笔带过了，没必要太过纠结，只需要搞懂光电子路径即可。</p>
+<p><img src="https://i.loli.net/2020/09/02/ow3uU7qfNyxHQWd.png" alt="bent artemis.png" loading="lazy"><br>
+<img src="https://i.loli.net/2020/09/02/vTo2OpUEPVyrj7Z.png" alt="bent feff.png" loading="lazy"></p>
+<p><strong>Figure 4.</strong> 把 Fe-C-N 键角改成 150°后的 <em>Artemis</em> 给出的 multiple scattering 强度。</p>
+<p>要说明的是，path 的强度不仅仅是跟键角相关。无论是 single scattering 或 multiple scattering，受到的因素包含但不限于：原子重量、距离、个数等等。在 multiple scattering 这里强调<strong>键角</strong>是因为这是一个 single scattering 不具备的讨论变量。在网上的<a href="http://www.umich.edu/~jphgroup/XAS_Course/Harbin/CCC2_XAS.pdf">一篇资料</a>中认为键角在 150 ° 到 180 ° 之间的 multiple scattering 是不可以被忽略的，而小于 150 ° 的键角相关的 multiple scattering 强度较弱常可以忽略：</p>
+<blockquote>
+<p>Multiple scattering is extremely angle dependent. For scattering angles less than ca. 150° (the angle A–S1S2 in the example above), multiple scatteringis weak and can often be neglected. However, for angles between 150° and 180°, multiple scatteringmust be considered. The angle dependence of multiple scatteringmeans that EXAFS can, at least in principle, provide direct information about bond angles.</p>
+</blockquote>
+<p>在我个人的经验来看，这个 150° 判定总体来说还能接受，但永远不能在研究课题里想当然排除各种情况。我也有过 120° 相关的 path 也有在拟合中用到的。理论方面，很多年前就 <a href="https://phys.washington.edu/people/john-j-rehr">John J. Rehr</a> 教授就开始研究这个问题，经过多年的努力，<em>FEFF</em> 努力做到把 multiple scattering 尽可能“类比”成 single scattering，让作为使用软件的用户减少拟合的学习成本。但是不可避免的是，multiple scattering 是一个相当复杂的问题，与各自的课题相关程度很大。有的人或许从来不需要，有的人要靠这个才能得到不错的结果。</p>
+<p>另外，我一直强调 Degeneracy ≠ 配位数，其目的就在于此。Multiple scattering 中配位数的概念无从谈起，只能说是多少条相同路径，用数量 (number) 更为合理。也就是为什么在输出 EXAFS 报告的时候我不建议使用 coordination number 的概念，因为在 <em>Artemis</em> 得到的数据从来就不是配位数，而是经过理解之后才能与配位数建立联系。</p>
+<h3 id="multiple-scattering-与-xafs-拟合">Multiple Scattering 与 XAFS 拟合</h3>
+<p>经过上述的讨论，可以看到 multiple scattering 对 EXAFS 谱图的贡献可大可小，套用到自己的 EXAFS 拟合中自然而然会是：<strong>加进去有助于拟合结果，放进去；加进去没有帮助，取出来</strong>。像是之前的 K<sub>3</sub>Fe(CN)<sub>6</sub> 例子，如果拟合这个化合物不加上 multiple scattering 永远都不会拿到满意的结果。但是如果拟合 FeS<sub>2</sub>，在 <a href="https://bruceravel.github.io/demeter/documents/Artemis/examples/fes2.html">Artemis 官方演示</a> 中是经过几次尝试后，决定加入其中几个 multiple scattering 让拟合结果更好。虽然加入越来越多的 path 会让结果越来越好（变量增多），但是整个 EXAFS 拟合变量数量上限是由选择的 <em>k</em> 和 <em>R</em> 数据长度相关的，而越多的 path 需要更多的变量。换言之，我们在拟合的过程中需要平衡变量的数量，对选择 path 也是有优先级且有克制的。而这个标准就是谁加进去有用就加谁，加进去没用的都是废物不值得。就我目前知道的，如果配体里面有氰基或者是一氧化碳，一定要注意 multiple scattering。</p>
+<p>与 multiple scattering 拟合相关还有就是 constraint <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span></span></span></span><sup>2</sup>，这个讨论起来就更复杂了，我应该不会展开来讨论。建议阅读的有 Artemis 的 <a href="https://bruceravel.github.io/demeter/documents/Artemis/examples/fes2.html">Example 1: FeS2</a>, <a href="https://bruceravel.github.io/demeter/documents/Artemis/extended/ss.html">Modeling disorder</a> 以及 <a href="https://www.amazon.com/XAFS-Everyone-Scott-Calvin/dp/1439878633">《XAFS for Everyone》 </a> 中的 <strong>14.5 Multiple-Scattering Paths</strong> 章节，尤其是后者对每个类型的 multiple scattering 描述和对应建议讨论非常详细。</p>
+<p>除了对 EXAFS 拟合的影响，multiple scattering 甚至能影响 XANES，我个人不是很了解。猜测也有可能是来自强配体 (CN<sup>-</sup> or CO) 的反馈 π 键导致价电轨轨道状态被改变，从而影响了 XANES 图像。只能贴一部分链接当做拓展阅读了：</p>
+<ol>
+<li><a href="https://doi.org/10.7567/JJAPS.32S2.8"><em>Jpn. J. Appl. Phys.</em> <strong>1993</strong>, 32 8</a></li>
+<li><a href="https://pubs.acs.org/doi/10.1021/ic000274n"><em>Inorg. Chem.</em> <strong>2000</strong>, 39, 17, 3784–3790</a></li>
+<li><a href="https://doi.org/10.1002/9781118844243.ch3">Chapter 3. Real‐Space Multiple‐Scattering Theory of X‐Ray Spectra</a></li>
+<li><a href="http://scripts.iucr.org/cgi-bin/paper?S1600577515013521"><em>J. Synchrotron Rad.</em> <strong>2015</strong>, 22, 1258-1262.</a></li>
+<li><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.62.1723"><em>Phys. Rev. B</em>. <strong>2000</strong>, 62, 1723</a></li>
+</ol>
+<br/>
+<br/>
+<br/>
+<br/>
+<pre><code>感谢你的阅读
+</code></pre>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://twocircles24.github.io/post/entertainment-sharing/" class="post-title gt-a-link">
+                    我用到的付费订阅流媒体 | Entertainment Subscriptions
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">My anger matters, so does yours. </div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+                <a href="https://weibo.com/xafs/" target="_blank">
+                    <i class="fab fa-weibo gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+                <a href="https://t.me/twocircles24" target="_blank">
+                    <i class="fab fa-telegram gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+                <a href="https://mp.weixin.qq.com/s/iriyLldckgQST4zTIz2_YQ" target="_blank">
+                    <i class="fab fa-weixin gt-c-content-color-first"></i>
+                </a>
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://twocircles24.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
