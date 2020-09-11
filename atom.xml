@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-09-10T23:14:36.733Z</updated>
+    <updated>2020-09-11T00:53:45.231Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -15,13 +15,13 @@
         <id>https://twocircles24.github.io/post/multiple-scattering/</id>
         <link href="https://twocircles24.github.io/post/multiple-scattering/">
         </link>
-        <updated>2020-09-10T08:14:30.000Z</updated>
+        <updated>2020-09-10T02:14:30.000Z</updated>
         <summary type="html"><![CDATA[<p>(12 min 30 s reading) 可能很多人看到过，但是从没细想过的一个问题~</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>(12 min 30 s reading) 可能很多人看到过，但是从没细想过的一个问题~</p>
 <!-- more -->
 <br/>
-<p><strong>视频：</strong></p>
+<p><strong>视频：《Multiple Scattering | XAFS数据处理参数讨论》(<a href="https://www.bilibili.com/video/bv1nf4y1D7Cd">Bilibili</a>, <a href="">YouTube</a>)</strong></p>
 <br/>
 <br/>
 <p><strong>阅读提示1：该文只用于参考和建议，非标准。各个课题遭遇的数据差异巨大，我的建议不一定适合你的数据处理，请谨慎使用。</strong></p>
