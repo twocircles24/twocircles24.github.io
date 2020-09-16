@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>你问我不一定答 | 第一期 | 两个圈 Two Circles</title>
+<title>你问我不一定答 | 第三期 | 两个圈 Two Circles</title>
 
 <link rel="shortcut icon" href="https://twocircles24.github.io/favicon.ico?v=1600233722767">
 
@@ -117,11 +117,11 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    你问我不一定答 | 第一期
+                    你问我不一定答 | 第三期
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2020-08-02 ·
+                        · 2020-09-15 ·
                     </time>
                     
                         <a href="https://twocircles24.github.io/tag/FgeW1spXY/" class="post-tags">
@@ -134,108 +134,114 @@
                     
                 </div>
                 <div class="post-content">
-                    <p>(5 min 38 s reading) 这是我目前想到比较合适且自由度较高的一种方式来归纳大家问过的问题。也许你的问题已经有人问过了。</p>
+                    <p>(6 min 34 s reading)</p>
 <!-- more -->
 <br/>
 <p><strong>阅读提示1：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
 <p><strong>阅读提示2：问题来源于 B 站 or 微博，问题有可能被重新整理，先后顺序不代表任何重要程度，如果你的提问被收入但觉得不合适，请联系我。</strong></p>
 <hr>
 <blockquote>
-<p>Q1: 有没有相关书推荐看一下</p>
+<p>Q21. 能用网上分享的 XAFS 数据来拟合吗？（包括 XANES 或者 EXAFS）</p>
 </blockquote>
-<p><strong>A1:</strong></p>
+<p><strong>A21:</strong></p>
 <ol>
-<li>参考下<a href="https://twocircles24.github.io/post/xafs-xue-xi-tui-jian-shu-ji-wen-xian/">《安利一些XAFS读物》</a>。</li>
+<li><strong>不可以拿来做任何的拟合，包含但不限于：LCF、PCA、EXAFS 拟合（Artemis）等等</strong>；</li>
+<li>具体原因参考<a href="https://twocircles24.com/post/energy-calibration/">《能量校正 Calibration》</a>。</li>
 </ol>
 <br/>
 <br/>
 <blockquote>
-<p>Q2：张三材料在R空间中出峰位置在 1.4 Å，我需要调节 Rbkg 的值吗？如果不调节直接在 Artemis 里面拟合，那个R范围太小了，独立参数不够 4 个，增加 Rmax 的值拟合效果又不好</p>
+<p>Q22. 比较不同批次得到的实验数据，应该如何选择 Alignment vs. Calibration？</p>
 </blockquote>
-<p><strong>A2:</strong></p>
+<p><strong>A22:</strong></p>
 <ol>
-<li><strong>Rbkg</strong> 的通常的选择标准是是 1.0 Å 或者是第一层的一半 (1.4 Å /2 = 0.7 Å)，很少有大于 1.0 Å 的情况；</li>
-<li>在 <em>Artemis</em> 里面，<strong>Rmin</strong> 的选择是受限于 <em>Athena</em> 里面的 <strong>Rbkg</strong>，也就是 <strong>Rmin</strong> ≥ <strong>Rbkg</strong>。例如张三选择了 1.4 Å，他在 <em>Artemis</em> 里只能从 1.4 Å 开始拟合；</li>
-<li>要解决独立参数不够，需要回到 <em>Athena</em> 里重新设定 <strong>Bbkg</strong>。然后在 <em>Artemis</em> 里面加载修改过后的数据进行拟合。</li>
+<li>比较不同批次的数据先把Fe foil(各自reference)先校正好到7112 eV，把校正后的Fe foil放在一起比较是不是一致的。</li>
+<li>如果确认Fe foil两次实验都是一致的，开始比较样品。</li>
+<li>Calibration相当于是用绝对值（reference的E0）来调整样品的位置，Alignment是利用同一样品（可reference可未知样品）的图像来对齐。</li>
+<li>更多讨论参考<a href="https://twocircles24.com/post/energy-calibration/">《能量校正 Calibration》</a>。</li>
 </ol>
 <br/>
 <br/>
 <blockquote>
-<p>Q3. 如果张三现在只有一张归一化以后的 oringi图，没有原始数据。横坐标是Photon Energy 纵坐标是Normatlized intensity(arb. units)，但是可以知道每一条曲线的点的具体坐标，这种情况下可以分析吗？</p>
+<p>Q23. 有没有关于过渡元素E0与价态之间关系的理论或者计算方面的文献啊，能在文章里引用的那种？</p>
 </blockquote>
-<p><strong>A3:</strong></p>
+<p><strong>A23:</strong></p>
+<p>总的来说没有一个review可以直接能套所有的E<sub>0</sub> vs. 价态讨论。你可以直接引比较新，高IF 跟你课题类似（同一元素）的文章。另外一种是可以按照同一元素来搜关键词，比如搜索 Fe XANES oxidation states，找两篇比较详细讨论你需要论点文章的来引用，不一定限于类似结构。因为元素与元素之间的 XANES 和其氧化态的关联是有差异的。XANES 的解读目前是极其复杂又不完善，所以很难有 comprehensive review 来引用。</p>
+<br/>
+<br/>
+<blockquote>
+<p>Q24. 在 XANES 一阶微分中出现了两个峰，第一个峰一定是 pre-edge 造成的吗？</p>
+</blockquote>
+<p><strong>A24:</strong></p>
+<p>确实不一定是，在<a href="https://www.bilibili.com/video/BV1yz411e7gu">《Athena新手教程 | 同步辐射吸收谱(XAS)数据处理》</a>有人提出来了自己的课题里面出现了混合物情况，里面的 A 组分和 B 组分各贡献了一个峰，所以最后还是选择了第一个峰作为 E<sub>0</sub>。这种情况完全有可能出现。<br>
+其实除了混合物的情况会混淆 E<sub>0</sub> 的选择，我自己知道的还可能有metal-Cl 的键也会影响 edge 位置，还要再出一个“假 pre-edge peak”，某些元素不会很明显，有的就会比如 Pt。不过说到底对于 EXAFS来 说，先定一个再去 Artemis 里面看就是了，不行再换。</p>
+<br/>
+<br/>
+<blockquote>
+<p>Q25. 视频<a href="https://www.bilibili.com/video/BV1364y1F7tw?pop_share=1">《能量校正 Calibration》</a>中提到S的能量较弱，短时间内仪器的能量偏移较小，需要用Na2SO3进行校正.如果我同一批测得标准样品和未知样品，他们的能量偏移应该是一致的，我可不可以直接用他们来拟合价态？</p>
+</blockquote>
+<p><strong>A25:</strong></p>
 <ol>
-<li>张三可。取出数据保存为 txt，然后到 <em>Athena</em> 里面 <u>import data</u>。Y 轴对 Y 轴，X 轴对 X 轴。把 <u>data type</u> 选为 <strong>norm(E)</strong>；</li>
-<li>在 <em>Athena</em> 界面中，因为已经加载为 <strong>norm(E)</strong>，无法修改做背景消除和归一化操作，但可以修改 <u>Fourier Transform</u> 的参数。</li>
+<li>大写的不可以。</li>
+<li>如果不进行能量校正，得到的 E<sub>0</sub> 值会跟其他文献里面的对不上号。比如大部分人汇报 Fe foil 是 7,112 eV，我不校正就是 7113.3 eV。那我发文章出去报后面这个数不是被公开处刑？</li>
+<li>LCF 拟合更多是看强度的吻合程度，在假定偏移程度一样的前提下，确实不校正可能对拟合的结果（主要是每个组份的比例）影响不大；但是你图偏移了，把它写成文章发出去遇到懂的审稿人不会被处刑？</li>
 </ol>
 <br/>
 <br/>
 <blockquote>
-<p>Q4. 在 <em>Athena</em> 一开始加载原始数据的时候。能量列和分子、分母的模块出现了十几个方框，张三将能量选为 1，分子分母分别选择 I<sub>0</sub>、I<sub>t</sub> 得到的谱图有非常多的峰，并且看不到明显的吸收边，</p>
+<p>Q26.为啥需要拟合数据呢？比如我拿到一组数据，直接通过 Athena 统一标定后，输出结果，应该就可以了吧？ 那么后续用Artemis拟合图以及搜寻cif卡片参比的意义在哪里呢？</p>
 </blockquote>
-<p><strong>A4:</strong></p>
+<p><strong>A26:</strong></p>
 <ol>
-<li>由于各个同步辐射实验室的程序不同，它们写入 XAFS 的数据也是会有差别的。所以经常会出现“I<sub>0</sub>”不是真 I<sub>0</sub> 的事情，不能完全相信文本里面的标签；</li>
-<li>最理想的情况是应当询问 beamline 的工作人员或者是采样的人，搞清楚到底哪一列是什么数据；</li>
-<li>如果第二条无法实现，那么先回想一下这个数据用的是吸收谱还是荧光谱，再回到数据文本里面去寻找 or 猜测。</li>
+<li>Artemis 的作用是为了得到邻近原子数量+距离，Athena得不到。如果你只是寻求 XANES 信息或仅仅展示数据，Athena 足矣。</li>
 </ol>
 <br/>
 <br/>
 <blockquote>
-<p>Q5: 在能量矫正的时候，第一微分图里面第一个峰不是最强峰，那么该选择第一个峰还是最强峰？</p>
+<p>Q27. 一旦保存（save as）后就显示软件假死，无法操作，这是什么情况呢？</p>
 </blockquote>
-<p><strong>A5:</strong></p>
+<p><strong>A27:</strong></p>
 <ol>
-<li><strong>E<sub>0</sub></strong> 位置的定义是人为的，所以理论来说这两个地方都可以。到后期做 <em>Artemis</em> 拟合会有修正项。</li>
-<li>如果第一个峰不是最强的，我猜测是有 <strong>pre-edge</strong>，那么我个人习惯是不用第一个峰，而是用最强的。因为 <strong>pre-edge</strong> 是由于 <strong>1s-nd</strong> 跃迁，而真正的 XANES 是 <strong>1s-np</strong> 跃迁。</li>
+<li>重开，重启，清caches，重装，少加两个数据，换版本。</li>
 </ol>
 <br/>
 <br/>
 <blockquote>
-<p>Q6: 那个E<sub>0</sub>和Calibrate的E有啥区别呢</p>
+<p>Q28. xafs中的论文大概有百分之九十的垃圾。</p>
 </blockquote>
-<p><strong>A6:</strong></p>
+<p><strong>A28:</strong></p>
 <ol>
-<li><u>Calibrate Energy</u> 通常是指利用校正一个已知样品的 <strong>E<sub>0</sub></strong>，比如纯金属 （metal foil)，从而修正自己未知样品的能量偏移。因为在实验中，能量可能存在偏移。可以类比在 <a href="https://en.wikipedia.org/wiki/X-ray_photoelectron_spectroscopy">XPS</a> 技术中大家经常用 Carbon 1s 的 284.8 eV 来进行校正。</li>
-<li><strong>E<sub>0</sub></strong> 理论来讲是样品受到X射线后，内层电子吸收射线后逃逸出的阈值，然而在实际经验中大家是人为在 <em>Athena</em> 里面人为定义这个阈值，也就是 <em>Athena</em> 里面的 <strong>E<sub>0</sub></strong>。完了之后去 <em>Artemis</em> 里面微调。</li>
+<li>我个人觉得是看出于什么样的目的发表的吧。对于这种表征，质量好的文章更多常见在小期刊上面，像 JPCC。要发IF高的刊物，表征只是一个必要不充分条件，讲的故事才是核心。但是站在不了解内情的局外人来看，以为表征是充分必要的，再加上学习成本较高，导致误解越来越深，越来越多的人对技术展开了盲目的追求。</li>
 </ol>
 <br/>
 <br/>
 <blockquote>
-<p>Q7: FEFF 或者是 Artemis 中的 .inp 文件可以自己进行修改吗？或者自己构建的模型，怎么可以得到相应的 inp 文件？</p>
+<p>Q29. 对于单原子催化剂要通过建模得到原子坐标等数据来得到inp文件。有很多单原子催化剂给出R空间拟合数据之后都会给出催化剂的球棍模型，而这个球棍模型大多是平面的，但是张三自己作图的时候边缘不可避免的会自动加入氢原子而保证碳四键，最后得到就是非平面的，不知道 x 教授是如何操作的？请问如何得到平面的构型？我用chemdraw画的，有没有容易上手的软件推荐一下来得到单原子的inp。</p>
 </blockquote>
-<p><strong>A7:</strong></p>
+<p><strong>A29:</strong></p>
 <ol>
-<li>可。保存为 <strong>inp</strong> 文件，然后用 <em>notepad</em> 打开直接文本修改。也可以拖到 <em>Originlab</em> 里面直接好给你断列做点加减法；</li>
-<li>如果想在 <em>Artemis</em> 里面加载自己的模型，最低要求是需要拿到 <strong>xyz</strong> 文件。利用 <em>Vesta</em> 软件打开，然后保存为 <strong>cif</strong> 文件格式即可去 <em>Artemis</em> 加载了。</li>
+<li>单原子催化剂 EXAFS 拟合不需要建模拟合，借鉴现有的分子晶体结构就行；.</li>
+<li>催化剂球棍模型是通过其他拟合计算得到的，EXAFS 的拟合数据 R 只是辅助说明理论计算和EXAFS证据是相互吻合的；</li>
+<li>单原子结构比如 Fe-N4 @ C 在 graphite 上面结构，一般是从 pure graphite 改过来的，从零开始画肯定难；3. ChemDraw 可以画，应该需要 disable 掉某些自动功能；</li>
+<li>如果画 3D，我反而推荐用 xyz 文件去 Vesta 画。</li>
 </ol>
 <br/>
 <br/>
 <blockquote>
-<p>Q8: 张三 DFT计算的 xyz 文件用vesta导出了cif，但是在artemis里运行feff时，显示 you have defined ipot 2 but not used it in the atom list，是为什么呢？2也是中心原子的元素</p>
+<p>Q30. 张三根据教程对数据进行了分析，得到的结果是接近绿色的，但是其中s0的平方和N都是负数，其他的一些数据满足您讲的条件，请问这样的数据配位数N可以取绝对值来使用嘛？如果不行，我需要调什么参数呢。</p>
 </blockquote>
-<p><strong>A8:</strong></p>
+<p><strong>A30:</strong></p>
 <ol>
-<li>导出来 <strong>inp</strong> 文件，用 <em>Excel</em> 或者是 <em>Orginlab</em> 来修改。把 <strong>ipot 2</strong> 的位置删掉后，再让后面的 ipots 往前推一位。完了再复制回 FEFF 窗口运行就行了；</li>
-<li>这是一个常见的问题，不要害怕。</li>
+<li>不可以，绿色只是代表你出来的线符合实验数据，但是并不说明每个参数有意义。所以绿色 ≠ 好 fitting；</li>
+<li>你可以尝试固定 S<sub>0</sub><sup>2</sup> 或者是 N 为正数里面一个合理的数值再看另外一个拟合得到的结果；</li>
+<li>关于变量调整相关视频，请参考<a href="https://www.bilibili.com/video/BV1Mk4y1B7Vz">《从EXAFS方程讨论拟合变量》</a>。</li>
 </ol>
-<blockquote>
-<p>Q9: webatom这个网页打不开是因为需要翻墙吗</p>
-</blockquote>
-<p><strong>A9:</strong></p>
-<ol>
-<li>不，是服务器垃圾。但也许科学上网可以一试；</li>
-<li>注意上传的文件得放在全英文的路径中。</li>
-</ol>
-<blockquote>
-<p>Q10: 多个壳层的path，可以从不同晶体文件里获得吗？</p>
-</blockquote>
-<p><strong>A10:</strong></p>
-<ol>
-<li>思路以结构类似为准。先保证结构足够类似，原子距离足够接近；</li>
-<li>优先一个晶体能全部拿下，那是最好的；</li>
-<li>如果一个晶体拿不下（常见情况），完全可以取不同的晶体结构，但依然需要满足条件 1。</li>
-</ol>
+<br/>
+<br/>
+<br/>
+</br>
+<pre><code>感谢你的阅读。
+</code></pre>
 
                 </div>
             </article>
@@ -244,8 +250,8 @@
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://twocircles24.github.io/post/xafs-reading/" class="post-title gt-a-link">
-                    安利一些XAFS读物
+                <a href="https://twocircles24.github.io/post/xafs-principle/" class="post-title gt-a-link">
+                    从应用出发，闲聊 EXAFS 的原理及思路
                 </a>
             </div>
         

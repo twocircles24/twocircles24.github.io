@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-09-13T23:48:52.130Z</updated>
+    <updated>2020-09-16T05:22:08.407Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -10,6 +10,124 @@
     <logo>https://twocircles24.github.io/images/avatar.png</logo>
     <icon>https://twocircles24.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 两个圈 Two Circles</rights>
+    <entry>
+        <title type="html"><![CDATA[你问我不一定答 | 第三期]]></title>
+        <id>https://twocircles24.github.io/post/youask-ianswer-3/</id>
+        <link href="https://twocircles24.github.io/post/youask-ianswer-3/">
+        </link>
+        <updated>2020-09-15T14:21:55.000Z</updated>
+        <summary type="html"><![CDATA[<p>(6 min 34 s reading)</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>(6 min 34 s reading)</p>
+<!-- more -->
+<br/>
+<p><strong>阅读提示1：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
+<p><strong>阅读提示2：问题来源于 B 站 or 微博，问题有可能被重新整理，先后顺序不代表任何重要程度，如果你的提问被收入但觉得不合适，请联系我。</strong></p>
+<hr>
+<blockquote>
+<p>Q21. 能用网上分享的 XAFS 数据来拟合吗？（包括 XANES 或者 EXAFS）</p>
+</blockquote>
+<p><strong>A21:</strong></p>
+<ol>
+<li><strong>不可以拿来做任何的拟合，包含但不限于：LCF、PCA、EXAFS 拟合（Artemis）等等</strong>；</li>
+<li>具体原因参考<a href="https://twocircles24.com/post/energy-calibration/">《能量校正 Calibration》</a>。</li>
+</ol>
+<br/>
+<br/>
+<blockquote>
+<p>Q22. 比较不同批次得到的实验数据，应该如何选择 Alignment vs. Calibration？</p>
+</blockquote>
+<p><strong>A22:</strong></p>
+<ol>
+<li>比较不同批次的数据先把Fe foil(各自reference)先校正好到7112 eV，把校正后的Fe foil放在一起比较是不是一致的。</li>
+<li>如果确认Fe foil两次实验都是一致的，开始比较样品。</li>
+<li>Calibration相当于是用绝对值（reference的E0）来调整样品的位置，Alignment是利用同一样品（可reference可未知样品）的图像来对齐。</li>
+<li>更多讨论参考<a href="https://twocircles24.com/post/energy-calibration/">《能量校正 Calibration》</a>。</li>
+</ol>
+<br/>
+<br/>
+<blockquote>
+<p>Q23. 有没有关于过渡元素E0与价态之间关系的理论或者计算方面的文献啊，能在文章里引用的那种？</p>
+</blockquote>
+<p><strong>A23:</strong></p>
+<p>总的来说没有一个review可以直接能套所有的E<sub>0</sub> vs. 价态讨论。你可以直接引比较新，高IF 跟你课题类似（同一元素）的文章。另外一种是可以按照同一元素来搜关键词，比如搜索 Fe XANES oxidation states，找两篇比较详细讨论你需要论点文章的来引用，不一定限于类似结构。因为元素与元素之间的 XANES 和其氧化态的关联是有差异的。XANES 的解读目前是极其复杂又不完善，所以很难有 comprehensive review 来引用。</p>
+<br/>
+<br/>
+<blockquote>
+<p>Q24. 在 XANES 一阶微分中出现了两个峰，第一个峰一定是 pre-edge 造成的吗？</p>
+</blockquote>
+<p><strong>A24:</strong></p>
+<p>确实不一定是，在<a href="https://www.bilibili.com/video/BV1yz411e7gu">《Athena新手教程 | 同步辐射吸收谱(XAS)数据处理》</a>有人提出来了自己的课题里面出现了混合物情况，里面的 A 组分和 B 组分各贡献了一个峰，所以最后还是选择了第一个峰作为 E<sub>0</sub>。这种情况完全有可能出现。<br>
+其实除了混合物的情况会混淆 E<sub>0</sub> 的选择，我自己知道的还可能有metal-Cl 的键也会影响 edge 位置，还要再出一个“假 pre-edge peak”，某些元素不会很明显，有的就会比如 Pt。不过说到底对于 EXAFS来 说，先定一个再去 Artemis 里面看就是了，不行再换。</p>
+<br/>
+<br/>
+<blockquote>
+<p>Q25. 视频<a href="https://www.bilibili.com/video/BV1364y1F7tw?pop_share=1">《能量校正 Calibration》</a>中提到S的能量较弱，短时间内仪器的能量偏移较小，需要用Na2SO3进行校正.如果我同一批测得标准样品和未知样品，他们的能量偏移应该是一致的，我可不可以直接用他们来拟合价态？</p>
+</blockquote>
+<p><strong>A25:</strong></p>
+<ol>
+<li>大写的不可以。</li>
+<li>如果不进行能量校正，得到的 E<sub>0</sub> 值会跟其他文献里面的对不上号。比如大部分人汇报 Fe foil 是 7,112 eV，我不校正就是 7113.3 eV。那我发文章出去报后面这个数不是被公开处刑？</li>
+<li>LCF 拟合更多是看强度的吻合程度，在假定偏移程度一样的前提下，确实不校正可能对拟合的结果（主要是每个组份的比例）影响不大；但是你图偏移了，把它写成文章发出去遇到懂的审稿人不会被处刑？</li>
+</ol>
+<br/>
+<br/>
+<blockquote>
+<p>Q26.为啥需要拟合数据呢？比如我拿到一组数据，直接通过 Athena 统一标定后，输出结果，应该就可以了吧？ 那么后续用Artemis拟合图以及搜寻cif卡片参比的意义在哪里呢？</p>
+</blockquote>
+<p><strong>A26:</strong></p>
+<ol>
+<li>Artemis 的作用是为了得到邻近原子数量+距离，Athena得不到。如果你只是寻求 XANES 信息或仅仅展示数据，Athena 足矣。</li>
+</ol>
+<br/>
+<br/>
+<blockquote>
+<p>Q27. 一旦保存（save as）后就显示软件假死，无法操作，这是什么情况呢？</p>
+</blockquote>
+<p><strong>A27:</strong></p>
+<ol>
+<li>重开，重启，清caches，重装，少加两个数据，换版本。</li>
+</ol>
+<br/>
+<br/>
+<blockquote>
+<p>Q28. xafs中的论文大概有百分之九十的垃圾。</p>
+</blockquote>
+<p><strong>A28:</strong></p>
+<ol>
+<li>我个人觉得是看出于什么样的目的发表的吧。对于这种表征，质量好的文章更多常见在小期刊上面，像 JPCC。要发IF高的刊物，表征只是一个必要不充分条件，讲的故事才是核心。但是站在不了解内情的局外人来看，以为表征是充分必要的，再加上学习成本较高，导致误解越来越深，越来越多的人对技术展开了盲目的追求。</li>
+</ol>
+<br/>
+<br/>
+<blockquote>
+<p>Q29. 对于单原子催化剂要通过建模得到原子坐标等数据来得到inp文件。有很多单原子催化剂给出R空间拟合数据之后都会给出催化剂的球棍模型，而这个球棍模型大多是平面的，但是张三自己作图的时候边缘不可避免的会自动加入氢原子而保证碳四键，最后得到就是非平面的，不知道 x 教授是如何操作的？请问如何得到平面的构型？我用chemdraw画的，有没有容易上手的软件推荐一下来得到单原子的inp。</p>
+</blockquote>
+<p><strong>A29:</strong></p>
+<ol>
+<li>单原子催化剂 EXAFS 拟合不需要建模拟合，借鉴现有的分子晶体结构就行；.</li>
+<li>催化剂球棍模型是通过其他拟合计算得到的，EXAFS 的拟合数据 R 只是辅助说明理论计算和EXAFS证据是相互吻合的；</li>
+<li>单原子结构比如 Fe-N4 @ C 在 graphite 上面结构，一般是从 pure graphite 改过来的，从零开始画肯定难；3. ChemDraw 可以画，应该需要 disable 掉某些自动功能；</li>
+<li>如果画 3D，我反而推荐用 xyz 文件去 Vesta 画。</li>
+</ol>
+<br/>
+<br/>
+<blockquote>
+<p>Q30. 张三根据教程对数据进行了分析，得到的结果是接近绿色的，但是其中s0的平方和N都是负数，其他的一些数据满足您讲的条件，请问这样的数据配位数N可以取绝对值来使用嘛？如果不行，我需要调什么参数呢。</p>
+</blockquote>
+<p><strong>A30:</strong></p>
+<ol>
+<li>不可以，绿色只是代表你出来的线符合实验数据，但是并不说明每个参数有意义。所以绿色 ≠ 好 fitting；</li>
+<li>你可以尝试固定 S<sub>0</sub><sup>2</sup> 或者是 N 为正数里面一个合理的数值再看另外一个拟合得到的结果；</li>
+<li>关于变量调整相关视频，请参考<a href="https://www.bilibili.com/video/BV1Mk4y1B7Vz">《从EXAFS方程讨论拟合变量》</a>。</li>
+</ol>
+<br/>
+<br/>
+<br/>
+</br>
+<pre><code>感谢你的阅读。
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[从应用出发，闲聊 EXAFS 的原理及思路]]></title>
         <id>https://twocircles24.github.io/post/xafs-principle/</id>
@@ -1017,58 +1135,6 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
 <br/>
 <pre><code>感谢你的阅读。
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[学习 XAFS 的困境]]></title>
-        <id>https://twocircles24.github.io/post/why-xafs-difficult/</id>
-        <link href="https://twocircles24.github.io/post/why-xafs-difficult/">
-        </link>
-        <updated>2020-08-11T21:42:10.000Z</updated>
-        <summary type="html"><![CDATA[<p>(7 min 50 s reading) 写着写着变成了吐槽大会……</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>(7 min 50 s reading) 写着写着变成了吐槽大会……</p>
-<!-- more -->
-<br/>
-<br/>
-<p><strong>阅读提示1：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
-<p><strong>阅读提示2：问题来源于B站 or 微博，问题有可能被重新整理。如果你的提问被收入但觉得不合适，请联系我。</strong></p>
-<p><strong>阅读提示3：我的一些回答可能会很有争议。如果你不喜欢，那就不喜欢。</strong></p>
-<hr>
-<br/>
-<br/>
-<br/>
-<h3 id="学-xafs-沉不住气">学 XAFS “沉不住气”</h3>
-<p>    XAFS 在我看来是高度集成的学科交叉技术，学习到位了你可以掌握的技能点包含但不限于化学，生物，环境，物理（量子，光学），工程（机械，电路，自动化，3D 打印），计算机（Python，算法，machine learning）等等等等。需要多维度的知识层面来了解这门技术，而且越学你觉得你越不懂，越不懂你会更想去学在你专业以外的知识。很多人看到要学这么多，就差没直接两眼一黑晕过去，下一秒就被劝退。<strong>这门技术耗时耗力，投入（尤其是前期）巨大，全凭自觉而且收效难以预估。</strong></p>
-<p>    每当有人问到“学 XAFS 要多久”、“我这套拟合是不是就完事了”这样的问题，我其实很难回答。因为我依然还在面对几年前处理的数据的时候可以得到更多的收获。可惜的是不少老板都对这个技术没什么概念，以为就跟自家实验室里面的红外谱一样，看看两三天就好了。从其他地方拿到数据张嘴就让学生处理出来一套能发文章的 EXAFS 拟合，接着又着急想发文章，随便凑合下感觉看着还行就发了。这种<strong>急功近利的浮躁心态</strong>会逼迫学生无法静下心来处理数据。我一直在重复说“<strong>看了我这几个视频根本就不能算作学会了 XAFS 数据处理</strong>”，这有很长的一段路要走。</p>
-<br/>
-<br/>
-<h3 id="同步辐射资源稀缺">同步辐射资源稀缺</h3>
-<p>    即使是在美国，同步辐射的资源也是削尖脑袋去竞争的。我对中国的情况不太了解，听说竞争相当惨烈。 以美国国家实验室为例，作为<a href="https://www.energy.gov/national-laboratories">美国能源部</a>砸钱开办的联邦设施，它们是需要每年被行政部门考核“业绩”。这所谓的 KPI 自然是用发表的文章来衡量的。如果做的不好也是有可能被关的，在 2017 - 2018 年遭遇的科研基金被 Trump Administration 削减时期，某个美国国家同步辐射实验室就被传闻要关闭掉，因为拼不过其他家的业绩。在这样“僧多粥少”和“KPI 压力”的双重因素下，国家实验室只可能选<strong>可以尽快发出重量级文章的课题</strong>。</p>
-<p>    B站用户 <a href="https://space.bilibili.com/240773439">@zzzzve</a> 也分享了一些<a href="https://www.bilibili.com/audio/au1758284?type=3">申请机时的经验</a>：</p>
-<blockquote>
-<p>国内目前测XAS的光源主要有合肥、北京、上海、台湾四个。其中合肥光源是软线，北京和上海主要是硬线，台湾光源是软硬都有。如果你现在想要申请测试XAS，以下几点供参考：<br>
-    1.合肥和北京你就不用费力扔本子了，拿不到的。<br>
-    2.上海可以一试，但是竞争很激烈，看本子的同时要看帽子和paper。<br>
-    3.台湾光源是个不错的选择，一是它的申请人没那么多，竞争压力小一些；二是那边能测XAS的beamline很多，而且有快扫模式。但是台湾申请也会看申请人的帽子(是的没错)，同时行程确实比较繁琐。</p>
-</blockquote>
-<p>    在自己都没机会见到仪器的情况下，又如何能真的学到其中的道道呢？</p>
-<br/>
-<br/>
-<h3 id="关系铸就了高门槛">“关系”铸就了高门槛</h3>
-<p>    既然资源稀缺又有时效考核，同步辐射实验室选课题的标准除了要有足够吸引 (broad social interest)，更要看课题组是否“熟练这门技术”。他们比任何人都清楚要培养一个能独立在国家实验室操作的学生成长周期是按年来计算的，实验室内的工作人员也不负责教导菜鸟。如果你所在的课题组从来就没有接触过同步辐射实际操作，对方审核课题 (proposal) 的时候也会留意到这一点的（扣分项）。</p>
-<p>    像是我的导师从 03 年的时候就跟同步辐射实验室打交道，再靠各位前辈们挣下来的名声，我一进组就不需要担忧“拿不拿得到机时”这样的问题。第一次去同步辐射实验室的时候工作人员对我说的就是”啊你是 xxx 组新来的啊，xxx 师兄/姐教你就好了，xxx 组老熟人了。“这样的”关系“不是所有课题组有条件建立起来的，于是另外一条路就是跟已经有跟同步辐射实验室稳定合作关系的人打交道了，这样门槛就会低一些。我隔壁的课题组也是一开始做催化剂，主要用低温 in-situ 红外的技术出了好几篇不错的文章。接着就跟同步辐射实验室的课题组打上了交道，发了 <em>JACS</em>、<em>Nature Material</em>、<em>Nature Chemistry</em> 等一打文章，这就彻底在同步辐射实验室里面建立起了非常稳固的合作关系。但无论”组内培养“还是”对外合作“，门槛都不低。前者要求多年的经验铺路，后者要求文章数量质量。</p>
-<br/>
-<br/>
-<h3 id="xafs-依赖实验经验">XAFS 依赖实验经验</h3>
-<p>    跟其他表征相比， XAFS 存在“实验影响数据处理”的难点。举个例子，假设样品浓度是 10 wt% 但用了荧光检测器 (fluorescence data)，谱图会存在荧光自吸收的问题 (<a href="https://bruceravel.github.io/demeter/aug/process/sa.html">self-absorption</a>)。这个来源于实验操作的问题是不会在数据处理的过程中轻易发现的。只学数据处理不顾实验细节，出来的结果很有误导性，或者拟合结果出现很诡异的数值。 同步辐射实验不像 <a href="https://en.wikipedia.org/wiki/Inductively_coupled_plasma_atomic_emission_spectroscopy">ICP-AES</a> 或者是 <a href="https://www.jeol.co.jp/en/products/nmr/basics.html#:~:text=NMR%20is%20an%20abbreviation%20for,in%20a%20powerful%20magnetic%20field.">solution-state NMR</a>，即使不亲手操作独自处理数据也不会出现太多问题。再结合之前的两个点，形成了一个闭环，外面的人很难能加入到这个“环”里面。</p>
-<p>    我也见过“A 做样品，B 采 XAFS数据，C 来拟合”的合作模式，中间出现了太多的问题。文章到最后发出来了，但是数据质量真是一言难尽……A 全程“我是谁，我在哪里，我在做什么”的状态。<br>
-  <br>
-<br/><br>
-<br/></p>
-<h3 id="迷信同步辐射技术">迷信“同步辐射技术”</h3>
-<p>    哎老生常谈了……完全理解文章指标这种不可抗力因素。不得不说，有些不了解同步辐射的人觉得用了一个同步辐射的数据就能把期刊质量给拉上去了，不在该用的地方用上那只能叫“灌水”好吗……这门技术没有想象中的那么厉害，能给出的信息也是有限的。</p>
-<p>    真的要发到高影响的文章，<strong>idea 始终是第一位，broad interest 是第二位</strong>。你见过有因为光做 EXAFS 的人发到 <em>Nature</em> 吗？<strong>一篇好的文章是一个好的故事</strong>，同步辐射只是其中服务故事剧情的一环，用的恰到好处那就是神剧情，硬塞进去那就算剧情崩坏。就跟“科幻特效”一样，塞到《流浪地球》和《上海堡垒》能是一回事？不要太迷信这门技术，不少人 XAFS 数据拿到后陷入了“这个到底有什么用”的灵魂拷问。这个问题应该是在做实验之前问，而非之后。花大力气处理得到 XAFS 能给你的和其他表征 (XPS，XRD，TEM etc.) 是同一个，甚至是更少。哎……真的没必要勉强自己上这套数据了，就像国产剧热衷于把 10 集的剧情注水成 80 集。</p>
 ]]></content>
     </entry>
 </feed>
