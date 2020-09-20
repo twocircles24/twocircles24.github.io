@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-09-20T23:26:30.607Z</updated>
+    <updated>2020-09-20T23:27:14.879Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -15,14 +15,14 @@
         <id>https://twocircles24.github.io/post/tutorial-support/</id>
         <link href="https://twocircles24.github.io/post/tutorial-support/">
         </link>
-        <updated>2020-09-20T08:26:23.000Z</updated>
+        <updated>2020-09-20T08:27:08.000Z</updated>
         <summary type="html"><![CDATA[<p>(10 min 40 s reading) 我如何在现有基础上尽可能减少开销并进行教程制作。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>(10 min 40 s reading) 我如何在现有基础上尽可能减少开销并进行教程制作。</p>
 <!-- more -->
 <br/>
 <br/>
-<p>因为 WFH (work from home) 开始做视频教程，横向对比网上相关（少得可怜的）中文资源，自认为做出来的东西还算及格分以上。虽然说内容是决定视频质量的第一要素，但围绕着内容可以做出一些努力，使得体验更进一步。作为一个（伪）学生党，我对这方面的投入算是比较节省。在这里总结一份清单来介绍下这几个月做 XAFS 教程用到的软件/硬件。</p>
+<p>因为 WFH (work from home) 开始做视频教程，横向对比网上相关（少得可怜的）中文资源，自认为做出来的东西还算及格分以上。虽然说内容是决定视频质量的第一要素，但围绕着内容可以做出努力，使得体验更好。作为（伪）学生党，我对这方面的投入算是比较节省。在这里总结一份清单来介绍下这几个月做 XAFS 教程用到的软件/硬件。</p>
 <h2 id="硬件">硬件</h2>
 <h3 id="1-画面nividia-gtx-1070-dual-4k-monitors">1. 画面：Nividia GTX 1070 + Dual 4K Monitors</h3>
 <p>几年前购买了台式机后，它就成为了我的主要生产力工具。 <s>花了快一万人民币买的 ThinkPad X1 Carbon 在家沦为看B站的工具</s> 教程均是在台式机上操作完成的。笔记本尤其是超极本，在我看来不太适合制作视频教程，一方面是配置确实受限，另一方面屏幕太小，可展示的空间不尽如人意。读博期间能有个台式机处理数据和写论文，我认为可以排 Todo List Top 3。</p>
