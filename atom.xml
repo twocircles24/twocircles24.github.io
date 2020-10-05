@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-09-20T23:27:14.879Z</updated>
+    <updated>2020-10-05T22:14:00.175Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -10,6 +10,100 @@
     <logo>https://twocircles24.github.io/images/avatar.png</logo>
     <icon>https://twocircles24.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 两个圈 Two Circles</rights>
+    <entry>
+        <title type="html"><![CDATA[与 XAFS Collaboration 沟通时需要什么样的信息]]></title>
+        <id>https://twocircles24.github.io/post/talk-with-your-collaborations/</id>
+        <link href="https://twocircles24.github.io/post/talk-with-your-collaborations/">
+        </link>
+        <updated>2020-10-05T07:13:53.000Z</updated>
+        <summary type="html"><![CDATA[<p>做成文字版方便阅读。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>做成文字版方便阅读。</p>
+<!-- more -->
+<br/>
+<br/>
+<p>之前已经发成视频  (<a href="https://www.bilibili.com/video/BV1Tv411q79R">Bilbili</a>, <a href="https://youtu.be/-ZiZGUdUTs4">YouTube</a>)，后来想想觉得还是应该做成文字版当成一个 To-do List 更加合适。</p>
+<p><strong>Disclaimer: 该文仅为个人意见，不代表正确答案，请酌情采纳。如果有任何建议，请联系我。</strong></p>
+<br/>
+<br/>
+<hr>
+<h3 id="1-样品状态以及测量时需要的状态">1. 样品状态，以及测量时需要的状态。</h3>
+<ul>
+<li>固体：粉末、片状……</li>
+<li>液体：悬浊液，溶剂……</li>
+<li>气体 （相对少见）</li>
+</ul>
+<br/>
+<h3 id="2-待测的元素及其边">2. 待测的元素及其边</h3>
+<ul>
+<li>元素的名称，eg. Pt, Fe...</li>
+<li>对应的边，eg. K-edge, L<sub>3</sub>-edge...</li>
+</ul>
+<br/>
+<h3 id="3-待测元素的浓度">3. 待测元素的浓度</h3>
+<ul>
+<li>建议使用质量分数 (wt%)，比如 一个 2 wt% Fe 的铁负载在二氧化硅的载体上。</li>
+<li>也有其他的表达方式，比如生物样品就不用 wt%，需要跟其他人沟通好。</li>
+</ul>
+<br/>
+<h3 id="4-样品中其他的组成">4. 样品中其他的组成</h3>
+<ul>
+<li>样品中所有的元素及其对应的质量分数，比如 Fe/SiO<sub>2</sub> 样品中，不仅需要 Fe 的质量分数，还需要 Si 和 O 的质量分数。</li>
+<li>这个信息可以直接决定数据质量成败（or 机时能被浪费多少）。</li>
+</ul>
+<br/>
+<h3 id="5-可以提供的样品质量">5. 可以提供的样品质量</h3>
+<ul>
+<li>明确表明能够给 xxx 克、xxx 毫升的样品。</li>
+<li>问清楚对方需要多少样品才可以测量。</li>
+</ul>
+<br/>
+<h3 id="6-对样品的特殊保护备注">6. 对样品的特殊保护/备注</h3>
+<ul>
+<li>空气敏感？易潮？</li>
+<li>低温装置保护？</li>
+<li>有任何危害性？比如易燃易爆、辐射性 etc</li>
+<li>容易被同步辐射光源打变质？(aka. beam damage)</li>
+<li>……</li>
+</ul>
+<br/>
+<h3 id="7-标准样品的需求">7. 标准样品的需求</h3>
+<ul>
+<li>想知道样品的氧化态，是否需要测量已知价态的不同化合物？</li>
+<li>……<br>
+<br/></li>
+</ul>
+<h3 id="8-实验条件特别在-in-situ-条件下">8. 实验条件（特别在 in-situ 条件下）</h3>
+<ul>
+<li>使用何种浓度的气体，什么样的温度，变温速率，气流速率……</li>
+<li>保证任何人看到步骤都没有任何的疑问；</li>
+<li>……</li>
+</ul>
+<br/>
+<br/>
+<hr>
+<h3 id="如果你作为我的-collaboration实验之前我想从你这里了解更多">如果你作为我的 collaboration，实验之前我想从你这里了解更多。</h3>
+<ol>
+<li>前期表征已经得到的信息，包含但不限于价态、元素组成、配位数；</li>
+<li>你想从 XAFS 中获得什么样新的信息，尤其是其他表征手段无法挖掘的信息；</li>
+<li>是否已经对待测样品的结构信息已经有若干个选项。</li>
+</ol>
+<br/>
+<br/>
+<hr>
+<h3 id="总结">总结</h3>
+<ol>
+<li>沟通万岁，理解万岁；</li>
+<li>多寄一点样品，尤其是第一次测类似的样品；</li>
+<li>让样品准时到达 collaboration 的手中。</li>
+</ol>
+<br/>
+<br/>
+<br/>
+<br/>
+<pre><code>感谢你的阅读。</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[制作教程用到的软硬件清单]]></title>
         <id>https://twocircles24.github.io/post/tutorial-support/</id>
@@ -897,124 +991,6 @@
 <br/>
 <br/>
 <pre><code>感谢你的阅读。
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Rbkg ]]></title>
-        <id>https://twocircles24.github.io/post/rbkg/</id>
-        <link href="https://twocircles24.github.io/post/rbkg/">
-        </link>
-        <updated>2020-08-17T13:55:11.000Z</updated>
-        <summary type="html"><![CDATA[<p>(11 min 26 s reading) Rbkg 选起来快，但是选错了就是灾难性的……</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>(11 min 26 s reading) Rbkg 选起来快，但是选错了就是灾难性的……</p>
-<!-- more -->
-<p><strong>视频：《Rbkg | XAFS数据处理参数讨论》 <a href="https://www.bilibili.com/video/BV1jK4y1Y71X/">Bilibili</a>, <a href="https://youtu.be/qn695n7TCoo">YouTube</a></strong></p>
-<br/>
-<br/>
-<p><strong>阅读提示1：该文只用于参考和建议，非标准。各个课题遭遇的数据差异巨大，我的建议不一定适合你的数据处理，请谨慎使用。</strong></p>
-<p><strong>阅读提示2：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
-<br/>
-<hr>
-<br/>
-<h2 id="太长不看速读">太长不看速读</h2>
-<p>    今天来聊聊关于 <em>Rbkg</em> 的问题， 它的选择只建议三种（按使用频率从高到低排列）：</p>
-<blockquote>
-<ol>
-<li><em>Rbkg</em> = 1.0 Å</li>
-<li><em>Rbkg</em> = 在 R 空间中第一个峰距离（也就是对应的R数值）÷ 2</li>
-<li>选项 1 和 2 中间的数值</li>
-</ol>
-<p>如果 R 空间中第一层峰距离比较短 (&lt; 1.8 Å)，倾向选项 <strong>2</strong>，但更有可能选 1 和 2 是一样的。</p>
-</blockquote>
-<p>    除此之外，<strong>没有其他选择</strong>。</p>
-<br/>
-<br/>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/08/18/yieoSfC8ZunxOH4.jpg" alt="InkedMainwindow_l.jpg" loading="lazy"></figure>
-<p><strong>Figure 1.</strong> 在 <em>Athena</em> 界面中 <em>Rbkg</em> 的位置。（红线）</p>
-<br/>
-<br/>
-<h2 id="接下来是正文">接下来是正文</h2>
-<br/>
-<h3 id="设置-rbkg-的初衷">设置 <em>Rbkg</em> 的初衷</h3>
-<p>    虽然我在<a href="https://www.bilibili.com/video/BV1yz411e7gu">之前教程里面</a>讲过 <em>Rbkg</em> 里面所处的功能区是负责对原始实验数据进行归一化和扣除背景。理论来说在这一步，只会出现 &quot;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span></span></span></span>(E) → XANES&quot;处理，也就是从原始数据到归一化后的数据。这其中不应该出现关于 R 空间里面的相关参数，那么这是为什么呢？</p>
-<p>    严格来讲，<em>Rbkg</em> 这个参数是<strong>通过调整 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span></span></span></span>(E) 的背景函数</strong>而影响最终 R 空间里面峰的形状。之所以取名是为了让使用者对这个参数的感知更加形象，毕竟到最后在 <em>Athena</em> 里面使用，视觉上直观会关联出来“这个 <em>Rbkg</em> 的选项是为了过滤（or 消除）在 R 空间中低于 <em>Rbkg</em> 的峰”的结论。所以也就是为什么在一个调整 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span></span></span></span>(E) 的功能区里面蹦出来一个“不和谐”的 R 空间相关参数。</p>
-<p>    既然要讲 <em>Rbkg</em> 是如何影响背景函数，那就得从背景函数的意义开始说起来了……</p>
-<br/>
-<br/>
-<h3 id="扣除背景是为了得到-exafs-信息">扣除背景是为了得到 EXAFS 信息</h3>
-<p>    第一步要先讲明白<strong>扣除背景</strong> (aka. background removal)。同步辐射精细吸收谱 (XAFS) 是通过X射线打到样品上，样品中的中心元素吸收X射线之后吸收后发出光电子到邻近原子再散射回来。通过检测中心元素的吸收谱来获得邻近原子的数量和距离信息（也就是 EXAFS）。</p>
-<blockquote>
-<p>    举个不太恰当的例子，假设你在一个会议室里站在台上，下面坐了一些观众。这时候你从外面抱回来一筐乒乓球（100 个），接着开始把乒乓球往观众扔过去，扔完为止。结果大致有两种：1. 你扔出去的乒乓球到了某个观众的手上。观众有可能把这个乒乓球仍回到你这里并且你也接住了（60 个 ）；2. 你扔出去的乒乓球没有人接住，就掉到了地上（40 个）。<br>
-    我作为旁观者，看不到你手上还剩多少乒乓球。只知道你开始拿进去的一筐乒乓球（100 个）和地上留下来的乒乓球（40 个），问：统计你从观众那里得到的乒乓球有多少。<br>
-    正确做法就是：<strong>一开始总共的（100 个）- 地上留下（60 个）= 你手头上还剩下的乒乓球数量 （40 个）</strong></p>
-</blockquote>
-<p>    EXAFS 中扣除背景的原理跟这个类似，因为 EXAFS 解决的问题是<strong>中心原子和邻近原子之间的相互作用，从而得到其数量和距离</strong>。中心原子（你本人）吸收X射线后激发内层电子跃迁到中心原子以外成为光电子（乒乓球），如果光电子到了邻近原子之后（台下的观众）激发再把光电子散射回来后，作为中心原子收到了这部分光电子就包含了 EXAFS 表征所需要的信息。然而在实际测试中，我们测得的是中心原子的<strong>所有信息</strong>，包含了最终回到中心原子的电子以及<strong>没能够回到中心原子的部分</strong>。那么我们只需要前者的话，就要扣除掉后者。</p>
-<p>    “扣除没有回到中心原子的电子”办法就是假设这个中心原子周围<strong>没有任何邻近原子</strong>的时候收到X射线发生内层电子跃迁，这样光电子行动时没有任何阻拦，也不存在回到中心原子的考虑，这就是<strong>背景</strong>。但是这样的条件真实情况下发生吗？要知道，一个原子在常压环境下（常压和真空下的电子行动模式是不一样的）周围不存在任何邻近原子是不可能的事情。为了消除消除背景，只可能<strong>通过理论数学公式</strong>来解决。</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>χ</mi><mo>(</mo><mi>E</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mi>μ</mi><mo>(</mo><mi>E</mi><mo>)</mo><mo>−</mo><msub><mi>μ</mi><mn>0</mn></msub><mo>(</mo><mi>E</mi><mo>)</mo></mrow><mrow><msub><mi>μ</mi><mn>0</mn></msub><mo>(</mo><mi>E</mi><mo>)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex"> \chi (E) = \frac{\mu (E) - \mu_{0}(E)}{\mu_{0}(E)}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">χ</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">μ</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
-<p><strong>Equation 1.</strong> <em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span></span></span></span><sub>0</sub>(E)</em> 孤立中心原子的吸收，通过 <em>Spline</em> 函数来计算。</p>
-<br/>
-<br/>
-<h3 id="利用-spline-函数作为背景方程">利用 <em>Spline</em> 函数作为背景方程</h3>
-<p>    在 <em>Athena</em> 软件中，作者选用了 <em>Spline</em> 函数来模拟孤立原子发出光电子的谱图。<em>Spline</em> 函数（中文：样条函数）是一个非常流行的非线性拟合方程。根据 <a href="https://zh.wikipedia.org/zh-hans/%E6%A0%B7%E6%9D%A1%E5%87%BD%E6%95%B0">Wikipedia</a> 的一段描述：</p>
-<blockquote>
-<p>     样条一词来源于工程绘图人员为了<strong>将一些指定点连接成一条光顺曲线所使用的工具</strong>，即富有弹性的细木条或薄钢条。由这样的样条形成的曲线在连接点处具有连续的坡度与曲率。分段低次多项式、在分段处具有一定<strong>光滑性的函数</strong>插值就是模拟以上原理发展起来的，它克服了高次多项式插值可能出现的振荡现象，具有较好的数值稳定性和收敛性，由这种插值过程产生的函数就是多项式样条函数。</p>
-</blockquote>
-<p>    大白话：<strong><em>Spline</em> 函数可以分段拟合数据（毕竟 XANES 和 EXAFS 机制不一样），并且可以得到一条光滑的曲线</strong>。与多项式拟合比起来优势很大，尤其是在<strong>限制拟合函数的变量</strong>上。对于在 <em>Athena</em> 中的 <em>Spline</em> 函数，需要考虑只有三个变量：函数级数 (polynomial order 非“真多项式”的级数)、 节点 (knot) 和所需要拟合数据范围 (range)。</p>
-<p>    <em>Rbkg</em> 的作用就是<strong>控制节点 (knots) 的数量上限</strong>，如下方程所示。节点代表了实验数据里抽取的点用于拟合 <em>Spline</em> 函数。节点越多，<em>Spline</em> 方程就可以变得更加贴近实验曲折的数据，反之方程的线条越直。</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>N</mi><mrow><mi>k</mi><mi>n</mi><mi>o</mi><mi>t</mi><mi>s</mi></mrow></msub><mo>=</mo><mfrac><mrow><mn>2</mn><msub><mi>R</mi><mrow><mi>b</mi><mi>k</mi><mi>g</mi></mrow></msub><mi mathvariant="normal">Δ</mi><mi>k</mi></mrow><mi>π</mi></mfrac></mrow><annotation encoding="application/x-tex">N_{knots} = \frac{2R_{bkg}\Delta k}{\pi}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mord mathdefault mtight">n</span><span class="mord mathdefault mtight">o</span><span class="mord mathdefault mtight">t</span><span class="mord mathdefault mtight">s</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.05744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">π</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">b</span><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mord mathdefault mtight" style="margin-right:0.03588em;">g</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord">Δ</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
-<p><strong>Equation 2.</strong> <em>Spline</em> 函数中的节点数量上限表达式。除了 <em>Rbkg</em>，选择 k 空间的范围 (<em>Spline range in k or E</em>, <strong>Figure 1.</strong>) 也会影响节点数量的上限。</p>
-<br/>
-<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2020/08/18/A5EXzFrUviRMSWp.png" alt="02Rbkg.png" loading="lazy"></figure>
-<p><strong>Figure 2.</strong> 选择  <em>Rbkg</em> = 0.2 时背景函数非常直（节点数量少）。</p>
-<br/>
-<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2020/08/18/fLRVzF1AI9eqvTY.png" alt="20Rbkg.png" loading="lazy"></figure>
-<p><strong>Figure 3.</strong> 选择  <em>Rbkg</em> = 2.0 时背景函数曲折（节点数量多）。</p>
-<br/>
-<br/>
-<h3 id="背景曲线的曲折程度影响-k-空间和-r-空间">背景曲线的曲折程度影响 k 空间和 R 空间</h3>
-<p>    我们知道在 EXAFS 区间上下波动的信号便是邻近原子返回中心原子的信号，如果背景函数 (<em>Spline function</em>) 波动过大（<em>Rbkg</em> 大，节点数量多），那么会把本属于真正邻近原子的波动信号给纳入背景函数中；反之，如果背景函数太直（<em>Rbkg</em> 小，节点数量少），就不能把本属于孤立中心原子发出的信号（真正的背景）摘干净。在这一步，<em>Rbkg</em> 影响到了 k 空间里面的图像。</p>
-<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2020/08/18/RQq3y8ihCUTjbok.png" alt="kspace.png" loading="lazy"></figure>
-<p><strong>Figure 4.</strong> 对同一样品 Fe_lepidocrocite（<a href="https://baike.baidu.com/item/%E7%BA%A4%E9%93%81%E7%9F%BF">纤铁矿</a>）取不同的 <em>Rbkg</em> 数值在 k 空间对比。（蓝线 1.0 Å，红线 0.2 Å，绿线 2.0 Å）</p>
-<br/>
-<p>    对比 <em>Rbkg</em> = 1.0 Å（蓝线）和 <em>Rbkg</em> = 0.2 Å（红线），可以看到的是 k 空间中的图像信号基本上在同相位的（一起上一起下），但是 <em>Rbkg</em> = 0.2 Å 的图像可以看到 k 空间中的”峰都会宽一些“。</p>
-<p>    对比 <em>Rbkg</em> = 1.0 Å（蓝线）和 <em>Rbkg</em> = 2.0 Å（绿线），在 k = 9 Å<sup>-1</sup> 以下，两者曲线差别大，尤其是绿线的信号小了不少。在 k = 9 Å<sup>-1</sup> 之后，两者图像基本吻合。</p>
-<br/>
-<p><img src="https://i.loli.net/2020/08/18/4CpnY7681rM5gvy.png" alt="rspace.png" loading="lazy"><br>
-<strong>Figure 5.</strong> 对同一样品 Fe_lepidocrocite（<a href="https://baike.baidu.com/item/%E7%BA%A4%E9%93%81%E7%9F%BF">纤铁矿</a>）取不同的 <em>Rbkg</em> 数值在 R 空间对比。（蓝线 1.0 Å，红线 0.2 Å，绿线 2.0 Å）</p>
-<br/>
-<p>    老生常谈的概念：R 空间是对 k 空间做傅里叶变换得到的，R 空间中 x 轴也就是 k 空间里面的频率（这里看不懂的去看<a href="https://www.bilibili.com/video/BV1Mk4y1B7Vz/">这个视频</a>）。那么既然 k 空间的数据已经改变，R 空间图像也会有所改变。可以看到的是选 <em>Rbkg</em> = 0.2 Å（红线）会比选 <em>Rbkg</em> = 1.0 Å（蓝线）多出来了在 0.5 Å 的峰，<strong>一个 artificial signal</strong>。而 <em>Rbkg</em> = 2.0 Å（绿线）基本上抹去了在 1.5 Å 的信号，我们知道这个样品里面有 Fe-O path，选择大的 <em>Rbkg</em> 直接<strong>消除了原本样品真实存在的信号</strong>。</p>
-<br/>
-<p><img src="https://i.loli.net/2020/08/18/4tz9aQjL7hHvNIT.png" alt="08Rbkg.png" loading="lazy"><br>
-<strong>Figure 6.</strong> 对同一样品 Fe_lepidocrocite（<a href="https://baike.baidu.com/item/%E7%BA%A4%E9%93%81%E7%9F%BF">纤铁矿</a>）取 <em>Rbkg</em> = 1 和 0.8 在 k 空间对比。（完全一样）</p>
-<h3 id="这也就是为什么-rbkg-的选择非常固定10-å-或者-r-空间第一层信号的一半距离-选低了小于-10-å-的地方-r-空间会冒出来非真实的信号选高了会把你真实-exafs-信号给抹去"><strong>这也就是为什么 <em>Rbkg</em> 的选择非常固定：1.0 Å 或者 R 空间第一层信号的一半距离。选低了，小于 1.0 Å 的地方 R 空间会冒出来非真实的信号；选高了，会把你真实 EXAFS 信号给抹去。</strong></h3>
-<br/>
-<br/>
-<h3 id="rbkg-影响在-artemis-中-rmin-下限"><em>Rbkg</em> 影响在 <em>Artemis</em> 中 <em>Rmin</em> 下限</h3>
-<figure data-type="image" tabindex="5"><img src="https://i.loli.net/2020/08/18/bt3afOLwxPyNjqd.jpg" alt="Inkedartemi_L.jpg" loading="lazy"></figure>
-<p><strong>Figure 7.</strong> <em>Artemis</em> 中 <em>Rmin</em> 的位置。（红线）</p>
-<br/>
-<p>    <strong>在 <em>Artemis</em> 里面 <em>Rmin</em> 的值必须要大于等于在 <em>Athena</em> 中的 <em>Rbkg</em></strong>。假设在一开始选择了 <em>Rbkg</em> = 1.0 Å，那么 <em>Artemis</em> 拟合 EXAFS 时只可能从 R = 1.0 Å 起拟合。假设强行把 <em>Rmin</em>设置为 0.2 Å，就会得到如下报错。要解决这个问题要不然调高 <em>Rmin</em> 要不然回到 <em>Athena</em> 重新设置  <em>Rbkg</em> 再加载修改后的 .prj 文件到  <em>Artemis</em> 中。</p>
-<figure data-type="image" tabindex="6"><img src="https://i.loli.net/2020/08/18/YyKP5cqAouLtJw7.png" alt="wrong.png" width="535" height="640" loading="lazy"></figure>
-<p><strong>Figure 8.</strong> 当 <em>Rmin</em> 小于 <em>Rbkg</em> 时。</p>
-<Br/>
-<br/>
-<br/>
-<br/>
-<h2 id="参考阅读">参考阅读</h2>
-<ol>
-<li>Athena 官方教程 4.2 章节：<a href="https://bruceravel.github.io/demeter/documents/Athena/bkg/rbkg.html">The AUTOBK Algorithm and the Rbkg Parameter</a></li>
-<li>AUTOBK 算法原始文献：<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.47.14126"><em>Phys. Rev. B</em>,<strong>1993</strong> 47:14126–14131</a></li>
-<li>样条函数维基百科：<a href="https://zh.wikipedia.org/zh-hans/%E6%A0%B7%E6%9D%A1%E5%87%BD%E6%95%B0">中文</a>和<a href="https://en.wikipedia.org/wiki/Spline_(mathematics)">英文</a>。</li>
-</ol>
-<Br/>
-<br/>
-<br/>
-<br/>
-<pre><code>希望我讲清楚了这个点，感谢你的阅读。
 </code></pre>
 ]]></content>
     </entry>
