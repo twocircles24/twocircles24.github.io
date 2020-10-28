@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-10-23T02:35:39.906Z</updated>
+    <updated>2020-10-28T21:14:11.924Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -10,6 +10,93 @@
     <logo>https://twocircles24.github.io/images/avatar.png</logo>
     <icon>https://twocircles24.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 两个圈 Two Circles</rights>
+    <entry>
+        <title type="html"><![CDATA[My Stay-at-home Workstation ]]></title>
+        <id>https://twocircles24.github.io/post/my-stay-at-home-workstation/</id>
+        <link href="https://twocircles24.github.io/post/my-stay-at-home-workstation/">
+        </link>
+        <updated>2020-10-28T06:13:56.000Z</updated>
+        <summary type="html"><![CDATA[<p>(6 min reading) 也从来没想过能在家做远程实验的……</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>(6 min reading) 也从来没想过能在家做远程实验的……</p>
+<!-- more -->
+<br/>
+<br/>
+<p>在经历了无数波折后，我终于开始了前所未有的远程同步辐射实验。实验因为疫情还有硬件故障被一拖再拖，终于拖到我再次孤身一人的状态下开始了。既然在家做实验，不如就来看看我的居家工作区域吧。</p>
+<br/>
+<br/>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/10/29/KTXGgojCr6dkOvQ.jpg" alt="workstation.JPG" loading="lazy"></figure>
+<br/>
+<br/>
+<br/>
+<p>卧室很小，基本上一面是电脑一面是床，就没有太多的空间了。 上面这张图是我的办公区域 + 化妆台 + 各种文字工作区域……还有平常做教程的地方。周围房租好贵，这已经是我预算范围内很满意的房子了~</p>
+<br/>
+<hr>
+<ol>
+<li>
+<p>意外出境的化妆刷：大部分都是从国内带过去的，美国的化妆刷又贵还不如沧州产的（白眼）。</p>
+</li>
+<li>
+<p>星巴克 Blond Roast：大部分连锁咖啡店做美式都比较偏酸，而我又很讨厌酸味。不想喝拿铁这样热量高的咖啡我就会选 Blond Roast 一类的咖啡，味道会更醇厚一些。</p>
+</li>
+<li></li>
+<li>
+<p>Google Home Mini：之前播客提及过的谷歌智能音箱，已经陪伴我快三年。个人很喜欢谷歌家产品设计，比亚马逊和苹果的球不知道好到哪里去了。最喜欢让它开关灯和播放播客，这样我就不用睡觉前下床关灯了。</p>
+</li>
+<li>
+<p>星巴克杯子：这是我离开家返回美国时在机场买到的，似乎每个城市机场里的星巴克店都会售卖城市系列的限定杯子，但是从没在商场里星巴克店见到过。算是对家的一点点念想吧，可以猜下这是哪个城市。</p>
+</li>
+<li>
+<p>显示器 1：4k 28 寸 VA 屏。如果让我掏钱买一个崭新的如此素质的显示器，我肯定拒绝。所以这是以跳楼价从别人那里收来的二手。要是做设计相关的工作，这显示器的色彩是真的不行（不过我也不做就是了）。能多一个 4k 大屏幕写写文章处理数据什么的还是很香，让我比较抓狂的是不支持 VESA 支架，就只能凑合用用了。</p>
+</li>
+<li>
+<p>UE Boom 2：第一年给本科生带实验的时候买来给他们放音乐来着，现在成了台式机的音响。好处是声音贼大，防水防尘防摔，支持有线蓝牙。坏处是有线连接的时候时不时会静音（并不懂这其中原因）。一直想升级但是没找到合适的。</p>
+</li>
+<li>
+<p>Razer Huntsman Keyboard：从别人那里收来的二手，把我的彩虹小马 Cherry 键盘给我室友了。雷蛇机械键盘一如既往的塑料质感，但是灯厂毕竟是灯厂，RGB 效果棒棒的。而且占地面积要小一些，给我多留了点空间放笔记本。</p>
+</li>
+<li>
+<p>Moleskine Notebook：算非官方的试验记录本，平常数据处理思路就会记录在本子里面。Moleskine 的质量也不怎么样，所以也就用在比较不那么重要的场合。记录一些比较重要的信息都会使用LEUCHTTURM 1917。</p>
+</li>
+<li>
+<p>Pilot Vball BG 05：百乐家的各类笔已经承包了我所有的书写工作。以及在美国售卖的笔通常线条较粗，对中文并不友好。日本牌子的笔更适合多场合书写，质量也棒。</p>
+</li>
+<li>
+<p>Logitech Pebble：粉红色的！！！便携静音，蓝牙 USB 双模，颜色很可，国内还有小刘鸭联名。基本上除了握持感以外我对这个鼠标的方方面面都很满意。形状较为扁平，如果用惯了游戏鼠标一类的，肯定是不适应的。在家工作有时候有线鼠标太麻烦了，偶尔拿它来替代下。</p>
+</li>
+<li>
+<p>Logitech G502：跟着雷蛇键盘一起收过来的鼠标，免费的。一开始用的时候确实觉得特别重，用久了也就习惯了。比较喜欢的是各种功能键设置，处理文档或是播客时候有不同的设置文件，能极大地提升效率。如果不需要游戏功能，Logitech MX Master 系列也是很不错的选择。</p>
+</li>
+<li>
+<p>Dretec 计时器：很多学习型博主会有的一个计时器。我买来就是为了定个时间让我起来活动下，一般都是 48 + 12 min 模式，48 分钟工作 12 分钟摸鱼。或者就定个时间告诉自己摸鱼了多久。</p>
+</li>
+<li>
+<p>显示器 2：4k 27寸 IPS 屏。记得这还是为了看 Ti7 Newbee 决赛时特地买的。基本上集齐了我想要的功能，屏幕素质也不错。现在把它竖起来方便看新闻 + 写文章。</p>
+</li>
+<li>
+<p>Bose QC20：出国前我妈送我的生日礼物，记得当时要 2000 人民币出头，对当时的我而言是天价耳机了。陪我去过太多的地方，也帮助我在十几个小时的越洋航班上睡着觉。虽然已经买了更好的 1000 XM3，但它依然静静陪我在家工作。</p>
+</li>
+<li>
+<p>iPad Pro 2017：50% 爱奇艺，50% 生产力。很喜欢。</p>
+</li>
+<li>
+<p>显示器 3：从室友那里借来的临时工，拿来跟对面开视频会议的，这样就不需要占用我自己的显示器影响工作了。</p>
+</li>
+<li>
+<p>小米台灯：特地从国内背过来的，最开心的一点是可以跟 Google Home 联用，也可以通过手机来控制色温和亮度，没有什么好吐槽的。</p>
+</li>
+<li>
+<p>Logitech C920：出了很多年的摄像头，因为疫情原因全部断货了，差不多快到了六月份才原价买到。特地买一个比较好的是为了可能出现的 job interview。</p>
+</li>
+<li>
+<p>草稿纸：从高中被那群搞数学竞赛的给影响的，喜欢拿干净的打印纸打草稿（很不环保）。临时有什么事情需要记录下来就会很快，背后垫个夹板方便书写。</p>
+</li>
+</ol>
+<br/>
+<hr>
+<p>这就是一个普通 UP 主的普通桌面，感谢收看！</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[与 XAFS Collaboration 沟通时需要什么样的信息]]></title>
         <id>https://twocircles24.github.io/post/talk-with-your-collaborations/</id>
@@ -868,129 +955,6 @@
 <br/>
 <br/>
 <pre><code>感谢你的阅读
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[你问我不一定答 | 第二期]]></title>
-        <id>https://twocircles24.github.io/post/youask-ianswer-2/</id>
-        <link href="https://twocircles24.github.io/post/youask-ianswer-2/">
-        </link>
-        <updated>2020-08-18T09:15:10.000Z</updated>
-        <summary type="html"><![CDATA[<p>(5 min 22 s reading)</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>(5 min 22 s reading)</p>
-<!-- more -->
-<br/>
-<p><strong>阅读提示1：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
-<p><strong>阅读提示2：问题来源于 B 站 or 微博，问题有可能被重新整理，先后顺序不代表任何重要程度，如果你的提问被收入但觉得不合适，请联系我。</strong></p>
-<hr>
-<blockquote>
-<p>Q11. 可不可以用简单的话说明一下，<em>Athena</em>和<em>Artemis</em>分别是做什么呢，<em>Athena</em>最后把我们数据变成什么样了，然后<em>Artemis</em>拟合又是最后变成什么样了？这个处理和拟合是个什么意思呢?</p>
-</blockquote>
-<p><strong>A11:</strong></p>
-<ol>
-<li><em>Athena</em>是把raw data处理成k空间和r空间。<em>Artemis</em>是把k空间的数据拿去拟合。所以前者处理数据，后者拟合EXAFS。处理的意思就是，让你看到k空间和R空间的数据。拟合的意思就是知道什么样的距离有多少个什么样的原子。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q12. Artemis拟合一个数据大概需要多久才能完成呢？</p>
-</blockquote>
-<p><strong>A12:</strong></p>
-<ol>
-<li>取决于你的需求还有你老板的要求。我自己手头有数据几年还没整完的事多了去了；</li>
-<li>数据拟合是一件很痛苦的事情，我一般都是吃好喝好睡好，<s>再焚香沐浴之后</s>开始坐下来处理数据；</li>
-<li>参考另外一篇文章<a href="https://twocircles24.com/post/how-long-for-xafs/">《学 XAFS 要多久》</a>。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q13. 张三拿到一个数据从一开始到完成到底需要什么样的步骤，是所有的数据都要<em>Athena</em>和<em>Artemis</em>双拳出击吗？还是说不同情况不同处理？</p>
-</blockquote>
-<p><strong>A13:</strong></p>
-<ol>
-<li>不同情况不同处理，始终取决于张三的需求。如果说你只想要 XANES 的对比或者是<a href="https://bruceravel.github.io/demeter/documents/Athena/analysis/lcf.html">LCF</a> 那么就没有必要用到 Artemis（only for EXAFS 拟合）。如果说你要 EXAFS 的原子距离和配位数，张三要问拿到的数据是 raw data 还是别人已经给你处理好的 .prj 文件呢？前者需要 <em>Athena</em> 处理，后者直接扔 <em>Artemis</em> （但最好在 <em>Athena</em> 中检查好参数）。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q14-1: 为什么张三的文献对（一个纯的化合物）同一中心原子拟合使用了不同的E<sub>0</sub></p>
-</blockquote>
-<p><strong>A14-1:</strong></p>
-<ol>
-<li>因为他们菜啊</li>
-<li>如果说你测的样品里面已经知道了是一个混合物（像50%Mn<sub>2</sub>O<sub>3</sub>50%Mn），你给两个E<sub>0</sub>不过分；</li>
-<li>如果是一个纯的化合物，大家都是从同一个原子跑出来，为什么会有两个E0？</li>
-</ol>
-<blockquote>
-<p>Q14-2: 复合物，类似于核壳结构的，就可能有多个E<sub>0</sub>吧？</p>
-</blockquote>
-<p><strong>A14-2:</strong></p>
-<ol>
-<li>我觉得看情况。优先还是先不要用那么多 E<sub>0</sub>，因为在拟合的过程中，可能要把变量多放在距离或者 DW factor (aka. <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span></span></span></span><sup>2</sup>) 上面。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q15: 要想下载旧版本或是 32 位 Demeter 软件包怎么弄？</p>
-</blockquote>
-<p><strong>A15:</strong></p>
-<ol>
-<li><a href="https://bruceravel.github.io/demeter/#old">Demeter 官网 Old Releases</a> 就可以找到上个版本 (0.9.25) 的 32 位版本。.</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q16: 拟合同种金属四配位六配位混合物的第一壳层，变量数很紧张，他们的σ2之间可以建立关联吗？能够假设他们相等或者其他关联吗？还有变量数一定要比independent points小2吗？</p>
-</blockquote>
-<p><strong>A16:</strong></p>
-<ol>
-<li>如果两种配位形式各自的距离 R 相差不大（比如差值小于 0.15 Å），建议用一条 path 来代表其平均值。如果不能够代替，再考虑用两条 paths 以及对其参数控制；</li>
-<li>关于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span></span></span></span><sup>2</sup>：可以，这个时候采取对两条 path 的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span></span></span></span><sup>2</sup> 的值控制为一样 (define  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span></span></span></span><sub>1</sub><sup>2</sup> = <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span></span></span></span><sub>2</sub><sup>2</sup>)；</li>
-<li>除了 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span></span></span></span><sup>2</sup>，还可以尝试使 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Δ</mi></mrow><annotation encoding="application/x-tex">\Delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span></span></span></span>R<sub>1</sub> = <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Δ</mi></mrow><annotation encoding="application/x-tex">\Delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span></span></span></span>R<sub>2</sub>。然而随着固定的变量数量增多，拟合的自由度降低，最终的结果可能不尽如人意，但不妨一试；</li>
-<li>变量数量 (number of variables) 需要小于 independent poitns 数量的 2/3。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q17: 信号质量与样品含量有关系吗？比如负载贵金属的催化剂可能负载量很低，这会影响信号强度及质量吗？</p>
-</blockquote>
-<p><strong>A17:</strong> 两个问题的答案均是：有，而且关系很大。但是完全可以通过使用不同的实验装置（主要是检测器）来拿到浓度很低的样品数据（到ppm级别）。这个考量比数据处理还要复杂。以后可能讲完软件操作会开始讲实验计划这一块，难度很大。</p>
-<br/>
-<br/>
-<blockquote>
-<p>Q18: 担担面提供的网站链接打不开怎么回事？</p>
-</blockquote>
-<p><strong>A18:</strong></p>
-<ol>
-<li>网站的服务器垃圾；</li>
-<li>需要科学上网。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q19: 多个壳层的path，可以从不同晶体文件里获得吗？</p>
-</blockquote>
-<p><strong>A19:</strong></p>
-<ol>
-<li>可以。思路以结构类似为准。优先一个晶体能全部拿下，拿不下再换。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q20: 有些元素，就像你b站视频演示的那个Fe铁的，这种前人做过很多的是不是能找到标准物质的数据呢？那在哪里可以找到这种标准物质的数据呢？</p>
-</blockquote>
-<p><strong>A20:</strong></p>
-<ol>
-<li>前几天 Matt Newwill 和他实习生的工作：<a href="https://xaslib.xrayabsorption.org/elem/">X-ray Absorption Data Library</a></li>
-<li>友情提示：只能拿做练习。不可以用作处理自己的数据，包括但不限于 PCA 和 LCF。</li>
-</ol>
-<br/>
-<br/>
-<br/>
-<br/>
-<pre><code>感谢你的阅读。
 </code></pre>
 ]]></content>
     </entry>
