@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-10-29T06:13:06.627Z</updated>
+    <updated>2020-10-29T06:14:49.552Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -15,10 +15,10 @@
         <id>https://twocircles24.github.io/post/athena-tutorial-text/</id>
         <link href="https://twocircles24.github.io/post/athena-tutorial-text/">
         </link>
-        <updated>2020-10-28T15:10:56.000Z</updated>
-        <summary type="html"><![CDATA[<p>(9 min 30 s reading) 如果看过视频了就不必在看这篇了，只是作为保存。</p>
+        <updated>2020-10-28T15:14:43.000Z</updated>
+        <summary type="html"><![CDATA[<p>(9 min 30 s reading) 如果看过视频了就不必看这篇了，只是作为保存。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>(9 min 30 s reading) 如果看过视频了就不必在看这篇了，只是作为保存。</p>
+        <content type="html"><![CDATA[<p>(9 min 30 s reading) 如果看过视频了就不必看这篇了，只是作为保存。</p>
 <!-- more -->
 <p><strong>首发于“研之成理”微信公众号，我是原作者。</strong></p>
 <p>同步辐射吸收光谱 （X-ray Absorption Spectroscopy）是一项常见的结构表征技术，可以提供中心原子的邻近信息，例如配位原子和数量。虽然在网上有很多介绍同步辐射的理论知识，但用于数据处理的软件教程相对较少。今天来跟大家分享下如何使用 Demeter 软件中的 Athena 来处理同步辐射吸收谱数据。</p>
