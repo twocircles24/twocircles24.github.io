@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-10-29T03:50:45.319Z</updated>
+    <updated>2020-10-29T06:13:06.627Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -10,6 +10,114 @@
     <logo>https://twocircles24.github.io/images/avatar.png</logo>
     <icon>https://twocircles24.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 两个圈 Two Circles</rights>
+    <entry>
+        <title type="html"><![CDATA[Athena 软件新手教程 | 缩水公众号版本]]></title>
+        <id>https://twocircles24.github.io/post/athena-tutorial-text/</id>
+        <link href="https://twocircles24.github.io/post/athena-tutorial-text/">
+        </link>
+        <updated>2020-10-28T15:10:56.000Z</updated>
+        <summary type="html"><![CDATA[<p>(9 min 30 s reading) 如果看过视频了就不必在看这篇了，只是作为保存。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>(9 min 30 s reading) 如果看过视频了就不必在看这篇了，只是作为保存。</p>
+<!-- more -->
+<p><strong>首发于“研之成理”微信公众号，我是原作者。</strong></p>
+<p>同步辐射吸收光谱 （X-ray Absorption Spectroscopy）是一项常见的结构表征技术，可以提供中心原子的邻近信息，例如配位原子和数量。虽然在网上有很多介绍同步辐射的理论知识，但用于数据处理的软件教程相对较少。今天来跟大家分享下如何使用 Demeter 软件中的 Athena 来处理同步辐射吸收谱数据。</p>
+<br/>
+<br/>
+<h2 id="1-demeter-软件简短介绍">1. Demeter 软件简短介绍</h2>
+<p>Demeter 软件是由 Bruce Ravel 教授发布免费数据处理软件，在这里可以下载到 <a href="https://bruceravel.github.io/demeter/">Demeter 最新版本</a>。在安装过程中需要注意路径必须为全英文，因为默认路径是 C盘中用户名下的一个子文件夹。如果你的用户名是中文，请换一个路径安装。</p>
+<p>安装好后，会有三个软件：Athena，Artemis 和 Hephaestus。其中 Athena 主要功能是对实验数据的处理得到 XANES 和 EXAFS；Artemis 是对 EXAFS 数据进行拟合得到配位数等一系列信息；Hephaestus 是与同步辐射实验相关的数据库。</p>
+<p>对于大部分的数据处理，Athena 是最为重要的。除得到并展示 XANES 和 EXAFS 数据以外，还可以进行线性拟合（Linear Combination Fitting）、主成分分析（Principle Component Analysis）等更高阶的数据处理。可以帮助大家从数据中挖掘出更多的信息。</p>
+<p>更多常见的 EXAFS数据处理教程放在了B站<a href="https://space.bilibili.com/625516278">“担子菌的担担面”</a>账号上，包含但不限于数据拟合，小波变换等等，欢迎有需要的同学观看。</p>
+<p><img src="https://i.loli.net/2020/10/29/NYKijkyFVxMhd8z.png" alt="Demeter Website.png" loading="lazy"><br>
+图1. Demeter 官方网站，左侧为下载链接。</p>
+<br/>
+<h2 id="2-athena-界面介绍">2. Athena 界面介绍</h2>
+<p>打开软件后，可以看到软件在 Main window窗口下大致可以分为左右两区域：左为参数区，右为数据展示区。</p>
+<p>在左方的参数设置区域，从上到下分别是：</p>
+<ol>
+<li>Main window （主窗口）：用于切换不同的数据处理功能；</li>
+<li>Current Group （当前数据）：包含数据路径，对应的元素 (Element) ，边 (Edge) 和能量移动值 (Energy Shift) 等基本信息；</li>
+<li>Normalization and background removal parameters （归一化和背景移除参数）：对原始数据的基本处理得到XANES 和 k 空间图像；</li>
+<li>Forward Fourier transform parameters （傅里叶变换参数）：从 k 空间到 R 空间变换；</li>
+<li>Back Fourier transform parameters （反傅里叶变换参数）：从 R 空间到 q 空间变换；</li>
+<li>Plotting parameters （画图参数）：对图像展示进行放大或缩小等。<br>
+右方空白部分是数据所在的几何位置，右下方用于不同形式的数据展示。</li>
+</ol>
+<p><img src="https://i.loli.net/2020/10/29/986qSYQijrUA4DG.png" alt="2AthenaMain_blank.png" loading="lazy"><br>
+图 2. Athena 主界面。</p>
+<br/>
+<p><strong>注：以下<a href="http://bruceravel.github.io/XAS-Education/">演示数据</a>来源于 Demeter 官网教程，由 Bruce Ravel 教授提供。</strong></p>
+<br/>
+<h2 id="3-数据加载">3. 数据加载</h2>
+<p>我选用了演示数据包中铁纤矿样品 (Fe_lepidocrocite) 来演示。原始数据数据可以直接用鼠标拖入到 Athena 中空白区域得到加载数据对话框如下：</p>
+<p><img src="https://i.loli.net/2020/10/29/Die7LYt8srAP1Fw.png" alt="3importdata_.png" loading="lazy"><br>
+图 3. 加载原始数据界面。</p>
+<br/>
+<p>首先我们需要先从实验中知道哪些数据是入射光、透射光还有荧光。左上方选择的是样品谱图。Energy 是 x 轴，y 轴是 μ(E) 通常由两组或两组以上的数据进行简单加减乘除得到。由于各个线站录入数据的格式会有所不同，请大家结合具体情况分析。我以这套数据为例，我们希望得到样品透射谱 (transmission spectrum)，那么会根据公式 ln(入射光I<sub>0</sub> /透射光 I<sub>1</sub>) ，选择分子为 I<sub>0</sub>，分母为 I<sub>t</sub> 并且勾选上 Natural log。由于这套数据中还有参考谱图 (reference)，在左下方勾选上 import reference channel，勾选上分子为 I<sub>t</sub>，分母为 I<sub>f</sub>。</p>
+<p>点击 OK ,三张 Fe_lepidocrocite.(000, 100, 200)原始数据就加载好出现在了右上方的空白区域。通常来说，Athena 软件在加载好数据后就会自动选择参数粗略处理好数据，大部分参数不需要过多改动。</p>
+<p><img src="https://i.loli.net/2020/10/29/JVRmweBdE5jyDSY.png" alt="4Athenawdata - Copy.png" loading="lazy"><br>
+图 4. 加载数据后大部分参数 Athena 已经自动给出。</p>
+<br/>
+<p><img src="https://i.loli.net/2020/10/29/YcpGWSC7xA6DXh5.png" alt="5dataAthena.png" loading="lazy"><br>
+图 5. 加载数据后就可以大致看到 E, k, R, q 空间的样子。</p>
+<br/>
+<h2 id="4-能量校正和汇合">4. 能量校正和汇合</h2>
+<p>点击 Main window 会看到一系列可选功能窗口。进行能量校正，选择 Calibrate data。</p>
+<p><img src="https://i.loli.net/2020/10/29/cqkYzL9g8UTZsyM.png" alt="6caliratestart - Copy.png" loading="lazy"><br>
+图 6. 点击 Main Window 出现菜单，选择 Calibrate data。</p>
+<br/>
+<p>能量校正的原理是通过校正参考谱图 (Reference) 到正确能量位置来校正样品谱图。所以先选择带 Ref 的谱图，以 deriv(E) 形式展示。点击 select point，用鼠标在图像中取最高峰顶点（黄色十字圈处），点击 Calibrate 就完成了对第一张谱图 (.000) 能量校正。对剩下的 .100 和 .200 数据做同样操作。</p>
+<p><img src="https://i.loli.net/2020/10/29/otQlGfuKY7X3nAm.png" alt="7calibratepage.png" loading="lazy"><br>
+图 7. Calibrate data 界面。</p>
+<br/>
+<p><img src="https://i.loli.net/2020/10/29/IJVgHMDYp4O7Kjc.png" alt="8calibrationgraph - Copy.png" loading="lazy"><br>
+图 8. 利用一阶微分 XANES 来矫正谱图</p>
+<br/>
+<p>接着回到 Main window，到右上方数据区域勾选上所有样品数据。点击上方工具栏中的 Merge ，使用 Merge norm(E) 得到由这三张实验数据图共同得到的一张同步辐射吸收图。这么做的主要原因是为了提高数据信噪比。在这里选择 Merge norm (E) 仅仅是基于这一套数据。不同的数据处理方式会略有不同。</p>
+<p><img src="https://i.loli.net/2020/10/29/98ofAwXmVEKY2Iu.png" alt="9merge.png" loading="lazy"><br>
+图 9. 在 Athena 上面工具栏中 Merge 选项的位置。</p>
+<br/>
+<p><img src="https://i.loli.net/2020/10/29/WMuE2wI49q6Ljh3.png" alt="10newmerge.png" loading="lazy"><br>
+图 10. 点击 Merge norm(E) 后出现新的图，名字为 “merge”。</p>
+<br/>
+<h2 id="5-展示-xanes-k-空间和-r-空间">5. 展示 XANES, k 空间和 R 空间</h2>
+<p>在 Merge 谱图后，通常我只会对这一张图进行更多参数上的微调，比如 E0 的数值还有 k-range, R-range 选择。但就大部分情况而言，数据质量本身不错的情况下，软件自动给出的参数就已经比较合适了。</p>
+<p>在 Athena 界面右下方可以选择谱图展示为归一化后的 μ(E)，也就是 XANES 以及 k 空间和 R 空间。点击黄色按钮是只展示我选择某一数据的谱图（蓝色高亮），而紫色按钮是展示所有我勾选上的数据（数据前有方框打勾）。k 的权重也可以通过 Plotting k-weights 选择。在 E, k, R 空间中有不同的展示，以 E 空间为例可以 Plot in energy。里面我可以选择展示原始数据，背景函数 (background)，归一化数据 (normalized) 等等，如果只是想给其他人粗略展示数据，就到 Athena 的图像软件中选择第一个图标 (Copy plot to clipboard) 再直接 Ctrl + V 到自己文档里。</p>
+<p>对于展示数据的区域选择，第一个方法是可以在右下方里面输入，以 E 空间为例，有 Emin 和 Emax。这是以吸收边能量 E0 为参照，展示 (E0 – Emin, E0 + Emax) 区间内的数据。如果想放大到 XANES 区间，就可以改成 Emin -20, Emax 100 等略小的数值，再点击 E 就可以刷新。另一个办法是直接倒图像界面中使用按住鼠标右键不动，拖动鼠标就可以选择一部分先要展示的区域，点击鼠标左键，就可以放大到之前的区域。</p>
+<p><img src="https://i.loli.net/2020/10/29/4rBdSCTvnjbgUis.png" alt="11Emin - Copy.png" loading="lazy"><br>
+图 11. 利用右下方 Emin, Emax 调整数据展示区间。</p>
+<br/>
+<p><img src="https://i.loli.net/2020/10/29/CIcTqvk2YJGV3gs.png" alt="12mousecursor.png" loading="lazy"><br>
+图 12. 利用鼠标直接框选想放大的区域。</p>
+<br/>
+<p><img src="https://i.loli.net/2020/10/29/iLmFEGpgj7D13No.png" alt="13k - Copy.png" loading="lazy"><br>
+图 13. 点击紫色 k 按键可展示所有的 k 空间数据。</p>
+<br/>
+<p><img src="https://i.loli.net/2020/10/29/3iSDIZGOEcaArX6.png" alt="14R - Copy.png" loading="lazy"><br>
+图 14. 点击紫色 k 按键可展示所有的 k 空间数据。</p>
+<br/>
+<h2 id="6-保存和输出数据">6. 保存和输出数据</h2>
+<p>对数据处理好后，如果我想把数据转到 OriginLab 等作图软件画图时，点击左上方 File，常会用到两种保存数据方式：Save current group as… 和 Save marked group as… 。前者是仅保存蓝色高亮的单独一组数据，后者是保存所有勾选上的数据。根据自己需求可以保存为有 XANES 等不同的数据形式，点击对应的选项即可。</p>
+<p><img src="https://i.loli.net/2020/10/29/GHJk7jWgbOosn28.png" alt="15save - Copy.png" loading="lazy"><br>
+图 15. 保存数据的多种选项。</p>
+<br/>
+<p>Athena 软件会根据不同的数据形式使用不同的后缀名来命名。例如我想保存这四张勾选上的图为 k 空间，依次选择 File → Save marked groups as → k3χ(k)，跳出保存窗口看到数据会被保存为 .chik3 的文件形式。不用惊慌，可以直接保存后用笔记本 Notepad打开看到所有数据以及备注信息，十分方便。若要加载到 OriginLab 里面，可以删掉所有文本信息只留下数列，拖入 OriginLab 窗口中即可。</p>
+<p><img src="https://i.loli.net/2020/10/29/chS68OTuJPnXl7v.png" alt="16chik3 - Copy.png" loading="lazy"><br>
+图 16. 保存为 .chik3 格式，也可以直接在后面改为 .txt 后缀方便打开。</p>
+<br/>
+<p><img src="https://i.loli.net/2020/10/29/ImQdiJ7RWwlAzqj.png" alt="17notepad.png" loading="lazy"><br>
+图 17. 保存好的文件包含了数据和一些文本信息便于记录。</p>
+<h2 id="7-结语">7. 结语</h2>
+<p>这一篇只是非常简单地介绍基本功能处理，还有更多有关参数选择的讨论已经发布在 Bilibili 上，搜索“担子菌的担担面”就可以找到我，也欢迎你通过邮件和我交流 (licouplings@gmail.com)。</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<pre><code>感谢你的阅读
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[My Stay-at-home Workstation ]]></title>
         <id>https://twocircles24.github.io/post/my-stay-at-home-workstation/</id>
@@ -829,132 +937,6 @@
 <br/>
 <br/>
 <pre><code>感谢你的阅读。</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[我用到的付费订阅制软件 | App Subscriptions ]]></title>
-        <id>https://twocircles24.github.io/post/app-sharing/</id>
-        <link href="https://twocircles24.github.io/post/app-sharing/">
-        </link>
-        <updated>2020-08-22T16:56:20.000Z</updated>
-        <summary type="html"><![CDATA[<p>划水闲聊的博客出现了！</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>划水闲聊的博客出现了！</p>
-<!-- more -->
-<p>这几年 Apple Store 里 App 采取订阅制收费的越来越多，买断制选项越来越少。一方面来说，这对开发者有更长可持续的鼓励和更充足的资金用于发展；另一方面而言，也助长了不少“为赋订阅强说好”的不必要浪费。回头看日常生活，泛订阅类服务已经不少，像是音乐会员和视频会员。相比之下，APP 的订阅开销其实不算多。</p>
-<p>我个人态度是选择性的支持订阅制服务，那今天就来分享下我会选择长期订阅的服务。</p>
-<p><strong>阅读提示：部分订阅服务有地区限制。本人消费也从来不明智。</strong></p>
-<hr>
-<h2 id="apple-news"><a href="https://www.apple.com/apple-news/">Apple News+</a></h2>
-<ul>
-<li>美区：$ 9.99/month</li>
-<li>评价：9/10</li>
-<li>适用：不着急看突发新闻，喜欢看不同杂志又不想多花钱的人。</li>
-</ul>
-<p>Apple New 是我获取新闻的主要来源之一。最大的优势是能在<strong>保护隐私</strong>的前提下能看多个平台新闻和杂志。我个人很吃 Tim Cook 近些年大打<strong>隐私</strong>一套说辞，尤其是对在 Google 还有国内 BAT <strong>不计一切代价用隐私换取便</strong>表示很失望。</p>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/08/23/zDBQnF72ACEaMNU.jpg" alt="photo_2020-08-22_23-33-05.jpg" width="360" height="640" loading="lazy"></figure>
-<pre><code>某一天 Apple News 首页，使用了 The Mercury News 报道的加州山火新闻。（人家看文章质量不看是哪家新闻机构出名）
-</code></pre>
-<br/>
-<p>其次 Apple New  的首页新闻都是被新闻专业人士筛选过展现的（我从一个从事新闻业工作的朋友听到的）。虽然突发新闻抢不了先机（也没必要），但是新闻的专业性还有阅读性是可以保证的。尤其是我很喜欢 Apple New+ 推送给我的老牌杂志长文，比如 ProPublica 和 The Atlantic。每篇花上大约十到二十分钟的阅读很有收获。相比之下，Google News 更多的是为了吸引流量，所以出新闻的速度很快但是很没有质量，有点“UC 标题党”调调，而且随着我在 Google News 上看到的新闻越来越“右”，我的 YouTube 广告全是 Trump 的竞选广告，这就让我很不爽了。其实“左派媒体”的报道我都是在 Apple News 上面看的。（摊手）</p>
-<p>上述的两个优势其实只需要一个苹果设备就可以拥有，而促使我订阅 Apple News+ 的原因是可以一站式看不少报刊杂志。我可以看的包含但不限于：The Wall Street Journal (Newspaper), The New Yorker (Magzines), Top Gear (Car), Bloomberg Business (Finance)...</p>
-<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2020/08/23/dunbQMgzsRv8ceV.jpg" alt="photo_2020-08-22_23-44-03.jpg" width="489" height="640" loading="lazy"></figure>
-<pre><code>部分 featured magzines in Apple News+
-</code></pre>
- <br/>
-<p>嗯？我会每一个都看完吗？当然不是，都是每次出来了捡自己喜欢的看呀。如果没有 Apple News+，我需要去每个报纸杂志平台订阅，价格每个月从几美元到十几美元不等。而 Apple News+ 只需要 $9.99，香死我了。我自己很少会固定看某一个杂志，但美国杂志收费又不便宜。Apple News+ 正好戳中我的痛点让我可以在不同杂志里面选择我想看的。</p>
-<p>最近 Apple New 上线了 Audio 版块，基本上就是把新闻媒体做的 Podcast 搬到了 Apple News 这里。Apple 自家也推出了播客，音频长度基本上可以覆盖我从家到学校的通勤时间，早上刷牙洗脸做早饭开车随便哪个点听一听相当不错，缺点就是特别左。</p>
-<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2020/08/23/6NUj3nTa8KOHecS.jpg" alt="photo_2020-08-22_23-33-14.jpg" width="360" height="640" loading="lazy"></figure>
-<pre><code>某天听到的 Audio Story
-</code></pre>
-<br/>
-<p>要说缺点，那就是搜索逻辑了。这方面 Google 无疑是老大了，基本上想要的新闻输入关键词就有了，但是 Apple 似乎是按照搜索“话题”而非“关键词”来搜索。比如我想看关于重庆洪灾的报道，在 Apple News 只会有跟 Chongqing 相关的话题或媒体，完全不是我想要的。而 Google News 随便搜搜就有了。除非我关注的是话题度较高的，像是美国大选或 COVID-19，才有可能在 Apple News 里面找到对口的报道。</p>
-<br/>
-<hr>
-<br/>
-<h2 id="inoreader"><a href="https://www.inoreader.com/welcome">Inoreader</a></h2>
-<ul>
-<li>美区价格：  $ 49.99/year</li>
-<li>评分：7/10</li>
-<li>适用：一站式收集最新期刊和新闻的用户</li>
-</ul>
-<p>Inoreader 是一个 RSS 平台，在<a href="https://sspai.com/post/58041">少数派上</a>提到过多次了。RSS 最大的好处就是把信息通过一个链接集合在了一个平台上，让我不必点开每个网站阅读全文再来判断，是真正的学术效率利器。对我来说最大用处就是订阅各个学术期刊的更新了。每天早上泡好咖啡之后就一边浏览各大期刊最新发表的文章一边喝咖啡摸鱼，不到 15 分钟就能掌握 ASAP。发现了有意思的，点击链接就能去源网站看全文。虽然 RSS 在 Google Reader 关闭后一路唱衰，但就各大学术期刊的 RSS 活跃度我根本离不开 RSS 客户端。</p>
-<p>不仅仅是学术期刊，Inoreader 的一大优势是其筛选机制让我更有效率地阅读信息。像是 COVID-19 期间漫天飞舞的各色新闻，Inoreader 就只会准确推送我想要的某一类新闻。同时也可以作为对 Apple News+ 的补充，Nature 和 Science 新闻推送就是通过 Inoreader 推送到我这里的。Inoreader 这个平台可以允许我<strong>一站式</strong>开启<s>美好</s>学术的一天。</p>
-<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2020/08/23/nhmxQMCNidWF3J2.png" alt="批注 2020-08-23 000511.png" loading="lazy"></figure>
-<pre><code>利用 Inoreader 收期刊的推送，只要五分钟就能知道今天 JACS 推送的有没有我想要的。
-</code></pre>
-<br/>
-<p>缺点就是<a href="https://www.inoreader.com/upgrade/feature/from_tree">价格太贵了</a>，我明年应该会降级成 $19.99/yr 的选项。也有免费版本，但有广告，限制比较多。如果要选择它的竞争对手，那就是 <a href="https://feedly.com/i/welcome">Feedly</a>，价格也不便宜~</p>
-<br/>
-<hr>
-<br/>
-<h2 id="bear"><a href="https://bear.app/">Bear</a> （<a href="https://bear.app/cn/">熊掌记</a>）</h2>
-<ul>
-<li>美区价格：$14.99/year</li>
-<li>评分：9/10</li>
-<li>适用：安静输出文字的苹果颜狗用户</li>
-</ul>
-<p>Bear 在中国又叫熊掌记，大概三四年前（？）我就开始使用了，当时纯粹是被它的颜值迷昏了眼，完全不顾 Windows 的不适配也没想过自己会不会用 iPad 来写作这个问题，铁了心的要入手。一开始使用频率极低，也就是拿来写写小总结或是微博投稿。订阅价格也没很贵，是“食之无味弃之可惜”的状态，全靠颜值支撑我续费。</p>
-<figure data-type="image" tabindex="5"><img src="https://i.loli.net/2020/08/23/6MFq4XsBGUaZ23d.png" alt="批注 2020-08-23 001349.png" loading="lazy"></figure>
-<pre><code>熊掌记是我见过 IOS 系统里最漂亮的软件之一了。（官网截图）
-</code></pre>
-<br/>
-<p>自从开始做教程之后，使用频率暴涨。因为在某个点会冒出来一个点子，立刻用手机端记录下来；完了之后到 iPad Pro 上扩充。待到大部分文字内容齐活儿了，就转移到台式机上填充图片之类的再发布。我教程的初稿都是在 Bear 上完成的，得益于它 iCloud 同步还有支持 Markdown 写作，把稿子用 Markdown 格式导出到电脑端修改几乎不费力。而且我可以一边看电视一边用 iPad Pro 写教程两不误啊哈哈～这种随想随写又漂亮的平台能不爱？</p>
-<p>硬说缺点，不支持 Windows 平台？对我而言影响不大，毕竟真要写正式的，上 Word 和 LaTex 就完事了。像是做教程这样的非正式轻量多文字工作，放到另外一个平台也是无形之中把工作和私人的写作分开了。（就是找借口花钱咳咳咳）</p>
-<br/>
-<hr>
-<br/>
-<h2 id="vsco"><a href="https://vsco.co/">VSCO</a></h2>
-<ul>
-<li>美区价格：$19.99/year</li>
-<li>评分：6/10</li>
-<li>适用：通过轻度修图适度抢占朋友圈摄影大赛的种子选手</li>
-</ul>
-<p>绝对算不上最好的修图软件，只是很早之前就开始使用 VSCO 已经完全顺手不想用其他的了 （那个时候还是按滤镜包来买的）。UI 界面做的不错，滤镜数量奇多，参数调整也算齐全。因为我不是摄影专业人士，但对发在社交平台里面的图还是有点想法，所以需要一个简单易用的修图软件，而 VSCO 在很早的时间遇到了。即使是有其他修图软件出现，功能上也是大同小异不会再有多与众不同有点哭笑不得的是现有“VSCO Girl”的梗出现，我自认为不算那样的人就是了。</p>
-<figure data-type="image" tabindex="6"><img src="https://i.loli.net/2020/08/23/NfTRC5ZJoGL69ns.jpg" alt="photo_2020-08-23_00-22-53.jpg" loading="lazy"></figure>
-<pre><code>索尼6000 + 狗头 + 30 秒曝光 + WIFI 传图 + VSCO 修图就能顶着光污染在学校里面拥有银河。（左原图，右修图）
-</code></pre>
-<br/>
-<p>要说缺点，我不太喜欢一个修图软件做社交功能。虽然现什么 APP 都在做社交提升用户粘性，但是我更喜欢一个安静做自己份内事的软件。</p>
-<br/>
-<hr>
-<br/>
-<h2 id="grammarly"><a href="https://app.grammarly.com/">Grammarly</a></h2>
-<ul>
-<li>淘宝价格：¥298/年</li>
-<li>评分：5/10</li>
-<li>适用：期待有个帮你英文查错小助手的学生党</li>
-</ul>
-<p>用 Grammarly 的免费版大约有几年了，我认为它优势是在对不同的文字场景支持还算不错，像是 Word 和网页插件。其次对于 typo 检错效率挺高，用过一段时间后，写错的情况减少了很多。之所以买了收费版是正好我男朋友也有需要，再加上有点好奇高级版本里面关于对英文遣词造句的专业建议。使用一段时间下来，我认为一大亮点是它允许设置不同的场景，比如 formal or casusal。根据使用者的场景来调整用词和语法的建议。对于部分学生来说，收费版本还可以提供论文查重功能，我自己没用过所以不好发表评价。</p>
-<figure data-type="image" tabindex="7"><img src="https://i.loli.net/2020/08/23/KMq39jdSkveQUBz.png" alt="批注 2020-08-23 003447.png" loading="lazy"></figure>
-<pre><code>一直把被动时态的语法检查给关掉，太不喜欢了。
-</code></pre>
-<p>不过这个软件指望能够帮自己投专业期刊的文章润色是不现实的。专业词汇的不识别都只是小问题，Grammarly 极其”讨厌“被动时态是让我无法理解的。可期刊文章里面被动时态是最常用的，整篇下来 Grammarly 能给你从头高亮到尾，即使是能关闭这个提醒，感觉其他的建议都很皮毛。所以评分不高，也许明年回归免费版了？拿来查错还是不错的，也支持加入个人词库。</p>
-<br/>
-<hr>
-<br/>
-<h2 id="滴答清单"><a href="https://dida365.com/">滴答清单</a></h2>
-<ul>
-<li>国区价格：¥139/年</li>
-<li>评分：7/10</li>
-<li>适用：全平台轻量文字工作的效率管理软件</li>
-</ul>
-<p>现在效率软件多如牛毛，我也使用过不少。一开始用过 Todolist 一类免费版本，也用过 Things 3 买断制 APP，去年开始换到了奇妙清单。最大动机还是对全平台的要求。Things 3 的界面和使用逻辑我是最喜欢的，但是不提供 Windows 版本。滴答清单总体而言做的非常优秀，兼顾最基础的 todo 功能还有轻量写作需求。高级版本丰富了提醒功能和日历小部件。最让我惊喜的是，滴答清单虽然拥有众多功能，但是依然可以有最简单的方法随时随地记下我需要做的事情，再到之后进行填充。如果一个小团队里面一起使用滴答清单，也可以成为一个小 “Slack”。</p>
-<figure data-type="image" tabindex="8"><img src="https://i.loli.net/2020/08/23/R9OfxE1hBUdTQvM.png" alt="批注 2020-08-23 004004.png" loading="lazy"></figure>
-<pre><code>用滴答清单帮助我准备出差需要的工具或是零件。
-</code></pre>
-<br/>
-<p>就缺点而言，我个人发现它智能识别时间一类的功能我不能太适应。比如我在订单里面写入“明天逛街”，它可以识别出来这项任务是应当在明天，但是在任务栏里面还是“明天逛街”，这就有种感觉是&quot;后天要去逛街&quot;的即视感，这一点让我觉得很不自然。既然标签都可以允许放到文本里面，为什么时间关键词不可以允许自动删除掉？</p>
-<br/>
-<hr>
-<br/>
-<p>今天的安利就到此为止啦，以后还会瞎写些奇怪安利的~</p>
-<br/>
-<br/>
-<br/>
-<br/>
-<pre><code>感谢你的阅读
-</code></pre>
 ]]></content>
     </entry>
 </feed>
