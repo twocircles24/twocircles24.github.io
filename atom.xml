@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-10-28T21:19:56.711Z</updated>
+    <updated>2020-10-29T03:49:58.463Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://twocircles24.github.io/post/my-stay-at-home-workstation/</id>
         <link href="https://twocircles24.github.io/post/my-stay-at-home-workstation/">
         </link>
-        <updated>2020-10-28T15:13:56.000Z</updated>
+        <updated>2020-10-28T00:13:56.000Z</updated>
         <summary type="html"><![CDATA[<p>(6 min reading) 也从来没想过能在家做远程实验的……</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>(6 min reading) 也从来没想过能在家做远程实验的……</p>
@@ -39,7 +39,6 @@
 <li>
 <p>星巴克 Blond Roast：大部分连锁咖啡店做美式都比较偏酸，而我又很讨厌酸味。不想喝拿铁这样热量高的咖啡我就会选 Blond Roast 一类的咖啡，味道会更醇厚一些。</p>
 </li>
-<li></li>
 <li>
 <p>Google Home Mini：之前播客提及过的谷歌智能音箱，已经陪伴我快三年。个人很喜欢谷歌家产品设计，比亚马逊和苹果的球不知道好到哪里去了。最喜欢让它开关灯和播放播客，这样我就不用睡觉前下床关灯了。</p>
 </li>
