@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://twocircles24.com</id>
+    <title>Gridea</title>
+    <updated>2020-10-31T17:17:51.383Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://twocircles24.com"/>
+    <link rel="self" href="https://twocircles24.com/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://twocircles24.com/images/avatar.png</logo>
+    <icon>https://twocircles24.com/favicon.ico</icon>
+    <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[Athena 软件新手教程 | 缩水公众号版本]]></title>
+        <id>https://twocircles24.com/post/athena-tutorial-text/</id>
+        <link href="https://twocircles24.com/post/athena-tutorial-text/">
+        </link>
+        <updated>2020-10-28T15:14:43.000Z</updated>
+        <summary type="html"><![CDATA[<p>(9 min 30 s reading) 如果看过视频了就不必看这篇了，只是作为保存。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>(9 min 30 s reading) 如果看过视频了就不必看这篇了，只是作为保存。</p>
+<!-- more -->
+<p><strong>首发于“研之成理”微信公众号，我是原作者。</strong></p>
+<p>同步辐射吸收光谱 （X-ray Absorption Spectroscopy）是一项常见的结构表征技术，可以提供中心原子的邻近信息，例如配位原子和数量。虽然在网上有很多介绍同步辐射的理论知识，但用于数据处理的软件教程相对较少。今天来跟大家分享下如何使用 Demeter 软件中的 Athena 来处理同步辐射吸收谱数据。</p>
+<br/>
+<br/>
+<h2 id="1-demeter-软件简短介绍">1. Demeter 软件简短介绍</h2>
+<p>Demeter 软件是由 Bruce Ravel 教授发布免费数据处理软件，在这里可以下载到 <a href="https://bruceravel.github.io/demeter/">Demeter 最新版本</a>。在安装过程中需要注意路径必须为全英文，因为默认路径是 C盘中用户名下的一个子文件夹。如果你的用户名是中文，请换一个路径安装。</p>
+<p>安装好后，会有三个软件：Athena，Artemis 和 Hephaestus。其中 Athena 主要功能是对实验数据的处理得到 XANES 和 EXAFS；Artemis 是对 EXAFS 数据进行拟合得到配位数等一系列信息；Hephaestus 是与同步辐射实验相关的数据库。</p>
+<p>对于大部分的数据处理，Athena 是最为重要的。除得到并展示 XANES 和 EXAFS 数据以外，还可以进行线性拟合（Linear Combination Fitting）、主成分分析（Principle Component Analysis）等更高阶的数据处理。可以帮助大家从数据中挖掘出更多的信息。</p>
+<p>更多常见的 EXAFS数据处理教程放在了B站<a href="https://space.bilibili.com/625516278">“担子菌的担担面”</a>账号上，包含但不限于数据拟合，小波变换等等，欢迎有需要的同学观看。</p>
+<p><img src="https://i.loli.net/2020/10/29/NYKijkyFVxMhd8z.png" alt="Demeter Website.png" loading="lazy"><br>
+图1. Demeter 官方网站，左侧为下载链接。</p>
+<br/>
+<h2 id="2-athena-界面介绍">2. Athena 界面介绍</h2>
+<p>打开软件后，可以看到软件在 Main window窗口下大致可以分为左右两区域：左为参数区，右为数据展示区。</p>
+<p>在左方的参数设置区域，从上到下分别是：</p>
+<ol>
+<li>Main window （主窗口）：用于切换不同的数据处理功能；</li>
+<li>Current Group （当前数据）：包含数据路径，对应的元素 (Element) ，边 (Edge) 和能量移动值 (Energy Shift) 等基本信息；</li>
+<li>Normalization and background removal parameters （归一化和背景移除参数）：对原始数据的基本处理得到XANES 和 k 空间图像；</li>
+<li>Forward Fourier transform parameters （傅里叶变换参数）：从 k 空间到 R 空间变换；</li>
+<li>Back Fourier transform parameters （反傅里叶变换参数）：从 R 空间到 q 空间变换；</li>
+<li>Plotting parameters （画图参数）：对图像展示进行放大或缩小等。<br>
+右方空白部分是数据所在的几何位置，右下方用于不同形式的数据展示。</li>
+</ol>
+<p><img src="https://i.loli.net/2020/10/29/986qSYQijrUA4DG.png" alt="2AthenaMain_blank.png" loading="lazy"><br>
+图 2. Athena 主界面。</p>
+<br/>
+<p><strong>注：以下<a href="http://bruceravel.github.io/XAS-Education/">演示数据</a>来源于 Demeter 官网教程，由 Bruce Ravel 教授提供。</strong></p>
+<br/>
+<h2 id="3-数据加载">3. 数据加载</h2>
+<p>我选用了演示数据包中铁纤矿样品 (Fe_lepidocrocite) 来演示。原始数据数据可以直接用鼠标拖入到 Athena 中空白区域得到加载数据对话框如下：</p>
+<p><img src="https://i.loli.net/2020/10/29/Die7LYt8srAP1Fw.png" alt="3importdata_.png" loading="lazy"><br>
+图 3. 加载原始数据界面。</p>
+<br/>
+<p>首先我们需要先从实验中知道哪些数据是入射光、透射光还有荧光。左上方选择的是样品谱图。Energy 是 x 轴，y 轴是 μ(E) 通常由两组或两组以上的数据进行简单加减乘除得到。由于各个线站录入数据的格式会有所不同，请大家结合具体情况分析。我以这套数据为例，我们希望得到样品透射谱 (transmission spectrum)，那么会根据公式 ln(入射光I<sub>0</sub> /透射光 I<sub>1</sub>) ，选择分子为 I<sub>0</sub>，分母为 I<sub>t</sub> 并且勾选上 Natural log。由于这套数据中还有参考谱图 (reference)，在左下方勾选上 import reference channel，勾选上分子为 I<sub>t</sub>，分母为 I<sub>f</sub>。</p>
+<p>点击 OK ,三张 Fe_lepidocrocite.(000, 100, 200)原始数据就加载好出现在了右上方的空白区域。通常来说，Athena 软件在加载好数据后就会自动选择参数粗略处理好数据，大部分参数不需要过多改动。</p>
+<p><img src="https://i.loli.net/2020/10/29/JVRmweBdE5jyDSY.png" alt="4Athenawdata - Copy.png" loading="lazy"><br>
+图 4. 加载数据后大部分参数 Athena 已经自动给出。</p>
+<br/>
+<p><img src="https://i.loli.net/2020/10/29/YcpGWSC7xA6DXh5.png" alt="5dataAthena.png" loading="lazy"><br>
+图 5. 加载数据后就可以大致看到 E, k, R, q 空间的样子。</p>
+<br/>
+<h2 id="4-能量校正和汇合">4. 能量校正和汇合</h2>
+<p>点击 Main window 会看到一系列可选功能窗口。进行能量校正，选择 Calibrate data。</p>
+<p><img src="https://i.loli.net/2020/10/29/cqkYzL9g8UTZsyM.png" alt="6caliratestart - Copy.png" loading="lazy"><br>
+图 6. 点击 Main Window 出现菜单，选择 Calibrate data。</p>
+<br/>
+<p>能量校正的原理是通过校正参考谱图 (Reference) 到正确能量位置来校正样品谱图。所以先选择带 Ref 的谱图，以 deriv(E) 形式展示。点击 select point，用鼠标在图像中取最高峰顶点（黄色十字圈处），点击 Calibrate 就完成了对第一张谱图 (.000) 能量校正。对剩下的 .100 和 .200 数据做同样操作。</p>
+<p><img src="https://i.loli.net/2020/10/29/otQlGfuKY7X3nAm.png" alt="7calibratepage.png" loading="lazy"><br>
+图 7. Calibrate data 界面。</p>
+<br/>
+<p><img src="https://i.loli.net/2020/10/29/IJVgHMDYp4O7Kjc.png" alt="8calibrationgraph - Copy.png" loading="lazy"><br>
+图 8. 利用一阶微分 XANES 来矫正谱图</p>
+<br/>
+<p>接着回到 Main window，到右上方数据区域勾选上所有样品数据。点击上方工具栏中的 Merge ，使用 Merge norm(E) 得到由这三张实验数据图共同得到的一张同步辐射吸收图。这么做的主要原因是为了提高数据信噪比。在这里选择 Merge norm (E) 仅仅是基于这一套数据。不同的数据处理方式会略有不同。</p>
+<p><img src="https://i.loli.net/2020/10/29/98ofAwXmVEKY2Iu.png" alt="9merge.png" loading="lazy"><br>
+图 9. 在 Athena 上面工具栏中 Merge 选项的位置。</p>
+<br/>
+<p><img src="https://i.loli.net/2020/10/29/WMuE2wI49q6Ljh3.png" alt="10newmerge.png" loading="lazy"><br>
+图 10. 点击 Merge norm(E) 后出现新的图，名字为 “merge”。</p>
+<br/>
+<h2 id="5-展示-xanes-k-空间和-r-空间">5. 展示 XANES, k 空间和 R 空间</h2>
+<p>在 Merge 谱图后，通常我只会对这一张图进行更多参数上的微调，比如 E0 的数值还有 k-range, R-range 选择。但就大部分情况而言，数据质量本身不错的情况下，软件自动给出的参数就已经比较合适了。</p>
+<p>在 Athena 界面右下方可以选择谱图展示为归一化后的 μ(E)，也就是 XANES 以及 k 空间和 R 空间。点击黄色按钮是只展示我选择某一数据的谱图（蓝色高亮），而紫色按钮是展示所有我勾选上的数据（数据前有方框打勾）。k 的权重也可以通过 Plotting k-weights 选择。在 E, k, R 空间中有不同的展示，以 E 空间为例可以 Plot in energy。里面我可以选择展示原始数据，背景函数 (background)，归一化数据 (normalized) 等等，如果只是想给其他人粗略展示数据，就到 Athena 的图像软件中选择第一个图标 (Copy plot to clipboard) 再直接 Ctrl + V 到自己文档里。</p>
+<p>对于展示数据的区域选择，第一个方法是可以在右下方里面输入，以 E 空间为例，有 Emin 和 Emax。这是以吸收边能量 E0 为参照，展示 (E0 – Emin, E0 + Emax) 区间内的数据。如果想放大到 XANES 区间，就可以改成 Emin -20, Emax 100 等略小的数值，再点击 E 就可以刷新。另一个办法是直接倒图像界面中使用按住鼠标右键不动，拖动鼠标就可以选择一部分先要展示的区域，点击鼠标左键，就可以放大到之前的区域。</p>
+<p><img src="https://i.loli.net/2020/10/29/4rBdSCTvnjbgUis.png" alt="11Emin - Copy.png" loading="lazy"><br>
+图 11. 利用右下方 Emin, Emax 调整数据展示区间。</p>
+<br/>
+<p><img src="https://i.loli.net/2020/10/29/CIcTqvk2YJGV3gs.png" alt="12mousecursor.png" loading="lazy"><br>
+图 12. 利用鼠标直接框选想放大的区域。</p>
+<br/>
+<p><img src="https://i.loli.net/2020/10/29/iLmFEGpgj7D13No.png" alt="13k - Copy.png" loading="lazy"><br>
+图 13. 点击紫色 k 按键可展示所有的 k 空间数据。</p>
+<br/>
+<p><img src="https://i.loli.net/2020/10/29/3iSDIZGOEcaArX6.png" alt="14R - Copy.png" loading="lazy"><br>
+图 14. 点击紫色 k 按键可展示所有的 k 空间数据。</p>
+<br/>
+<h2 id="6-保存和输出数据">6. 保存和输出数据</h2>
+<p>对数据处理好后，如果我想把数据转到 OriginLab 等作图软件画图时，点击左上方 File，常会用到两种保存数据方式：Save current group as… 和 Save marked group as… 。前者是仅保存蓝色高亮的单独一组数据，后者是保存所有勾选上的数据。根据自己需求可以保存为有 XANES 等不同的数据形式，点击对应的选项即可。</p>
+<p><img src="https://i.loli.net/2020/10/29/GHJk7jWgbOosn28.png" alt="15save - Copy.png" loading="lazy"><br>
+图 15. 保存数据的多种选项。</p>
+<br/>
+<p>Athena 软件会根据不同的数据形式使用不同的后缀名来命名。例如我想保存这四张勾选上的图为 k 空间，依次选择 File → Save marked groups as → k3χ(k)，跳出保存窗口看到数据会被保存为 .chik3 的文件形式。不用惊慌，可以直接保存后用笔记本 Notepad打开看到所有数据以及备注信息，十分方便。若要加载到 OriginLab 里面，可以删掉所有文本信息只留下数列，拖入 OriginLab 窗口中即可。</p>
+<p><img src="https://i.loli.net/2020/10/29/chS68OTuJPnXl7v.png" alt="16chik3 - Copy.png" loading="lazy"><br>
+图 16. 保存为 .chik3 格式，也可以直接在后面改为 .txt 后缀方便打开。</p>
+<br/>
+<p><img src="https://i.loli.net/2020/10/29/ImQdiJ7RWwlAzqj.png" alt="17notepad.png" loading="lazy"><br>
+图 17. 保存好的文件包含了数据和一些文本信息便于记录。</p>
+<h2 id="7-结语">7. 结语</h2>
+<p>这一篇只是非常简单地介绍基本功能处理，还有更多有关参数选择的讨论已经发布在 Bilibili 上，搜索“担子菌的担担面”就可以找到我，也欢迎你通过邮件和我交流 (licouplings@gmail.com)。</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<pre><code>感谢你的阅读
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[My Stay-at-home Workstation ]]></title>
+        <id>https://twocircles24.com/post/my-stay-at-home-workstation/</id>
+        <link href="https://twocircles24.com/post/my-stay-at-home-workstation/">
+        </link>
+        <updated>2020-10-28T12:50:28.000Z</updated>
+        <summary type="html"><![CDATA[<p>(6 min reading) 也从来没想过能在家做远程实验的……</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>(6 min reading) 也从来没想过能在家做远程实验的……</p>
+<!-- more -->
+<br/>
+<br/>
+<p>在经历了无数波折后，我终于开始了前所未有的远程同步辐射实验。实验因为疫情还有硬件故障被一拖再拖，终于拖到我再次孤身一人的状态下开始了。既然在家做实验，不如就来看看我的居家工作区域吧。</p>
+<br/>
+<br/>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/10/29/KTXGgojCr6dkOvQ.jpg" alt="workstation.JPG" loading="lazy"></figure>
+<br/>
+<br/>
+<br/>
+<p>卧室很小，基本上一面是电脑一面是床，就没有太多的空间了。 上面这张图是我的办公区域 + 化妆台 + 各种文字工作区域……还有平常做教程的地方。周围房租好贵，这已经是我预算范围内很满意的房子了~</p>
+<br/>
+<hr>
+<ol>
+<li>
+<p>意外出境的化妆刷：大部分都是从国内带过去的，美国的化妆刷又贵还不如沧州产的（白眼）。</p>
+</li>
+<li>
+<p>星巴克 Blond Roast：大部分连锁咖啡店做美式都比较偏酸，而我又很讨厌酸味。不想喝拿铁这样热量高的咖啡我就会选 Blond Roast 一类的咖啡，味道会更醇厚一些。</p>
+</li>
+<li>
+<p>Google Home Mini：之前播客提及过的谷歌智能音箱，已经陪伴我快三年。个人很喜欢谷歌家产品设计，比亚马逊和苹果的球不知道好到哪里去了。最喜欢让它开关灯和播放播客，这样我就不用睡觉前下床关灯了。</p>
+</li>
+<li>
+<p>星巴克杯子：这是我离开家返回美国时在机场买到的，似乎每个城市机场里的星巴克店都会售卖城市系列的限定杯子，但是从没在商场里星巴克店见到过。算是对家的一点点念想吧，可以猜下这是哪个城市。</p>
+</li>
+<li>
+<p>显示器 1：4k 28 寸 VA 屏。如果让我掏钱买一个崭新的如此素质的显示器，我肯定拒绝。所以这是以跳楼价从别人那里收来的二手。要是做设计相关的工作，这显示器的色彩是真的不行（不过我也不做就是了）。能多一个 4k 大屏幕写写文章处理数据什么的还是很香，让我比较抓狂的是不支持 VESA 支架，就只能凑合用用了。</p>
+</li>
+<li>
+<p>UE Boom 2：第一年给本科生带实验的时候买来给他们放音乐来着，现在成了台式机的音响。好处是声音贼大，防水防尘防摔，支持有线蓝牙。坏处是有线连接的时候时不时会静音（并不懂这其中原因）。一直想升级但是没找到合适的。</p>
+</li>
+<li>
+<p>Razer Huntsman Keyboard：从别人那里收来的二手，把我的彩虹小马 Cherry 键盘给我室友了。雷蛇机械键盘一如既往的塑料质感，但是灯厂毕竟是灯厂，RGB 效果棒棒的。而且占地面积要小一些，给我多留了点空间放笔记本。</p>
+</li>
+<li>
+<p>Moleskine Notebook：算非官方的试验记录本，平常数据处理思路就会记录在本子里面。Moleskine 的质量也不怎么样，所以也就用在比较不那么重要的场合。记录一些比较重要的信息都会使用LEUCHTTURM 1917。</p>
+</li>
+<li>
+<p>Pilot Vball BG 05：百乐家的各类笔已经承包了我所有的书写工作。以及在美国售卖的笔通常线条较粗，对中文并不友好。日本牌子的笔更适合多场合书写，质量也棒。</p>
+</li>
+<li>
+<p>Logitech Pebble：粉红色的！！！便携静音，蓝牙 USB 双模，颜色很可，国内还有小刘鸭联名。基本上除了握持感以外我对这个鼠标的方方面面都很满意。形状较为扁平，如果用惯了游戏鼠标一类的，肯定是不适应的。在家工作有时候有线鼠标太麻烦了，偶尔拿它来替代下。</p>
+</li>
+<li>
+<p>Logitech G502：跟着雷蛇键盘一起收过来的鼠标，免费的。一开始用的时候确实觉得特别重，用久了也就习惯了。比较喜欢的是各种功能键设置，处理文档或是播客时候有不同的设置文件，能极大地提升效率。如果不需要游戏功能，Logitech MX Master 系列也是很不错的选择。</p>
+</li>
+<li>
+<p>Dretec 计时器：很多学习型博主会有的一个计时器。我买来就是为了定个时间让我起来活动下，一般都是 48 + 12 min 模式，48 分钟工作 12 分钟摸鱼。或者就定个时间告诉自己摸鱼了多久。</p>
+</li>
+<li>
+<p>显示器 2：4k 27寸 IPS 屏。记得这还是为了看 Ti7 Newbee 决赛时特地买的。基本上集齐了我想要的功能，屏幕素质也不错。现在把它竖起来方便看新闻 + 写文章。</p>
+</li>
+<li>
+<p>Bose QC20：出国前我妈送我的生日礼物，记得当时要 2000 人民币出头，对当时的我而言是天价耳机了。陪我去过太多的地方，也帮助我在十几个小时的越洋航班上睡着觉。虽然已经买了更好的 1000 XM3，但它依然静静陪我在家工作。</p>
+</li>
+<li>
+<p>iPad Pro 2017：50% 爱奇艺，50% 生产力。很喜欢。</p>
+</li>
+<li>
+<p>显示器 3：从室友那里借来的临时工，拿来跟对面开视频会议的，这样就不需要占用我自己的显示器影响工作了。</p>
+</li>
+<li>
+<p>小米台灯：特地从国内背过来的，最开心的一点是可以跟 Google Home 联用，也可以通过手机来控制色温和亮度，没有什么好吐槽的。</p>
+</li>
+<li>
+<p>Logitech C920：出了很多年的摄像头，因为疫情原因全部断货了，差不多快到了六月份才原价买到。特地买一个比较好的是为了可能出现的 job interview。</p>
+</li>
+<li>
+<p>草稿纸：从高中被那群搞数学竞赛的给影响的，喜欢拿干净的打印纸打草稿（很不环保）。临时有什么事情需要记录下来就会很快，背后垫个夹板方便书写。</p>
+</li>
+</ol>
+<br/>
+<hr>
+<p>这就是一个普通 UP 主的普通桌面，感谢收看！</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[与 XAFS Collaboration 沟通时需要什么样的信息]]></title>
+        <id>https://twocircles24.com/post/talk-with-your-collaborations/</id>
+        <link href="https://twocircles24.com/post/talk-with-your-collaborations/">
+        </link>
+        <updated>2020-10-05T07:13:53.000Z</updated>
+        <summary type="html"><![CDATA[<p>做成文字版方便阅读。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>做成文字版方便阅读。</p>
+<!-- more -->
+<br/>
+<br/>
+<p>之前已经发成视频  (<a href="https://www.bilibili.com/video/BV1Tv411q79R">Bilbili</a>, <a href="https://youtu.be/-ZiZGUdUTs4">YouTube</a>)，后来想想觉得还是应该做成文字版当成一个 To-do List 更加合适。</p>
+<p><strong>Disclaimer: 该文仅为个人意见，不代表正确答案，请酌情采纳。如果有任何建议，请联系我。</strong></p>
+<br/>
+<br/>
+<hr>
+<h3 id="1-样品状态以及测量时需要的状态">1. 样品状态，以及测量时需要的状态。</h3>
+<ul>
+<li>固体：粉末、片状……</li>
+<li>液体：悬浊液，溶剂……</li>
+<li>气体 （相对少见）</li>
+</ul>
+<br/>
+<h3 id="2-待测的元素及其边">2. 待测的元素及其边</h3>
+<ul>
+<li>元素的名称，eg. Pt, Fe...</li>
+<li>对应的边，eg. K-edge, L<sub>3</sub>-edge...</li>
+</ul>
+<br/>
+<h3 id="3-待测元素的浓度">3. 待测元素的浓度</h3>
+<ul>
+<li>建议使用质量分数 (wt%)，比如 一个 2 wt% Fe 的铁负载在二氧化硅的载体上。</li>
+<li>也有其他的表达方式，比如生物样品就不用 wt%，需要跟其他人沟通好。</li>
+</ul>
+<br/>
+<h3 id="4-样品中其他的组成">4. 样品中其他的组成</h3>
+<ul>
+<li>样品中所有的元素及其对应的质量分数，比如 Fe/SiO<sub>2</sub> 样品中，不仅需要 Fe 的质量分数，还需要 Si 和 O 的质量分数。</li>
+<li>这个信息可以直接决定数据质量成败（or 机时能被浪费多少）。</li>
+</ul>
+<br/>
+<h3 id="5-可以提供的样品质量">5. 可以提供的样品质量</h3>
+<ul>
+<li>明确表明能够给 xxx 克、xxx 毫升的样品。</li>
+<li>问清楚对方需要多少样品才可以测量。</li>
+</ul>
+<br/>
+<h3 id="6-对样品的特殊保护备注">6. 对样品的特殊保护/备注</h3>
+<ul>
+<li>空气敏感？易潮？</li>
+<li>低温装置保护？</li>
+<li>有任何危害性？比如易燃易爆、辐射性 etc</li>
+<li>容易被同步辐射光源打变质？(aka. beam damage)</li>
+<li>……</li>
+</ul>
+<br/>
+<h3 id="7-标准样品的需求">7. 标准样品的需求</h3>
+<ul>
+<li>想知道样品的氧化态，是否需要测量已知价态的不同化合物？</li>
+<li>……<br>
+<br/></li>
+</ul>
+<h3 id="8-实验条件特别在-in-situ-条件下">8. 实验条件（特别在 in-situ 条件下）</h3>
+<ul>
+<li>使用何种浓度的气体，什么样的温度，变温速率，气流速率……</li>
+<li>保证任何人看到步骤都没有任何的疑问；</li>
+<li>……</li>
+</ul>
+<br/>
+<br/>
+<hr>
+<h3 id="如果你作为我的-collaboration实验之前我想从你这里了解更多">如果你作为我的 collaboration，实验之前我想从你这里了解更多。</h3>
+<ol>
+<li>前期表征已经得到的信息，包含但不限于价态、元素组成、配位数；</li>
+<li>你想从 XAFS 中获得什么样新的信息，尤其是其他表征手段无法挖掘的信息；</li>
+<li>是否已经对待测样品的结构信息已经有若干个选项。</li>
+</ol>
+<br/>
+<br/>
+<hr>
+<h3 id="总结">总结</h3>
+<ol>
+<li>沟通万岁，理解万岁；</li>
+<li>多寄一点样品，尤其是第一次测类似的样品；</li>
+<li>让样品准时到达 collaboration 的手中。</li>
+</ol>
+<br/>
+<br/>
+<br/>
+<br/>
+<pre><code>感谢你的阅读。</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[制作教程用到的软硬件清单]]></title>
+        <id>https://twocircles24.com/post/tutorial-support/</id>
+        <link href="https://twocircles24.com/post/tutorial-support/">
+        </link>
+        <updated>2020-09-20T08:27:08.000Z</updated>
+        <summary type="html"><![CDATA[<p>(10 min 40 s reading) 我如何在现有基础上尽可能减少开销并进行教程制作。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>(10 min 40 s reading) 我如何在现有基础上尽可能减少开销并进行教程制作。</p>
+<!-- more -->
+<br/>
+<br/>
+<p>因为 WFH (work from home) 开始做视频教程，横向对比网上相关（少得可怜的）中文资源，自认为做出来的东西还算及格分以上。虽然说内容是决定视频质量的第一要素，但围绕着内容可以做出努力，使得体验更好。作为（伪）学生党，我对这方面的投入算是比较节省。在这里总结一份清单来介绍下这几个月做 XAFS 教程用到的软件/硬件。</p>
+<h2 id="硬件">硬件</h2>
+<h3 id="1-画面nividia-gtx-1070-dual-4k-monitors">1. 画面：Nividia GTX 1070 + Dual 4K Monitors</h3>
+<p>几年前购买了台式机后，它就成为了我的主要生产力工具。 <s>花了快一万人民币买的 ThinkPad X1 Carbon 在家沦为看B站的工具</s> 教程均是在台式机上操作完成的。笔记本尤其是超极本，在我看来不太适合制作视频教程，一方面是配置确实受限，另一方面屏幕太小，可展示的空间不尽如人意。读博期间能有个台式机处理数据和写论文，我认为可以排 Todo List Top 3。</p>
+<p>提到N卡是因为它自带 <a href="https://www.nvidia.com/en-us/geforce/geforce-experience/">Nvidia Geforce Experience</a> 可以方便录屏，只需要一个 Alt + F9 就开始了，内存占用不多。类似的竞品有 <a href="https://support.microsoft.com/en-us/help/4027180/windows-10-record-a-game-clip-with-xbox-game-bar">Xbox Game Bar</a> （可以用 Win + G 启动），但是试用之后我觉得没有N卡自己带的方便，而且占用的内存较多。我做教程的时候经常是很多个浏览器和软件全开，而且两块屏幕 (27 + 28) 均是 4K，所以个人更推荐N卡自带的软件来录屏。最近 Nvidia 新发布的 GTX 3000 series 可以做到降噪让我十分心动（有人在旁边用吹风机都能降噪到一点声音没有的那种），个人认为不缺预算上 GTX 3080 是很香的，但只是做个小教程，用用普通N卡也是很不错的，蹭一个软件不亏。<s>1070 这张卡还是我男朋友换上 2080 剩给我的，所以开销为 0。</s></p>
+<p>4K 显示器这个无论是做教程还是出于工作需求都是强烈推荐的，不差钱至少上 27 寸以上 4K 可调高度的那种，最好是 Dell 的，能有多好就有多好。预算紧张的有 24 寸的 1080 IPS 显示器也很香，我黑五买过全新 1080p IPS 27寸 Dell 显示器不到 $80，收个二手也是极好的。屏幕大了之后可以更容易地把内容展示出来，小屏幕会看的比较难受。而且还要涉及到后续编辑视频，大屏幕会让眼睛没那么快觉得紧张疲劳。</p>
+<p>对于一个软件视频教程而言，画面是传递信息最直观的方式。如果无法保证视频的清晰度，视频内容质量很受伤害。</p>
+<br/>
+<br/>
+<h3 id="2-声音blue-microphones-snowball-ice-pop-filter">2. 声音：<a href="https://www.bluemic.com/en-us/products/snowball-ice/">Blue Microphones Snowball iCE</a> + <a href="https://www.amazon.com/Microphone-Windscreens-Pop-Filters/b?ie=UTF8&amp;node=11974601">Pop Filter</a></h3>
+<blockquote>
+<p>如果需要把自己声音放进去，请一定要有专门的麦克风。</p>
+</blockquote>
+<p>这是我看过B站化学相关的知识区视频之后得到的重要结论，但很多 UP 主没有留意过这个细节。很多视频画面方面做得非常不错，还有动画转场字幕等等，但是声音这一块听起来真的不愉快。我通常做视频教程的时候想象的是：在教室里老师讲台上的样子。除开板书，老师们会通过声音来补充很多知识点。我认为视频教程亦是如此：<strong>利用声音给教程增添信息，但不能让人分心</strong>。</p>
+<p>最重要的是发音清晰，而麦克风能够准确捕捉到我的声音。在一开始的视频我使用的是 webcam 上自带的麦克风，够用但是差强人意，所以入了 Blue 家的麦克风。买的是最便宜的那种 ($49)，预算往上走还有它家最有名的 <a href="https://www.bluemic.com/en-us/products/yeti/">Yeti 系列麦克风</a>，支持更多的收音模式和更高的音质。我不建议使用笔记本自带的收音，因为人坐的位置离笔记本的拾音口太远，而且很容易把杂音给收进去。我也不认为一定非得买 Blue 家的麦克风，收音干净的就可以，离自己嘴巴比较近并且有心形收音功能更好，因为这样麦克风就可以尽可能地保留人声而降低对其他方向的杂音。</p>
+<p>录音时，建议<strong>使用单声道录制</strong>。Yeti 系列麦克风默认是双声道收音，虽然功能更强大了，但在视频教程里有点弄巧成拙。因为在录制教程的过程，常常脑袋会晃来晃去看电脑和台本（教程都是有台本准备再开始录制的），如果使用双声道录制而观众用耳机收听的时候，就会明显感觉得到我的声音是在晃动，这个听感对视频内容没有任何帮助，甚至是一个让人分心的行为。而利用单声道录制时，由于是心形收音曲线，最多只会感觉到有一点音量起伏，听感影响不大。</p>
+<p>使用 <a href="https://www.amazon.com/Microphone-Windscreens-Pop-Filters/b?ie=UTF8&amp;node=11974601">pop filter</a> 或者叫“兔耳”的配件是为了减少爆破声，呼吸声还有吧唧嘴声音的输入。由于麦克风离嘴巴比较近，如果念到爆破音（ papi、呸等等）音轨线就会变形得到一个爆音，拿耳机听会特别难受。加入一个 pop filter 或者是兔耳就可以减少爆音出现还有呼吸音等杂音，不需要花大钱就能提升听感一大利器。</p>
+<br/>
+<br/>
+<h3 id="3-文字cherry-g80-3000-keyboard-ipad-pro-2017-logitech-key-to-go">3. 文字：<a href="https://www.cherry-world.com/cherry-g80-3000.html">Cherry G80-3000 Keyboard</a> + iPad Pro 2017 + <a href="https://www.logitech.com/en-us/products/ipad-keyboards/keys-to-go.920-006701.html?crid=27">Logitech Key-to-go</a></h3>
+<p>文字输入最关键的就是键盘了，机械键盘里面用来用去还是 Cherry 经典款最舒服，原价比较贵的(~$100)。我运气好从别人那里花 $30 收了一个几乎全新的 <a href="https://www.cherry-world.com/cherry-g80-3000.html">G80-3000</a>。长时间输入还是要依赖机械键盘。无论笔记本键盘还是 Mac 键盘，都是受刑体验。机械键盘还算长寿，遇到别人出二手的时候收一个，香。但如果你和室友同住宿舍，要留意机械键盘发出来的声音可能会不利于室友之间的友谊。</p>
+<p>不是所有的文字工作都是在台式机前进行的，有时候有灵感了就会坐下来抓出 iPad Pro 开始写 outline。移动端中，文字输入是 iPad + 外接键盘，选择 <a href="https://www.logitech.com/en-us/products/ipad-keyboards/keys-to-go.920-006701.html?crid=27">Logitech Key-to-go</a> 完全出于便携的原因，要说跟机械键盘比输入感那是完败。如果对便携要求不那么严格，<a href="https://www.logitech.com/en-us/products/keyboards/k380-multi-device.html?crid=27">Logitech K380</a> 可以更好地平衡输入体验和便携性，价格也要低很多。</p>
+<br/>
+<br/>
+<br/>
+<h2 id="软件">软件</h2>
+<h3 id="1-画面hitfilm-goodnotes-notability">1. 画面：<a href="https://fxhome.com/">Hitfilm</a> + <a href="https://www.goodnotes.com/">GoodNotes</a> + <a href="https://www.gingerlabs.com/">Notability</a></h3>
+<p>除开N卡自带的 <a href="https://www.nvidia.com/en-us/geforce/geforce-experience/">Nvidia Geforce Experience</a> ，我只使用 <a href="https://fxhome.com/">Hitfilm</a> 来编辑视频。原因嘛，不要钱。只需要花几个小时的时间看一看教程，然后就能把视频基本剪出来的，对新手友好。 要说缺点就是对中文文本支持不太行，有时候打字打到一半就崩溃了。还有个主要拿来给视频打码，总的来说使用频率不算高，够懒。（最近想尝试 Adobe 全家桶，但价格实在是太贵了哈哈。）</p>
+<p>我个人不喜欢使用 PPT 来做教程，因为极为无趣而且传递不了跟软件相关使用的小细节。 在选择讲一些理论相关知识点的时候，我倾向于做板书，是为了让听众有足够的时间跟上我的节奏，而我也可以在其中灵活插入补充点。而要做成视频，iPad Pro + Apple Pencil + 笔记软件无疑是完美组合。<a href="https://www.goodnotes.com/">GoodNotes</a> 和 <a href="https://www.gingerlabs.com/">Notability</a> 是知名老牌 IOS 端笔记软件了，平常就很喜欢拿来打草稿或者是远程开会涂鸦。要说缺点就是录屏不是 16:9，会有一部分屏幕留白，不过影响不大。</p>
+<br/>
+<br/>
+<h3 id="2-声音audacity">2. 声音：<a href="https://www.audacityteam.org/">Audacity</a></h3>
+<p>因为教程涉及到了视频中的音频还有播客，有一个音频软件是必需品。选择 <a href="https://www.audacityteam.org/">Audacity</a> 的原因还是：免费。 功能足够强大，可以剪辑可以修音，学习成本不高，Mac/Windows 均可使用。</p>
+<p>我常用功能有 Normalization （把声音给拉到比较合适音量）、Noise Reduction （背景噪音）、Amplify （解决爆音）、Noise Gate （解决呼吸声），有兴趣的可以在油管上搜索相关教程。</p>
+<br/>
+<br/>
+<h3 id="3-文字gridea-typora-bear">3. 文字：<a href="https://gridea.dev/">Gridea</a> + <a href="https://typora.io/">Typora</a> +  <a href="https://bear.app/">Bear</a></h3>
+<p>文字教程相关都是使用 Markdown 产出。作为一个非码农选手，Markdown 的学习成本比 LaTex 要低很多，还能有非常不错的排版。现在有不少文字平台已经支持 Markdown 语法，比如简书和印象笔记。如果你想了解有关 <a href="https://www.markdownguide.org/getting-started/">Markdown</a> 的使用，在少数派上可以找到不错的介绍文章，比如 「<a href="https://sspai.com/post/36610">Markdown 完全入门</a>」。</p>
+<p>基于 Markdown 的语法使用，我在 Windows 平台选择 <a href="https://typora.io/">Typora</a> 输入，其开源免费界面美观的优点可以几乎无脑选择。可以阅读少数派 2015 年的文章 「<a href="https://sspai.com/post/30292">让 Markdown 写作更简单，免费极简编辑器：Typora</a>」 来了解它的优点。然而 Typora 没有移动端，于是我选择了 <a href="https://bear.app/">Bear</a> （中文名熊掌记）作为 IOS 端 Markdown 输入。在另外一篇文章里介绍过这个软件，虽然是订阅制收费，但架不住软件的美貌。除开 Bear 以外还有竞品 <a href="https://ulysses.app/">Ulysses</a> 很多人使用。</p>
+<p><a href="https://gridea.dev/">Gridea</a> 也是我在少数派上找到的免费静态博客客户端，依托于 Github Pages 账号搭建个人网页非常方便，省去了学习前端的时间，几乎是可以傻瓜操作。出于能省则省，且不要搞得花里胡哨的目的，我没有使用 WordPress。然而使用这样比较小众客户端搭建网页，也会有不少缺点，比如我目前网页搜索功能几乎是不能用，得等男朋友忙完这一阵之后帮我写一写。<s>我真的对代码一窍不通。</s></p>
+<br/>
+<br/>
+<br/>
+<p>总的来说，因为做教程的原因产生出来的开销大头还是在麦克风上，其他的硬软件都是因为非教程目的早已购入或者是能用免费的就不用收钱的。我一开始看别人制作的教程，总感觉别人用的工具都是高大上，我完全不能承受的那种。后来也就发现似乎不是这么一回事，这中间离不开男朋友的技术支持 <s>还有B站三连支持</s>。对于比较专业的软件视频教程，<strong>内容的打磨和主题的选择是王道</strong>，很多UP主视频讲解专业软件非常精彩，即使是音频或其他方面有点小瑕疵也并不影响播放量。如果有一天你想要开始制作教程，我推荐先看看别人的作品，去仔细推敲别人的优缺点，寻找到自己<strong>独一无二</strong>的竞争力。而今天推荐的软硬件其实只是一个“锦上添花”的作用。</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<pre><code>感谢你的阅读。</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[你问我不一定答 | 第三期]]></title>
+        <id>https://twocircles24.com/post/youask-ianswer-3/</id>
+        <link href="https://twocircles24.com/post/youask-ianswer-3/">
+        </link>
+        <updated>2020-09-15T14:25:04.000Z</updated>
+        <summary type="html"><![CDATA[<p>(6 min 34 s reading) 提问是越来越有意思了~</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>(6 min 34 s reading) 提问是越来越有意思了~</p>
+<!-- more -->
+<br/>
+<p><strong>阅读提示1：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
+<p><strong>阅读提示2：问题来源于 B 站 or 微博，问题有可能被重新整理，先后顺序不代表任何重要程度，如果你的提问被收入但觉得不合适，请联系我。</strong></p>
+<hr>
+<blockquote>
+<p>Q21. 能用网上分享的 XAFS 数据来拟合吗？（包括 XANES 或者 EXAFS）</p>
+</blockquote>
+<p><strong>A21:</strong></p>
+<ol>
+<li><strong>不可以拿来做任何的拟合，包含但不限于：LCF、PCA、EXAFS 拟合（Artemis）等等</strong>；</li>
+<li>具体原因参考<a href="https://twocircles24.com/post/energy-calibration/">《能量校正 Calibration》</a>。</li>
+</ol>
+<br/>
+<br/>
+<blockquote>
+<p>Q22. 比较不同批次得到的实验数据，应该如何选择 Alignment vs. Calibration？</p>
+</blockquote>
+<p><strong>A22:</strong></p>
+<ol>
+<li>比较不同批次的数据先把Fe foil(各自reference)先校正好到7112 eV，把校正后的Fe foil放在一起比较是不是一致的。</li>
+<li>如果确认Fe foil两次实验都是一致的，开始比较样品。</li>
+<li>Calibration相当于是用绝对值（reference的E0）来调整样品的位置，Alignment是利用同一样品（可reference可未知样品）的图像来对齐。</li>
+<li>更多讨论参考<a href="https://twocircles24.com/post/energy-calibration/">《能量校正 Calibration》</a>。</li>
+</ol>
+<br/>
+<br/>
+<blockquote>
+<p>Q23. 有没有关于过渡元素E0与价态之间关系的理论或者计算方面的文献啊，能在文章里引用的那种？</p>
+</blockquote>
+<p><strong>A23:</strong></p>
+<p>总的来说没有一个review可以直接能套所有的E<sub>0</sub> vs. 价态讨论。你可以直接引比较新，高IF 跟你课题类似（同一元素）的文章。另外一种是可以按照同一元素来搜关键词，比如搜索 Fe XANES oxidation states，找两篇比较详细讨论你需要论点文章的来引用，不一定限于类似结构。因为元素与元素之间的 XANES 和其氧化态的关联是有差异的。XANES 的解读目前是极其复杂又不完善，所以很难有 comprehensive review 来引用。</p>
+<br/>
+<br/>
+<blockquote>
+<p>Q24. 在 XANES 一阶微分中出现了两个峰，第一个峰一定是 pre-edge 造成的吗？</p>
+</blockquote>
+<p><strong>A24:</strong></p>
+<p>确实不一定是，在<a href="https://www.bilibili.com/video/BV1yz411e7gu">《Athena新手教程 | 同步辐射吸收谱(XAS)数据处理》</a>有人提出来了自己的课题里面出现了混合物情况，里面的 A 组分和 B 组分各贡献了一个峰，所以最后还是选择了第一个峰作为 E<sub>0</sub>。这种情况完全有可能出现。<br>
+其实除了混合物的情况会混淆 E<sub>0</sub> 的选择，我自己知道的还可能有metal-Cl 的键也会影响 edge 位置，还要再出一个“假 pre-edge peak”，某些元素不会很明显，有的就会比如 Pt。不过说到底对于 EXAFS来 说，先定一个再去 Artemis 里面看就是了，不行再换。</p>
+<br/>
+<br/>
+<blockquote>
+<p>Q25. 视频<a href="https://www.bilibili.com/video/BV1364y1F7tw?pop_share=1">《能量校正 Calibration》</a>中提到S的能量较弱，短时间内仪器的能量偏移较小，需要用Na2SO3进行校正.如果我同一批测得标准样品和未知样品，他们的能量偏移应该是一致的，我可不可以直接用他们来拟合价态？</p>
+</blockquote>
+<p><strong>A25:</strong></p>
+<ol>
+<li>大写的不可以。</li>
+<li>如果不进行能量校正，得到的 E<sub>0</sub> 值会跟其他文献里面的对不上号。比如大部分人汇报 Fe foil 是 7,112 eV，我不校正就是 7113.3 eV。那我发文章出去报后面这个数不是被公开处刑？</li>
+<li>LCF 拟合更多是看强度的吻合程度，在假定偏移程度一样的前提下，确实不校正可能对拟合的结果（主要是每个组份的比例）影响不大；但是你图偏移了，把它写成文章发出去遇到懂的审稿人不会被处刑？</li>
+</ol>
+<br/>
+<br/>
+<blockquote>
+<p>Q26.为啥需要拟合数据呢？比如我拿到一组数据，直接通过 Athena 统一标定后，输出结果，应该就可以了吧？ 那么后续用Artemis拟合图以及搜寻cif卡片参比的意义在哪里呢？</p>
+</blockquote>
+<p><strong>A26:</strong></p>
+<ol>
+<li>Artemis 的作用是为了得到邻近原子数量+距离，Athena得不到。如果你只是寻求 XANES 信息或仅仅展示数据，Athena 足矣。</li>
+</ol>
+<br/>
+<br/>
+<blockquote>
+<p>Q27. 一旦保存（save as）后就显示软件假死，无法操作，这是什么情况呢？</p>
+</blockquote>
+<p><strong>A27:</strong></p>
+<ol>
+<li>重开，重启，清caches，重装，少加两个数据，换版本。</li>
+</ol>
+<br/>
+<br/>
+<blockquote>
+<p>Q28. xafs中的论文大概有百分之九十的垃圾。</p>
+</blockquote>
+<p><strong>A28:</strong></p>
+<ol>
+<li>我个人觉得是看出于什么样的目的发表的吧。对于这种表征，质量好的文章更多常见在小期刊上面，像 JPCC。要发IF高的刊物，表征只是一个必要不充分条件，讲的故事才是核心。但是站在不了解内情的局外人来看，以为表征是充分必要的，再加上学习成本较高，导致误解越来越深，越来越多的人对技术展开了盲目的追求。</li>
+</ol>
+<br/>
+<br/>
+<blockquote>
+<p>Q29. 对于单原子催化剂要通过建模得到原子坐标等数据来得到inp文件。有很多单原子催化剂给出R空间拟合数据之后都会给出催化剂的球棍模型，而这个球棍模型大多是平面的，但是张三自己作图的时候边缘不可避免的会自动加入氢原子而保证碳四键，最后得到就是非平面的，不知道 x 教授是如何操作的？请问如何得到平面的构型？我用chemdraw画的，有没有容易上手的软件推荐一下来得到单原子的inp。</p>
+</blockquote>
+<p><strong>A29:</strong></p>
+<ol>
+<li>单原子催化剂 EXAFS 拟合不需要建模拟合，借鉴现有的分子晶体结构就行；.</li>
+<li>催化剂球棍模型是通过其他拟合计算得到的，EXAFS 的拟合数据 R 只是辅助说明理论计算和EXAFS证据是相互吻合的；</li>
+<li>单原子结构比如 Fe-N4 @ C 在 graphite 上面结构，一般是从 pure graphite 改过来的，从零开始画肯定难；3. ChemDraw 可以画，应该需要 disable 掉某些自动功能；</li>
+<li>如果画 3D，我反而推荐用 xyz 文件去 Vesta 画。</li>
+</ol>
+<br/>
+<br/>
+<blockquote>
+<p>Q30. 张三根据教程对数据进行了分析，得到的结果是接近绿色的，但是其中s0的平方和N都是负数，其他的一些数据满足您讲的条件，请问这样的数据配位数N可以取绝对值来使用嘛？如果不行，我需要调什么参数呢。</p>
+</blockquote>
+<p><strong>A30:</strong></p>
+<ol>
+<li>不可以，绿色只是代表你出来的线符合实验数据，但是并不说明每个参数有意义。所以绿色 ≠ 好 fitting；</li>
+<li>你可以尝试固定 S<sub>0</sub><sup>2</sup> 或者是 N 为正数里面一个合理的数值再看另外一个拟合得到的结果；</li>
+<li>关于变量调整相关视频，请参考<a href="https://www.bilibili.com/video/BV1Mk4y1B7Vz">《从EXAFS方程讨论拟合变量》</a>。</li>
+</ol>
+<br/>
+<br/>
+<br/>
+</br>
+<pre><code>感谢你的阅读。
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[从应用出发，闲聊 EXAFS 的原理及思路]]></title>
+        <id>https://twocircles24.com/post/xafs-principle/</id>
+        <link href="https://twocircles24.com/post/xafs-principle/">
+        </link>
+        <updated>2020-09-12T17:43:01.000Z</updated>
+        <summary type="html"><![CDATA[<p>(16 min 40 s reading) 想知道邻近原子的距离 (&lt; 5 Å) 和个数吗？不是不可以考虑下 EXAFS。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>(16 min 40 s reading) 想知道邻近原子的距离 (&lt; 5 Å) 和个数吗？不是不可以考虑下 EXAFS。</p>
+<!-- more -->
+<br/>
+<br/>
+<p><strong>阅读提示1：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
+<p><strong>阅读提示2：问题来源于B站 or 微博，问题有可能被重新整理。如果你的提问被收入但觉得不合适，请联系我。</strong></p>
+<p><strong>阅读提示3：我的一些回答可能会很有争议。如果你不喜欢，那就不喜欢。</strong></p>
+<hr>
+<p>这个题目来自于微博的一个提问。说起来有点好笑，做了几个月的 EXAFS 教程还没有讲过一点 EXAFS 能拿来干嘛。之所以没讲的原因有几个：</p>
+<ol>
+<li>网上很多课程或者是讲义已经提及了，我即使要讲也就是照本宣科，不会有多大区别；</li>
+<li>我本就一开始打算从软件使用做起。虽然讲理论的讲义网上一大把，实际操作的中文教程几乎为零，我要的是填补这块空白；</li>
+<li>就我自己的经验来看，这个问题的答案并不是三言两语能讲清楚的；</li>
+<li>其实这个问题，应该更多的是问你课题需要什么。</li>
+</ol>
+<p>这篇文章区别于网上正规的讲义，我会尝试用一个直白的方式聊聊“从 EXAFS 这里能获得什么”。</p>
+<br/>
+<br/>
+<h2 id="exafs-应用极为广泛">EXAFS 应用极为广泛</h2>
+<p>我随手 Google “XAFS 应用”得到了如下结果：</p>
+<ol>
+<li>
+<p>来自中科大韦世强老师的讲义<a href="http://ssrf.sinap.ac.cn/meeting/syjs/XAFS/pdf/06-%E9%9F%A6%E4%B8%96%E5%BC%BA.pdf">《XAFS技术及其应用》</a>：Zn<sub>1-x</sub>TM<sub>x</sub>O (TM=Co,Mn) DMS；Ge-Si/Si(001) 量子体系；研究Au纳米颗粒初期生长机理……</p>
+</li>
+<li>
+<p>材料牛的<a href="http://www.cailiaoniu.com/161530.html">《干货：X射线吸收谱（XAFS）在多相催化中的应用》</a>有一句在多相催化里面的描述：</p>
+<blockquote>
+<p>XAFS对催化剂的研究起始于无负载析出相，这是因为它代表了活性负载相的模型材料。由于它们的非晶相性，EXAFS谱是判定吸收原子附近局域结构的唯一结构技术。</p>
+</blockquote>
+</li>
+<li>
+<p>来自中科院张静老师的讲义<a href="http://bsrf.ihep.cas.cn/hezuojiaoliu/jiangxiban/201412/P020141207743896333247.pdf">《XAS 原理于应用》</a>：环境中的过渡金属氧化物纳米粒子转化；金属熔体中原子间距负膨胀现象；植物修复技术……</p>
+</li>
+</ol>
+<p>这只是摘取的部分 EXAFS 应用，可以发现涉及的范围非常大。我作为一名在读学生，没有像各位教授那样接触不同的课题，很难把应用讲得很完整。而在同步辐射实验室做实验的时候，也会遇到来自五湖四海的课题组进行着我从来都没听过的课题，甚至还在线站上看到有人在测牙齿的里钙的 XAFS （是的，就是直接把一颗人的牙齿架在样品台上面跑数据）。</p>
+<p>说这么多，只是为了想减轻一点你的焦虑。作为初学者，没有必要一开始去了解这门技术应用上的方方面面，反而更建议你从课题上出发：先提出问题，接着思考可能的对应方案，再考虑 XAFS 是不是能帮你回答问题。比如，我想知道我某一步合成的产物是否有杂质，如果是有机化合物有碳有氢，核磁直接安排上。我会下意识说用 XAFS 吗？当然不。</p>
+<blockquote>
+<p>可以最简单地解决问题的手段才是好手段。</p>
+</blockquote>
+<p>再者，XAFS 有着“灵活的适应性”，近来发展原位或是同其他表征联用的手段在文章上越来越多，数据处理方面则朝着大数据或机器学习方向发展。想起几年前去同步辐射实验室的时候，带我参观的工作人员是这么说的：</p>
+<blockquote>
+<p>不用问我们能做什么，只问你自己有什么想做的。只要够有意思，不存在的东西也可以整出来。</p>
+</blockquote>
+<p>我第一次听到这样的话觉得吹牛成分有占一半，混熟了发现……嗯，确实只要课题够有意思，真的可以为所欲为。不过这也是想说明 XAFS 这门技术处在一个发展的阶段，在这个基础上还有 XES、RIXS 等等高端技术，那怎么讲都讲不完的。然而万变不离其宗，当掌握了最基本的原理，现阶段应用相关的问题自然迎刃而解。</p>
+<br/>
+<br/>
+<h2 id="exafs-提供的是中心原子的结构信息">EXAFS 提供的是中心原子的结构信息</h2>
+<p>为了简化解释，需要指出几个关于大部分 XAFS 谱的核心要点。需要指出的是，<strong>低能谱线的谱图 (eg. S K-edge) 数据处理会和过渡金属一类的差距较大，有些要点并不适用</strong>，在这里主要以过渡金属的 XAFS 技术来讨论：</p>
+<ol>
+<li>X-ray <strong>absorption</strong> spectroscopy 是一项<strong>吸收光谱</strong>技术；</li>
+<li>通过改变<strong>入射光的能量</strong>来获得的<strong>目标元素</strong>的谱图；</li>
+<li>只看<strong>中心原子</strong>的周围结构环境信息；</li>
+<li>数据反映的是<strong>平均环境</strong>，也叫做 bulky technique；</li>
+</ol>
+<p>背后的“潜台词”包含但不限于：</p>
+<h3 id="与其他光谱技术类似性">与其他光谱技术类似性</h3>
+<p>吸收光谱里面的红外 (infrared spectroscopy, IR) 和紫外-可见光谱 (UV-vis spectroscopy) 在部分原理上是<strong>可以相互借鉴的</strong>。比如：</p>
+<ol>
+<li>均遵循 <a href="%5Bhttps://en.wikipedia.org/wiki/Beer%E2%80%93Lambert_law%5D(https://en.wikipedia.org/wiki/Beer%E2%80%93Lambert_law)">Beer-Lambert law</a>，数据来自测量于入射前和入射后的光强度，从而得到样品吸收多少光；</li>
+<li>光路是需要<strong>穿过样品</strong>，这与 XPS 一类的表面表征技术<strong>有区别</strong>；</li>
+<li>光路是有<strong>一定横截面积</strong>，测得的结构信息实质上是<strong>光斑的面积 × 样品厚度</strong>以内体积中的；</li>
+<li>如果在被入射光打到的体积内，出现了混合物的情况，出射光只能知道有多少光被吸收了，最后得到的是这个体积内的<strong>平均信息</strong>；</li>
+<li>你在测量样品的时候需要把光瞄准到样品上，以及在装样品的时候需要像红外片一样讲样品碾均匀了再压片放入样品片中。<s>（实验部分是以后要补的坑，不是所有的样品都是粉末）</s></li>
+</ol>
+<br/>
+<h3 id="能量是用于区分元素的手段">能量是用于区分元素的手段</h3>
+<p>所有 EXAFS 的原始数据中 x 轴均是能量，这是因为 EXAFS 是依靠能量来分辨元素的。很多人的第一印象认为 EXAFS 能精准地区分一个元素到另一个元素。可以这么理解，但是要加一个重要的前提：<strong>需要分辨的元素各自吸收边尽可能远离彼此</strong>。来举几个例子：</p>
+<ol>
+<li>一个铁负载在二氧化硅载体上的样品，需要测铁 K-edge。那么样品里面包含的元素有 Fe, Si &amp; O。由于前者的 K边吸收能量远超过剩下的元素，所以我只需要去 Fe K-edge 附近测量 XAFS 信息；</li>
+<li>一个 bimetallic 催化剂里面含有相近质量分数的钨 (Tungsten, W) 和铼 (Rhenium, Re) 。如果我想测量 W L<sub>III</sub>-edge （10,207 eV) ，EXAFS 谱图从 ~10,000 eV 开始扫起，到10,207 eV 附近会看到一个吸收；能量数值继续增加，在10,535 eV 附近还会看到第二个吸收，这是来自于 Re L<sub>III</sub>-edge 吸收。此时如果我希望得到的是一张 W L<sub>III</sub>-edge EXAFS <strong>吸收</strong>谱图，是会被 Re 的吸收而直接干扰，从吸收谱这里不能得到一张完整可用于处理的 EXAFS 图。</li>
+</ol>
+<p>正因为如此，得到一张目标元素的 EXAFS 谱图 = <strong>在吸收边 -100 eV ~ +1000 eV 中最好别有其他元素的吸收边落在这个范围内</strong>。我强调吸收谱是因为这个问题是可以依靠荧光谱来解决的，虽然一开始在实验计划上就应当避免。</p>
+<br/>
+<h3 id="邻近原子信息是依靠-exafs-方程获得">邻近原子信息是依靠 EXAFS 方程获得</h3>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>χ</mi><mo>(</mo><mi>k</mi><mo>)</mo><mo>=</mo><munderover><mo>∑</mo><mi>i</mi><mrow></mrow></munderover><mfrac><mrow><mo>(</mo><msub><mi>N</mi><mi>i</mi></msub><msubsup><mi>S</mi><mn>0</mn><mn>2</mn></msubsup><mo>)</mo><msub><mi>F</mi><mi>i</mi></msub><mo>(</mo><mi>k</mi><mo>)</mo></mrow><mrow><mi>k</mi><msubsup><mi>R</mi><mi>i</mi><mn>2</mn></msubsup></mrow></mfrac><mi>s</mi><mi>i</mi><mi>n</mi><mo>[</mo><mn>2</mn><mi>k</mi><msub><mi>R</mi><mi>i</mi></msub><mo>+</mo><msub><mi>δ</mi><mi>i</mi></msub><mo>(</mo><mi>k</mi><mo>)</mo><mo>]</mo><msup><mi>e</mi><mrow><mo>−</mo><mn>2</mn><msubsup><mi>σ</mi><mi>i</mi><mn>2</mn></msubsup><msup><mi>k</mi><mn>2</mn></msup></mrow></msup><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><mn>2</mn><msub><mi>R</mi><mi>i</mi></msub></mrow><mrow><mi>λ</mi><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mfrac></mrow></msup></mrow><annotation encoding="application/x-tex">\chi(k)= \sum_{i}^{}\frac{(N_{i}S_{0}^{2})F_{i}(k)}{kR_{i}^{2}}sin[2kR_{i} + \delta_{i}(k)]e^{-2\sigma _{i}^{2}k^{2}}e^{-\frac{2R_{i}}{\lambda (k)}}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">χ</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.768777em;vertical-align:-1.277669em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3500050000000003em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7959080000000001em;"><span style="top:-2.4231360000000004em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span style="top:-3.0448000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.27686399999999994em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4518920000000004em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.24810799999999997em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9628639999999999em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mopen">[</span><span class="mord">2</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.459675em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03785em;">δ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">)</span><span class="mclose">]</span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.0369199999999998em;"><span style="top:-3.1130000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">2</span><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8913142857142857em;"><span style="top:-2.214em;margin-left:-0.03588em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913142857142857em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.209675em;"><span style="top:-3.4842000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0363928571428573em;"><span style="top:-2.640785714285714em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">λ</span><span class="mopen mtight">(</span><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mclose mtight">)</span></span></span></span><span style="top:-3.2255000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.5483000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3448em;margin-left:-0.00773em;margin-right:0.1em;"><span class="pstrut" style="height:2.65952em;"></span><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.31472em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5377857142857143em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>注：这可是 EXAFS 的灵魂方程啊</p>
+<br/>
+<p>之前已经做了一个讨论 <a href="https://www.bilibili.com/video/BV1Mk4y1B7Vz">EXAFS 方程变量的视频</a>，简单来说从这个方程里面最直接的能够获得中心原子的两个信息：<strong>原子种类和距离</strong>。</p>
+<p>对于原子种类的分辨，其依据是来自于 <em>F(k)</em> 和 <em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03785em;">δ</span></span></span></span>(k)</em> 两个方程，分别对应 scattering amplitude 和 phase shift 方程。其中  <em>F(k)</em> 的形状和强度与原子质量相关，我们主要依赖于它来分辨邻近原子。下图是来自 <a href="https://millenia.cars.aps.anl.gov/xraylarch/downloads/2018Workshop/NewvilleEXAFS_RIMG78_ColorPreprint.pdf">Matthew Newville 的讲义</a>示例：O、Fe &amp; Pb 三者的 scattering amplitude 均不一样 （留意图中 x 轴也是 k 空间的 x 轴），这三者元素的质量相差甚远，对应的 <em>F(k)</em> 也不一样，反映到 EXAFS 数据处理中，就可以通过 <em>Artemis</em> 来拟合甄别是铁或氧或铅。<br>
+再者，右图代表了三个元素的 phase shift 方程，可以看到铁和氧比较类似，而铅的图像差距较大。如果有看过 <a href="https://www.bilibili.com/video/BV1yz411e7gu?p=6">phase correction 相关视频</a>，就知道在 R 空间中看到的 path 对应峰位置会比真实的原子距离要短 0.2 ~ 0.4 Å，这个误差就来自于 <em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03785em;">δ</span></span></span></span>(k)</em>。而对于轻元素而言，<em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03785em;">δ</span></span></span></span>(k)</em> 比较类似，而重元素则差距较大。反映到实际 EXAFS 图像中，就会发现<strong>氧或铁在 R 空间中显示的距离“偏移”会比铅要少</strong>。虽然是由原子不同序数导致的，但是远不如 <em>F(k)</em> 明显。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/09/14/BzpwRaybAs8cHGL.png" alt="fk.png" loading="lazy"></figure>
+<p><strong>Figure 1.</strong>  <em>F(k)</em> and <em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span></span></span></span>(k)</em> for oxygen K-edge, iron K-edge and Pb L<sub>III</sub>-edge from <a href="https://millenia.cars.aps.anl.gov/xraylarch/downloads/2018Workshop/NewvilleEXAFS_RIMG78_ColorPreprint.pdf">Matthew Newville</a>.</p>
+<br/>
+<p>然而，<strong>如果两者原子序数 Z = ± 5 以内</strong>，<em>F(k)</em> 方程会非常接近，直接结果就是<strong>无法在 EXAFS 中分辨</strong>。最简单的例子就是在在 EXAFS 中，<strong>作为邻近原子的碳氮氧在相同距离是无法区分的，钨和铼也没办法分辨</strong>。如果谁告诉你光用 EXAFS 可以在同一距离分辨碳氮氧，这篇文章下一秒可以进垃圾桶了。<s>我就是在说相当一部分的单原子文章</s></p>
+<p>费这么大力气讲这个就是希望在理解这一点之后回头看自己的课题中的问题，思考你是否会遭遇这样的难点。如果有，XAFS 很可能不是适合的手段，或者需要费大力气。</p>
+<br/>
+<p>对于原子距离，核心判定来自于方程中的 <em>R</em>。我一直强调：</p>
+<ol>
+<li>在 R 空间看到的图<strong>不能</strong>直接不经分析跳出来说是 xxx 原子在 xxx 距离，因为一个峰可以对应多个原子的可能性（如上讨论）；</li>
+<li>Multiple scattering 也可以在 R 空间中出现信号，它们对应的 R 值<strong>并不是原子距离</strong>；</li>
+<li>要理解距离的含义，多参考晶体结构里面的信息，例如键角、配位数、几何结构等等。</li>
+</ol>
+<p>如果已经阅读过多篇 EXAFS 相关的文献，就可以知道 EXAFS 测得的距离大多是 1 ~ 5 Å，换言之超过 5 Å 的原子很可能是看不到了（也有例外，今天不谈）。所以在我考虑想要测得某原子与中心原子距离的时候，我至少会先判断这个距离：</p>
+<ol>
+<li>有没有超过 5 Å，邻近原子是重原子还是轻原子（轻原子在距离较远的时候信号更弱）；</li>
+<li>出现的地方会不会有其他原子的干扰，我能不能通过原子序数区别来分辨；</li>
+<li>有没有参考的晶体结构或者计算出来的结果，帮助我分析我拟合得到的数据合理性。</li>
+</ol>
+<br/>
+<br/>
+<h2 id="把-exafs-的优势和课题中的痛点连接起来">把 EXAFS 的优势和课题中的痛点连接起来</h2>
+<p>EXAFS 的优势在我接触的课题中，大致可以分为原理和实验操作上的两大类：</p>
+<ol>
+<li>其他主流表征都无法提供原子距离和种类信息，比如 NMR、EPR、Raman、UV-vis 云云，能想到的技术都不能帮助我回答我课题的问题。比如我做过的 Re/Al<sub>2</sub>O<sub>3</sub> 催化剂，NMR 只可能测 <sup>27</sup>Al，EPR 测不了 d<sup>0</sup> 电子结构，因为负载量太低，Raman 和 UV-vis 都是废物，用 CO 吸收也是测了没用，用 IR 也是测载体。只有 XAFS 可以给我 Re 的信息；</li>
+<li>实验可以在常压高温下进行，能做 <em>Operando</em> 反应。XPS 做了直接没扫几圈就把样品给打还原了，HAADF-STEM 一打样品直接扑街结果，这两个技术号称有 <em>in-situ</em>，但是那气体要求的上限真是低的可怜。XAFS 能够发挥想象力，什么奇怪的样品都能测，我除了常规的常压高温的实验，高温高压、低温、易燃易爆、空气敏感、固液气等等实验都能做，上手很快，装备自己设计设计就能有。要做丙烷脱氢实验，直接挂一个气路 + GC-FID/MS 的仪器就可以开始了。反应上了几百度的时候，很多 IR 信号已经不能看了，XANES 再怎么样都能打，EXAFS 在把实验设计完善的情况下，六七百度也能拿到可用的谱图。</li>
+</ol>
+<p>所以说，先了解你自己课题的痛点再来决定用什么方案来解决。如果说核磁可以解决的，就用核磁，毕竟大多数学校核磁是能做的。如果是做 Rh 相关的催化剂，想看是否是单原子，CO 吸附会是一个不错的选择，因为红外的信号会比 EXAFS 更灵敏。<strong>一旦有其他解决方案，绝对不在第一时间选择 EXAFS</strong>。</p>
+<p>在介绍<a href="https://www.bilibili.com/audio/au1758284?type=1">《如何写 XAS 机时申请书》</a>的播客我提过的思路：</p>
+<blockquote>
+<p>在申请书里面，必须要提及这个课题已经有前期表征和初步的发现，并且要点出使用 EXAFS 能够给出什么样额外的信息，而这部分信息是其他任何表征手段都无法给出的。</p>
+</blockquote>
+<p>在做研究的漫漫长路上，不论使用何种手段，都要问自己：这是正确的解决方案吗？这是最简单可行的解决方案吗？</p>
+<br/>
+<br/>
+<h3 id="留心-xafs-的缺点">留心 XAFS 的缺点</h3>
+<p>缺点除了大家老说拿不到机时、学习来太难以外，技术自身还有很多缺点：</p>
+<ol>
+<li>给出的是平均信息；</li>
+<li>误差高达 10~15%；</li>
+<li>某些原子根本就分辨不了（比如碳氮氧）；</li>
+<li>必须依赖其他表征结果来理解数据；</li>
+<li>……</li>
+</ol>
+<p>所以，再次审视你的课题，问一些问题，像是：</p>
+<ol>
+<li>需要找到负载量为 10 wt% Re 的催化剂中 1% 的活性位点吗？(10 wt% Re × 1% = 0.1 wt% Re from 9.9 wt% Re)</li>
+<li>需要分辨在 1.9 Å 的氧原子 vs. 碳原子吗？</li>
+<li>验证氧平均配位数是从 6 变为了 5 个？</li>
+<li>其他表征能不能回答这个问题？</li>
+<li>……</li>
+</ol>
+<p>如果 1~3 问题回答的是 Yes，请再三慎重使用 XAFS。但 XAFS 限制绝对不止这几个点，建议多从文献里面比较和与老师多讨论。</p>
+<br/>
+<br/>
+<h2 id="xafs-的原理和应用联动">XAFS 的原理和应用联动</h2>
+<p>回到一开始那些列出的例子，比如研究金纳米粒子的生长机理。以一个金原子为中心，新的金原子一层一层开始包围最开始的原子。使用 XAFS 就能看到金原子的周围逐渐开始出现 Au-Au path，对 EXAFS 数据进行拟合，可以得到周围金原子有多少个，在多少的距离，会有几层金原子。配合原位反应，就可以动态的看到纳米粒子是以什么样的速度生产，获得动态数据。这个反应可以在液体里面进行。而这些结果是电镜一类技术无法实现的。</p>
+<p>再来个举烂了的例子，单原子催化剂。很多异相催化剂的载体是非晶相的，大部分表征都是没用的。如果你想知道 Fe 原子的配位数是多少，只能安排上 EXAFS了。至于怎么去解释这个催化反应的机理，这是通过动力学反应或是其他表征来得到的。XAFS 就一结构信息，没办法拿到催化数据。</p>
+<br/>
+<br/>
+<h2 id="番外">番外</h2>
+<p>要问 XANES 能干嘛吗？无可奉告 2333</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<pre><code>感谢你的阅读。
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Multiple Scattering]]></title>
+        <id>https://twocircles24.com/post/multiple-scattering/</id>
+        <link href="https://twocircles24.com/post/multiple-scattering/">
+        </link>
+        <updated>2020-09-10T14:48:37.000Z</updated>
+        <summary type="html"><![CDATA[<p>(12 min 30 s reading) 可能很多人看到过，但是从没细想过的一个问题~</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>(12 min 30 s reading) 可能很多人看到过，但是从没细想过的一个问题~</p>
+<!-- more -->
+<br/>
+<p><strong>视频：《Multiple Scattering | XAFS数据处理参数讨论》(<a href="https://www.bilibili.com/video/bv1nf4y1D7Cd">Bilibili</a>, <a href="https://youtu.be/J6526e_3q_s">YouTube</a>)</strong></p>
+<br/>
+<br/>
+<p><strong>阅读提示1：该文只用于参考和建议，非标准。各个课题遭遇的数据差异巨大，我的建议不一定适合你的数据处理，请谨慎使用。</strong></p>
+<p><strong>阅读提示2：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
+<br/>
+<hr>
+<h2 id="太长不看">太长不看</h2>
+<blockquote>
+<ol>
+<li>Single scattering 是指光电子发生在中心原子和一个邻近原子之间的散射路径；而 multiple scattering 是指在光电子回到中心原子前还有经过其他的邻近原子。</li>
+<li>Multiple scattering 的强度主要与对应的键角相关，越接近 180° 强度越大。<strong>通常来说</strong>，键角低于 150° 的时候其贡献很小，可以忽略。（也有例外）</li>
+</ol>
+</blockquote>
+<br/>
+<hr>
+<p>如果把 cif 文件放到 Artemis 里面的时候，你会发现在计算好的 paths 中包含了 Degeneracy （简并度）、Reff（有效半径），Scattering path （散射路径）、Rank（排名）、L（脚数量）和 Type（种类）。我们今天来讲讲他们分别代表了什么，以及这跟 multiple scattering 的关系是什么。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/09/02/HblOaAxU8V3mrjS.png" alt="example.png" loading="lazy"></figure>
+<p><strong>Figure 1.</strong> FeS<sub>2</sub> cif 文件（CCDC# 1755449）在 <em>Artemis</em> 演示。</p>
+<br/>
+<h2 id="scattering-路径的分类和命名">Scattering 路径的分类和命名</h2>
+<p>先来回想下 EXAFS 的理论：当中心原子（比如 FeS<sub>2</sub> 中的 Fe）受到了足够的能量（比如大于 7,112 eV）后，内层电子（1s e<sup>-</sup>）激发逃逸成为了光电子到邻近原子发生了散射行为（比如 S 或另一个 Fe 原子），接着光电子再散射回中心原子，我们通过检测中心原子的变化来获得 XAFS 信息。</p>
+<p>今天讲述的重点就是在光电子从中心原子逃逸到邻近原子再回到中心原子的过程。可以下意识的想到最简单的<strong>逃逸-返回</strong>的路径是中心原子到任一邻近原子再直接返回，整 scattering 过程<strong>只发生在了两个原子之间，其中一个必须是中心原子</strong>，这就是 <strong>single scattering</strong>。不难想象，光电子的运动并不会只发生在指定的两个原子之间，邻近原子受到的光电子还能再散射出去到它的“邻近原子”，然后再回到中心原子。那么<strong>包含了三个原子及其以上的 scattering 过程（其中必有中心原子）就是 multiple scattering</strong>。</p>
+<br/>
+<h3 id="single-scattering">Single Scattering</h3>
+<br/>
+<p>Single scattering 的定义非常简单：中心原子 + 邻近原子（可远可近）。<strong>Figure 2</strong> 中的原子 1 和 2 就是不同距离的 single scattering。 也可以看到在中心原子 （Abs，蓝色圆圈）附近有两个相同的原子 1（一左一右），在测量 EXAFS 数据时，就会收到两倍的原子 1 光电子。这就是我们能够测得它们配位数的信息，或者更准确地说是 degeneracy （简并度）。由于一进一出的简单过程，我们可以对 single scattering 的 Reff （有效半径）能认作是两个原子之间的距离。在这样的假定前提下，我们可以从 EXAFS 中得到原子之间的距离信息。在 <em>Artemis</em> 中的 rank 只是一个粗略代表了这条 path 强度，没有任何实际的物理意义。L 代表了 Leg 的数量，一个 leg 是指光电子在两个原子间的一次转移。对于 single scattering，进行了中心原子到一个邻近原子（leg × 1），再回到了中心原子（leg × 1），总和 L = 2。也可以从 scattering path 里面读出来，以第一个为例：@S1.1 @，指的是从硫原子到中心铁原子，S1.1 是从晶体结构文件里面出来的，可以打开 <em>Vesta</em> 去寻找，最后只有 @ 但没有原子符号，直接代表了中心原子。</p>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2020/09/02/FKqyY61WgTMex5w.png" alt="collinear.png" loading="lazy"></figure>
+<p><strong>Figure 2.</strong> This diagram demonstrates the various kinds of collinear MS paths and how they relate to the corresponding SS path. (from <a href="https://bruceravel.github.io/demeter/documents/Artemis/extended/ss.html">Artemis manual</a>)</p>
+<br/>
+<h3 id="multiple-scattering">Multiple Scattering</h3>
+<br/>
+<p>Multiple scattering 一定程度上可以跟 single scattering 类比，无非是在回到中心原子之前经历了多于一个邻近原子。在 <strong>Figure 1</strong> 的 Type 中但凡不是 single scattering 的名字，<strong>都是 multiple scattering</strong>。这个说起来就很头疼了，一方面是种类太多，另一方面它们给了拟合不小的麻烦。我这里只能做一点点地解释。</p>
+<p><strong>Figure 2</strong> 里列举了部分 multiple scattering，可以发现大部分开头都是以 Collinear （共线）开头，这里代表所有涉及的原子均在一条直线上，每个之间的键角均为 180°。可以看到：</p>
+<ol>
+<li>Collinear double scattering 涉及了三个原子：中心原子 → 原子 1 → 原子 2 → 中心原子 。 3 legs。</li>
+<li>Collinear triple scattering 涉及了三个原子：中心原子 → 原子 1 → 原子 2 → 原子 1 → 中心原子 。4 legs。</li>
+<li>Double scattering (DS) or triple scattering (TS) through absorber：散射路径经过了中心原子。legs 数量还是对应为 3 和 4。</li>
+<li>Rattle：通常指在两个原子之间来回反复横跳，legs 数量取决于跳了多少次 。 <s>（就跟坂本大佬一样）</s></li>
+</ol>
+<br/>
+<h2 id="multiple-scattering-强度受键角影响">Multiple Scattering 强度受键角影响</h2>
+<p>在上述粗略介绍里我强调了 <strong>collinear</strong> 是因为 Multiple scattering的强度受涉及的原子间键角影响。 简单来说，键角越接近 180°，mutiple scattering 的角度。拿一个在视频里面举的例子，K<sub>3</sub>Fe(CN)<sub>6</sub> 中 Fe-C-N 键角为 178° （几乎接近为直线）。我们可以看到它的 Fe-C-N-Fe 和 Fe-C-N-C-Fe 路径不仅强度完全碾压了 Fe-N-Fe single scattering，连 Reff 都是一样的。因为它们都经过了同样的路径<s>像是一根线上的蚂蚱</s>。</p>
+<p><img src="https://i.loli.net/2020/09/02/oibHrjKxeMGAOJc.png" alt="linear artemis.png" loading="lazy"><br>
+<img src="https://i.loli.net/2020/09/02/wvT4Gr1RF5WgD82.png" alt="feff linear.png" loading="lazy"></p>
+<p><strong>Figure 3.</strong> K<sub>3</sub>Fe(CN)<sub>6</sub> 中两个 multiple scattering 已经比 single scattering 明显了。</p>
+<br/>
+<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2020/09/02/vkLTqSuMOVDmEIe.png" alt="pic.png" loading="lazy"></figure>
+<p><strong>Figure 4.</strong> 用 <em>Avogadro</em> 把 Fe-C-N 的键角修改成 150° 再重新投到 <em>Artemis</em> 里面计算。（左：未修改；右：修改键角后。橘色：Fe；灰色：C；蓝色：N；紫色：K）</p>
+<br/>
+<p>但如果我用 <em>Avogadro</em> 把所有的 Fe-C-N 键角改成了 150°（保持 C-N 距离不变的情况下），就会看到两个 multiple scattering 的强度降低，Fe-N single scattering 反而强度略有增多（因为 Fe-N path 距离近了一点）。不仅如此，连 Fe-C-N-Fe multiple scattering 的名字从 foward scattering 改成了 obtuse  scattering。一方面可以证明强度与键角关系，另一方面也说明 multiple scattering 的命名是很灵活的，在实际运用的过程中它们的名字常常用“multiple scattering”就能一笔带过了，没必要太过纠结，只需要搞懂光电子路径即可。</p>
+<p><img src="https://i.loli.net/2020/09/02/ow3uU7qfNyxHQWd.png" alt="bent artemis.png" loading="lazy"><br>
+<img src="https://i.loli.net/2020/09/02/vTo2OpUEPVyrj7Z.png" alt="bent feff.png" loading="lazy"></p>
+<p><strong>Figure 4.</strong> 把 Fe-C-N 键角改成 150°后的 <em>Artemis</em> 给出的 multiple scattering 强度。</p>
+<p>要说明的是，path 的强度不仅仅是跟键角相关。无论是 single scattering 或 multiple scattering，受到的因素包含但不限于：原子重量、距离、个数等等。在 multiple scattering 这里强调<strong>键角</strong>是因为这是一个 single scattering 不具备的讨论变量。在网上的<a href="http://www.umich.edu/~jphgroup/XAS_Course/Harbin/CCC2_XAS.pdf">一篇资料</a>中认为键角在 150 ° 到 180 ° 之间的 multiple scattering 是不可以被忽略的，而小于 150 ° 的键角相关的 multiple scattering 强度较弱常可以忽略：</p>
+<blockquote>
+<p>Multiple scattering is extremely angle dependent. For scattering angles less than ca. 150° (the angle A–S1S2 in the example above), multiple scatteringis weak and can often be neglected. However, for angles between 150° and 180°, multiple scatteringmust be considered. The angle dependence of multiple scatteringmeans that EXAFS can, at least in principle, provide direct information about bond angles.</p>
+</blockquote>
+<p>在我个人的经验来看，这个 150° 判定总体来说还能接受，但永远不能在研究课题里想当然排除各种情况。我也有过 120° 相关的 path 也有在拟合中用到的。理论方面，很多年前就 <a href="https://phys.washington.edu/people/john-j-rehr">John J. Rehr</a> 教授就开始研究这个问题，经过多年的努力，<em>FEFF</em> 努力做到把 multiple scattering 尽可能“类比”成 single scattering，让作为使用软件的用户减少拟合的学习成本。但是不可避免的是，multiple scattering 是一个相当复杂的问题，与各自的课题相关程度很大。有的人或许从来不需要，有的人要靠这个才能得到不错的结果。</p>
+<p>另外，我一直强调 Degeneracy ≠ 配位数，其目的就在于此。Multiple scattering 中配位数的概念无从谈起，只能说是多少条相同路径，用数量 (number) 更为合理。也就是为什么在输出 EXAFS 报告的时候我不建议使用 coordination number 的概念，因为在 <em>Artemis</em> 得到的数据从来就不是配位数，而是经过理解之后才能与配位数建立联系。</p>
+<h3 id="multiple-scattering-与-xafs-拟合">Multiple Scattering 与 XAFS 拟合</h3>
+<p>经过上述的讨论，可以看到 multiple scattering 对 EXAFS 谱图的贡献可大可小，套用到自己的 EXAFS 拟合中自然而然会是：<strong>加进去有助于拟合结果，放进去；加进去没有帮助，取出来</strong>。像是之前的 K<sub>3</sub>Fe(CN)<sub>6</sub> 例子，如果拟合这个化合物不加上 multiple scattering 永远都不会拿到满意的结果。但是如果拟合 FeS<sub>2</sub>，在 <a href="https://bruceravel.github.io/demeter/documents/Artemis/examples/fes2.html">Artemis 官方演示</a> 中是经过几次尝试后，决定加入其中几个 multiple scattering 让拟合结果更好。虽然加入越来越多的 path 会让结果越来越好（变量增多），但是整个 EXAFS 拟合变量数量上限是由选择的 <em>k</em> 和 <em>R</em> 数据长度相关的，而越多的 path 需要更多的变量。换言之，我们在拟合的过程中需要平衡变量的数量，对选择 path 也是有优先级且有克制的。而这个标准就是谁加进去有用就加谁，加进去没用的都是废物不值得。就我目前知道的，如果配体里面有氰基或者是一氧化碳，一定要注意 multiple scattering。</p>
+<p>与 multiple scattering 拟合相关还有就是 constraint <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span></span></span></span><sup>2</sup>，这个讨论起来就更复杂了，我应该不会展开来讨论。建议阅读的有 Artemis 的 <a href="https://bruceravel.github.io/demeter/documents/Artemis/examples/fes2.html">Example 1: FeS2</a>, <a href="https://bruceravel.github.io/demeter/documents/Artemis/extended/ss.html">Modeling disorder</a> 以及 <a href="https://www.amazon.com/XAFS-Everyone-Scott-Calvin/dp/1439878633">《XAFS for Everyone》 </a> 中的 <strong>14.5 Multiple-Scattering Paths</strong> 章节，尤其是后者对每个类型的 multiple scattering 描述和对应建议讨论非常详细。</p>
+<p>除了对 EXAFS 拟合的影响，multiple scattering 甚至能影响 XANES，我个人不是很了解。猜测也有可能是来自强配体 (CN<sup>-</sup> or CO) 的反馈 π 键导致价电轨轨道状态被改变，从而影响了 XANES 图像。只能贴一部分链接当做拓展阅读了：</p>
+<ol>
+<li><a href="https://doi.org/10.7567/JJAPS.32S2.8"><em>Jpn. J. Appl. Phys.</em> <strong>1993</strong>, 32 8</a></li>
+<li><a href="https://pubs.acs.org/doi/10.1021/ic000274n"><em>Inorg. Chem.</em> <strong>2000</strong>, 39, 17, 3784–3790</a></li>
+<li><a href="https://doi.org/10.1002/9781118844243.ch3">Chapter 3. Real‐Space Multiple‐Scattering Theory of X‐Ray Spectra</a></li>
+<li><a href="http://scripts.iucr.org/cgi-bin/paper?S1600577515013521"><em>J. Synchrotron Rad.</em> <strong>2015</strong>, 22, 1258-1262.</a></li>
+<li><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.62.1723"><em>Phys. Rev. B</em>. <strong>2000</strong>, 62, 1723</a></li>
+</ol>
+<br/>
+<br/>
+<br/>
+<br/>
+<pre><code>感谢你的阅读
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[我用到的付费订阅流媒体 | Entertainment Subscriptions]]></title>
+        <id>https://twocircles24.com/post/entertainment-sharing/</id>
+        <link href="https://twocircles24.com/post/entertainment-sharing/">
+        </link>
+        <updated>2020-09-02T09:05:16.000Z</updated>
+        <summary type="html"><![CDATA[<p>精神文明建设不可少！</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>精神文明建设不可少！</p>
+<!-- more -->
+<br/>
+<p>上次闲聊到了安在手机上付费订阅制的 APP，这次就分享下专门用于 PhD 精神文明建设的订阅服务，在实验室操劳了 N 个小时后，只想打开电脑/电视机摸鱼 XD</p>
+<br/>
+<hr>
+<br/>
+<h2 id="bilibili-大会员"><a href="https://www.bilibili.com/read/cv6020185/">Bilibili 大会员</a></h2>
+<ul>
+<li>国区价格：¥233/年</li>
+<li>评分：9/10</li>
+<li>适用：喜欢用弹幕配合看番的</li>
+</ul>
+<p>我自然是有除了教程之外的账号啦，老B站用户了。不为其他的，就是看番，而且看老番居多。双十的时候（不是双十一）还有半价优惠来着？吃晚饭的时候点开一集 Jojo 下饭舒服的一批。美国流媒体平台至今没上第五部，而且英文字幕看着也不爽，最重要的是不少番还是要弹幕下饭的。通常圣诞节的时候我也不会去哪里玩（太累了），基本上就在家打开B站躺着看一天的动画就算过节了。</p>
+<p>就算不买会员，我也喜欢用B站看童年电视剧。毕竟现在国产剧精品数量太少，而且没有精力追国产的。有时候剧荒就会打开B站看老电视剧消遣。除了国产，B站也买了像是 Killing Eve 这样的外国电视剧（需要大会员）。如果我没来得及当季追剧的话，就上B站看看了。</p>
+<br/>
+<hr>
+<br/>
+<h2 id="transocks-穿梭"><a href="https://transocks.org/">Transocks 穿梭</a></h2>
+<ul>
+<li>价格：¥260/年</li>
+<li>评分：7/10</li>
+<li>适用：在外面想看国内的视频还有听歌</li>
+</ul>
+<p>钱钟书那句说烂的话：墙外的人想进来，墙内的人想出去。国内的一些娱乐我还是无法割舍掉的，比如B站。所以使用正确的姿势网上冲是必要前提。价格也还能接受，尤其是跟 App Store 里面那些 APP 比起来已经很良心了。加上多个平台可用，包括浏览器插件。被同学安利了之后就入坑了。总体来说，基本上可以看我喜欢的视频和听我喜欢的歌，偶尔会抽风。</p>
+<br/>
+<hr>
+<br/>
+<h2 id="网易云黑胶-vip"><a href="https://music.163.com/">网易云黑胶 VIP</a></h2>
+<ul>
+<li>国区价格：¥138/年</li>
+<li>评分：6/10</li>
+<li>适用：喜欢网易云推荐算法的，不太在意曲目少的用户</li>
+</ul>
+<p>虽然网易云之前一直被吐槽吃相难看曲库稀少（连周杰伦都不愿意合作），但实在是喜欢它算法给出来的推荐歌曲。有些推荐出来的歌收听量不高但是很合胃口，我买它会员纯粹是主观喜好。掐指一算我大概用网易云已经快有六七年时间了？试图切换到QQ音乐感觉完全适应不了。而且打折活动多，有时候六七折就能买 12 个月会员。动漫和电视剧的 OST 曲库也还可观，有一种“续就续吧”的佛系态度。</p>
+<br/>
+<hr>
+<br/>
+<h2 id="spotify"><a href="https://www.spotify.com/">Spotify</a></h2>
+<ul>
+<li>美区学生价格：$4.99/year + free Showtime &amp; Hulu</li>
+<li>评分：8/10</li>
+<li>适用：在美国的穷学生</li>
+</ul>
+<p>Spotify 在美国的普及率很高，曲库也是最全的。一开始订阅 Spotify 是因为周杰伦的歌在网易云下架，再加上始终挂网络软件会影响网速。初用 Spotify 的时候很不能理解为什么这么多人用它，感觉推荐歌曲一点都不合胃口，使用逻辑和国内的音乐类 APP 也完全不同，还没有歌词显示。是的，纯粹是为了听周杰伦的歌才掏钱的。</p>
+<p>后来意识到 Spotify 的厉害之处是它任一平台的同步。简单来说，Spotify 不仅是和美国市面上主流智能设备都有 APP 可以使用，而且可以做到一个设备可以控制所有平台的音乐播放，包括 Carplay。举个例子，我可以用我的手机控制 Spotify 的播放从家里面的电视到卧室的台式机再到厨房里面的 Google Home Mini。我目前来说还没有遇到能和 Spotify 对抗的软件，真的是用了就回不去了。只要有一个智能设备，Spotify 必能适配。</p>
+<p>除了强大的同步能力，我也逐渐发现 Spotify 其他好处。比如周杰伦最新的 EP 发布几乎是第一时间，也可以当作一个泛用型 APP 来收听 Podcast，在 YouTube 上听到的歌单基本上在 Spotify 上面可以找到。</p>
+<p>缺点嘛，我非常钟意的歌单数量还是太少，使用逻辑还不是最顺手的。华语歌曲还是偏怀旧情绪的。</p>
+<br/>
+<hr>
+<br/>
+<h2 id="netflix"><a href="https://www.netflix.com/">Netflix</a></h2>
+<ul>
+<li>美区家庭账户：$14.99/month for5 users</li>
+<li>评分：10/10</li>
+<li>适合：在家看剧必备呀！</li>
+</ul>
+<p>美国 Netflix &amp; Chill 的梗不是白说的，几乎没有人在美国可以抗拒 Netflix。曾经我也是被《纸牌屋》吸引订阅，但是当时只有笔记本来看电视剧，就只买了最基本的。后来搬家买了 4k 电视，直接上了最高的账户订阅，不想工作的摸鱼时光就完全被 Netflix 给占领了。</p>
+<p>除了大热的 IP 作品，Netflix 近几年对亚洲市场的野心是肉眼可见的，尤其是韩国和台湾市场。作为用户的好处就是能同步追韩剧了，而且自带中文字幕！这可是其他的美国流媒体平台不具备的（最多也就弱小的 Apple TV+）。追剧体验满分！与此同时，Netflix 收了一众过去的片源，完全是为我补剧打开了新世界，还有周星驰的电影全集（狂喜）。Netflix 做的真人秀也是贼让人上头，最近我和室友一起看《印度媒婆》简直是跟当下适婚年龄男女的魔幻现实有着神一样的契合，我直接一天就看完了。暌违已久的《秘密森林》也是每周末就能准时追到的，太开心了。<s>才不要工作呢</s></p>
+<p>Netflix 播放也可以通过手机来操控，几乎没什么短板。满分满分！硬说缺点，大概就是让我根本不想工作吧0.0</p>
+<br/>
+<br/>
+<p>说真的，流媒体付费相比于软件是更容易让我掏钱的，毕竟电视剧电影音乐一类都是靠烧钱起来的。美国最近流媒体大战也是愈演愈烈，作为流媒体老大 Netflix，要遭遇 Apple TV+ 和 Disney+ 的双面夹击。Apple 也是财大气粗直接送了用户一年的 Apple TV+ 订阅，白嫖了《灰狗号》和《早间新闻秀》体验也是不错的，就是片源太少，实在是没有挽留用户的资本。Disney+ 也是一度想订阅，但是看了下片库似乎除了《汉密尔顿》和《木兰》（还要单独掏钱），其他的我不是特别感兴趣。另外一个流媒体平台 Hulu 也是不得不提的，买了很多日本动漫，可惜没有中文字幕，我想都没想就投了B站。还有就是 Amazon 流媒体，作为 Amazon Prime 会员直接享用，我反而不会太留意它。只用过几次，没想到上面还有不少好片子，但是软件方面始终做不过 Netflix 的体验。</p>
+<p><strong>总结：Netflix 牛逼。</strong></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<pre><code>感谢你的阅读
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[能量校准 Calibration]]></title>
+        <id>https://twocircles24.com/post/energy-calibration/</id>
+        <link href="https://twocircles24.com/post/energy-calibration/">
+        </link>
+        <updated>2020-08-31T03:50:38.000Z</updated>
+        <summary type="html"><![CDATA[<p>(7 min 30 s reading) 真没想过这个问题能成日经问答了……</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>(7 min 30 s reading) 真没想过这个问题能成日经问答了……</p>
+<!-- more -->
+<br/>
+<p>涉及到的视频有：<a href="https://www.bilibili.com/video/BV1364y1F7tw">《能量校正 Calibration |  XAFS 数据处理》</a>、<a href="https://www.bilibili.com/video/BV1yz411e7gu">《Athena新手教程 | 同步辐射吸收谱(XAS)数据处理》</a>和<a href="https://www.bilibili.com/video/BV1jK4y1Y71X/">《E0, Edge Energy &amp; 吸收边 | XAFS数据处理参数讨论》</a>。</p>
+<p>目前收到被问最多的问题，今天来仔细讲下。最初这个问题是从 <em>Athena</em> 的教程里面引出：在加载原始数据到 <em>Athena</em> 后，到 <em>Calibration</em> 窗口进行校正。<strong>在已经看过 <em>Athena</em> 新手教程到基础上</strong>，我们来进一步了解这个“校正”这个操作。</p>
+<p>先说明的是，这一个概念完全可以类比 XPS 里面的数据处理。在早前教程里面没有过多涉及这个问题是因为这个点跟实验操作相关性很大，在没有做过相关实验的前提下，理解起来会有难度。</p>
+<p><strong>需要留意的是，在这里我指的未知样品是你测得的透射谱 ln(I<sub>0</sub>/I<sub>1</sub>) 和荧光谱 (I<sub>f</sub>/I<sub>0</sub>)，它可能是你真的正儿八经不知道这个样品是什么，需要你去拟合。比如一个 Fe 负载在 CeO<sub>2</sub> 载体上的催化剂；也可能是你会拿来做线性拟合之类已知样品，比如你要拟合含铁样品 XANES，你会测得 Fe<sub>2</sub>O<sub>3</sub>，FeO，Fe<sub>3</sub>O<sub>4</sub> 云云，在这篇文展里面也归属于未知样品。或者可以理解为是放在 I<sub>0</sub> 之后，I<sub>1</sub> (or I<sub>t</sub>) 之前的样品均在该文算作未知样品。以及标准样品（reference spectra）是指用来校正的样品，通常是利用未知样品之后的光 (I<sub>1</sub> or I<sub>t</sub>)再打过一个标准样品，得到一张透射谱 ln(I<sub>1</sub>/I<sub>2</sub>)。这里说它标准，是因为我知道其准确的 E<sub>0</sub> 数值。</strong></p>
+<br/>
+<hr>
+<h2 id="做-calibration-的原因">做 Calibration 的原因</h2>
+<p>这完全是出于实验硬件的原因，简单来说负责调整入射能量值的 monochromator 是有一点误差，会导致显示的数值不是正确的能量数值。比如测量铁片的 K-edge，扫出来它的 E<sub>0</sub> （也就是一阶微分 XANES 中的第一个峰）是 7112.58 eV ，但是上网一查 Fe foil 的 E<sub>0</sub> 是 7,112.00 eV。这就是我们需要去校正铁片样品数据的时候了。由于只跟能量值相关，相当于是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span></span></span></span>(E) 整个平移零点几个 eV 值，就把整张图数平移回去就好。</p>
+<h2 id="如何知道误差值">如何知道误差值</h2>
+<p>那么知道 Calibration 的根本原因后，下一个问题是如何知道能量值跟真实距离相差了多少？</p>
+<p><strong>由于每次测量硬件都会有所区别，不能用不同批次采集得到的数据来相互校正</strong>。像是利用网上的数据或是去年采的数据来校正这个月的数据，这都是大忌。正确的做法是：每次扫未知样品时候，都会在未知样品之后放一个标准样品，利用穿过样品的透射光，在扫描未知样品 XAFS 谱图时也可以同时获得一张标准样品的谱图。因为未知和标准样品使用的均是来源于同一入射光源，两个样品的能量值与真实能量值的误差是可以可以认作一样的（标准样品误差了多少，未知样品误差值也是这个值）。</p>
+<p>既然如此，我们就需要标准样品来确定误差值。常见的选择就是对应元素单质，比如我测 Fe<sub>2</sub>O<sub>3</sub>，那么就使用 Fe foil。标准样品的选择绝不仅仅限于相同元素单质，因为有不少元素单质不容易获得或者是其他原因，所以选择元素对应的化合物非常常见。比如我也可以在测 Fe<sub>2</sub>O<sub>3</sub> 时，我也可以用 Fe<sub>3</sub>O<sub>4</sub> 来作为标准样品进行校正，as long as 我知道 Fe<sub>3</sub>O<sub>4</sub> 的 E<sub>0</sub> 是多少（可以从文献或者是其他地方知道）。我甚至可以用 monochromator 上面的 glitch 来校正（因为 glitch 的出现是由于缺陷导致的，这个值是不受实验条件影响）。总的来说这个选择很灵活。</p>
+<p>一个比较特殊的例子：硫的标准样品是一个难点，因为硫单质存在多项的情况，能量值 (E<sub>0</sub>) 很模糊。在一次讨论中，Ritimukta Sarangi (beamline scientist at SSRL) 是<a href="https://www.mail-archive.com/ifeffit@millenia.cars.aps.anl.gov/msg06924.html">推荐使用硫代硫酸钠</a> (Sodium Thiosulfate)：</p>
+<blockquote>
+<p>In my experience, it is best to stay away from sulfate which has a hugely intense peak subject to self absorption. At SSRL, we advice users to choose Sodium Thiosulfate with the low lying and sharp S-S sigma star peak at 2472.02 eV and Tetraphenyl phosphonium bromide at 2146.96 eV for Phosphorus (see Scott's paper at: J. Synchrotron Rad. <a href="http://journals.iucr.org/s">http://journals.iucr.org/s</a> (2018). <em>25</em> <a href="http://journals.iucr.org/s/contents/backissues.html">http://journals.iucr.org/s/contents/backissues.html</a>, 529-536)</p>
+</blockquote>
+<h2 id="使用标准样品校正-reference-spectra-的必要性">使用标准样品校正 (reference spectra) 的必要性</h2>
+<p>有人问过：我可以不校正嘛？我的答案是：必须校正。在计划实验一开始就会注意标准样品的选择，硬件上面的误差是常有翻车出现，哪怕是现在大部分同步辐射光源的质量已经相当不错的情况下，同时采得标准样品的谱图是一种双层保险。在做完实验后处理数据才发现能量误差太大但也没有取得标准谱图，那个时候数据已经失去了可靠性，于事无补。所以一定要在做实验的时候用上标准样品。</p>
+<p>使用标准样品校正的另一个动机是帮助我在比较从不同时间段的实验中取得的数据。因为每次实验的能量偏移数值是有区别的，如果要比较未知样品的谱图，先确保各自标准样品已经校正好。甚至是要确保标准样品是完整的，毕竟见过不少标准样品变质导致能量改变，做了几年之后才发现导致所有数据没法比较的事故。</p>
+<br/>
+<hr>
+<h2 id="分情况举例">分情况举例</h2>
+<h3 id="1-同一个样品多次连续扫描">1. 同一个样品多次连续扫描</h3>
+<p>加载原始数据的时候把未知样品对应的标准样品一起加载进去。（参考 <a href="https://www.bilibili.com/video/BV1yz411e7gu?p=3">Athena 新手教程</a>）</p>
+<p>通常是先校正一个标准样品的谱图（Calibration），然后把剩下的标准样品谱图跟已经校正后的对齐（Alignment）。</p>
+<h3 id="2-对比-a-样品和-b-样品-常见于展示-xanes">2. 对比 A 样品和 B 样品 （常见于展示 XANES）</h3>
+<p>把情况 1 的操作对各自 A 和 B 样品做好后，merge 得到各自的图像。</p>
+<p>把 A 和 B 样品以及对应的标准样品加载在一起，先比较标准样品（A 和 B 都用的同一个标准样品）。确认标准样品的谱图 (reference spectra) 是一样的，包括形状还有能量值。这是为了确保标准样品的consistency。有时候会发现标准样品是有变化，如果看到了标准样品变质，必须立刻换掉。（参考<a href="https://www.bilibili.com/video/BV1364y1F7tw">能量校正 Calibration</a>）</p>
+<h3 id="3-软线低能样品比如氧硫磷一类">3. 软线低能样品，比如氧硫磷一类</h3>
+<p>因为能量极低的时候光线无法穿过样品，所以标准样品的谱图无从谈起。能做的是单独先测标准样品，然后再测未知样品。处理数据的时候，只能分开处理。（参考<a href="https://www.bilibili.com/video/BV1364y1F7tw">能量校正 Calibration</a>）</p>
+<p><strong>先校正标准样品，知道误差值有多大。再把同样的差值用到未知样品上，手动校正。</strong></p>
+<p>这种做法只限于低能软线，比如氧硫磷这样的（&lt; 3000 eV)。过渡元素的测量仍然遵循情况 1 和 2。只可能在自己没有同步采得标准样品不得已情况下，可以参考这样的操作。（仍然不建议，风险太大，有 manipulate data 的嫌疑）</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<pre><code>感谢你的阅读。
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[肝 XAFS 实验的小细节 | Podcast Ep. 3]]></title>
+        <id>https://twocircles24.com/post/podcast-ep3/</id>
+        <link href="https://twocircles24.com/post/podcast-ep3/">
+        </link>
+        <updated>2020-08-30T13:46:12.000Z</updated>
+        <summary type="html"><![CDATA[<p>(8 min 27 s reading) 爱惜身体，爆肝做实验不可取。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>(8 min 27 s reading) 爱惜身体，爆肝做实验不可取。</p>
+<!-- more -->
+<br/>
+<br/>
+<p><strong>阅读提示1：该文是<a href="https://www.bilibili.com/audio/au1818517">B站音频</a>的文字版本，内容会有少量出入。</strong></p>
+<iframe src="https://anchor.fm/twocircles24/embed/episodes/Vol-4-eitcrb" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+<br/>
+<br/>
+<hr>
+<br/>
+<br/>
+<h2 id="保持通讯畅通">保持通讯畅通</h2>
+<p>    出门在外，<strong>安全第一</strong>。保持通讯畅通能够让同行人随时掌握情况，一旦有任何意外情况可以第一时间发现。另一方面，在需要同事远程帮忙的时候可以及时解决。同步辐射实验室对手机信号的屏蔽比较厉害，建议使用网络通讯软件，比如微信、WhatsApp 等等。在醒目的地方留下你的手机联系方式还有暂住的酒店地址。</p>
+<br/>
+<br/>
+<h2 id="认真看待睡眠">认真看待睡眠</h2>
+<p>    同步辐射相关实验常常是 24 小时营业，作息跟在自家学校的很不一样。熬夜的危害包含但不限于身体健康还有心理压力，更要命的是，缺乏休息会让人反应力降低。即使努力打起精神实验也会越做越差，最后心态崩溃。</p>
+<p>    在提刀熬夜之前，要先问问自己是不是那种“可以肝”的人？不得不承认有一部分人是无法熬夜的，如果被强迫，效果只会适得其反。当确认自己无法完成任务的时候，就平静地放弃吧。这类实验更多的是靠自我驱使完成的。<strong>不要害怕放弃，身体才是革命的本钱</strong>，离开了这门技术依然可以活得很精彩。</p>
+<p>    一旦确定可以“肝”，我们也要尽可能控制住熬夜带来的危害。最重要的是要判断“什么时候不能再继续熬夜”了，这种判断就像是“喝醉的人说自己没喝醉，没喝醉的人已经说喝醉了”。在做实验的过程中，我们就要做那个“没喝醉的人”，比如发现自己装样品老装不进去、软件操作开始出低级错误、头晕等等。<strong>逞强是摧毁实验的一大因素</strong>，不要把自己压迫到极限，后续的身体伤害实在太大。</p>
+<p>    睡觉也是可以是调整心态的一种方式。做实验上头是经常的事情，我自己遭遇大半夜 beam 直接崩掉，还有什么老鼠跑进了 spear ring 里面。没经验的时候老想着是不是再等十分钟光就能回来继续做实验了，结果快等到快天亮的时候才修好。这种时间拿去睡觉不好吗？偶尔还有玄学事件发生，大晚上仪器崩掉了第二天醒来就自己恢复了。人得到了休息之后再静下心来思考解决对策，比困得睁不开眼睛脑子一团浆糊要好得多。</p>
+<p>    如果你跟同事一起做实验，恭喜你可以跟他们轮班了。如果是晚班，白天就不要瞎溜达了，好好休息。如果你一个人 solo 实验，对自己睡眠的控制需要更加小心。根据实验天数来考虑睡眠时间，牺牲部分实验时间是注定的，不要觉得可惜就不睡觉伤害自己。</p>
+<br/>
+<br/>
+<h2 id="吃好喝好">吃好喝好</h2>
+<p>    饮食方面几乎可以照抄健身食谱了：<strong>多蛋白、摄入低 GI 碳水，多喝水；少油腻，少糖，少精致碳水</strong>。这是因为蛋白质和低 GI 碳水的食物释放能量比较持久且不会段时间大幅度提高血糖水平，可以持续平衡功能。另一方面熬夜对肌肉的消耗速度极快，补充蛋白质也能小小地弥补下。</p>
+<p>    为了能长时间保持清醒，需要保持一点点饥饿感。好多人想着能出去吃的可以报销，就大鱼大肉操办起来了。但是一吃什么牛油火锅 + 米饭，直接分分钟就要迷糊过去了。我自己出差的时候，通常是买蛋白零食，像是蛋白棒还有蛋白饮料，喝一瓶基本上可以抵过大半天。点外卖就会选择味道比较清淡酸甜，有优质肉类的，最好是冷食。之所以说是冷食，是因为实验的事情一来就得先去解决问题，并不能保证饭能到了就能吃。也可能吃到一半去做实验，这个时候冷食就不存在还要加热的问题了。<a href="https://en.wikipedia.org/wiki/Poke_(Hawaiian_dish)">Poke Bowl</a> 就是我的最爱了，把里面的sushi rice 换成 brown rice 吃一碗可以抵一晚上工作。</p>
+<br/>
+<br/>
+<h2 id="记录实验和拷贝数据">记录实验和拷贝数据</h2>
+<p>    不仅仅是使用实验记录本，灵活运用拍照和音频可以留存更多的实验细节。记录下时间戳 (time stamp) 能在你忘记记录实验信息后帮你回忆当时的情景。尤其是 in-situ 实验，有的可以 1 分钟内出来好几张图，根本来不及一一记录。利用手机把这些细节随时随地记录下来，等稍微闲点再把文字记录补上。</p>
+<p>    备份数据建议 U 盘一份，电脑本地一份，网盘一份。频率可以考虑一轮实验之后转移，或者是一天实验结束后。这样可以动态地保护数据，不要等到最后一天再来保存数据。丢失了数据空手回家真的是惨又麻烦的一件事。</p>
+<br/>
+<br/>
+<h2 id="粗略的处理数据">粗略的处理数据</h2>
+<p>    在 Athena 用熟了看一张图不会超过 2 分钟。但是这两分钟能告诉你这图质量行不行，够不够用在 Artemis 里面。当发现数据有问题。可以立刻再重新规划做样品。如果只是为了完成任务而完成，那么回去了发现数据不能用或者是有问题的话，下一次实验又遥遥无期，那不得哭死。</p>
+<p>     不要对自己的数据自信过头的，翻车的不在少数。</p>
+<br/>
+<br/>
+<h2 id="记录实验操作步骤">记录实验操作步骤</h2>
+<p>    因为涉及到复杂操作，实验做起来时间可能就几天，但是下次做可能是几个月后了。每一步是怎么装样品的，怎么调试参数，怎么跟工作人员打交道的都要记录下来。中间偶尔会有 trouble shooting 操作，今天遇到的可能下次遇到。麻烦人家一次就不要麻烦第二次了。<strong>不要相信自己的记忆力</strong>。</p>
+<p>    把实验细节记录下来，下次再来做类似的实验上手会更快。XAS 实验就是吃经验这碗饭，你对细节的积累就是从菜鸟转变成大佬的关键因素。我自己甚至是会把 sample holder 的图纸都画好备一份以防需要换材料重做。</p>
+<br/>
+<br/>
+<h2 id="多问问题问思考过的问题">多问问题，问思考过的问题</h2>
+<p>    学到新知识都是靠有问题问出来的。有时候非母语的学生有点害怕或者是害羞。但是不问就没机会学，没机会学到了大半夜实验仪器出现问题不会修，就只有浪费机时了。<strong>一个有经验的 XAS 选手 = 贼会修 beam or 知道找谁来修</strong>。在实验室里面的工作人员大多人美心善，我问一些很弱智的问题他们都能讲的深入浅出，从物理讲到机械，从自动化到算法，实在是大开眼界。</p>
+<p>    问思考过的问题。“助人者自助”，寻求帮助是基于尊重，真诚和同理。先花时间尝试解决再去问其他人，这是有诚意的。不动脑子是不会有人来帮助的。</p>
+<br/>
+<br/>
+<h2 id="相互帮助">相互帮助</h2>
+<p>    在实验室蹲过的多多少少都是有经验，也比较清楚到底有多少问题。如果你真的遇到麻烦，尤其是在深夜里面，很可能他们是你唯一可以帮忙的人了。若是其他人遇到了问题也不要甩脸色只顾自己的，毕竟大半夜谁都不愿意看到实验出现问题，你在帮助他人的同时也可以了解其他人的课题。我见过靠这样的方式认识人找到合作者一起发文章，甚至是找到了工作。你也可以搭把手给staff，这样的话就可以学习实际操作经验。</p>
+<br/>
+<br/>
+<h2 id="不要看xas的理论知识">不要看XAS的理论知识</h2>
+<p>    没用的，不要自欺欺人，越看越容易睡觉。在这么紧张的实验里，老老实实是把数据拿到才是王道。理论知识离实际操作太远，在正确的时间做正确的事情。看看 Jojo 不香吗？</p>
+<br/>
+<br/>
+<h2 id="深呼吸暂停一下">深呼吸，暂停一下</h2>
+<p>    实验再紧张，也要给自己一点缓冲空间。尤其是在做操作难度大的实验时，先问问自己心跳有没有过快、手抖不抖、脑子够清醒不。如果答案是“不”，出去吹吹风再回来问问自己。还不行就回去睡觉。</p>
+<p>    有时候心里面着急想做好实验，结果事与愿违，陷入恶性循环。学会如何把自己从恶性循环的泥潭中拽出来，是一名成熟的 senior graduate student 的标志之一。缓冲也许只要五分钟，但搞砸实验可能两个小时都挽回不了，实在是不值 。</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<h2 id="更多阅读">更多阅读</h2>
+<ul>
+<li>丁香医生：<a href="https://dxy.com/column/331">警惕熬夜对身体的危害</a></li>
+<li>丁香医生：<a href="https://mp.weixin.qq.com/s/EpuDgNVa-kDdo5Sp73coWw">经常熬夜记性会变差，真的</a></li>
+</ul>
+<br/>
+<br/>
+<pre><code>感谢你的阅读。</code></pre>
+]]></content>
+    </entry>
+</feed>
