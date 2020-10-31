@@ -1,134 +1,117 @@
-
-<!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>能量校准 Calibration | 两个圈 Two Circles</title>
-<meta name="description" content="My anger matters, so does yours. ">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://twocircles24.github.io/favicon.ico?v=1604165499599">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="https://twocircles24.github.io/favicon.ico?v=1604165689870">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://twocircles24.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="能量校准 Calibration | 两个圈 Two Circles - Atom Feed" href="https://twocircles24.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+    <meta name="description" content="(7 min 30 s reading) 真没想过这个问题能成日经问答了……
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174490678-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-174490678-1');
-</script>
-
-
+涉及到的视频有：《能量校正 Calibration |  XAFS 数据处理》、《Athena新手教程 | 同步辐射吸收谱(XAS)数据处理》和《E0, Ed..." />
+    <meta name="keywords" content="XAFS,Tutorial,Terminology" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://twocircles24.github.io">
-        <img class="avatar" src="https://twocircles24.github.io/images/avatar.png?v=1604165499599" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://twocircles24.github.io">
-        <h1 class="site-title">两个圈 Two Circles</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://twocircles24.github.io">
+  <img class="avatar" src="https://twocircles24.github.io/images/avatar.png?v=1604165689870" alt="">
+  </a>
+  <h1 class="site-title">
+    两个圈 Two Circles
+  </h1>
+  <p class="site-description">
+    My anger matters, so does yours. 
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          Home
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          Archives
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          Tags
+        </a>
+      
+    
+      
+        <a href="https://anchor.fm/twocircles24" class="menu" target="_blank">
+          Podcast
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          About
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
   </div>
 </div>
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
-        
-          <a href="/" class="menu purple-link">
-            Home
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            Archives
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            Tags
-          </a>
-        
-      
-        
-          <a class="menu purple-link" href="https://anchor.fm/twocircles24" class="menu" target="_blank">
-            Podcast
-          </a>
-        
-      
-        
-          <a href="/post/about" class="menu purple-link">
-            About
-          </a>
-        
-      
-    </div>
-  </div>
-</transition>
-
-
-      <div class="content-container">
         <div class="post-detail">
-          
-            <div class="feature-container" style="background-image: url('https://i.loli.net/2020/08/06/xh1HO3sj5Eti9P2.png')">
-            </div>
-          
-          <h2 class="post-title">能量校准 Calibration</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2020-08-30</span>
-            
+          <article class="post">
+            <h2 class="post-title">
+              能量校准 Calibration
+            </h2>
+            <div class="post-info">
               <span>
-                <i class="icon-pricetags-outline"></i>
-                
-                  <a href="https://twocircles24.github.io/tag/KWaizZOsZA/">
-                    XAFS
-                    
-                      ，
-                    
-                  </a>
-                
-                  <a href="https://twocircles24.github.io/tag/D-qUSAhcHC/">
-                    Tutorial
-                    
-                      ，
-                    
-                  </a>
-                
-                  <a href="https://twocircles24.github.io/tag/9i5b8UBnHf/">
-                    Terminology
-                    
-                  </a>
-                
+                2020-08-30
               </span>
+              <span>
+                8 min read
+              </span>
+              
+                <a href="https://twocircles24.github.io/tag/KWaizZOsZA/" class="post-tag">
+                  # XAFS
+                </a>
+              
+                <a href="https://twocircles24.github.io/tag/D-qUSAhcHC/" class="post-tag">
+                  # Tutorial
+                </a>
+              
+                <a href="https://twocircles24.github.io/tag/9i5b8UBnHf/" class="post-tag">
+                  # Terminology
+                </a>
+              
+            </div>
             
-          </div>
-          <div class="post-content">
-            <p>(7 min 30 s reading) 真没想过这个问题能成日经问答了……</p>
+              <img class="post-feature-image" src="https://i.loli.net/2020/08/06/xh1HO3sj5Eti9P2.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>(7 min 30 s reading) 真没想过这个问题能成日经问答了……</p>
 <!-- more -->
 <br/>
 <p>涉及到的视频有：<a href="https://www.bilibili.com/video/BV1364y1F7tw">《能量校正 Calibration |  XAFS 数据处理》</a>、<a href="https://www.bilibili.com/video/BV1yz411e7gu">《Athena新手教程 | 同步辐射吸收谱(XAS)数据处理》</a>和<a href="https://www.bilibili.com/video/BV1jK4y1Y71X/">《E0, Edge Energy &amp; 吸收边 | XAFS数据处理参数讨论》</a>。</p>
@@ -170,57 +153,92 @@
 <pre><code>感谢你的阅读。
 </code></pre>
 
-          </div>
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%81%9A-calibration-%E7%9A%84%E5%8E%9F%E5%9B%A0">做 Calibration 的原因</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E7%9F%A5%E9%81%93%E8%AF%AF%E5%B7%AE%E5%80%BC">如何知道误差值</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E6%A0%87%E5%87%86%E6%A0%B7%E5%93%81%E6%A0%A1%E6%AD%A3-reference-spectra-%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7">使用标准样品校正 (reference spectra) 的必要性</a></li>
+<li><a href="#%E5%88%86%E6%83%85%E5%86%B5%E4%B8%BE%E4%BE%8B">分情况举例</a>
+<ul>
+<li><a href="#1-%E5%90%8C%E4%B8%80%E4%B8%AA%E6%A0%B7%E5%93%81%E5%A4%9A%E6%AC%A1%E8%BF%9E%E7%BB%AD%E6%89%AB%E6%8F%8F">1. 同一个样品多次连续扫描</a></li>
+<li><a href="#2-%E5%AF%B9%E6%AF%94-a-%E6%A0%B7%E5%93%81%E5%92%8C-b-%E6%A0%B7%E5%93%81-%E5%B8%B8%E8%A7%81%E4%BA%8E%E5%B1%95%E7%A4%BA-xanes">2. 对比 A 样品和 B 样品 （常见于展示 XANES）</a></li>
+<li><a href="#3-%E8%BD%AF%E7%BA%BF%E4%BD%8E%E8%83%BD%E6%A0%B7%E5%93%81%E6%AF%94%E5%A6%82%E6%B0%A7%E7%A1%AB%E7%A3%B7%E4%B8%80%E7%B1%BB">3. 软线低能样品，比如氧硫磷一类</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://twocircles24.github.io/post/podcast-ep3/">
+            <div class="next">下一篇</div>
+            <a href="https://twocircles24.github.io/post/podcast-ep3/">
               <h3 class="post-title">
-                下一篇：肝 XAFS 实验的小细节 | Podcast Ep. 3
+                肝 XAFS 实验的小细节 | Podcast Ep. 3
               </h3>
             </a>
           </div>
-          
-      </div>
+        
 
-      
+        
 
-      <div class="site-footer">
-  <div class="slogan">My anger matters, so does yours. </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://twocircles24.github.io/atom.xml" target="_blank">RSS</a>
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://twocircles24.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
 </div>
 
-
+      </div>
     </div>
-    <script type="application/javascript">
 
-hljs.initHighlightingOnLoad()
+    <script>
+      hljs.initHighlightingOnLoad()
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-</script>
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
 
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
 
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
 
-
+    </script>
   </body>
 </html>

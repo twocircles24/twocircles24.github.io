@@ -1,120 +1,118 @@
-
-<!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>肝 XAFS 实验的小细节 | Podcast Ep. 3 | 两个圈 Two Circles</title>
-<meta name="description" content="My anger matters, so does yours. ">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://twocircles24.github.io/favicon.ico?v=1604165499599">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="https://twocircles24.github.io/favicon.ico?v=1604165689870">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://twocircles24.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="肝 XAFS 实验的小细节 | Podcast Ep. 3 | 两个圈 Two Circles - Atom Feed" href="https://twocircles24.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+    <meta name="description" content="(8 min 27 s reading) 爱惜身体，爆肝做实验不可取。
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174490678-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-174490678-1');
-</script>
+阅读提示1：该文是B站音频的文字版本，内容会有少量出入。
 
 
+
+
+
+
+保持通讯畅通
+    出门在外，安全第一。保持通讯畅通能够让同行人随时掌握情况，一旦有任何意..." />
+    <meta name="keywords" content="Podcast" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://twocircles24.github.io">
-        <img class="avatar" src="https://twocircles24.github.io/images/avatar.png?v=1604165499599" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://twocircles24.github.io">
-        <h1 class="site-title">两个圈 Two Circles</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://twocircles24.github.io">
+  <img class="avatar" src="https://twocircles24.github.io/images/avatar.png?v=1604165689870" alt="">
+  </a>
+  <h1 class="site-title">
+    两个圈 Two Circles
+  </h1>
+  <p class="site-description">
+    My anger matters, so does yours. 
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          Home
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          Archives
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          Tags
+        </a>
+      
+    
+      
+        <a href="https://anchor.fm/twocircles24" class="menu" target="_blank">
+          Podcast
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          About
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
   </div>
 </div>
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
-        
-          <a href="/" class="menu purple-link">
-            Home
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            Archives
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            Tags
-          </a>
-        
-      
-        
-          <a class="menu purple-link" href="https://anchor.fm/twocircles24" class="menu" target="_blank">
-            Podcast
-          </a>
-        
-      
-        
-          <a href="/post/about" class="menu purple-link">
-            About
-          </a>
-        
-      
-    </div>
-  </div>
-</transition>
-
-
-      <div class="content-container">
         <div class="post-detail">
-          
-            <div class="feature-container" style="background-image: url('https://i.loli.net/2020/08/12/sEZiGJbkoFx6evK.png')">
-            </div>
-          
-          <h2 class="post-title">肝 XAFS 实验的小细节 | Podcast Ep. 3</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2020-08-30</span>
-            
+          <article class="post">
+            <h2 class="post-title">
+              肝 XAFS 实验的小细节 | Podcast Ep. 3
+            </h2>
+            <div class="post-info">
               <span>
-                <i class="icon-pricetags-outline"></i>
-                
-                  <a href="https://twocircles24.github.io/tag/cJGMA5PSA4/">
-                    Podcast
-                    
-                  </a>
-                
+                2020-08-30
               </span>
+              <span>
+                9 min read
+              </span>
+              
+                <a href="https://twocircles24.github.io/tag/cJGMA5PSA4/" class="post-tag">
+                  # Podcast
+                </a>
+              
+            </div>
             
-          </div>
-          <div class="post-content">
-            <p>(8 min 27 s reading) 爱惜身体，爆肝做实验不可取。</p>
+              <img class="post-feature-image" src="https://i.loli.net/2020/08/12/sEZiGJbkoFx6evK.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>(8 min 27 s reading) 爱惜身体，爆肝做实验不可取。</p>
 <!-- more -->
 <br/>
 <br/>
@@ -186,57 +184,93 @@
 <br/>
 <pre><code>感谢你的阅读。</code></pre>
 
-          </div>
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%BF%9D%E6%8C%81%E9%80%9A%E8%AE%AF%E7%95%85%E9%80%9A">保持通讯畅通</a></li>
+<li><a href="#%E8%AE%A4%E7%9C%9F%E7%9C%8B%E5%BE%85%E7%9D%A1%E7%9C%A0">认真看待睡眠</a></li>
+<li><a href="#%E5%90%83%E5%A5%BD%E5%96%9D%E5%A5%BD">吃好喝好</a></li>
+<li><a href="#%E8%AE%B0%E5%BD%95%E5%AE%9E%E9%AA%8C%E5%92%8C%E6%8B%B7%E8%B4%9D%E6%95%B0%E6%8D%AE">记录实验和拷贝数据</a></li>
+<li><a href="#%E7%B2%97%E7%95%A5%E7%9A%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE">粗略的处理数据</a></li>
+<li><a href="#%E8%AE%B0%E5%BD%95%E5%AE%9E%E9%AA%8C%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4">记录实验操作步骤</a></li>
+<li><a href="#%E5%A4%9A%E9%97%AE%E9%97%AE%E9%A2%98%E9%97%AE%E6%80%9D%E8%80%83%E8%BF%87%E7%9A%84%E9%97%AE%E9%A2%98">多问问题，问思考过的问题</a></li>
+<li><a href="#%E7%9B%B8%E4%BA%92%E5%B8%AE%E5%8A%A9">相互帮助</a></li>
+<li><a href="#%E4%B8%8D%E8%A6%81%E7%9C%8Bxas%E7%9A%84%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86">不要看XAS的理论知识</a></li>
+<li><a href="#%E6%B7%B1%E5%91%BC%E5%90%B8%E6%9A%82%E5%81%9C%E4%B8%80%E4%B8%8B">深呼吸，暂停一下</a></li>
+<li><a href="#%E6%9B%B4%E5%A4%9A%E9%98%85%E8%AF%BB">更多阅读</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://twocircles24.github.io/post/app-sharing/">
+            <div class="next">下一篇</div>
+            <a href="https://twocircles24.github.io/post/app-sharing/">
               <h3 class="post-title">
-                下一篇：我用到的付费订阅制软件 | App Subscriptions 
+                我用到的付费订阅制软件 | App Subscriptions 
               </h3>
             </a>
           </div>
-          
-      </div>
+        
 
-      
+        
 
-      <div class="site-footer">
-  <div class="slogan">My anger matters, so does yours. </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://twocircles24.github.io/atom.xml" target="_blank">RSS</a>
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://twocircles24.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
 </div>
 
-
+      </div>
     </div>
-    <script type="application/javascript">
 
-hljs.initHighlightingOnLoad()
+    <script>
+      hljs.initHighlightingOnLoad()
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-</script>
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
 
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
 
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
 
-
+    </script>
   </body>
 </html>

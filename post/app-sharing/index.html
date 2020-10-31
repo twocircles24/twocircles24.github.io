@@ -1,134 +1,116 @@
-
-<!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>我用到的付费订阅制软件 | App Subscriptions  | 两个圈 Two Circles</title>
-<meta name="description" content="My anger matters, so does yours. ">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://twocircles24.github.io/favicon.ico?v=1604165499599">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="https://twocircles24.github.io/favicon.ico?v=1604165689870">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://twocircles24.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="我用到的付费订阅制软件 | App Subscriptions  | 两个圈 Two Circles - Atom Feed" href="https://twocircles24.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+    <meta name="description" content="划水闲聊的博客出现了！
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174490678-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-174490678-1');
-</script>
-
-
+这几年 Apple Store 里 App 采取订阅制收费的越来越多，买断制选项越来越少。一方面来说，这对开发者有更长可持续的鼓励和更充足的资金用于发展；另一方面而言，也助长了不少“为赋订阅强说好”的不必要浪费。回..." />
+    <meta name="keywords" content="日常,花钱如流水,安利" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://twocircles24.github.io">
-        <img class="avatar" src="https://twocircles24.github.io/images/avatar.png?v=1604165499599" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://twocircles24.github.io">
-        <h1 class="site-title">两个圈 Two Circles</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://twocircles24.github.io">
+  <img class="avatar" src="https://twocircles24.github.io/images/avatar.png?v=1604165689870" alt="">
+  </a>
+  <h1 class="site-title">
+    两个圈 Two Circles
+  </h1>
+  <p class="site-description">
+    My anger matters, so does yours. 
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          Home
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          Archives
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          Tags
+        </a>
+      
+    
+      
+        <a href="https://anchor.fm/twocircles24" class="menu" target="_blank">
+          Podcast
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          About
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
   </div>
 </div>
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
-        
-          <a href="/" class="menu purple-link">
-            Home
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            Archives
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            Tags
-          </a>
-        
-      
-        
-          <a class="menu purple-link" href="https://anchor.fm/twocircles24" class="menu" target="_blank">
-            Podcast
-          </a>
-        
-      
-        
-          <a href="/post/about" class="menu purple-link">
-            About
-          </a>
-        
-      
-    </div>
-  </div>
-</transition>
-
-
-      <div class="content-container">
         <div class="post-detail">
-          
-            <div class="feature-container" style="background-image: url('https://i.loli.net/2020/08/05/cNwk4ClythrSYVb.png')">
-            </div>
-          
-          <h2 class="post-title">我用到的付费订阅制软件 | App Subscriptions </h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2020-08-22</span>
-            
+          <article class="post">
+            <h2 class="post-title">
+              我用到的付费订阅制软件 | App Subscriptions 
+            </h2>
+            <div class="post-info">
               <span>
-                <i class="icon-pricetags-outline"></i>
-                
-                  <a href="https://twocircles24.github.io/tag/-1vWbbfL8u/">
-                    日常
-                    
-                      ，
-                    
-                  </a>
-                
-                  <a href="https://twocircles24.github.io/tag/mSs8idwGsL/">
-                    花钱如流水
-                    
-                      ，
-                    
-                  </a>
-                
-                  <a href="https://twocircles24.github.io/tag/n9-hOC1sKx/">
-                    安利
-                    
-                  </a>
-                
+                2020-08-22
               </span>
+              <span>
+                11 min read
+              </span>
+              
+                <a href="https://twocircles24.github.io/tag/-1vWbbfL8u/" class="post-tag">
+                  # 日常
+                </a>
+              
+                <a href="https://twocircles24.github.io/tag/mSs8idwGsL/" class="post-tag">
+                  # 花钱如流水
+                </a>
+              
+                <a href="https://twocircles24.github.io/tag/n9-hOC1sKx/" class="post-tag">
+                  # 安利
+                </a>
+              
+            </div>
             
-          </div>
-          <div class="post-content">
-            <p>划水闲聊的博客出现了！</p>
+              <img class="post-feature-image" src="https://i.loli.net/2020/08/05/cNwk4ClythrSYVb.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>划水闲聊的博客出现了！</p>
 <!-- more -->
 <p>这几年 Apple Store 里 App 采取订阅制收费的越来越多，买断制选项越来越少。一方面来说，这对开发者有更长可持续的鼓励和更充足的资金用于发展；另一方面而言，也助长了不少“为赋订阅强说好”的不必要浪费。回头看日常生活，泛订阅类服务已经不少，像是音乐会员和视频会员。相比之下，APP 的订阅开销其实不算多。</p>
 <p>我个人态度是选择性的支持订阅制服务，那今天就来分享下我会选择长期订阅的服务。</p>
@@ -245,57 +227,88 @@
 <pre><code>感谢你的阅读
 </code></pre>
 
-          </div>
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#apple-news">Apple News+</a></li>
+<li><a href="#inoreader">Inoreader</a></li>
+<li><a href="#bear">Bear</a></li>
+<li><a href="#vsco">VSCO</a></li>
+<li><a href="#grammarly">Grammarly</a></li>
+<li><a href="#%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95">滴答清单</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://twocircles24.github.io/post/youask-ianswer-2/">
+            <div class="next">下一篇</div>
+            <a href="https://twocircles24.github.io/post/youask-ianswer-2/">
               <h3 class="post-title">
-                下一篇：你问我不一定答 | 第二期
+                你问我不一定答 | 第二期
               </h3>
             </a>
           </div>
-          
-      </div>
+        
 
-      
+        
 
-      <div class="site-footer">
-  <div class="slogan">My anger matters, so does yours. </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://twocircles24.github.io/atom.xml" target="_blank">RSS</a>
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://twocircles24.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
 </div>
 
-
+      </div>
     </div>
-    <script type="application/javascript">
 
-hljs.initHighlightingOnLoad()
+    <script>
+      hljs.initHighlightingOnLoad()
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-</script>
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
 
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
 
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
 
-
+    </script>
   </body>
 </html>
