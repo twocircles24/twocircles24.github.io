@@ -164,7 +164,7 @@
     function renderResult(searchedInfos) {
         if (searchedInfos.posts.length > 0) {
             ajax({
-                url: getTemplateURL(),
+                url: 'https://twocircles24.com/media/gridea-search/result-template.ejs',
                 success: function (data) {
                     var resultDIV = document.getElementById('gridea-search-result');
                     resultDIV.innerHTML = ejs.compile(data)(searchedInfos);

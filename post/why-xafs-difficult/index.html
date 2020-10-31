@@ -1,119 +1,124 @@
 <html>
-  <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
 <title>学习 XAFS 的困境 | 两个圈 Two Circles</title>
-<link rel="shortcut icon" href="https://twocircles24.github.io/favicon.ico?v=1604165689870">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+
+<link rel="shortcut icon" href="https://twocircles24.github.io/favicon.ico?v=1604166249441">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://twocircles24.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="学习 XAFS 的困境 | 两个圈 Two Circles - Atom Feed" href="https://twocircles24.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
 
 
 
-    <meta name="description" content="(7 min 50 s reading) 写着写着变成了吐槽大会……
-
-
-
-阅读提示1：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。
-阅读提示2：问..." />
-    <meta name="keywords" content="Introduction,XAFS,Q&A" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-  </head>
-  <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://twocircles24.github.io">
-  <img class="avatar" src="https://twocircles24.github.io/images/avatar.png?v=1604165689870" alt="">
-  </a>
-  <h1 class="site-title">
-    两个圈 Two Circles
-  </h1>
-  <p class="site-description">
-    My anger matters, so does yours. 
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          Home
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          Archives
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          Tags
-        </a>
-      
-    
-      
-        <a href="https://anchor.fm/twocircles24" class="menu" target="_blank">
-          Podcast
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          About
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-</div>
-
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              学习 XAFS 的困境
-            </h2>
-            <div class="post-info">
-              <span>
-                2020-08-11
-              </span>
-              <span>
-                8 min read
-              </span>
-              
-                <a href="https://twocircles24.github.io/tag/rlW4tCnw9/" class="post-tag">
-                  # Introduction
-                </a>
-              
-                <a href="https://twocircles24.github.io/tag/KWaizZOsZA/" class="post-tag">
-                  # XAFS
-                </a>
-              
-                <a href="https://twocircles24.github.io/tag/-MRFJgz8G3/" class="post-tag">
-                  # Q&amp;A
-                </a>
-              
-            </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            两个圈 Two Circles
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
             
-              <img class="post-feature-image" src="https://i.loli.net/2020/08/05/oBpRwIfK8CMAzLQ.png" alt="">
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            Home
+                        </a>
+                    
+                </div>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <p>(7 min 50 s reading) 写着写着变成了吐槽大会……</p>
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            Archives
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            Tags
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://anchor.fm/twocircles24" class="menu gt-a-link" target="_blank">
+                            Podcast
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            About
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1604166249441" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    学习 XAFS 的困境
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-08-11 ·
+                    </time>
+                    
+                        <a href="https://twocircles24.github.io/tag/rlW4tCnw9/" class="post-tags">
+                            # Introduction
+                        </a>
+                    
+                        <a href="https://twocircles24.github.io/tag/KWaizZOsZA/" class="post-tags">
+                            # XAFS
+                        </a>
+                    
+                        <a href="https://twocircles24.github.io/tag/-MRFJgz8G3/" class="post-tags">
+                            # Q&amp;A
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>(7 min 50 s reading) 写着写着变成了吐槽大会……</p>
 <!-- more -->
 <br/>
 <br/>
@@ -156,91 +161,56 @@
 <p>    哎老生常谈了……完全理解文章指标这种不可抗力因素。不得不说，有些不了解同步辐射的人觉得用了一个同步辐射的数据就能把期刊质量给拉上去了，不在该用的地方用上那只能叫“灌水”好吗……这门技术没有想象中的那么厉害，能给出的信息也是有限的。</p>
 <p>    真的要发到高影响的文章，<strong>idea 始终是第一位，broad interest 是第二位</strong>。你见过有因为光做 EXAFS 的人发到 <em>Nature</em> 吗？<strong>一篇好的文章是一个好的故事</strong>，同步辐射只是其中服务故事剧情的一环，用的恰到好处那就是神剧情，硬塞进去那就算剧情崩坏。就跟“科幻特效”一样，塞到《流浪地球》和《上海堡垒》能是一回事？不要太迷信这门技术，不少人 XAFS 数据拿到后陷入了“这个到底有什么用”的灵魂拷问。这个问题应该是在做实验之前问，而非之后。花大力气处理得到 XAFS 能给你的和其他表征 (XPS，XRD，TEM etc.) 是同一个，甚至是更少。哎……真的没必要勉强自己上这套数据了，就像国产剧热衷于把 10 集的剧情注水成 80 集。</p>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#%E5%AD%A6-xafs-%E6%B2%89%E4%B8%8D%E4%BD%8F%E6%B0%94">学 XAFS “沉不住气”</a></li>
-<li><a href="#%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E8%B5%84%E6%BA%90%E7%A8%80%E7%BC%BA">同步辐射资源稀缺</a></li>
-<li><a href="#%E5%85%B3%E7%B3%BB%E9%93%B8%E5%B0%B1%E4%BA%86%E9%AB%98%E9%97%A8%E6%A7%9B">“关系”铸就了高门槛</a></li>
-<li><a href="#xafs-%E4%BE%9D%E8%B5%96%E5%AE%9E%E9%AA%8C%E7%BB%8F%E9%AA%8C">XAFS 依赖实验经验</a></li>
-<li><a href="#%E8%BF%B7%E4%BF%A1%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%8A%80%E6%9C%AF">迷信“同步辐射技术”</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-              </div>
-            </div>
-          </article>
+                </div>
+            </article>
         </div>
 
         
-          <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://twocircles24.github.io/post/how-long-for-xafs/">
-              <h3 class="post-title">
-                学 XAFS 要多久
-              </h3>
-            </a>
-          </div>
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://twocircles24.github.io/post/how-long-for-xafs/" class="post-title gt-a-link">
+                    学 XAFS 要多久
+                </a>
+            </div>
         
 
         
 
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-  <a class="rss" href="https://twocircles24.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">My anger matters, so does yours. </div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://twocircles24.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
 </div>
 
-      </div>
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
     </div>
-
-    <script>
-      hljs.initHighlightingOnLoad()
-
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
-
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
-
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
-
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
-
-    </script>
-  </body>
+</div>
+</body>
 </html>
