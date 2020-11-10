@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-11-10T04:42:39.850Z</updated>
+    <updated>2020-11-10T04:44:35.063Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://twocircles24.github.io/post/youask-ianswer-4/</id>
         <link href="https://twocircles24.github.io/post/youask-ianswer-4/">
         </link>
-        <updated>2020-11-09T12:42:33.000Z</updated>
+        <updated>2020-11-09T12:44:29.000Z</updated>
         <summary type="html"><![CDATA[<p>(4 min 30 s reading)</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>(4 min 30 s reading)</p>
@@ -24,7 +24,6 @@
 <p><strong>阅读提示1：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
 <p><strong>阅读提示2：问题来源于 B 站 or 微博，问题有可能被重新整理，先后顺序不代表任何重要程度，如果你的提问被收入但觉得不合适，请联系我。</strong></p>
 <hr>
-<p>**</p>
 <blockquote>
 <p>Q31. 如果将多种金属元素，比如说两种铂族元素Pt,Pd均以单原子的形式负载在某载体上面。那么通过XAFS能够有效表征这两种金属元素均以单原子形式负载在载体上面吗？还是说由于这两种元素太过相似，可能在分析处理数据的的时候会产生很大的难度</p>
 </blockquote>
