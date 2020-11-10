@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>你问我不一定答 | 第三期 | 两个圈 Two Circles</title>
+<title>你问我不一定答 | 第四期 | 两个圈 Two Circles</title>
 
 <link rel="shortcut icon" href="https://twocircles24.github.io/favicon.ico?v=1604983198653">
 
@@ -109,11 +109,11 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    你问我不一定答 | 第三期
+                    你问我不一定答 | 第四期
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2020-09-15 ·
+                        · 2020-11-09 ·
                     </time>
                     
                         <a href="https://twocircles24.github.io/tag/KWaizZOsZA/" class="post-tags">
@@ -126,112 +126,109 @@
                     
                 </div>
                 <div class="post-content">
-                    <p>(6 min 34 s reading) 提问是越来越有意思了~</p>
+                    <p>(4 min 30 s reading)</p>
 <!-- more -->
 <br/>
 <p><strong>阅读提示1：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
 <p><strong>阅读提示2：问题来源于 B 站 or 微博，问题有可能被重新整理，先后顺序不代表任何重要程度，如果你的提问被收入但觉得不合适，请联系我。</strong></p>
 <hr>
+<p>**</p>
 <blockquote>
-<p>Q21. 能用网上分享的 XAFS 数据来拟合吗？（包括 XANES 或者 EXAFS）</p>
+<p>Q31. 如果将多种金属元素，比如说两种铂族元素Pt,Pd均以单原子的形式负载在某载体上面。那么通过XAFS能够有效表征这两种金属元素均以单原子形式负载在载体上面吗？还是说由于这两种元素太过相似，可能在分析处理数据的的时候会产生很大的难度</p>
 </blockquote>
-<p><strong>A21:</strong></p>
+<p><strong>A31:</strong></p>
 <ol>
-<li><strong>不可以拿来做任何的拟合，包含但不限于：LCF、PCA、EXAFS 拟合（Artemis）等等</strong>；</li>
-<li>具体原因参考<a href="https://twocircles24.com/post/energy-calibration/">《能量校正 Calibration》</a>。</li>
+<li>Pt 和 Pd 反而是很好侧，前者测 L<sub>3</sub>-edge，后者测 K-edge；</li>
+<li>至于两种或多种元素的 XAS 测量难易程度讨论，在篇文章中提及了：<a href="https://twocircles24.com/post/xafs-principle/">《从应用出发，闲聊 EXAFS 的原理及思路》</a>。</li>
 </ol>
 <br/>
 <br/>
 <blockquote>
-<p>Q22. 比较不同批次得到的实验数据，应该如何选择 Alignment vs. Calibration？</p>
+<p>Q32. 如果我拿到的原始实验数据没有标出 I<sub>0</sub>，I<sub>t</sub> 等这种容易辨别的，我应该怎么办？</p>
 </blockquote>
-<p><strong>A22:</strong></p>
+<p><strong>A32:</strong></p>
 <ol>
-<li>比较不同批次的数据先把Fe foil(各自reference)先校正好到7112 eV，把校正后的Fe foil放在一起比较是不是一致的。</li>
-<li>如果确认Fe foil两次实验都是一致的，开始比较样品。</li>
-<li>Calibration相当于是用绝对值（reference的E0）来调整样品的位置，Alignment是利用同一样品（可reference可未知样品）的图像来对齐。</li>
-<li>更多讨论参考<a href="https://twocircles24.com/post/energy-calibration/">《能量校正 Calibration》</a>。</li>
+<li>每个线站会使用不同的命名方法，所以最好的解决方案是询问线站工作人员；</li>
+<li>如果不方便，每一个都试一试就好了。</li>
 </ol>
 <br/>
 <br/>
 <blockquote>
-<p>Q23. 有没有关于过渡元素E0与价态之间关系的理论或者计算方面的文献啊，能在文章里引用的那种？</p>
+<p>Q33. 关于样品的拓展边的分析，往往只会在硬X射线的吸收谱出现。为什么同样是吸收谱，在软X射线吸收谱中却很少有能分析拓展边信号或者说是原子之间的配位关系呢？</p>
 </blockquote>
-<p><strong>A23:</strong></p>
-<p>总的来说没有一个review可以直接能套所有的E<sub>0</sub> vs. 价态讨论。你可以直接引比较新，高IF 跟你课题类似（同一元素）的文章。另外一种是可以按照同一元素来搜关键词，比如搜索 Fe XANES oxidation states，找两篇比较详细讨论你需要论点文章的来引用，不一定限于类似结构。因为元素与元素之间的 XANES 和其氧化态的关联是有差异的。XANES 的解读目前是极其复杂又不完善，所以很难有 comprehensive review 来引用。</p>
-<br/>
-<br/>
-<blockquote>
-<p>Q24. 在 XANES 一阶微分中出现了两个峰，第一个峰一定是 pre-edge 造成的吗？</p>
-</blockquote>
-<p><strong>A24:</strong></p>
-<p>确实不一定是，在<a href="https://www.bilibili.com/video/BV1yz411e7gu">《Athena新手教程 | 同步辐射吸收谱(XAS)数据处理》</a>有人提出来了自己的课题里面出现了混合物情况，里面的 A 组分和 B 组分各贡献了一个峰，所以最后还是选择了第一个峰作为 E<sub>0</sub>。这种情况完全有可能出现。<br>
-其实除了混合物的情况会混淆 E<sub>0</sub> 的选择，我自己知道的还可能有metal-Cl 的键也会影响 edge 位置，还要再出一个“假 pre-edge peak”，某些元素不会很明显，有的就会比如 Pt。不过说到底对于 EXAFS来 说，先定一个再去 Artemis 里面看就是了，不行再换。</p>
-<br/>
-<br/>
-<blockquote>
-<p>Q25. 视频<a href="https://www.bilibili.com/video/BV1364y1F7tw?pop_share=1">《能量校正 Calibration》</a>中提到S的能量较弱，短时间内仪器的能量偏移较小，需要用Na2SO3进行校正.如果我同一批测得标准样品和未知样品，他们的能量偏移应该是一致的，我可不可以直接用他们来拟合价态？</p>
-</blockquote>
-<p><strong>A25:</strong></p>
+<p><strong>A33:</strong></p>
 <ol>
-<li>大写的不可以。</li>
-<li>如果不进行能量校正，得到的 E<sub>0</sub> 值会跟其他文献里面的对不上号。比如大部分人汇报 Fe foil 是 7,112 eV，我不校正就是 7113.3 eV。那我发文章出去报后面这个数不是被公开处刑？</li>
-<li>LCF 拟合更多是看强度的吻合程度，在假定偏移程度一样的前提下，确实不校正可能对拟合的结果（主要是每个组份的比例）影响不大；但是你图偏移了，把它写成文章发出去遇到懂的审稿人不会被处刑？</li>
+<li>信号太差，做不到扩展边；</li>
+<li>其实也见过做硫 (S K-edge) EXAFS 的。理论来说其实还是有软线 EXAFS 的讲法，但是实验条件会很苛刻。</li>
 </ol>
 <br/>
 <br/>
 <blockquote>
-<p>Q26.为啥需要拟合数据呢？比如我拿到一组数据，直接通过 Athena 统一标定后，输出结果，应该就可以了吧？ 那么后续用Artemis拟合图以及搜寻cif卡片参比的意义在哪里呢？</p>
+<p>Q34. 在做 pre edge 和 post edge 的时候，两条线需要平行吗？</p>
 </blockquote>
-<p><strong>A26:</strong></p>
+<p><strong>A34:</strong></p>
 <ol>
-<li>Artemis 的作用是为了得到邻近原子数量+距离，Athena得不到。如果你只是寻求 XANES 信息或仅仅展示数据，Athena 足矣。</li>
+<li>不需要，因为 pre-edge 通常向下，通常是由于光源和能量升高导致的；而 post-edge 趋势可千奇百怪，这是由检测器，样品组成等等多种因素造成的。</li>
 </ol>
 <br/>
 <br/>
 <blockquote>
-<p>Q27. 一旦保存（save as）后就显示软件假死，无法操作，这是什么情况呢？</p>
+<p>Q35. 碳的近边吸收谱这个数据要怎么处理呢？大致图形和 XPS 差不多。</p>
 </blockquote>
-<p><strong>A27:</strong></p>
+<p><strong>A35:</strong></p>
 <ol>
-<li>重开，重启，清caches，重装，少加两个数据，换版本。</li>
+<li>当做 XPS 一样的数据来处理，Originlab 或是 MATLAB 都可以解决；</li>
+<li>我不做这方面所以我不会出教程的。</li>
 </ol>
 <br/>
 <br/>
 <blockquote>
-<p>Q28. xafs中的论文大概有百分之九十的垃圾。</p>
+<p>Q36: 在 Athena 中如何判定数据质量好不好？</p>
 </blockquote>
-<p><strong>A28:</strong></p>
+<p><strong>A36:</strong></p>
 <ol>
-<li>我个人觉得是看出于什么样的目的发表的吧。对于这种表征，质量好的文章更多常见在小期刊上面，像 JPCC。要发IF高的刊物，表征只是一个必要不充分条件，讲的故事才是核心。但是站在不了解内情的局外人来看，以为表征是充分必要的，再加上学习成本较高，导致误解越来越深，越来越多的人对技术展开了盲目的追求。</li>
+<li>至于判定数据质量是否可靠，唯一的方法就是看足够多的数据， 包括好的和坏的，并且尽全力去处理。见得越多，自然就知道了。哪怕是已经当教授的人了对数据质量都是没有概念的，这本就是一个不容易培养的能力，不必气馁，耐心一点。</li>
 </ol>
 <br/>
 <br/>
 <blockquote>
-<p>Q29. 对于单原子催化剂要通过建模得到原子坐标等数据来得到inp文件。有很多单原子催化剂给出R空间拟合数据之后都会给出催化剂的球棍模型，而这个球棍模型大多是平面的，但是张三自己作图的时候边缘不可避免的会自动加入氢原子而保证碳四键，最后得到就是非平面的，不知道 x 教授是如何操作的？请问如何得到平面的构型？我用chemdraw画的，有没有容易上手的软件推荐一下来得到单原子的inp。</p>
+<p>Q37: 张三有一个数据，它的数据列表是e, xmu, bkg, pre_edge, post_edge, der, sec, i0, chie，总共九列，在导入数据的过程中，不能确定投射光是哪列，以及教程中说的ir列对应这里哪列？</p>
 </blockquote>
-<p><strong>A29:</strong></p>
+<p><strong>A37::</strong></p>
 <ol>
-<li>单原子催化剂 EXAFS 拟合不需要建模拟合，借鉴现有的分子晶体结构就行；.</li>
-<li>催化剂球棍模型是通过其他拟合计算得到的，EXAFS 的拟合数据 R 只是辅助说明理论计算和EXAFS证据是相互吻合的；</li>
-<li>单原子结构比如 Fe-N4 @ C 在 graphite 上面结构，一般是从 pure graphite 改过来的，从零开始画肯定难；3. ChemDraw 可以画，应该需要 disable 掉某些自动功能；</li>
-<li>如果画 3D，我反而推荐用 xyz 文件去 Vesta 画。</li>
+<li>从描述来看，我认为这个不是原始数据（从线站上取得）而是别人保存的数据（从 Athena 中），而且后缀名是 .xmu;</li>
+<li>如果是这样，x轴（能量）选择第一个e，y轴选xmu，取消 Natural log，Data type 选择 μ(E) 即可。然而这样会没有reference spectra 。</li>
 </ol>
 <br/>
 <br/>
 <blockquote>
-<p>Q30. 张三根据教程对数据进行了分析，得到的结果是接近绿色的，但是其中s0的平方和N都是负数，其他的一些数据满足您讲的条件，请问这样的数据配位数N可以取绝对值来使用嘛？如果不行，我需要调什么参数呢。</p>
+<p>Q38: 单原子和颗粒共存可以单纯从同步辐射谱图看出来吗？是不是需要借助球差来看</p>
 </blockquote>
-<p><strong>A30:</strong></p>
+<p><strong>A38:</strong></p>
 <ol>
-<li>不可以，绿色只是代表你出来的线符合实验数据，但是并不说明每个参数有意义。所以绿色 ≠ 好 fitting；</li>
-<li>你可以尝试固定 S<sub>0</sub><sup>2</sup> 或者是 N 为正数里面一个合理的数值再看另外一个拟合得到的结果；</li>
-<li>关于变量调整相关视频，请参考<a href="https://www.bilibili.com/video/BV1Mk4y1B7Vz">《从EXAFS方程讨论拟合变量》</a>。</li>
+<li>单独看看不出来。主要取决于课题本身的性质或者是问题吧。HADDF-STEM + XAFS 确实是单原子常规操作，前者看局部，后者看平均。</li>
+</ol>
+<br/>
+<br/>
+<blockquote>
+<p>Q39: Athena里面那个phase correction是根据什么来校准的，我看不同物质应该偏移是不一样的，而这个软件就是自动校准，他是根据什么原则来的吗？</p>
+</blockquote>
+<p><strong>A39:</strong></p>
+<ol>
+<li><a href="https://twocircles24.com/post/xafs-principle/">「从应用出发，闲聊 EXAFS 的原理及思路」</a>我这里面讲过一点点关于phase是怎么出现的。这个不叫校准（calibration），而叫修正（correction）。偏移不一样是由于元素本身的造成的。原则就是利用FEFF算出来的。</li>
+</ol>
+<br/>
+<br/>
+<blockquote>
+<p>Q40: K-range选择必须要大于2吗？</p>
+</blockquote>
+<ol>
+<li>必须大于2，k=0-2之间可能还有XANES的信息，而它形成的原理和EXAFS是完全脱轨的，如果你把这带有XANES信息算作了EXAFS，反而会让你的数据会出现问题。</li>
 </ol>
 <br/>
 <br/>
 <br/>
-</br>
+<br/>
 <pre><code>感谢你的阅读。
 </code></pre>
 
@@ -242,8 +239,8 @@
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://twocircles24.github.io/post/xafs-principle/" class="post-title gt-a-link">
-                    从应用出发，闲聊 EXAFS 的原理及思路
+                <a href="https://twocircles24.github.io/post/athena-tutorial-text/" class="post-title gt-a-link">
+                    Athena 软件新手教程 | 缩水公众号版本
                 </a>
             </div>
         
