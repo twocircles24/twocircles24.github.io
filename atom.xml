@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2020-11-22T01:12:44.043Z</updated>
+    <updated>2020-11-22T01:13:57.750Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://twocircles24.github.io/post/introduction-to-the-practical-aspects-of-xas-and-exafs-data-measurement-subtitles/</id>
         <link href="https://twocircles24.github.io/post/introduction-to-the-practical-aspects-of-xas-and-exafs-data-measurement-subtitles/">
         </link>
-        <updated>2020-11-21T09:11:43.000Z</updated>
+        <updated>2020-11-21T09:13:43.000Z</updated>
         <summary type="html"><![CDATA[<p>深深被自己弱智中文和英文水平给折服了……</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>深深被自己弱智中文和英文水平给折服了……</p>
@@ -24,7 +24,7 @@
 <br/>
 <p>最近回实验室了，有点忙。第一部分的 <a href="https://www.youtube.com/channel/UC3sd8ZqQkNfDK11jM8cOWzw/videos">Synchrotron Spectroscopy and Imaging Summer School</a> 的教程完成。先翻译了四个视频，介绍了 XAFS 数据采集的基本理论知识。<a href="https://www.researchgate.net/profile/John_Bargar">Dr. John Bargar</a> 是主讲人，视频是来自于今年 SSRL Summer School。</p>
 <p>我认为这四个视频能给你一个大致入门介绍关于 XAFS 测试时遭遇的基础理论知识。Dr. Bargar 讲的非常详细并且语速不快 <s>（上好的英语听力练习啊大误）</s> 我做字幕反而觉得有点画蛇添足，很多中文里面的翻译很生硬，甚至没法找到在中文里面对应的翻译。而且从翻译到时间轴到校正都是我一个人完成的，我可以拍胸脯说我绝对有眼瞎手滑的操作，所以在这里拜托大家：<strong>如果你发现字幕中有错误或是更好的翻译表达方式，请通过邮件联系我 licouplings@gmail.com</strong>，拜托了！</p>
-<p>我会发给对面的老师，至于什么时候会正式更新到 <a href="(https://www.youtube.com/channel/UC3sd8ZqQkNfDK11jM8cOWzw/videos)">YouTube</a> 就别问我了。但是我在这里留存一份 .srt 文件。你只需要点击到的对应的链接，会跳出来文档。可以直接复制粘贴到 Notepad 上面保存为 .srt，跟视频一起就能看了。（其实这还是我最一开始接触美剧的时候看视频的方法）</p>
+<p>我会发给对面的老师，至于什么时候会正式更新到 <a href="(https://www.youtube.com/channel/UC3sd8ZqQkNfDK11jM8cOWzw/videos)">YouTube</a> 就别问我了。但是我在这里留存一份 .srt 文件。你只需要点击到的对应的链接，会跳出来文档。可以直接复制粘贴到 Notepad 上，把后缀改成 .srt，跟视频一起就能看了。（其实这还是我最一开始接触美剧的时候看视频的方法）</p>
 <h2 id="视频链接及其对应字幕-updated-by-11212020">视频链接及其对应字幕 (Updated by 11/21/2020)</h2>
 <br/>
 <br/>
