@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2021-01-09T21:28:14.745Z</updated>
+    <updated>2021-01-12T18:37:25.895Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -10,6 +10,166 @@
     <logo>https://twocircles24.github.io/images/avatar.png</logo>
     <icon>https://twocircles24.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 两个圈 Two Circles</rights>
+    <entry>
+        <title type="html"><![CDATA[在 2020 年成为冷门科研教程视频 UP 主]]></title>
+        <id>https://twocircles24.github.io/post/being-contentcreator-in2020/</id>
+        <link href="https://twocircles24.github.io/post/being-contentcreator-in2020/">
+        </link>
+        <updated>2021-01-12T02:36:39.000Z</updated>
+        <summary type="html"><![CDATA[<p>(14 min 20 s reading) 准备拿去凑个奖的年终总结 XD</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>(14 min 20 s reading) 准备拿去凑个奖的年终总结 XD</p>
+<!-- more -->
+<p>本文首发在<a href="https://sspai.com/post/64447">少数派</a>。</p>
+<p>阅读提示：我是一个海外化学专业读博的学生，这篇文章是用来回顾在 2020 年我成为 UP 主做同步辐射吸收谱教程的历程。如果你不了解同步辐射是什么，把它当做一个很冷门的技术就好。</p>
+<hr>
+<h2 id="起因商业测试机构不公开的免费公开课">起因：商业测试机构不公开的「免费公开课」</h2>
+<br/>
+<p>2020 年的疫情打断了往常的生活节奏，许多事情需要依靠网络来完成。其中学术科研视频大量出现在 Bilibili 网站 （下文用B站替代），比如大学课程、专业领域教授讲座一类正式严谨的学术交流，也有像是如何使用文献管理软件，效率地阅读文献等等这类实用型教程。就我的观察而言，这部分视频主要面向大学生和研究生，所涉及的内容偏向基础也没有太多的专业指向。这类视频特点是受众范围广点击量高，对应的视频数量也多。作为一个在校学生想成为学术型 UP 主，从基础文献管理和专业介绍等方向做起来更从容一些，或者是介绍平常使用的科研软件也是不错的选择。但如果是极为专业又冷门的软件呢？</p>
+<p>2020 年以前，我从没想过会把我平常使用的科研软件方法做成教程，一是以为不会有太多人使用，毕竟同步辐射这门技术门槛很高又比较罕见。另一方面，自觉对这门技术的理解还不够（至今没有 publication 产出）。**总之，那时候的我觉得要做同步辐射相关的教程既没有点击量又能力不够。**让我改变想法的是在 20 年 4 月前后，如雨后春笋一般的商业科研仪器测试公司宣传霸占了我的朋友圈。他们宣称提供免费的公开课，内容包含了生化环材四大天坑常需要使用的技术和相关软件使用，其中提到了同步辐射有对应的免费课程。我对此感到既意外又好奇，于是去听了一次，得到两个收获：</p>
+<blockquote>
+<p><strong>1. 很多人在寻找这样的教程。</strong><br>
+<strong>2. 我的能力完全可以胜任制作同步辐射教程，甚至能做到更好。</strong></p>
+</blockquote>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/01/13/QE3ZxYbM21DCXm6.png" alt="cffd886059a7e75d10f43ce26c4fac59.png" loading="lazy"></figure>
+<p><strong>Figure 1.</strong> 某商业测试机构在B站上的只放了几分钟片段就能有三千多的点击量</p>
+<br/>
+<h2 id="准备找到目标人群切中痛点">准备：找到目标人群，切中痛点</h2>
+<br/>
+<p>由于教程涉及的内容是极为少见，只可能是特定人群才会收看。我的第一个想法是去了解我的潜在观众在学习同步辐射技术的过程中到底最需要什么，再对应地制作教程。这个过程就类似于市场调研。很明显，我的教程是做给那些在自己研究课题中会使用到同步辐射技术的人，他们大多是在<strong>攻读硕士或是博士学位</strong>。他们在自己的研究生涯中，周围人并不了解同步辐射，所以需要通过<strong>自学</strong>来搞定，然而<strong>英语能力</strong>无法自如应对英文视频或是网上的英文文章。最后，我的目标人群是<strong>没有足够多、足够长的时间</strong>来学习这门技术。基于我对目标人群的理解，我做出了如下判断。</p>
+<h3 id="把教程视频发布在b站上">把教程视频发布在B站上</h3>
+<p>「在B站学习」这句话真不是开玩笑。就目前的各大网站的定位来看，B站无疑是最适合发布科研学习类型的网站，出于几个原因：</p>
+<ol>
+<li>
+<p>会看我教程的人群几乎是读研读博的，年龄大多分布在 20 - 30 岁之间。虽然B站用户平均年龄接近 20 岁，但 25 - 30 年龄段的人对B站应该也是有所耳闻。</p>
+</li>
+<li>
+<p>B站视频没有开头广告。如果在看教程之前还要被迫观看一分钟的广告，实在是分心。</p>
+</li>
+<li>
+<p>B站视频可以被各大搜索引擎抓取到。因为前期没有打算通过周围人的宣传，我需要确保教程不会像是微信公众号文章一样只能被部分搜索给检索到。</p>
+</li>
+<li>
+<p>B站推出记笔记功能等一系列操作意味着B站有认真考虑到知识区的未来发展和布局，说明这个网站是会留意改进跟学术科研相关视频教程对应所需的功能。</p>
+</li>
+</ol>
+<h3 id="从如何使用数据分析软件开始做起">从如何使用数据分析软件开始做起</h3>
+<p>学习同步辐射，类似于学习其他技术（比如 Python, R 语言等等） 一样，<strong>大致可以分成三个方面：原理，操作和应用</strong>。在那些商业机构的「免费公开课」中，老师大致只讲了原理和应用这一块却忽略了操作，尤其是在数据分析软件一块，这给我创造了发挥空间：</p>
+<ol>
+<li>
+<p>软件是免费的，并且软件作者提供了可供练习的数据文件。我不需要使用盗版软件也不需要使用我自己的数据。<strong>每个看我视频的人不需要网盘都可以获得同样的资源</strong>，他们也可以使用视频中一模一样的数据进行练习。</p>
+</li>
+<li>
+<p><strong>节省我的前期准备时间</strong>，因为可以暂时忽略掉复杂的原理解释。毕竟做视频是一个副业，平时大部分时间还是正儿八经读书学习干活。对于制作软件使用的视频教程，我几乎不需要任何剪辑也不需要前期准备，录完就可以发，效率很高。</p>
+</li>
+<li>
+<p>把原理和应用在操作这一步，也就是数据分析软件中连接起来。任何一门技术，都是需要去实践才会对原理和应用理解更深，<strong>get things done 是最关键的一环</strong>。我要做的是把 get things done 的过程完整体现出来，并适时提醒在哪一步用到了什么样的原理，又在哪一步可以跟应用相结合得到想要的答案。</p>
+</li>
+</ol>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2021/01/13/isVH6AEtOCfFqx4.png" alt="17e48506807e0cb0b06365ac976fd7d4.png" loading="lazy"></figure>
+<p><strong>Figure 2.</strong> 我借鉴了不少「影视飓风」的达芬奇教程中教学思路</p>
+<br/>
+<h2 id="制作声音的重要性不可忽略">制作：声音的重要性不可忽略</h2>
+<br/>
+<p>制作教程所需的硬件不多，一个人和一台电脑足够。然而我在B站上看了不少用自己笔记本录制的科研软件的教程，作为观众的体验并不是很好。所以从中吸取教训，帮助我在制作教程时更好地留意细节。</p>
+<ol>
+<li>
+<p><strong>开始录制前打稿子</strong>。这可以帮助我讲解软件使用的时候不错过细节 ，逻辑更加顺畅，思路也清晰。还可以多比较下不同思路哪一种效果更好，顺便把需要的文件，或是需要介绍的网站准备好。</p>
+</li>
+<li>
+<p>清理掉自己桌面的无关文件和软件快捷方式。除了分心，更担心暴露隐私等问题。</p>
+</li>
+<li>
+<p>节奏稍微放慢一些，确保每个操作都被记录下来，这样可以避免后面有人再询问有关操作的问题。（嫌慢的观众点倍速就好了）</p>
+</li>
+<li>
+<p>使用比较大<strong>比较夸张的鼠标光标</strong>，这样观众就清楚我点屏幕的哪一个地方。（这个我一开始没做到后来被评论提醒的）</p>
+</li>
+</ol>
+<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2021/01/13/D4jLTMsSCnx9tq7.png" alt="20ba2bae14e52c69414cb63221600674.png" loading="lazy"></figure>
+<p><strong>Figure 3.</strong> N卡自带的录屏软件或 OBS 足以解决画面</p>
+<br/>
+<p>声音的重要性我需要单独拿出来说，因为有太多的教程没有注意到但又让观众很难受的一点。在软件教程中，声音是用于解释一些无法通过画面来展示的知识点，其重要性不亚于画面，我对声音的基本要求就是清楚。但见过有不少是在比较嘈杂的环境中录制的，或者是声音太小几乎听不清，视频质量大打折扣。或者是一边放着音乐一边录制，对于观众来说实在是一种负担。我的建议是<strong>简单就好</strong>：</p>
+<ol>
+<li>
+<p><strong>不要在录制时播放任何背景音乐</strong>。哪怕是想插入音乐，请在视频编辑软件里面后期另外建一条音轨来实现，绝对不要连着人声一起录制。</p>
+</li>
+<li>
+<p><strong>使用外置麦克风</strong>，哪怕是最便宜的小蜜蜂麦克风。笔记本内内置的麦克风不仅收音质量不行，而且它的位置（相比较人）离键盘更近的，导致敲键盘的声音可能会盖过人声。只要使用一个离嘴巴更近又远离其他音源的麦克风，那就是一大成功！</p>
+</li>
+<li>
+<p><strong>监控声音输入</strong>或是在后期处理。最要命的是录了一个小时然后发现声音全损又得重录。所以随时监控，出现差错可以随时调整。后期处理的话就可以用像是 Adobe Audition 或是 Audacity 这样的软件进一步降噪压缩之类的操作，像处理播客一样调整，比如保证在 - 18 到 - 6 dB 之间。</p>
+</li>
+</ol>
+<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2021/01/13/2VIv1QDheKAu7nP.png" alt="eb825a6a1239a9667fc4e620329b3384.png" loading="lazy"></figure>
+<p><strong>Figure 4.</strong> 利用 OBS Studio 来监控输入音源在合适的范围内</p>
+<br/>
+<h2 id="宣传公众号投稿和写博客">宣传：公众号投稿和写博客</h2>
+<br/>
+<p>到目前为止，可以自信的说我做的同步辐射（使用数据分析软件）的中文教程不论是在完整度还是质量上都是最好的（甚至可以说目前只有我一个人这么做了），但前期不做任何的宣传只是等着其他人来搜索，点击量是很低的。而且我不愿意在网上公开信息，也没有在认识的朋友中宣传。</p>
+<p>三个月后，在我初步完成了第一阶段视频制作后我<strong>向学术科研型微信公众号投稿</strong>。还是因为我清楚知道我的目标人群在哪里（类似于打广告），让更多有需要的同学看到了我的教程。</p>
+<figure data-type="image" tabindex="5"><img src="https://i.loli.net/2021/01/13/Wzput7rnVe9vbPY.png" alt="fb0db76ae821d864fa9de15bb4c33348.png" loading="lazy"></figure>
+<p><strong>Figure 5.</strong> 让别人有机会认识到自己的作品</p>
+<p>以及依靠 Gridea 搭建了自己的博客，把一些教程的小问题还有收集到的问题统一放在个人博客上。<strong>学术依然重度依赖文字，需要阅读，需要思考</strong>。个人博客相比于微信知乎等等是个不错的解决方案。最大的优点还是可以被搜索引擎检索到而且对自己的创作内容是最自由的，代价是可能被一些平台洗稿或其他侵权行为。</p>
+<p>在其他主流平台比如知乎，我就只甩了一个链接和文章，确保有人在知乎上搜索相关内容时能找到我的视频。比较满意的是现在用中文检索带「同步辐射教程」等关键词，无论使用任何搜索引擎都能在前两页看到我的名字。</p>
+<h2 id="ethics流量要为学术让路">Ethics：流量要为学术让路</h2>
+<br/>
+<p>我对自己的教程定位是教程，更准确地说是用于学术研究的教程。我并不认为学术是高冷的，也不认为学术一定是没有流量的代表，毕竟B站上有那么多破百万点击量的科普性视频，也有毕导这样优秀的 UP 主存在。<strong>只是对于不同的内容创作，作品本身性质就可能与流量会互相冲突</strong>，比如这个 99% 的人都不会看的同步辐射X射线精细结构吸收谱数据处理教程（这才是它的全名）。</p>
+<p>我在打算制作教程的第一天起就知道我制作的内容是不可能被大范围传播，不能为我带来流量，但这<strong>并不代表我做的东西毫无意义</strong>。对我的内容而言，意义并非通过流量来表现。用爱发电在这里事实不假，但我也收获了「希望可以把你的名字写进我的毕业论文致谢」的私信。我并非是要强行把流量和学术切割开，而是希望在保证学术的严谨性和完整性前提下传播。</p>
+<p>再者是关于钱的问题，曾经有人找上门来想买我的视频，但回绝了。我很清楚地知道，卖掉视频后无法自由制作自己想要的内容，并且我有信心这些视频的价值是可以在未来还能变得更高。我没有拿视频去盈利，是出于多方原因。<strong>但这并不代表任何一个学习向的视频都不应该收入，有盈利才会有更可持续的发展，关键是在于如何平衡创作自由与盈利。</strong></p>
+<br/>
+<h2 id="如果你也有打算成为一个科研型视频的-up-主">如果你也有打算成为一个科研型视频的 UP 主</h2>
+<p>自认为还是有不少收获想跟你分享：</p>
+<ol>
+<li>
+<p>做之前先思考好自己对视频的定位，尝试像产品经理一样去制定内容创作的计划。了解什么样的人会看你的视频，怎么样才能让他们看到你的视频，视频内容的重点在哪里，特点是什么等等。</p>
+</li>
+<li>
+<p>做视频的心态要好，尤其是这种非常硬核学术向。很可能是「用爱发电」结局，但也许会有意想不到的收获，比如在现实生活中开展课题合作，交换资源。（认真的）</p>
+</li>
+<li>
+<p>多看看类似内容的视频，了解对手们（善意）的视频都在讲什么，自己应该如何去调整，比如内容和思路等等。你也可以作为观众捕捉到哪些细节可以提升。</p>
+</li>
+<li>
+<p>慎重接受所谓的商业合作。哪怕是送上门来的钱，需要仔细甄别它是否可以给你带来正向的发展，也要留意潜在的风险，比如版权被共享或是创作内容需要妥协，甚至危害内容质量。我十分鼓励通过内容创作变现盈利，but in a sustainable way.</p>
+</li>
+<li>
+<p>其实很多时候是自己在妄自菲薄，觉得自己能力不够。但真的迈出去那一步，你会发现要看的人还挺多的……还是这种又冷门又枯燥的学术型视频。</p>
+</li>
+<li>
+<p>做视频会锻炼不少的技能点。我从 HitFilm 到 Premiere Pro 再到 Davinci Resolve，从 Audacity 到 Audition，还有各种搭建网站以及学习各种平台账号宣传姿势，总之体验很新奇。</p>
+</li>
+<li>
+<p>帮助他人是可以给你带来快乐的，尤其是在疫情笼罩的阴影之下。</p>
+</li>
+</ol>
+<br/>
+<h2 id="后记">后记</h2>
+<p>即使到 2021 年我仍没有摆脱居家科研的窘境，依然继续在教程制作上有新的尝试。回顾 2020 年的经历，我大概只能用「奇妙」来形容，尝试了很多我之前从不去试的东西，有意想不到的收获帮助我度过充满挑战的 2020。我也希望这篇文章可以给你带来不一样的感觉。</p>
+<hr>
+<h2 id="相关链接">相关链接</h2>
+<ol>
+<li>
+<p>同步辐射吸收教程：<a href="https://space.bilibili.com/625516278">担子菌的担担面</a></p>
+</li>
+<li>
+<p>如果你真的很好奇什么是同步辐射：文章<a href="https://zhuanlan.zhihu.com/p/25771069">「同步辐射基础」</a>或者视频<a href="https://www.bilibili.com/video/BV1bx411u7cv">「世界上最亮的光有多恐怖？」</a></p>
+</li>
+<li>
+<p>B站记笔记功能：<a href="https://sspai.com/post/63959">「这一次，你可以在哔哩哔哩上更好地学习了」</a></p>
+</li>
+<li>
+<p>录制教程所用的软件：<a href="https://obsproject.com/">OBS: Open Broadcaster Software</a></p>
+</li>
+<li>
+<p>通过 Gridea 搭建自己的博客：<a href="https://sspai.com/post/57164">「不会代码，如何搭建个人博客？」</a></p>
+</li>
+</ol>
+<blockquote>
+<p>祝大家新年快乐</p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[你问我不一定答 | 第五期]]></title>
         <id>https://twocircles24.github.io/post/youask-ianswer-5/</id>
@@ -764,164 +924,6 @@
 <br/>
 <br/>
 </br>
-<pre><code>感谢你的阅读。
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[从应用出发，闲聊 EXAFS 的原理及思路]]></title>
-        <id>https://twocircles24.github.io/post/xafs-principle/</id>
-        <link href="https://twocircles24.github.io/post/xafs-principle/">
-        </link>
-        <updated>2020-09-12T17:43:01.000Z</updated>
-        <summary type="html"><![CDATA[<p>(16 min 40 s reading) 想知道邻近原子的距离 (&lt; 5 Å) 和个数吗？不是不可以考虑下 EXAFS。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>(16 min 40 s reading) 想知道邻近原子的距离 (&lt; 5 Å) 和个数吗？不是不可以考虑下 EXAFS。</p>
-<!-- more -->
-<br/>
-<br/>
-<p><strong>阅读提示1：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
-<p><strong>阅读提示2：问题来源于B站 or 微博，问题有可能被重新整理。如果你的提问被收入但觉得不合适，请联系我。</strong></p>
-<p><strong>阅读提示3：我的一些回答可能会很有争议。如果你不喜欢，那就不喜欢。</strong></p>
-<hr>
-<p>这个题目来自于微博的一个提问。说起来有点好笑，做了几个月的 EXAFS 教程还没有讲过一点 EXAFS 能拿来干嘛。之所以没讲的原因有几个：</p>
-<ol>
-<li>网上很多课程或者是讲义已经提及了，我即使要讲也就是照本宣科，不会有多大区别；</li>
-<li>我本就一开始打算从软件使用做起。虽然讲理论的讲义网上一大把，实际操作的中文教程几乎为零，我要的是填补这块空白；</li>
-<li>就我自己的经验来看，这个问题的答案并不是三言两语能讲清楚的；</li>
-<li>其实这个问题，应该更多的是问你课题需要什么。</li>
-</ol>
-<p>这篇文章区别于网上正规的讲义，我会尝试用一个直白的方式聊聊“从 EXAFS 这里能获得什么”。</p>
-<br/>
-<br/>
-<h2 id="exafs-应用极为广泛">EXAFS 应用极为广泛</h2>
-<p>我随手 Google “XAFS 应用”得到了如下结果：</p>
-<ol>
-<li>
-<p>来自中科大韦世强老师的讲义<a href="http://ssrf.sinap.ac.cn/meeting/syjs/XAFS/pdf/06-%E9%9F%A6%E4%B8%96%E5%BC%BA.pdf">《XAFS技术及其应用》</a>：Zn<sub>1-x</sub>TM<sub>x</sub>O (TM=Co,Mn) DMS；Ge-Si/Si(001) 量子体系；研究Au纳米颗粒初期生长机理……</p>
-</li>
-<li>
-<p>材料牛的<a href="http://www.cailiaoniu.com/161530.html">《干货：X射线吸收谱（XAFS）在多相催化中的应用》</a>有一句在多相催化里面的描述：</p>
-<blockquote>
-<p>XAFS对催化剂的研究起始于无负载析出相，这是因为它代表了活性负载相的模型材料。由于它们的非晶相性，EXAFS谱是判定吸收原子附近局域结构的唯一结构技术。</p>
-</blockquote>
-</li>
-<li>
-<p>来自中科院张静老师的讲义<a href="http://bsrf.ihep.cas.cn/hezuojiaoliu/jiangxiban/201412/P020141207743896333247.pdf">《XAS 原理于应用》</a>：环境中的过渡金属氧化物纳米粒子转化；金属熔体中原子间距负膨胀现象；植物修复技术……</p>
-</li>
-</ol>
-<p>这只是摘取的部分 EXAFS 应用，可以发现涉及的范围非常大。我作为一名在读学生，没有像各位教授那样接触不同的课题，很难把应用讲得很完整。而在同步辐射实验室做实验的时候，也会遇到来自五湖四海的课题组进行着我从来都没听过的课题，甚至还在线站上看到有人在测牙齿的里钙的 XAFS （是的，就是直接把一颗人的牙齿架在样品台上面跑数据）。</p>
-<p>说这么多，只是为了想减轻一点你的焦虑。作为初学者，没有必要一开始去了解这门技术应用上的方方面面，反而更建议你从课题上出发：先提出问题，接着思考可能的对应方案，再考虑 XAFS 是不是能帮你回答问题。比如，我想知道我某一步合成的产物是否有杂质，如果是有机化合物有碳有氢，核磁直接安排上。我会下意识说用 XAFS 吗？当然不。</p>
-<blockquote>
-<p>可以最简单地解决问题的手段才是好手段。</p>
-</blockquote>
-<p>再者，XAFS 有着“灵活的适应性”，近来发展原位或是同其他表征联用的手段在文章上越来越多，数据处理方面则朝着大数据或机器学习方向发展。想起几年前去同步辐射实验室的时候，带我参观的工作人员是这么说的：</p>
-<blockquote>
-<p>不用问我们能做什么，只问你自己有什么想做的。只要够有意思，不存在的东西也可以整出来。</p>
-</blockquote>
-<p>我第一次听到这样的话觉得吹牛成分有占一半，混熟了发现……嗯，确实只要课题够有意思，真的可以为所欲为。不过这也是想说明 XAFS 这门技术处在一个发展的阶段，在这个基础上还有 XES、RIXS 等等高端技术，那怎么讲都讲不完的。然而万变不离其宗，当掌握了最基本的原理，现阶段应用相关的问题自然迎刃而解。</p>
-<br/>
-<br/>
-<h2 id="exafs-提供的是中心原子的结构信息">EXAFS 提供的是中心原子的结构信息</h2>
-<p>为了简化解释，需要指出几个关于大部分 XAFS 谱的核心要点。需要指出的是，<strong>低能谱线的谱图 (eg. S K-edge) 数据处理会和过渡金属一类的差距较大，有些要点并不适用</strong>，在这里主要以过渡金属的 XAFS 技术来讨论：</p>
-<ol>
-<li>X-ray <strong>absorption</strong> spectroscopy 是一项<strong>吸收光谱</strong>技术；</li>
-<li>通过改变<strong>入射光的能量</strong>来获得的<strong>目标元素</strong>的谱图；</li>
-<li>只看<strong>中心原子</strong>的周围结构环境信息；</li>
-<li>数据反映的是<strong>平均环境</strong>，也叫做 bulky technique；</li>
-</ol>
-<p>背后的“潜台词”包含但不限于：</p>
-<h3 id="与其他光谱技术类似性">与其他光谱技术类似性</h3>
-<p>吸收光谱里面的红外 (infrared spectroscopy, IR) 和紫外-可见光谱 (UV-vis spectroscopy) 在部分原理上是<strong>可以相互借鉴的</strong>。比如：</p>
-<ol>
-<li>均遵循 <a href="%5Bhttps://en.wikipedia.org/wiki/Beer%E2%80%93Lambert_law%5D(https://en.wikipedia.org/wiki/Beer%E2%80%93Lambert_law)">Beer-Lambert law</a>，数据来自测量于入射前和入射后的光强度，从而得到样品吸收多少光；</li>
-<li>光路是需要<strong>穿过样品</strong>，这与 XPS 一类的表面表征技术<strong>有区别</strong>；</li>
-<li>光路是有<strong>一定横截面积</strong>，测得的结构信息实质上是<strong>光斑的面积 × 样品厚度</strong>以内体积中的；</li>
-<li>如果在被入射光打到的体积内，出现了混合物的情况，出射光只能知道有多少光被吸收了，最后得到的是这个体积内的<strong>平均信息</strong>；</li>
-<li>你在测量样品的时候需要把光瞄准到样品上，以及在装样品的时候需要像红外片一样讲样品碾均匀了再压片放入样品片中。<s>（实验部分是以后要补的坑，不是所有的样品都是粉末）</s></li>
-</ol>
-<br/>
-<h3 id="能量是用于区分元素的手段">能量是用于区分元素的手段</h3>
-<p>所有 EXAFS 的原始数据中 x 轴均是能量，这是因为 EXAFS 是依靠能量来分辨元素的。很多人的第一印象认为 EXAFS 能精准地区分一个元素到另一个元素。可以这么理解，但是要加一个重要的前提：<strong>需要分辨的元素各自吸收边尽可能远离彼此</strong>。来举几个例子：</p>
-<ol>
-<li>一个铁负载在二氧化硅载体上的样品，需要测铁 K-edge。那么样品里面包含的元素有 Fe, Si &amp; O。由于前者的 K边吸收能量远超过剩下的元素，所以我只需要去 Fe K-edge 附近测量 XAFS 信息；</li>
-<li>一个 bimetallic 催化剂里面含有相近质量分数的钨 (Tungsten, W) 和铼 (Rhenium, Re) 。如果我想测量 W L<sub>III</sub>-edge （10,207 eV) ，EXAFS 谱图从 ~10,000 eV 开始扫起，到10,207 eV 附近会看到一个吸收；能量数值继续增加，在10,535 eV 附近还会看到第二个吸收，这是来自于 Re L<sub>III</sub>-edge 吸收。此时如果我希望得到的是一张 W L<sub>III</sub>-edge EXAFS <strong>吸收</strong>谱图，是会被 Re 的吸收而直接干扰，从吸收谱这里不能得到一张完整可用于处理的 EXAFS 图。</li>
-</ol>
-<p>正因为如此，得到一张目标元素的 EXAFS 谱图 = <strong>在吸收边 -100 eV ~ +1000 eV 中最好别有其他元素的吸收边落在这个范围内</strong>。我强调吸收谱是因为这个问题是可以依靠荧光谱来解决的，虽然一开始在实验计划上就应当避免。</p>
-<br/>
-<h3 id="邻近原子信息是依靠-exafs-方程获得">邻近原子信息是依靠 EXAFS 方程获得</h3>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>χ</mi><mo>(</mo><mi>k</mi><mo>)</mo><mo>=</mo><munderover><mo>∑</mo><mi>i</mi><mrow></mrow></munderover><mfrac><mrow><mo>(</mo><msub><mi>N</mi><mi>i</mi></msub><msubsup><mi>S</mi><mn>0</mn><mn>2</mn></msubsup><mo>)</mo><msub><mi>F</mi><mi>i</mi></msub><mo>(</mo><mi>k</mi><mo>)</mo></mrow><mrow><mi>k</mi><msubsup><mi>R</mi><mi>i</mi><mn>2</mn></msubsup></mrow></mfrac><mi>s</mi><mi>i</mi><mi>n</mi><mo>[</mo><mn>2</mn><mi>k</mi><msub><mi>R</mi><mi>i</mi></msub><mo>+</mo><msub><mi>δ</mi><mi>i</mi></msub><mo>(</mo><mi>k</mi><mo>)</mo><mo>]</mo><msup><mi>e</mi><mrow><mo>−</mo><mn>2</mn><msubsup><mi>σ</mi><mi>i</mi><mn>2</mn></msubsup><msup><mi>k</mi><mn>2</mn></msup></mrow></msup><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><mn>2</mn><msub><mi>R</mi><mi>i</mi></msub></mrow><mrow><mi>λ</mi><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mfrac></mrow></msup></mrow><annotation encoding="application/x-tex">\chi(k)= \sum_{i}^{}\frac{(N_{i}S_{0}^{2})F_{i}(k)}{kR_{i}^{2}}sin[2kR_{i} + \delta_{i}(k)]e^{-2\sigma _{i}^{2}k^{2}}e^{-\frac{2R_{i}}{\lambda (k)}}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">χ</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.768777em;vertical-align:-1.277669em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3500050000000003em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7959080000000001em;"><span style="top:-2.4231360000000004em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span style="top:-3.0448000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.27686399999999994em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4518920000000004em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.24810799999999997em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9628639999999999em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mopen">[</span><span class="mord">2</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.459675em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03785em;">δ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">)</span><span class="mclose">]</span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.0369199999999998em;"><span style="top:-3.1130000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">2</span><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8913142857142857em;"><span style="top:-2.214em;margin-left:-0.03588em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913142857142857em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.209675em;"><span style="top:-3.4842000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0363928571428573em;"><span style="top:-2.640785714285714em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">λ</span><span class="mopen mtight">(</span><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mclose mtight">)</span></span></span></span><span style="top:-3.2255000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.5483000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3448em;margin-left:-0.00773em;margin-right:0.1em;"><span class="pstrut" style="height:2.65952em;"></span><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.31472em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5377857142857143em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
-<p>注：这可是 EXAFS 的灵魂方程啊</p>
-<br/>
-<p>之前已经做了一个讨论 <a href="https://www.bilibili.com/video/BV1Mk4y1B7Vz">EXAFS 方程变量的视频</a>，简单来说从这个方程里面最直接的能够获得中心原子的两个信息：<strong>原子种类和距离</strong>。</p>
-<p>对于原子种类的分辨，其依据是来自于 <em>F(k)</em> 和 <em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03785em;">δ</span></span></span></span>(k)</em> 两个方程，分别对应 scattering amplitude 和 phase shift 方程。其中  <em>F(k)</em> 的形状和强度与原子质量相关，我们主要依赖于它来分辨邻近原子。下图是来自 <a href="https://millenia.cars.aps.anl.gov/xraylarch/downloads/2018Workshop/NewvilleEXAFS_RIMG78_ColorPreprint.pdf">Matthew Newville 的讲义</a>示例：O、Fe &amp; Pb 三者的 scattering amplitude 均不一样 （留意图中 x 轴也是 k 空间的 x 轴），这三者元素的质量相差甚远，对应的 <em>F(k)</em> 也不一样，反映到 EXAFS 数据处理中，就可以通过 <em>Artemis</em> 来拟合甄别是铁或氧或铅。<br>
-再者，右图代表了三个元素的 phase shift 方程，可以看到铁和氧比较类似，而铅的图像差距较大。如果有看过 <a href="https://www.bilibili.com/video/BV1yz411e7gu?p=6">phase correction 相关视频</a>，就知道在 R 空间中看到的 path 对应峰位置会比真实的原子距离要短 0.2 ~ 0.4 Å，这个误差就来自于 <em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03785em;">δ</span></span></span></span>(k)</em>。而对于轻元素而言，<em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03785em;">δ</span></span></span></span>(k)</em> 比较类似，而重元素则差距较大。反映到实际 EXAFS 图像中，就会发现<strong>氧或铁在 R 空间中显示的距离“偏移”会比铅要少</strong>。虽然是由原子不同序数导致的，但是远不如 <em>F(k)</em> 明显。</p>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/09/14/BzpwRaybAs8cHGL.png" alt="fk.png" loading="lazy"></figure>
-<p><strong>Figure 1.</strong>  <em>F(k)</em> and <em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span></span></span></span>(k)</em> for oxygen K-edge, iron K-edge and Pb L<sub>III</sub>-edge from <a href="https://millenia.cars.aps.anl.gov/xraylarch/downloads/2018Workshop/NewvilleEXAFS_RIMG78_ColorPreprint.pdf">Matthew Newville</a>.</p>
-<br/>
-<p>然而，<strong>如果两者原子序数 Z = ± 5 以内</strong>，<em>F(k)</em> 方程会非常接近，直接结果就是<strong>无法在 EXAFS 中分辨</strong>。最简单的例子就是在在 EXAFS 中，<strong>作为邻近原子的碳氮氧在相同距离是无法区分的，钨和铼也没办法分辨</strong>。如果谁告诉你光用 EXAFS 可以在同一距离分辨碳氮氧，这篇文章下一秒可以进垃圾桶了。<s>我就是在说相当一部分的单原子文章</s></p>
-<p>费这么大力气讲这个就是希望在理解这一点之后回头看自己的课题中的问题，思考你是否会遭遇这样的难点。如果有，XAFS 很可能不是适合的手段，或者需要费大力气。</p>
-<br/>
-<p>对于原子距离，核心判定来自于方程中的 <em>R</em>。我一直强调：</p>
-<ol>
-<li>在 R 空间看到的图<strong>不能</strong>直接不经分析跳出来说是 xxx 原子在 xxx 距离，因为一个峰可以对应多个原子的可能性（如上讨论）；</li>
-<li>Multiple scattering 也可以在 R 空间中出现信号，它们对应的 R 值<strong>并不是原子距离</strong>；</li>
-<li>要理解距离的含义，多参考晶体结构里面的信息，例如键角、配位数、几何结构等等。</li>
-</ol>
-<p>如果已经阅读过多篇 EXAFS 相关的文献，就可以知道 EXAFS 测得的距离大多是 1 ~ 5 Å，换言之超过 5 Å 的原子很可能是看不到了（也有例外，今天不谈）。所以在我考虑想要测得某原子与中心原子距离的时候，我至少会先判断这个距离：</p>
-<ol>
-<li>有没有超过 5 Å，邻近原子是重原子还是轻原子（轻原子在距离较远的时候信号更弱）；</li>
-<li>出现的地方会不会有其他原子的干扰，我能不能通过原子序数区别来分辨；</li>
-<li>有没有参考的晶体结构或者计算出来的结果，帮助我分析我拟合得到的数据合理性。</li>
-</ol>
-<br/>
-<br/>
-<h2 id="把-exafs-的优势和课题中的痛点连接起来">把 EXAFS 的优势和课题中的痛点连接起来</h2>
-<p>EXAFS 的优势在我接触的课题中，大致可以分为原理和实验操作上的两大类：</p>
-<ol>
-<li>其他主流表征都无法提供原子距离和种类信息，比如 NMR、EPR、Raman、UV-vis 云云，能想到的技术都不能帮助我回答我课题的问题。比如我做过的 Re/Al<sub>2</sub>O<sub>3</sub> 催化剂，NMR 只可能测 <sup>27</sup>Al，EPR 测不了 d<sup>0</sup> 电子结构，因为负载量太低，Raman 和 UV-vis 都是废物，用 CO 吸收也是测了没用，用 IR 也是测载体。只有 XAFS 可以给我 Re 的信息；</li>
-<li>实验可以在常压高温下进行，能做 <em>Operando</em> 反应。XPS 做了直接没扫几圈就把样品给打还原了，HAADF-STEM 一打样品直接扑街结果，这两个技术号称有 <em>in-situ</em>，但是那气体要求的上限真是低的可怜。XAFS 能够发挥想象力，什么奇怪的样品都能测，我除了常规的常压高温的实验，高温高压、低温、易燃易爆、空气敏感、固液气等等实验都能做，上手很快，装备自己设计设计就能有。要做丙烷脱氢实验，直接挂一个气路 + GC-FID/MS 的仪器就可以开始了。反应上了几百度的时候，很多 IR 信号已经不能看了，XANES 再怎么样都能打，EXAFS 在把实验设计完善的情况下，六七百度也能拿到可用的谱图。</li>
-</ol>
-<p>所以说，先了解你自己课题的痛点再来决定用什么方案来解决。如果说核磁可以解决的，就用核磁，毕竟大多数学校核磁是能做的。如果是做 Rh 相关的催化剂，想看是否是单原子，CO 吸附会是一个不错的选择，因为红外的信号会比 EXAFS 更灵敏。<strong>一旦有其他解决方案，绝对不在第一时间选择 EXAFS</strong>。</p>
-<p>在介绍<a href="https://www.bilibili.com/audio/au1758284?type=1">《如何写 XAS 机时申请书》</a>的播客我提过的思路：</p>
-<blockquote>
-<p>在申请书里面，必须要提及这个课题已经有前期表征和初步的发现，并且要点出使用 EXAFS 能够给出什么样额外的信息，而这部分信息是其他任何表征手段都无法给出的。</p>
-</blockquote>
-<p>在做研究的漫漫长路上，不论使用何种手段，都要问自己：这是正确的解决方案吗？这是最简单可行的解决方案吗？</p>
-<br/>
-<br/>
-<h3 id="留心-xafs-的缺点">留心 XAFS 的缺点</h3>
-<p>缺点除了大家老说拿不到机时、学习来太难以外，技术自身还有很多缺点：</p>
-<ol>
-<li>给出的是平均信息；</li>
-<li>误差高达 10~15%；</li>
-<li>某些原子根本就分辨不了（比如碳氮氧）；</li>
-<li>必须依赖其他表征结果来理解数据；</li>
-<li>……</li>
-</ol>
-<p>所以，再次审视你的课题，问一些问题，像是：</p>
-<ol>
-<li>需要找到负载量为 10 wt% Re 的催化剂中 1% 的活性位点吗？(10 wt% Re × 1% = 0.1 wt% Re from 9.9 wt% Re)</li>
-<li>需要分辨在 1.9 Å 的氧原子 vs. 碳原子吗？</li>
-<li>验证氧平均配位数是从 6 变为了 5 个？</li>
-<li>其他表征能不能回答这个问题？</li>
-<li>……</li>
-</ol>
-<p>如果 1~3 问题回答的是 Yes，请再三慎重使用 XAFS。但 XAFS 限制绝对不止这几个点，建议多从文献里面比较和与老师多讨论。</p>
-<br/>
-<br/>
-<h2 id="xafs-的原理和应用联动">XAFS 的原理和应用联动</h2>
-<p>回到一开始那些列出的例子，比如研究金纳米粒子的生长机理。以一个金原子为中心，新的金原子一层一层开始包围最开始的原子。使用 XAFS 就能看到金原子的周围逐渐开始出现 Au-Au path，对 EXAFS 数据进行拟合，可以得到周围金原子有多少个，在多少的距离，会有几层金原子。配合原位反应，就可以动态的看到纳米粒子是以什么样的速度生产，获得动态数据。这个反应可以在液体里面进行。而这些结果是电镜一类技术无法实现的。</p>
-<p>再来个举烂了的例子，单原子催化剂。很多异相催化剂的载体是非晶相的，大部分表征都是没用的。如果你想知道 Fe 原子的配位数是多少，只能安排上 EXAFS了。至于怎么去解释这个催化反应的机理，这是通过动力学反应或是其他表征来得到的。XAFS 就一结构信息，没办法拿到催化数据。</p>
-<br/>
-<br/>
-<h2 id="番外">番外</h2>
-<p>要问 XANES 能干嘛吗？无可奉告 2333</p>
-<br/>
-<br/>
-<br/>
-<br/>
 <pre><code>感谢你的阅读。
 </code></pre>
 ]]></content>
