@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2021-02-23T17:35:59.302Z</updated>
+    <updated>2021-03-07T05:27:21.337Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -10,6 +10,96 @@
     <logo>https://twocircles24.github.io/images/avatar.png</logo>
     <icon>https://twocircles24.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 两个圈 Two Circles</rights>
+    <entry>
+        <title type="html"><![CDATA[S02  | 一个和老板吵了三年的问题]]></title>
+        <id>https://twocircles24.github.io/post/s02/</id>
+        <link href="https://twocircles24.github.io/post/s02/">
+        </link>
+        <updated>2021-03-06T13:27:05.000Z</updated>
+        <summary type="html"><![CDATA[<p>(10 min reading) 爷累了。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>(10 min reading) 爷累了。</p>
+<!-- more -->
+<p><strong>友情提示：这篇文章不是什么技术型指导意见，只是记录下跟老板“吵架经历”。</strong><br>
+<strong>免责声明：你不能拿这篇文章的观点作为你数据处理的依据。</strong></p>
+<br/>
+<h3 id="事情的起因">事情的起因</h3>
+<p>在大部分 EXAFS 拟合的情况下，是想要得到配位数这个信息。我在教程里面提过：<strong>S<sub>0</sub><sup>2</sup> 和配位数不可兼得</strong> ，所以如果要想知道配位数，就得知道 S<sub>0</sub><sup>2</sup>；那要知道 S<sub>0</sub><sup>2</sup>，就得知道配位数。<s>（套娃警告）</s> 不扯其他的了，我和老板核心分歧在于：<strong>求 S<sub>0</sub><sup>2</sup> 的时候，应该用哪个已知样品数据。</strong></p>
+<p>举个例子： 比如我有一个铂负载在二氧化硅的样品，想要知道它的配位数。我会选择一同测试的铂金属 (Pt foil)来求得 S<sub>0</sub><sup>2</sup>，而老板要求使用 PtO<sub>2</sub>。</p>
+<p>老板一方观点：</p>
+<blockquote>
+<p>由于 S<sub>0</sub><sup>2</sup> 是一个 reduction term，那么这个衰减的来源应当是于样品结构相关。所以应当采取跟目标未知样品类似结构的已知样品的数据来获取 S<sub>0</sub><sup>2</sup>。</p>
+</blockquote>
+<p>我方观点：</p>
+<blockquote>
+<p>S<sub>0</sub><sup>2</sup> 确实是个 reduction term，并且一定程度上也确实是跟样品结构相关，但是实验条件对这个参数影响更大，所以只要是在同一批实验里面测得的标准样品就可以拿来求得 S<sub>0</sub><sup>2</sup>。</p>
+</blockquote>
+<p>我们两个就这件事僵持不下，于是纷纷开始找“外援”了。</p>
+<br/>
+<br/>
+<h3 id="全世界测-pt-金属的-s02-差距有多大">全世界测 Pt 金属的 S<sub>0</sub><sup>2</sup> 差距有多大</h3>
+<p>在寻找论据的过程中，我发现了一篇“很水”的文章，叫做 <a href="https://iopscience.iop.org/article/10.1088/1742-6596/190/1/012032">Comparison of EXAFS foil spectra from around the world</a>。世界各地的同步辐射实验室测量铜片的 EXAFS，并基于已知配位数得到对应的 S<sub>0</sub><sup>2</sup>。鉴于有不同的光源强度，单色光设置，铜片厚度等等的差异，这篇文章试图回答一个问题： <strong>S<sub>0</sub><sup>2</sup> 差异在不同的线站上会有多大？</strong></p>
+<p><img src="https://i.loli.net/2021/03/07/DVKMrgCIiNTfUom.png" alt="image.png" loading="lazy"><br>
+<strong>Figure 1.</strong> 不同线站得到的铜片 S<sub>0</sub><sup>2</sup> 值。图源自  <a href="https://iopscience.iop.org/article/10.1088/1742-6596/190/1/012032">Comparison of EXAFS foil spectra from around the world</a></p>
+<br/>
+<br/>
+<p>可以看到，从最低的 0.91 到 1.04，差值大约有 15%。这个跟 EXAFS 的不确定值是同一范围的，确实会有点差距，但总得来说可以接受。如果把这个差距放到一个无定型或是未知结构的谱图中，我<strong>个人</strong>会觉得这个差值还要扩大。总而言之，一个直接结论：</p>
+<blockquote>
+<p>一个已知结构样品在不同线站上测 EXAFS 时，S<sub>0</sub><sup>2</sup> 会略有不同，但误差值在 EXAFS 的不确定范围内。</p>
+</blockquote>
+<br/>
+<p>然而这张表暴露出来了一个灵魂拷问：S<sub>0</sub><sup>2</sup> 数值范围应该什么区间范围？这个问题这里我先不急回答。</p>
+<br/>
+<br/>
+<h3 id="书里面是怎么说的">书里面是怎么说的</h3>
+<p>我又特地回去看了 「XAFS for Everyone」这本书，里面有特地讲到了 S<sub>0</sub><sup>2</sup> 一些理论方面成因：S<sub>0</sub><sup>2</sup> 可以理解为是 <strong>instrinsic loss</strong>。快速回顾下 EXAFS 原理：</p>
+<p>X射线射入后，原子内层电子被激发出来，在内层轨道上留下空位，也就是 core-hole，电子就跑到外层和原子以外的地方去了。这个对应着 initial state 是电子还在内层轨道什么都没发生的状态，而 final state 对应的是这个电子离开内层轨道的状态，假定剩下的轨道和电子没有改变（毕竟第一时间跃迁啥的又不是它们）。听起来很正常对吧？这就是 EXAFS 里面用到的计算假定。</p>
+<p>然而但是，创造出来 core-hole 明显也不是啥事都不做的，由于它的存在，这个原子不再像是以前的原子。对应的剩下的轨道啊电子啊都会对应进行调整，也就是说，我们一开始以为的从内层到外层再到原子以外的过程，它的 final state 并非是我们一开始以为的 final state。而是经过一点点调整之后的 final state，而这个跟我们一开始的假定是有出入的，这个状态下的电子是 “relaxed”（译作“弛豫”？）。<strong>而 S<sub>0</sub><sup>2</sup> 就用来描述这个小小的差异。</strong></p>
+<p>除此之外，instrinsic loss 还来源于 <em>shake-up</em> &amp; <em>shake-down</em> process。这两个过程分别定义为：</p>
+<blockquote>
+<p><em>Shake-up</em> process: outer electrons are excited when the core hole life is formed.<br>
+<em>Shake-down</em> process: outer electrons are ejected from the atom.</p>
+</blockquote>
+<p>这两个过程总得来说发生的概率不大，但是这两个过程涉及到了电子到光电子的转变过程，其中会损耗能量。所以跟理论计算（没有考虑这两个过程）有所差距。</p>
+<p>听起来是不是有点晕了，但其实 S<sub>0</sub><sup>2</sup> 是个很笼统的参数，这也说明 S<sub>0</sub><sup>2</sup> 确实跟样品结构本身有所关联。<strong>你可以简单理解为理论和实验数据之间的差距，并且这个差距来源跟邻近原子关系不大的，所以这个参数是直接放在了 EXAFS 的乘数项。</strong></p>
+<p>在作者解释了这么一通后，回马一枪：</p>
+<blockquote>
+<p>In practice, determinations of S<sub>0</sub><sup>2</sup> are every sensitive to measurment and data reduction issues.</p>
+</blockquote>
+<p>好吧，作者其实就想说虽然 S<sub>0</sub><sup>2</sup> 成因来源于复杂理论计算，但是最终会被实验上的各种骚操作给盖过，于是我们应该更关注实验条件导致的 S<sub>0</sub><sup>2</sup> 差距。</p>
+<br/>
+<br/>
+<h3 id="实验型和理论型大腿意见">实验型和理论型大腿意见</h3>
+<p>光找文章当然是不足以说服老板的，正好国家实验室里面的有认识的大腿老师，所以就把他们拉过来帮我说话了。</p>
+<p>第一个是理论向老师。它听到这个问题之后，叹气一声，首先表示虽然自己做了很多年的 XAS 理论计算，但是他并不愿意回答这个问题。一是相当复杂，这个值确实是跟电子激发跃迁相关，是可以通过很严格的理论计算得到的数值。但是这个理论计算出来的值又会跟真实值存在差异，而差异就来源自实验。他作为理论计算的一方，完全无法控制实验条件。所以他在审稿的时候并不会特别在意到底使用什么样品得到 S<sub>0</sub><sup>2</sup>，但是他会在意 S<sub>0</sub><sup>2</sup> 值是否在合理的区间范围内。</p>
+<p>Bruce Ravel 也<a href="https://www.mail-archive.com/ifeffit@millenia.cars.aps.anl.gov/msg02237.html">认为 S<sub>0</sub><sup>2</sup> 不是一个 chemically transferrable term</a>：</p>
+<blockquote>
+<p>For many years, the concept of &quot;chemical transferability&quot; has been currency in the EXAFS community.  That is, we presume that for properly created and measured samples of the same absorber and edge, the S02 value for one such sample can be used in teh analysis of another.  Stated another way, S02 is a property of the species of the absorber.  Some years ago, Frank Bridges and his group published such a survey.  Recent work from John Rehr's group has elaborated on this, demonstrating that S02 is, in the strictest sense, neither transferable nor constant in energy.  However, these effects are small such that chemical transferability remains a useful and defensible practice in many EXAFS analyses.</p>
+</blockquote>
+<br/>
+<p>第二个实验向老师。他持跟理论向老师类似的意见，理论和实验都会共同影响 S<sub>0</sub><sup>2</sup>，但是他就如果获得 S<sub>0</sub><sup>2</sup> 值提出了非常有意思的观点：</p>
+<ol>
+<li>在发文章的时候，你应当汇报 S<sub>0</sub><sup>2</sup> 的来源，从什么样品中获得的，这很重要。</li>
+<li>如果想测某个样品来获得 S<sub>0</sub><sup>2</sup>，需要保证的是跟剩下样品的测试条件是一样的。<strong>很多人（包括我）喜欢使用放在 I<sub>1</sub> 和 I<sub>2</sub> 之间用于校正的金属片来获得 S<sub>0</sub><sup>2</sup>，他认为是不合适的。因为样品的入射光是 I<sub>0</sub>，而金属片入射光是 I<sub>1</sub>，这就是不同的实验条件了。</strong></li>
+<li>一定要预先判断晶体结构再特定选择样品来获得 S<sub>0</sub><sup>2</sup>。举个例子，如果你想测 Mo 样品，如果你选择 MoO<sub>3</sub> 来获得 S<sub>0</sub><sup>2</sup>是不合适的，因为第一层原子距离略有不同，本身拟合就很有难度了。对应的，选择 Na<sub>2</sub>MoO<sub>4</sub> 就会容易一些，因为第一壳层只有四个很确定的氧原子。</li>
+</ol>
+<br/>
+<br/>
+<h2 id="s02-合理范围在多少">S<sub>0</sub><sup>2</sup> 合理范围在多少？</h2>
+<p>「XAFS for Everyone」建议在 0.7 - 1.05。然而我老板对 S<sub>0</sub><sup>2</sup> 大于 1 这个事情不能容忍。这也能理解，毕竟理论和实验来看，无论如何这都是一个 reduction term，代表着真是信号是减少的，怎么可以大于理论值。刚刚上面提出观点的两个老师也表示他们可以接受的上限是 1，超过 1 没法忍。</p>
+<p>接着问题来到了 S<sub>0</sub><sup>2</sup> 下限在哪里。我老板说 0.8，实验向老师 0.8，理论向老师 0.7。我……你们开心就好。</p>
+<p>但三个人讨论之后觉得说，如果有很强的证据证明由于实验的关系导致 S<sub>0</sub><sup>2</sup> 很小的话，那么下限扩大到 0.7 也可以接受。于是三个人得到 <strong>0.7 - 1.0</strong> 这个范围。</p>
+<p>不过，我之前在视频里面讲到过，我上课时问过 XAS 大佬这个问题：为什么 S<sub>0</sub><sup>2</sup> 可以大于 1？大佬跟我说是因为 FEFF6 （就 Artemis 里面用的）的计算就是会把强度计算得要比真实强度低了一点，所以在某些情况下，还真的就可以大于 1。我……你们开心就好。</p>
+<br/>
+<br/>
+<h3 id="最后结论">最后结论</h3>
+<p>老板接受了实验参数影响 S<sub>0</sub><sup>2</sup> 的观点。</p>
+<br/>
+<br/>
+<br/>
+<br/>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[在 2020 年成为冷门科研教程视频 UP 主]]></title>
         <id>https://twocircles24.github.io/post/being-contentcreator-in2020/</id>
@@ -808,124 +898,6 @@
 <br/>
 <br/>
 <pre><code>感谢你的阅读。</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[你问我不一定答 | 第三期]]></title>
-        <id>https://twocircles24.github.io/post/youask-ianswer-3/</id>
-        <link href="https://twocircles24.github.io/post/youask-ianswer-3/">
-        </link>
-        <updated>2020-09-15T14:25:04.000Z</updated>
-        <summary type="html"><![CDATA[<p>(6 min 34 s reading) 提问是越来越有意思了~</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>(6 min 34 s reading) 提问是越来越有意思了~</p>
-<!-- more -->
-<br/>
-<p><strong>阅读提示1：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
-<p><strong>阅读提示2：问题来源于 B 站 or 微博，问题有可能被重新整理，先后顺序不代表任何重要程度，如果你的提问被收入但觉得不合适，请联系我。</strong></p>
-<hr>
-<blockquote>
-<p>Q21. 能用网上分享的 XAFS 数据来拟合吗？（包括 XANES 或者 EXAFS）</p>
-</blockquote>
-<p><strong>A21:</strong></p>
-<ol>
-<li><strong>不可以拿来做任何的拟合，包含但不限于：LCF、PCA、EXAFS 拟合（Artemis）等等</strong>；</li>
-<li>具体原因参考<a href="https://twocircles24.com/post/energy-calibration/">《能量校正 Calibration》</a>。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q22. 比较不同批次得到的实验数据，应该如何选择 Alignment vs. Calibration？</p>
-</blockquote>
-<p><strong>A22:</strong></p>
-<ol>
-<li>比较不同批次的数据先把Fe foil(各自reference)先校正好到7112 eV，把校正后的Fe foil放在一起比较是不是一致的。</li>
-<li>如果确认Fe foil两次实验都是一致的，开始比较样品。</li>
-<li>Calibration相当于是用绝对值（reference的E0）来调整样品的位置，Alignment是利用同一样品（可reference可未知样品）的图像来对齐。</li>
-<li>更多讨论参考<a href="https://twocircles24.com/post/energy-calibration/">《能量校正 Calibration》</a>。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q23. 有没有关于过渡元素E0与价态之间关系的理论或者计算方面的文献啊，能在文章里引用的那种？</p>
-</blockquote>
-<p><strong>A23:</strong></p>
-<p>总的来说没有一个review可以直接能套所有的E<sub>0</sub> vs. 价态讨论。你可以直接引比较新，高IF 跟你课题类似（同一元素）的文章。另外一种是可以按照同一元素来搜关键词，比如搜索 Fe XANES oxidation states，找两篇比较详细讨论你需要论点文章的来引用，不一定限于类似结构。因为元素与元素之间的 XANES 和其氧化态的关联是有差异的。XANES 的解读目前是极其复杂又不完善，所以很难有 comprehensive review 来引用。</p>
-<br/>
-<br/>
-<blockquote>
-<p>Q24. 在 XANES 一阶微分中出现了两个峰，第一个峰一定是 pre-edge 造成的吗？</p>
-</blockquote>
-<p><strong>A24:</strong></p>
-<p>确实不一定是，在<a href="https://www.bilibili.com/video/BV1yz411e7gu">《Athena新手教程 | 同步辐射吸收谱(XAS)数据处理》</a>有人提出来了自己的课题里面出现了混合物情况，里面的 A 组分和 B 组分各贡献了一个峰，所以最后还是选择了第一个峰作为 E<sub>0</sub>。这种情况完全有可能出现。<br>
-其实除了混合物的情况会混淆 E<sub>0</sub> 的选择，我自己知道的还可能有metal-Cl 的键也会影响 edge 位置，还要再出一个“假 pre-edge peak”，某些元素不会很明显，有的就会比如 Pt。不过说到底对于 EXAFS来 说，先定一个再去 Artemis 里面看就是了，不行再换。</p>
-<br/>
-<br/>
-<blockquote>
-<p>Q25. 视频<a href="https://www.bilibili.com/video/BV1364y1F7tw?pop_share=1">《能量校正 Calibration》</a>中提到S的能量较弱，短时间内仪器的能量偏移较小，需要用Na2SO3进行校正.如果我同一批测得标准样品和未知样品，他们的能量偏移应该是一致的，我可不可以直接用他们来拟合价态？</p>
-</blockquote>
-<p><strong>A25:</strong></p>
-<ol>
-<li>大写的不可以。</li>
-<li>如果不进行能量校正，得到的 E<sub>0</sub> 值会跟其他文献里面的对不上号。比如大部分人汇报 Fe foil 是 7,112 eV，我不校正就是 7113.3 eV。那我发文章出去报后面这个数不是被公开处刑？</li>
-<li>LCF 拟合更多是看强度的吻合程度，在假定偏移程度一样的前提下，确实不校正可能对拟合的结果（主要是每个组份的比例）影响不大；但是你图偏移了，把它写成文章发出去遇到懂的审稿人不会被处刑？</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q26.为啥需要拟合数据呢？比如我拿到一组数据，直接通过 Athena 统一标定后，输出结果，应该就可以了吧？ 那么后续用Artemis拟合图以及搜寻cif卡片参比的意义在哪里呢？</p>
-</blockquote>
-<p><strong>A26:</strong></p>
-<ol>
-<li>Artemis 的作用是为了得到邻近原子数量+距离，Athena得不到。如果你只是寻求 XANES 信息或仅仅展示数据，Athena 足矣。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q27. 一旦保存（save as）后就显示软件假死，无法操作，这是什么情况呢？</p>
-</blockquote>
-<p><strong>A27:</strong></p>
-<ol>
-<li>重开，重启，清caches，重装，少加两个数据，换版本。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q28. xafs中的论文大概有百分之九十的垃圾。</p>
-</blockquote>
-<p><strong>A28:</strong></p>
-<ol>
-<li>我个人觉得是看出于什么样的目的发表的吧。对于这种表征，质量好的文章更多常见在小期刊上面，像 JPCC。要发IF高的刊物，表征只是一个必要不充分条件，讲的故事才是核心。但是站在不了解内情的局外人来看，以为表征是充分必要的，再加上学习成本较高，导致误解越来越深，越来越多的人对技术展开了盲目的追求。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q29. 对于单原子催化剂要通过建模得到原子坐标等数据来得到inp文件。有很多单原子催化剂给出R空间拟合数据之后都会给出催化剂的球棍模型，而这个球棍模型大多是平面的，但是张三自己作图的时候边缘不可避免的会自动加入氢原子而保证碳四键，最后得到就是非平面的，不知道 x 教授是如何操作的？请问如何得到平面的构型？我用chemdraw画的，有没有容易上手的软件推荐一下来得到单原子的inp。</p>
-</blockquote>
-<p><strong>A29:</strong></p>
-<ol>
-<li>单原子催化剂 EXAFS 拟合不需要建模拟合，借鉴现有的分子晶体结构就行；.</li>
-<li>催化剂球棍模型是通过其他拟合计算得到的，EXAFS 的拟合数据 R 只是辅助说明理论计算和EXAFS证据是相互吻合的；</li>
-<li>单原子结构比如 Fe-N4 @ C 在 graphite 上面结构，一般是从 pure graphite 改过来的，从零开始画肯定难；3. ChemDraw 可以画，应该需要 disable 掉某些自动功能；</li>
-<li>如果画 3D，我反而推荐用 xyz 文件去 Vesta 画。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q30. 张三根据教程对数据进行了分析，得到的结果是接近绿色的，但是其中s0的平方和N都是负数，其他的一些数据满足您讲的条件，请问这样的数据配位数N可以取绝对值来使用嘛？如果不行，我需要调什么参数呢。</p>
-</blockquote>
-<p><strong>A30:</strong></p>
-<ol>
-<li>不可以，绿色只是代表你出来的线符合实验数据，但是并不说明每个参数有意义。所以绿色 ≠ 好 fitting；</li>
-<li>你可以尝试固定 S<sub>0</sub><sup>2</sup> 或者是 N 为正数里面一个合理的数值再看另外一个拟合得到的结果；</li>
-<li>关于变量调整相关视频，请参考<a href="https://www.bilibili.com/video/BV1Mk4y1B7Vz">《从EXAFS方程讨论拟合变量》</a>。</li>
-</ol>
-<br/>
-<br/>
-<br/>
-</br>
-<pre><code>感谢你的阅读。
-</code></pre>
 ]]></content>
     </entry>
 </feed>
