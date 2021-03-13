@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2021-03-13T01:29:31.573Z</updated>
+    <updated>2021-03-13T01:31:20.311Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://twocircles24.github.io/post/Shelly-Kelly-EXAFS-Tutorials/</id>
         <link href="https://twocircles24.github.io/post/Shelly-Kelly-EXAFS-Tutorials/">
         </link>
-        <updated>2021-03-12T09:29:19.000Z</updated>
+        <updated>2021-03-11T17:29:19.000Z</updated>
         <summary type="html"><![CDATA[<p>Athena 和 Artemis 教程翻译达成！</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>Athena 和 Artemis 教程翻译达成！</p>
@@ -35,6 +35,8 @@
 <p><a href="https://raw.githubusercontent.com/twocircles24/twocircles24.github.io/master/Subtitles/8%20EXAFS_%20Artemis%20-%20Pt%20foil%20data%20fitting%20upto%206%20A.srt">8 EXAFS: Artemis - Pt foil data fitting upto 6 Å</a></p>
 <p><a href="https://raw.githubusercontent.com/twocircles24/twocircles24.github.io/master/Subtitles/9%20EXAFS_%20Artemis%20fitting%20of%20Cu%20Foil%20-%201st%20Shell.srt">9 EXAFS: Artemis fitting of Cu Foil - 1st Shell</a></p>
 <p><a href="https://raw.githubusercontent.com/twocircles24/twocircles24.github.io/master/Subtitles/10%20EXAFS_%20Artemis%20fitting%20of%20Cu%20Foil%20-%202nd%20Shell.srt">10 EXAFS: Artemis fitting of Cu Foil - 2nd Shell</a></p>
+<p>（我懒得贴每个视频链接了）</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/03/13/wpyYmxAZ6RaFIsO.png" alt="image.png" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
