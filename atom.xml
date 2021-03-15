@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2021-03-13T06:48:51.352Z</updated>
+    <updated>2021-03-15T06:29:36.053Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -10,6 +10,36 @@
     <logo>https://twocircles24.github.io/images/avatar.png</logo>
     <icon>https://twocircles24.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 两个圈 Two Circles</rights>
+    <entry>
+        <title type="html"><![CDATA[Pfizer 疫苗记]]></title>
+        <id>https://twocircles24.github.io/post/vaccine-log/</id>
+        <link href="https://twocircles24.github.io/post/vaccine-log/">
+        </link>
+        <updated>2021-03-14T14:29:17.000Z</updated>
+        <summary type="html"><![CDATA[<p>（动态更新）没想到我这么早能打上疫苗的。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>（动态更新）没想到我这么早能打上疫苗的。</p>
+<!-- more -->
+<p>上周二的时候，学校通知 phase 1b 人员可以预约疫苗了。看到邮件手快就约到了周六的疫苗。</p>
+<blockquote>
+<p>背景知识：在我州打疫苗是按照 phase 来排优先级的，数字越小优先级越高。比如 phase 1a 中第一优先级是医护人员，以及 65 岁以上的人。我们作为 education emergency 也是 essential worker 被排在了 phase 1b。</p>
+</blockquote>
+<br/>
+<br/>
+<p>我去的是当地的医院，预约完成之后需要带上自己的驾照和保险卡（最好再带一支笔填表）。check-in 和打疫苗都是在车里面进行不需要下车。因为已经预约过了，整个过程就非常顺利。从到达到注射没超过 10 分钟，中间主要是填表。大致有知情同意书以及病史询问，毕竟现在还是有疫苗副作用报道出来。我以为还要再等一会儿来着，结果有个护士直接过来从打开的车窗帮我把疫苗打了，然后需要等待 15 分钟观察是否有副反应。中间跟医生聊了会儿天，感觉他也没怎么认真戴口罩……他跟我说他们都已经打了疫苗了，现在在医院内部开会的话他们都不戴口罩了（因为全部人都产生免疫了）。 感觉他的言谈之间还是透露出来比较轻松的样子，想想一月份的时候我们村医疗体系接近崩溃的样子觉得现在事情在朝着好的方向发展？</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/03/15/NJjqPrxkLdZ7zfK.jpg" alt="car.jpg" loading="lazy"></figure>
+<p>Check-in 就是在我车窗写上了……</p>
+<br/>
+<p>由于 Pfizer 疫苗需要接受第二针，并且在接受第二针两周之后才会被认作免疫力，所以我还是会好好戴口罩，之前是怎么样的现在就怎么样。顺便用这篇来 update 下接种疫苗状态。</p>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2021/03/15/O6MsKYf2Bmu3EX9.jpg" alt="record.jpg" loading="lazy"></figure>
+<p>我的疫苗接种卡</p>
+<br/>
+<br/>
+<h3 id="疫苗-logbook">疫苗 Logbook</h3>
+<p><strong>2021/03/13</strong> - 第一针。觉得有点点困（也有可能是因为我没喝咖啡），注射区域有肿胀酸痛，无发烧迹象。<br>
+<strong>2021/03/14</strong> - 注射区域有酸痛感，抬手会有点点困难，但做做俯卧撑没啥问题。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Athena & Artemis Tutorials by Shelly Kelly | 中文翻译]]></title>
         <id>https://twocircles24.github.io/post/Shelly-Kelly-EXAFS-Tutorials/</id>
@@ -770,100 +800,6 @@
 <br/>
 <hr>
 <p>这就是一个普通 UP 主的普通桌面，感谢收看！</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[与 XAFS Collaboration 沟通时需要什么样的信息]]></title>
-        <id>https://twocircles24.github.io/post/talk-with-your-collaborations/</id>
-        <link href="https://twocircles24.github.io/post/talk-with-your-collaborations/">
-        </link>
-        <updated>2020-10-05T07:13:53.000Z</updated>
-        <summary type="html"><![CDATA[<p>做成文字版方便阅读。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>做成文字版方便阅读。</p>
-<!-- more -->
-<br/>
-<br/>
-<p>之前已经发成视频  (<a href="https://www.bilibili.com/video/BV1Tv411q79R">Bilbili</a>, <a href="https://youtu.be/-ZiZGUdUTs4">YouTube</a>)，后来想想觉得还是应该做成文字版当成一个 To-do List 更加合适。</p>
-<p><strong>Disclaimer: 该文仅为个人意见，不代表正确答案，请酌情采纳。如果有任何建议，请联系我。</strong></p>
-<br/>
-<br/>
-<hr>
-<h3 id="1-样品状态以及测量时需要的状态">1. 样品状态，以及测量时需要的状态。</h3>
-<ul>
-<li>固体：粉末、片状……</li>
-<li>液体：悬浊液，溶剂……</li>
-<li>气体 （相对少见）</li>
-</ul>
-<br/>
-<h3 id="2-待测的元素及其边">2. 待测的元素及其边</h3>
-<ul>
-<li>元素的名称，eg. Pt, Fe...</li>
-<li>对应的边，eg. K-edge, L<sub>3</sub>-edge...</li>
-</ul>
-<br/>
-<h3 id="3-待测元素的浓度">3. 待测元素的浓度</h3>
-<ul>
-<li>建议使用质量分数 (wt%)，比如 一个 2 wt% Fe 的铁负载在二氧化硅的载体上。</li>
-<li>也有其他的表达方式，比如生物样品就不用 wt%，需要跟其他人沟通好。</li>
-</ul>
-<br/>
-<h3 id="4-样品中其他的组成">4. 样品中其他的组成</h3>
-<ul>
-<li>样品中所有的元素及其对应的质量分数，比如 Fe/SiO<sub>2</sub> 样品中，不仅需要 Fe 的质量分数，还需要 Si 和 O 的质量分数。</li>
-<li>这个信息可以直接决定数据质量成败（or 机时能被浪费多少）。</li>
-</ul>
-<br/>
-<h3 id="5-可以提供的样品质量">5. 可以提供的样品质量</h3>
-<ul>
-<li>明确表明能够给 xxx 克、xxx 毫升的样品。</li>
-<li>问清楚对方需要多少样品才可以测量。</li>
-</ul>
-<br/>
-<h3 id="6-对样品的特殊保护备注">6. 对样品的特殊保护/备注</h3>
-<ul>
-<li>空气敏感？易潮？</li>
-<li>低温装置保护？</li>
-<li>有任何危害性？比如易燃易爆、辐射性 etc</li>
-<li>容易被同步辐射光源打变质？(aka. beam damage)</li>
-<li>……</li>
-</ul>
-<br/>
-<h3 id="7-标准样品的需求">7. 标准样品的需求</h3>
-<ul>
-<li>想知道样品的氧化态，是否需要测量已知价态的不同化合物？</li>
-<li>……<br>
-<br/></li>
-</ul>
-<h3 id="8-实验条件特别在-in-situ-条件下">8. 实验条件（特别在 in-situ 条件下）</h3>
-<ul>
-<li>使用何种浓度的气体，什么样的温度，变温速率，气流速率……</li>
-<li>保证任何人看到步骤都没有任何的疑问；</li>
-<li>……</li>
-</ul>
-<br/>
-<br/>
-<hr>
-<h3 id="如果你作为我的-collaboration实验之前我想从你这里了解更多">如果你作为我的 collaboration，实验之前我想从你这里了解更多。</h3>
-<ol>
-<li>前期表征已经得到的信息，包含但不限于价态、元素组成、配位数；</li>
-<li>你想从 XAFS 中获得什么样新的信息，尤其是其他表征手段无法挖掘的信息；</li>
-<li>是否已经对待测样品的结构信息已经有若干个选项。</li>
-</ol>
-<br/>
-<br/>
-<hr>
-<h3 id="总结">总结</h3>
-<ol>
-<li>沟通万岁，理解万岁；</li>
-<li>多寄一点样品，尤其是第一次测类似的样品；</li>
-<li>让样品准时到达 collaboration 的手中。</li>
-</ol>
-<br/>
-<br/>
-<br/>
-<br/>
-<pre><code>感谢你的阅读。</code></pre>
 ]]></content>
     </entry>
 </feed>
