@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2021-03-15T06:34:47.876Z</updated>
+    <updated>2021-03-16T05:29:37.542Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://twocircles24.github.io/post/vaccine-log/</id>
         <link href="https://twocircles24.github.io/post/vaccine-log/">
         </link>
-        <updated>2021-03-14T14:29:17.000Z</updated>
+        <updated>2021-03-15T14:29:20.000Z</updated>
         <summary type="html"><![CDATA[<p>（动态更新）没想到我这么早能打上疫苗的。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>（动态更新）没想到我这么早能打上疫苗的。</p>
@@ -37,7 +37,8 @@
 <br/>
 <h3 id="疫苗-logbook">疫苗 Logbook</h3>
 <p><strong>2021/03/13</strong> - 第一针。觉得有点点困（也有可能是因为我没喝咖啡），注射区域有肿胀酸痛，无发烧迹象。<br>
-<strong>2021/03/14</strong> - 注射区域有酸痛感，抬手会有点点困难，但做做俯卧撑没啥问题。</p>
+<strong>2021/03/14</strong> - 注射区域有酸痛感，抬手会有点点困难，但做做俯卧撑没啥问题。<br>
+<strong>2021/03/15</strong> - 没有任何感觉，一切正常。</p>
 ]]></content>
     </entry>
     <entry>
