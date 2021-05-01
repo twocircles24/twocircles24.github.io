@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2021-04-03T02:52:26.214Z</updated>
+    <updated>2021-05-01T07:00:48.639Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -11,14 +11,97 @@
     <icon>https://twocircles24.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 两个圈 Two Circles</rights>
     <entry>
+        <title type="html"><![CDATA[答「我是怎么入门同步辐射」]]></title>
+        <id>https://twocircles24.github.io/post/how-i-start-xafs/</id>
+        <link href="https://twocircles24.github.io/post/how-i-start-xafs/">
+        </link>
+        <updated>2021-04-30T16:00:41.000Z</updated>
+        <summary type="html"><![CDATA[<p>(12 min reading) 有点想法</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>(12 min reading) 有点想法</p>
+<!-- more -->
+<blockquote>
+<p>阅读提示：前两天收到一位相当有意思的兄弟发来的邮件，字里行间我已经能脑补出来他大约是在天气非常好的一个下午，在树荫下拿出手机敲的邮件。鉴于比较有意思，我就把对话贴出来。（已征得对方允许，隐去信息）</p>
+</blockquote>
+<hr>
+<p>担子菌,</p>
+<p>你好！如有可能,希望能够叨扰你大概 15 分钟。</p>
+<p>先说明我的来意，我是纯纯正正对这个技术不懂的一个菜狗，不过现在打算从头开始学习这项技术的，主要想了解下你的入门经验和过程。我在各个论坛翻看了下相关的内容，在 B 站看到了你的教程,基本上看不懂(尴尬)。所以电邮想聊聊具体的情况。我即将国内研究生毕业，可能接下来几年都和光源打交道。然后我研究生期间呢，对于我们组来说，国内光源资源匮乏。我只接触过上海光源线站某技术，没啥可以操作的，具体操作也不让，哈哈哈。</p>
+<p>嗯，年前在去找资料打基础的时候认识了一个校友，他对同步辐射相关很有经验，很热情的给我做了很多相关地推荐。不过，我一点基础都没有，所以他给我推荐的人一直没有联系，就是那种没有点货，肚子里，哈哈哈怕被嘲讽到哭。年后回学校又因为很多毕业的事情缠着不得空。</p>
+<p>哈哈，篇幅有点长。回归正题,我现在对同步辐射还是一点头绪也没有。我想着把材料结构、XRD 表征基础、空间群论、裂纹学，还有同步辐射相关的中文资料，一堆乱七八糟的没有头绪，不得其门。所以打扰问问相关入门时候感受和经验。</p>
+<p>嗯......近两个月来头一次好天气！趁着心情也超级好写了这封求助信，哈哈哈。</p>
+<p>4.29，写于风景贼好的地儿。</p>
+<br/>
+<hr>
+<br/>
+<p><strong>（以下是我的回复）</strong></p>
+<br/>
+<p>兄弟你好，</p>
+<p>你的有部分问题其实我在一些博客里面前前后后谈过，你可以看看。但并没有直接回答过我是怎么去学这门技术的。所以我先回答你的一部分问题然后再说我是怎么做的。</p>
+<blockquote>
+<p>看不懂我的教程</p>
+</blockquote>
+<p>对于小白来说很正常。学习一门技术的常规逻辑是：原理，操作，应用。然而我的教程只涉及了操作，你也没有原理的背景支撑，所以看不懂是意料之中的事情。</p>
+<blockquote>
+<p>掌握同步辐射技术发文章</p>
+</blockquote>
+<p>从操作到原理其实有很长的一段路就要走。就像烧菜做饭一样，无非都是在锅里面一顿炒，步骤都一样，为什么有的人做出来的很好吃，有的人做出来就不对劲呢。我理解作为学生，发文章是量化成果的重要手段（甚至没有之一） 。然而我个人的体会是，发了文章之后，真的代表你懂这门技术了吗？</p>
+<blockquote>
+<p>国内光源资源内卷很严重</p>
+</blockquote>
+<p>国内是资源分配不均不明，并非内卷。</p>
+<blockquote>
+<p>有机会认识了大佬但羞于发问</p>
+</blockquote>
+<p>既然你都愿意向我问问题了，那么为什么不敢去问大佬呢？是因为我不够大佬还是觉得大佬人不好相处呢？（开玩笑的 233）你又是如何在没有联系沟通的情况下就已经定论大佬会嘲讽你呢？我相信我的嘲讽能力也是高于平均水平的，为什么你还会来问一个很爱嘲讽的我呢？All in all, 跟大佬打交道的原则一直是「问了有东西血赚，问了没东西不亏，不问是sb」。</p>
+<blockquote>
+<p>没有头绪准备</p>
+</blockquote>
+<p>我的建议更是着眼于毕业的事情，学会 prioritize 你的任务将会成为你读书工作路上十分重要的能力。</p>
+<br/>
+<hr>
+<br/>
+<p>鉴于你给我看了一张风景不错的照片，那么现在我顺便讲一下我一开始是怎么学的，从中得到了什么教训。想先说明，这个邮件我会修改隐去个人信息后发在我的博客上。如果你觉得有不妥之处，请告诉我。</p>
+<p>我本科是做的手性拆分，到了博士期间进入的是一个做 heterogeneous catalysis 的课题组，由于自身定位的原因，我研究的重点不在于「寻找到一个活性高的催化剂」，而是回答为什么「 一些 催化剂活性高，而另一部分催化剂没有活性」。因为要回答这个问题，我用到了同步辐射这门技术。再一次由于我们课题组的定位，课题组本身就和同步辐射有了很长的历史，所以我并没有经历像是国内这样需要费尽心思争取机时的痛苦。换言之，光资源这一块我就已经领先无数人了。</p>
+<p>可能出乎你的意料是，在这样一个拥有资源的课题组，我最终是走的自学道路。美国的那几个国家实验室每年都会有 workshop 来给初学者讲如何使用光源和基本的数据处理。我的第一次同步辐射经历便来自这个 workshop，它们基本上在 4 天之内把所有的东西都塞给你，然后让你自己回去消化。我记得当时课程内容已经让人压力够大了，结果还发生了数据处理软件没有安装成功的问题，导致我在数据处理的课上几乎什么都没有学到。课程结束后，我的成果就是存了一篓子的 PPT 回家了。可能跟你现在的情况也好不了哪里去。</p>
+<p>接下来，由于高年级学生毕业而这门技术需要有人接手，那个时候我并没有在课题组中立足的技能，所以我决定试着接下这个任务。于是我便跟着高年级的学生去同步辐射实验室做实验了。第一次实验我其实负责是开车，连数据都没采过，因为仪器太贵了我不敢动。实际体验下来唯一感受是「这些东西太复杂了，我根本搞不懂」。</p>
+<p>不懂怎么办呢，那就先记下来我到底看到了什么，回头我再仔细研究。这么做的原因是步骤太多太繁琐，里面涉及的原理是我不可能花几分钟就能弄懂的。记下来之后，我在梳理这些步骤的过程中，自然会想到「我为什么要做这一步」， 「为什么这一步一定要紧跟另一个步骤」。如同其他实验一样，前前后后都是有逻辑的，而逻辑的构建是依靠理论原理所支撑的。通过这些观察，我更清楚地意识到我到底应该去补什么样的理论知识。这时候我就翻回之前的 PPT 就感觉有点上道了。但 PPT 也不够，于是开始根据各项知识来补，比如信号处理，比如量子物理，还有机械，代码等等。这都没有一个固定的套路，想到什么最要紧就去补哪个。</p>
+<p>在实验以外的时间补充好知识后回到同步辐射实验室，会逐渐意识到这么多的步骤是有原因的，我并不需要去刻意记住，因为每个步骤的顺序都是有逻辑决定的。在这中间我遇到了无数的问题，可以难到需要把整个线站光源关掉进行抢修，也有遇到胶带崩掉的弱智问题。任何一个出现的问题，我会记录下来问题本身和解决方案。每一次实验会积累很多的知识，这一部分对后续的数据处理有关键帮助。</p>
+<p>至于数据处理部分，这个无论从谁那里学，都只能学到皮毛。因为每个课题的要求都是不一样的，导致处理数据的时候需要区分对待，没办法一锅炖。在这个过程中，你收到的反馈大多是负面的，比如「这个数值不对」， 「这图看着不对」等等。你很难会直接得到一个正面直接的指导说  「你应该这么做」。不过做研究也就是这样嘛，要是别人都知道怎么做了，会留给你发文章？把错误的答案排除够多之后，正确答案的概率就会上升那么一丢丢。我大概也是前后被否定了一年多，才有机会反驳别人的意见。</p>
+<p>你可以发现我的套路是实验 + 数据处理螺旋交替的学习模式，我并不认为这个适用于每一个人，因为资源有限。这也就是为什么我特地只做数据处理视频的原因之一。因为我没办法对着一群没有见过 monochromator 的人说你应该怎么这么做，这需要去看，去试错才会知道改怎么去解决问题。如果你有机会去到同步辐射实验室做 troubleshooting 的时候，我想你的体会更加真切的。</p>
+<hr>
+<p>虽然没办法复制别人的做法，但仍然有一些 transferable skills 会让你受益。</p>
+<blockquote>
+<p>任务管理</p>
+</blockquote>
+<p>既然你已经说要看这么多的知识，那孰轻孰重，每个技术要花多少时间呢？如果这些东西一拥而上，那反而人更容易懈怠。与其安排这么多的技术要学，不如挑一个东西在固定时间内做好。比如把要去的课题组文章看了写个总结，比如给自己要接受的课题方向写个 perspective 方便自己切入。我很少会在眼下不需要某一门技术的时候去学习这门技术，因为我手头上的事情已经够忙了。我更倾向于是着眼于我手头最要紧的，储备必要的知识。有着明确的驱动力（比如我必须这周需要处理 XRD 数据），围绕着你的诉求来学习。哪怕我懂得同步辐射技术比你多，一旦脱离催化剂这个东西，我的知识储备是远不如你的。你需要学会如何依靠目标来做事而不是漫无目的的学习。</p>
+<br/>
+<blockquote>
+<p>英语</p>
+</blockquote>
+<p>我更建议你阅读英文教材，哪怕我做的教程都是中文。很简单，你出去之后就是依靠英语交流，而这门技术第一语言是英语。我在没有出国的时候也很畏惧看英语书籍，但其实它们要比你想象中简单很多。就语言来讲，中文反而是复杂细腻的。大概这就是为什么很多留学生出国之后中英混杂：英文的表达方式简单又直接。中文教材我有看过，也不错，只是你的环境很快会变成非中文，再看中文的书籍对你语言适应没有太多帮助。</p>
+<p>我的经验是多看英文的教材，你提前介入英语的环境中，后续跟他人的交流也会进步很快。我的博客上面也有介绍过哪些比较经典而且不算特别老旧的书籍。</p>
+<br/>
+<blockquote>
+<p>Networking</p>
+</blockquote>
+<p>这个我实在是想不出来中文最贴切的一个词语，可以代指社交，沟通很多东西。 我记得我在同步辐射实验室的时候，会向很多人问很多问题。里面肯定有很多是弱智问题，但他们依然是会乐意问答我。这里面有很多原因，首先我在同步辐射实验室见过的人不近学识渊博并且人格外友好。我经常在那里自嘲自己是唯一一个不是 Dr. 开头的，实验室的人是一群极其热爱科研的人，他们很乐意分享他们最近做的东西。如果我问他们做什么的时候，他们会特别开心跟我讲很多，哪怕我跟他不是合作者的关系。其次，我询问他们问题的时候，我会先试着自己解答问题，不行的话再去问他们。在表达问题时，我会告诉他们我到底想了什么，我做了什么，我觉得哪里不懂。他们会很深入浅出地解答，我有很多的知识是从跟他们互动中获得的。至少我接触的人中，很少有人会因为我是学生或是经验不足而看不起我。遇到好人的概率要比遇到垃圾的概率通常来说还是要高那么一点。很多时候都是自己预先设定了一个答案就直接投降，去试试其实说不定血赚。（比如现在）</p>
+<p>放宽点讲，你的合作者甚至是以后找工作就会是类似的套路。我见过的周围人大部分都是通过 networking 找到的工作，如果你能一早有意识地去培养，等到需要时会帮助你很多。</p>
+<hr>
+<p>今天对我来说也是很好的一天，在稀稀拉拉写这封邮件的时候算是经历了人生半个「大起大落」，我也祝你可以在未来找到值得让你开心的人和事。</p>
+<p>Best,</p>
+<p>Lilith</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Pfizer 疫苗记]]></title>
         <id>https://twocircles24.github.io/post/vaccine-log/</id>
         <link href="https://twocircles24.github.io/post/vaccine-log/">
         </link>
-        <updated>2021-04-02T11:51:52.000Z</updated>
-        <summary type="html"><![CDATA[<p>（动态更新）没想到我这么早能打上疫苗的。</p>
+        <updated>2021-04-05T12:19:01.000Z</updated>
+        <summary type="html"><![CDATA[<p>两针打完，起飞。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>（动态更新）没想到我这么早能打上疫苗的。</p>
+        <content type="html"><![CDATA[<p>两针打完，起飞。</p>
 <!-- more -->
 <p>上周二的时候，学校通知 phase 1b 人员可以预约疫苗。看到邮件手快就约到了周六的疫苗。</p>
 <blockquote>
@@ -41,6 +124,7 @@
 <p><strong>2021/03/15 - 2021/03/31</strong> - 没有任何感觉，一切正常。</p>
 <p><strong>2021/04/01</strong> - 第二针。目前注射区域有肿胀酸痛，没有其他迹象。</p>
 <p><strong>2021/04/02</strong> - 头疼 + 困了一上午，吃了泰诺有所好转。注射区域仍有酸痛。</p>
+<p><strong>2021/04/03</strong> - 一切恢复正常。完结撒花。</p>
 ]]></content>
     </entry>
     <entry>
@@ -715,114 +799,6 @@
 <br/>
 <br/>
 <pre><code>感谢你的阅读。
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Athena 软件新手教程 | 缩水公众号版本]]></title>
-        <id>https://twocircles24.github.io/post/athena-tutorial-text/</id>
-        <link href="https://twocircles24.github.io/post/athena-tutorial-text/">
-        </link>
-        <updated>2020-10-28T15:14:43.000Z</updated>
-        <summary type="html"><![CDATA[<p>(9 min 30 s reading) 如果看过视频了就不必看这篇了，只是作为保存。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>(9 min 30 s reading) 如果看过视频了就不必看这篇了，只是作为保存。</p>
-<!-- more -->
-<p><strong>首发于“研之成理”微信公众号，我是原作者。</strong></p>
-<p>同步辐射吸收光谱 （X-ray Absorption Spectroscopy）是一项常见的结构表征技术，可以提供中心原子的邻近信息，例如配位原子和数量。虽然在网上有很多介绍同步辐射的理论知识，但用于数据处理的软件教程相对较少。今天来跟大家分享下如何使用 Demeter 软件中的 Athena 来处理同步辐射吸收谱数据。</p>
-<br/>
-<br/>
-<h2 id="1-demeter-软件简短介绍">1. Demeter 软件简短介绍</h2>
-<p>Demeter 软件是由 Bruce Ravel 教授发布免费数据处理软件，在这里可以下载到 <a href="https://bruceravel.github.io/demeter/">Demeter 最新版本</a>。在安装过程中需要注意路径必须为全英文，因为默认路径是 C盘中用户名下的一个子文件夹。如果你的用户名是中文，请换一个路径安装。</p>
-<p>安装好后，会有三个软件：Athena，Artemis 和 Hephaestus。其中 Athena 主要功能是对实验数据的处理得到 XANES 和 EXAFS；Artemis 是对 EXAFS 数据进行拟合得到配位数等一系列信息；Hephaestus 是与同步辐射实验相关的数据库。</p>
-<p>对于大部分的数据处理，Athena 是最为重要的。除得到并展示 XANES 和 EXAFS 数据以外，还可以进行线性拟合（Linear Combination Fitting）、主成分分析（Principle Component Analysis）等更高阶的数据处理。可以帮助大家从数据中挖掘出更多的信息。</p>
-<p>更多常见的 EXAFS数据处理教程放在了B站<a href="https://space.bilibili.com/625516278">“担子菌的担担面”</a>账号上，包含但不限于数据拟合，小波变换等等，欢迎有需要的同学观看。</p>
-<p><img src="https://i.loli.net/2020/10/29/NYKijkyFVxMhd8z.png" alt="Demeter Website.png" loading="lazy"><br>
-图1. Demeter 官方网站，左侧为下载链接。</p>
-<br/>
-<h2 id="2-athena-界面介绍">2. Athena 界面介绍</h2>
-<p>打开软件后，可以看到软件在 Main window窗口下大致可以分为左右两区域：左为参数区，右为数据展示区。</p>
-<p>在左方的参数设置区域，从上到下分别是：</p>
-<ol>
-<li>Main window （主窗口）：用于切换不同的数据处理功能；</li>
-<li>Current Group （当前数据）：包含数据路径，对应的元素 (Element) ，边 (Edge) 和能量移动值 (Energy Shift) 等基本信息；</li>
-<li>Normalization and background removal parameters （归一化和背景移除参数）：对原始数据的基本处理得到XANES 和 k 空间图像；</li>
-<li>Forward Fourier transform parameters （傅里叶变换参数）：从 k 空间到 R 空间变换；</li>
-<li>Back Fourier transform parameters （反傅里叶变换参数）：从 R 空间到 q 空间变换；</li>
-<li>Plotting parameters （画图参数）：对图像展示进行放大或缩小等。<br>
-右方空白部分是数据所在的几何位置，右下方用于不同形式的数据展示。</li>
-</ol>
-<p><img src="https://i.loli.net/2020/10/29/986qSYQijrUA4DG.png" alt="2AthenaMain_blank.png" loading="lazy"><br>
-图 2. Athena 主界面。</p>
-<br/>
-<p><strong>注：以下<a href="http://bruceravel.github.io/XAS-Education/">演示数据</a>来源于 Demeter 官网教程，由 Bruce Ravel 教授提供。</strong></p>
-<br/>
-<h2 id="3-数据加载">3. 数据加载</h2>
-<p>我选用了演示数据包中铁纤矿样品 (Fe_lepidocrocite) 来演示。原始数据数据可以直接用鼠标拖入到 Athena 中空白区域得到加载数据对话框如下：</p>
-<p><img src="https://i.loli.net/2020/10/29/Die7LYt8srAP1Fw.png" alt="3importdata_.png" loading="lazy"><br>
-图 3. 加载原始数据界面。</p>
-<br/>
-<p>首先我们需要先从实验中知道哪些数据是入射光、透射光还有荧光。左上方选择的是样品谱图。Energy 是 x 轴，y 轴是 μ(E) 通常由两组或两组以上的数据进行简单加减乘除得到。由于各个线站录入数据的格式会有所不同，请大家结合具体情况分析。我以这套数据为例，我们希望得到样品透射谱 (transmission spectrum)，那么会根据公式 ln(入射光I<sub>0</sub> /透射光 I<sub>1</sub>) ，选择分子为 I<sub>0</sub>，分母为 I<sub>t</sub> 并且勾选上 Natural log。由于这套数据中还有参考谱图 (reference)，在左下方勾选上 import reference channel，勾选上分子为 I<sub>t</sub>，分母为 I<sub>f</sub>。</p>
-<p>点击 OK ,三张 Fe_lepidocrocite.(000, 100, 200)原始数据就加载好出现在了右上方的空白区域。通常来说，Athena 软件在加载好数据后就会自动选择参数粗略处理好数据，大部分参数不需要过多改动。</p>
-<p><img src="https://i.loli.net/2020/10/29/JVRmweBdE5jyDSY.png" alt="4Athenawdata - Copy.png" loading="lazy"><br>
-图 4. 加载数据后大部分参数 Athena 已经自动给出。</p>
-<br/>
-<p><img src="https://i.loli.net/2020/10/29/YcpGWSC7xA6DXh5.png" alt="5dataAthena.png" loading="lazy"><br>
-图 5. 加载数据后就可以大致看到 E, k, R, q 空间的样子。</p>
-<br/>
-<h2 id="4-能量校正和汇合">4. 能量校正和汇合</h2>
-<p>点击 Main window 会看到一系列可选功能窗口。进行能量校正，选择 Calibrate data。</p>
-<p><img src="https://i.loli.net/2020/10/29/cqkYzL9g8UTZsyM.png" alt="6caliratestart - Copy.png" loading="lazy"><br>
-图 6. 点击 Main Window 出现菜单，选择 Calibrate data。</p>
-<br/>
-<p>能量校正的原理是通过校正参考谱图 (Reference) 到正确能量位置来校正样品谱图。所以先选择带 Ref 的谱图，以 deriv(E) 形式展示。点击 select point，用鼠标在图像中取最高峰顶点（黄色十字圈处），点击 Calibrate 就完成了对第一张谱图 (.000) 能量校正。对剩下的 .100 和 .200 数据做同样操作。</p>
-<p><img src="https://i.loli.net/2020/10/29/otQlGfuKY7X3nAm.png" alt="7calibratepage.png" loading="lazy"><br>
-图 7. Calibrate data 界面。</p>
-<br/>
-<p><img src="https://i.loli.net/2020/10/29/IJVgHMDYp4O7Kjc.png" alt="8calibrationgraph - Copy.png" loading="lazy"><br>
-图 8. 利用一阶微分 XANES 来矫正谱图</p>
-<br/>
-<p>接着回到 Main window，到右上方数据区域勾选上所有样品数据。点击上方工具栏中的 Merge ，使用 Merge norm(E) 得到由这三张实验数据图共同得到的一张同步辐射吸收图。这么做的主要原因是为了提高数据信噪比。在这里选择 Merge norm (E) 仅仅是基于这一套数据。不同的数据处理方式会略有不同。</p>
-<p><img src="https://i.loli.net/2020/10/29/98ofAwXmVEKY2Iu.png" alt="9merge.png" loading="lazy"><br>
-图 9. 在 Athena 上面工具栏中 Merge 选项的位置。</p>
-<br/>
-<p><img src="https://i.loli.net/2020/10/29/WMuE2wI49q6Ljh3.png" alt="10newmerge.png" loading="lazy"><br>
-图 10. 点击 Merge norm(E) 后出现新的图，名字为 “merge”。</p>
-<br/>
-<h2 id="5-展示-xanes-k-空间和-r-空间">5. 展示 XANES, k 空间和 R 空间</h2>
-<p>在 Merge 谱图后，通常我只会对这一张图进行更多参数上的微调，比如 E0 的数值还有 k-range, R-range 选择。但就大部分情况而言，数据质量本身不错的情况下，软件自动给出的参数就已经比较合适了。</p>
-<p>在 Athena 界面右下方可以选择谱图展示为归一化后的 μ(E)，也就是 XANES 以及 k 空间和 R 空间。点击黄色按钮是只展示我选择某一数据的谱图（蓝色高亮），而紫色按钮是展示所有我勾选上的数据（数据前有方框打勾）。k 的权重也可以通过 Plotting k-weights 选择。在 E, k, R 空间中有不同的展示，以 E 空间为例可以 Plot in energy。里面我可以选择展示原始数据，背景函数 (background)，归一化数据 (normalized) 等等，如果只是想给其他人粗略展示数据，就到 Athena 的图像软件中选择第一个图标 (Copy plot to clipboard) 再直接 Ctrl + V 到自己文档里。</p>
-<p>对于展示数据的区域选择，第一个方法是可以在右下方里面输入，以 E 空间为例，有 Emin 和 Emax。这是以吸收边能量 E0 为参照，展示 (E0 – Emin, E0 + Emax) 区间内的数据。如果想放大到 XANES 区间，就可以改成 Emin -20, Emax 100 等略小的数值，再点击 E 就可以刷新。另一个办法是直接倒图像界面中使用按住鼠标右键不动，拖动鼠标就可以选择一部分先要展示的区域，点击鼠标左键，就可以放大到之前的区域。</p>
-<p><img src="https://i.loli.net/2020/10/29/4rBdSCTvnjbgUis.png" alt="11Emin - Copy.png" loading="lazy"><br>
-图 11. 利用右下方 Emin, Emax 调整数据展示区间。</p>
-<br/>
-<p><img src="https://i.loli.net/2020/10/29/CIcTqvk2YJGV3gs.png" alt="12mousecursor.png" loading="lazy"><br>
-图 12. 利用鼠标直接框选想放大的区域。</p>
-<br/>
-<p><img src="https://i.loli.net/2020/10/29/iLmFEGpgj7D13No.png" alt="13k - Copy.png" loading="lazy"><br>
-图 13. 点击紫色 k 按键可展示所有的 k 空间数据。</p>
-<br/>
-<p><img src="https://i.loli.net/2020/10/29/3iSDIZGOEcaArX6.png" alt="14R - Copy.png" loading="lazy"><br>
-图 14. 点击紫色 k 按键可展示所有的 k 空间数据。</p>
-<br/>
-<h2 id="6-保存和输出数据">6. 保存和输出数据</h2>
-<p>对数据处理好后，如果我想把数据转到 OriginLab 等作图软件画图时，点击左上方 File，常会用到两种保存数据方式：Save current group as… 和 Save marked group as… 。前者是仅保存蓝色高亮的单独一组数据，后者是保存所有勾选上的数据。根据自己需求可以保存为有 XANES 等不同的数据形式，点击对应的选项即可。</p>
-<p><img src="https://i.loli.net/2020/10/29/GHJk7jWgbOosn28.png" alt="15save - Copy.png" loading="lazy"><br>
-图 15. 保存数据的多种选项。</p>
-<br/>
-<p>Athena 软件会根据不同的数据形式使用不同的后缀名来命名。例如我想保存这四张勾选上的图为 k 空间，依次选择 File → Save marked groups as → k3χ(k)，跳出保存窗口看到数据会被保存为 .chik3 的文件形式。不用惊慌，可以直接保存后用笔记本 Notepad打开看到所有数据以及备注信息，十分方便。若要加载到 OriginLab 里面，可以删掉所有文本信息只留下数列，拖入 OriginLab 窗口中即可。</p>
-<p><img src="https://i.loli.net/2020/10/29/chS68OTuJPnXl7v.png" alt="16chik3 - Copy.png" loading="lazy"><br>
-图 16. 保存为 .chik3 格式，也可以直接在后面改为 .txt 后缀方便打开。</p>
-<br/>
-<p><img src="https://i.loli.net/2020/10/29/ImQdiJ7RWwlAzqj.png" alt="17notepad.png" loading="lazy"><br>
-图 17. 保存好的文件包含了数据和一些文本信息便于记录。</p>
-<h2 id="7-结语">7. 结语</h2>
-<p>这一篇只是非常简单地介绍基本功能处理，还有更多有关参数选择的讨论已经发布在 Bilibili 上，搜索“担子菌的担担面”就可以找到我，也欢迎你通过邮件和我交流 (licouplings@gmail.com)。</p>
-<br/>
-<br/>
-<br/>
-<br/>
-<pre><code>感谢你的阅读
 </code></pre>
 ]]></content>
     </entry>
