@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2021-05-03T03:03:39.680Z</updated>
+    <updated>2021-05-23T06:00:28.145Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -10,6 +10,74 @@
     <logo>https://twocircles24.github.io/images/avatar.png</logo>
     <icon>https://twocircles24.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 两个圈 Two Circles</rights>
+    <entry>
+        <title type="html"><![CDATA[那些治好了我多年低血压的文章 | 学 XAS 不要看 Nat. Commnun.]]></title>
+        <id>https://twocircles24.github.io/post/10.1038-s41467-021-22948-w/</id>
+        <link href="https://twocircles24.github.io/post/10.1038-s41467-021-22948-w/">
+        </link>
+        <updated>2021-05-22T15:00:19.000Z</updated>
+        <summary type="html"><![CDATA[<p>(8 min reading) 我和作者之间必须有一个是没学过 XAS 的。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>(8 min reading) 我和作者之间必须有一个是没学过 XAS 的。</p>
+<!-- more -->
+<p><strong>前情提要：本来打算做成视频的，但组织了下语言后发现还是写成文字会文明一点。</strong></p>
+<p>本次要做分析的文章来自于 Nature Communication，原文题目是 Regulating coordination number in atomically dispersed Pt species on defect-rich graphene for n-butane dehydrogenation reaction，<a href="https://www.nature.com/articles/s41467-021-22948-w">原文跳转可以点这里</a>。对于这篇文章，我会直接从图开始分析。因为图片会比文字留下更深的印象，所以我看别人的文章都是从图开始然后再阅读我需要的文字部分。下面的图片均使用原文的排序，方便对应。</p>
+<br>
+<h2 id="这是一篇能打开正文-10-秒内血压起飞的文章">这是一篇能打开正文 10 秒内血压起飞的文章</h2>
+<p><img src="https://i.loli.net/2021/05/23/85IVwUDd7bhYBiZ.png" alt="image.png" loading="lazy"><br>
+<strong>Figure 2.</strong> Synchrotron XAFS measurements of catalysts. <strong>a</strong> Pt L<sub>3</sub> XANES spectra of above as-prepared catalysts, Pt foil and PtO<sub>2</sub>. <strong>b</strong> <em>k<sup>3</sup></em>-weighted EXAFS spectra of above as-prepared catalysts, Pt foil and PtO<sub>2</sub>. <strong>c</strong> WT analysis of Pt<sub>1.7</sub>Sn/ND@G.</p>
+<p>第一印象：我真的很久没有见到过在正文里面有这么难看的图了。第二印象：里面这么明显的错误为什么还能堂而皇之发在 Nat. Commun. 上。</p>
+<p><strong>迷惑1：(Figure 2a) PtO<sub>2</sub> 的 edge 和 Pt foil 在统一位置，而不是之前。</strong></p>
+<p>鉴于版权原因，希望大家可以在 Google 图片上搜索关键词 <a href="https://www.google.com/search?q=PtO2+Pt+foil+XANES&amp;sxsrf=ALeKk035ZIi1HlpBLzfvPF46bHhaC5f0og:1621744768659&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=2ahUKEwidneiG_t7wAhVVrp4KHWzZBUIQ_AUoAXoECAIQAw&amp;biw=1920&amp;bih=948">&quot;PtO2 Pt foil XANES&quot;</a>，然后你会发现 PtO<sub>2</sub> 和 Pt foil 的 rising edge 是重叠的，不一样的是白线峰高度。</p>
+<p><strong>迷惑 2: (Figure 2a) y 轴不是 Intensity，而是 Normalized absorbance。</strong></p>
+<p>这张图很明显指代的是 XANES，XANES 和原始数据的区别就是 XANES 是经过归一化处理后的，这样我们才可以对白线峰强度进行对比，intensity 不能说明数据是否是归一化后的。</p>
+<p><strong>迷惑 3：(Figure 2a) y 轴不是 c(k)，而是 χ(<em>k</em>)。</strong></p>
+<p>如果能把 EXAFS 方程打成 c(<em>k</em>)，只能说明两件事：一，不知道怎么打希腊字母，我推荐收藏<a href="https://www.keynotesupport.com/internet/special-characters-greek-letters-symbols.shtml">这个网页</a>，里面有 Alt code 帮助你快速输入希腊字母；二，不懂什么是 EXAFS 方程。</p>
+<p>以及，我不理解把这些五颜六色的毛毛虫堆在一起是什么意义，你能看得出来什么区别吗？对于国内这种喜欢把一堆 EXAFS 图放在一起 (n &gt; 4)，我只能说一兰拉面店拉的面条都没你多。</p>
+<p><strong>迷惑 4： (Figure 3c) 不要用 MATLAB 的图，画你自己的。</strong></p>
+<p>大家好，这张图是成功把我血压 MAX 了，看我操作。</p>
+<p>首先，这是原始数据的图，如果看过我的视频并学会如何利用 MATLAB 进行 WT-EXAFS 分析，会很清楚知道 data in，figures out。我还特地教了怎么修改代码从而把矩阵数据给抠出来方便自己做一张好看的图放在正文中。实不相瞒，这两张图在我文章的 SI 里面都不配。首先字体不一致，y 轴也是错误的，在 WT-EXAFS analysis 3D 图中，是不讨论 CCWT modulus，没有任何意义。其次，k 空间和 R 空间的图的 scale 也可能是错误的，因为 Figure 3c χ(<em>k</em>) 代表的是没有带 k<sup>n</sup> 权重的，如果没有权重，为什么振幅能够达到 ± 0.4？还是那句话，这些图可以用作于原始数据讨论，但是发在正文中是绝对不合适的。</p>
+<p>对此，引发了两个问题：<strong>1. 这个图实在是太过熟悉，请问有引用过对方作者的代码了吗？2. 有些 Cauchy Wavelet 级数是多少吗？</strong></p>
+<p>于是，我打开了 MATLAB code，开头便是：</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/05/23/bsX2H7uLcSGvjyY.png" alt="image.png" loading="lazy"></figure>
+<p>然后我再去文章里面搜了下作者的名字，没有。我在想，莫非这不是作者靠勤劳的双手自己写出来的 MATLAB code，而恰好跟快 20 年前的 code 正好能输出一样的图？毕竟，我们要往好的一方面去想。</p>
+<p>然后，我再看了下文章里面的 Methods Characterizations 部分，涉及到 XAS 的描述仅有：</p>
+<blockquote>
+<p>XAFS measurements of the samples were carried out in Shanghai Synchroton Radiation Facility (SSRF).</p>
+</blockquote>
+<p>这不叫 characterization， 这是 acknowledgement。都是发 Nature Communication 的人了，难道这两个部分该写什么不知道吗？我还没发过文章的人都知道这写了还不如不写，不想讲自己怎么做实验的，那还发文章做什么？</p>
+<br/>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2021/05/23/T8ZfJvRYGdtaW2U.png" alt="image.png" loading="lazy"></figure>
+<p><strong>迷惑 5：(Table 1) 缺少拟合细节，以及一个样品中不应该有两个 ΔE 值。</strong></p>
+<p>首先， Pt foil 到底是拟合了还是没拟合？为什么没有对应 σ<sup>2</sup>，ΔE，R-facotr 呢？数据都去哪儿了呢？放了个寂寞</p>
+<p>接着，对于每个样品中的每条 path 独自使用一个 ΔE，为什么呢？ 其中依据是什么？仅仅是为了降低 R-factor 吗？如果这么做（使用不同 ΔE），那么每条路径的距离是会受到影响的，这样更会导致数值更加不可信，因为 ΔE 和 R 共同影响 EXAFS 方程的 phase information。</p>
+<p>在我们没有阅读正文的情况下，我猜测 XAS 测试在室温下进行。如果是这样，  σ<sup>2</sup> 在 0.005 - 0.009 之间是偏大了，我不会拿这样的拟合结果当做可以发表文章的数据。</p>
+<br/>
+<br/>
+<h2 id="si-精彩的一匹">SI 精彩的一匹</h2>
+<p><img src="https://i.loli.net/2021/05/23/KfDYdyvAEpjPctl.png" alt="image.png" loading="lazy"><br>
+<strong>Figure S4.</strong> 各种 EXAFS 拟合数据拟合结果。</p>
+<p><strong>迷惑 6：前面那个小于 1 Å 的峰是？</strong></p>
+<p>我可以猜测这个峰之所以出现，是因为在 Athena 软件里面处理背景的失误导致的。当然也有其他原因。这个峰没有解释的话很难说服别人。在 EXAFS 中是不应该存在小于 1 Å，我只从 collaboration 那里听到过一个例子（但我忘了，非常罕见）。</p>
+<p>还有这 y 轴是 FT(k<sup>2</sup>χ(<em>k</em>))，R 空间是 χ(<em>k</em>) 方程的傅里叶变换，叹气。</p>
+<p><img src="https://i.loli.net/2021/05/23/TJcYHEnhG3ug2qx.png" alt="image.png" loading="lazy"><br>
+<strong>Figure S5.</strong> 各种 WT-EXAFS 图</p>
+<p><strong>迷惑 7：我就想知道这么放着很好看吗？</strong></p>
+<p>为什么要把两个一样的图放在一起？我指的是 3D WT-EXAFS 和 2D WT-EXAFS，它们明明就是一个东西。为什么非要把两个都放上去？有见过其他人这么做吗？（除了 code 原作者）</p>
+<p><img src="https://i.loli.net/2021/05/23/spRY6CtGOiKPz4L.png" alt="image.png" loading="lazy"><br>
+<strong>Figure S6.</strong> Sn K-edge EXAFS</p>
+<p><strong>迷惑 8：这图像素都裂成这样了，长点心吧。</strong></p>
+<p><img src="https://i.loli.net/2021/05/23/YA2xRtzSgnFp6VH.png" alt="image.png" loading="lazy"><br>
+<strong>Figure S8.</strong> EXAFS 中 k 空间拟合</p>
+<p><strong>迷惑 9: 可以看到在 9 Å<sup>-1</sup> 之后的数据质量滑坡的厉害。回原文搜关键词 &quot;wt&quot; 大概看 Sn 的量比较低，掐指算下大概是在 1 wt% 以下。数据烂点可以理解万岁，但完全可以多花点心思得到很好的数据的，不过国内赶着发文章也不是很在意的这些「细节」。</strong></p>
+<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2021/05/23/Y6NkKXAJelOctzE.png" alt="image.png" loading="lazy"></figure>
+<p><strong>迷惑 10: 这个 table 里面跟正文中的有一样的问题，没有任何不确定值也没有任何拟合细节。当然最扯淡的是 S<sub>0</sub><sup>2</sup> 能在 2.67 和 4.99 之间？我和作者之间必须有一个是没学过 XAS 的。</strong></p>
+<br/>
+<br/>
+<p>以上仅是我看图说话带搜索关键词发现可以帮助你提升血压的点，那么这文章具体写了啥，我觉得已经不重要了。今天找到的 10 个迷惑就当送大家一个十全十美吧。</p>
+<p>祝大家周末愉快。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[答「我是怎么入门同步辐射」]]></title>
         <id>https://twocircles24.github.io/post/how-i-start-xafs/</id>
@@ -685,121 +753,6 @@
 <br/>
 <br/>
 <p>To be continued.</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[你问我不一定答 | 第四期]]></title>
-        <id>https://twocircles24.github.io/post/youask-ianswer-4/</id>
-        <link href="https://twocircles24.github.io/post/youask-ianswer-4/">
-        </link>
-        <updated>2020-11-09T12:45:34.000Z</updated>
-        <summary type="html"><![CDATA[<p>(4 min 30 s reading)</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>(4 min 30 s reading)</p>
-<!-- more -->
-<br/>
-<p><strong>阅读提示1：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
-<p><strong>阅读提示2：问题来源于 B 站 or 微博，问题有可能被重新整理，先后顺序不代表任何重要程度，如果你的提问被收入但觉得不合适，请联系我。</strong></p>
-<hr>
-<blockquote>
-<p>Q31. 如果将多种金属元素，比如说两种铂族元素Pt,Pd均以单原子的形式负载在某载体上面。那么通过XAFS能够有效表征这两种金属元素均以单原子形式负载在载体上面吗？还是说由于这两种元素太过相似，可能在分析处理数据的的时候会产生很大的难度</p>
-</blockquote>
-<p><strong>A31:</strong></p>
-<ol>
-<li>Pt 和 Pd 反而是很好侧，前者测 L<sub>3</sub>-edge，后者测 K-edge；</li>
-<li>至于两种或多种元素的 XAS 测量难易程度讨论，在篇文章中提及了：<a href="https://twocircles24.com/post/xafs-principle/">《从应用出发，闲聊 EXAFS 的原理及思路》</a>。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q32. 如果我拿到的原始实验数据没有标出 I<sub>0</sub>，I<sub>t</sub> 等这种容易辨别的，我应该怎么办？</p>
-</blockquote>
-<p><strong>A32:</strong></p>
-<ol>
-<li>每个线站会使用不同的命名方法，所以最好的解决方案是询问线站工作人员；</li>
-<li>如果不方便，每一个都试一试就好了。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q33. 关于样品的拓展边的分析，往往只会在硬X射线的吸收谱出现。为什么同样是吸收谱，在软X射线吸收谱中却很少有能分析拓展边信号或者说是原子之间的配位关系呢？</p>
-</blockquote>
-<p><strong>A33:</strong></p>
-<ol>
-<li>信号太差，做不到扩展边；</li>
-<li>其实也见过做硫 (S K-edge) EXAFS 的。理论来说其实还是有软线 EXAFS 的讲法，但是实验条件会很苛刻。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q34. 在做 pre edge 和 post edge 的时候，两条线需要平行吗？</p>
-</blockquote>
-<p><strong>A34:</strong></p>
-<ol>
-<li>不需要，因为 pre-edge 通常向下，通常是由于光源和能量升高导致的；而 post-edge 趋势可千奇百怪，这是由检测器，样品组成等等多种因素造成的。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q35. 碳的近边吸收谱这个数据要怎么处理呢？大致图形和 XPS 差不多。</p>
-</blockquote>
-<p><strong>A35:</strong></p>
-<ol>
-<li>当做 XPS 一样的数据来处理，Originlab 或是 MATLAB 都可以解决；</li>
-<li>我不做这方面所以我不会出教程的。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q36: 在 Athena 中如何判定数据质量好不好？</p>
-</blockquote>
-<p><strong>A36:</strong></p>
-<ol>
-<li>至于判定数据质量是否可靠，唯一的方法就是看足够多的数据， 包括好的和坏的，并且尽全力去处理。见得越多，自然就知道了。哪怕是已经当教授的人了对数据质量都是没有概念的，这本就是一个不容易培养的能力，不必气馁，耐心一点。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q37: 张三有一个数据，它的数据列表是e, xmu, bkg, pre_edge, post_edge, der, sec, i0, chie，总共九列，在导入数据的过程中，不能确定投射光是哪列，以及教程中说的ir列对应这里哪列？</p>
-</blockquote>
-<p><strong>A37::</strong></p>
-<ol>
-<li>从描述来看，我认为这个不是原始数据（从线站上取得）而是别人保存的数据（从 Athena 中），而且后缀名是 .xmu;</li>
-<li>如果是这样，x轴（能量）选择第一个e，y轴选xmu，取消 Natural log，Data type 选择 μ(E) 即可。然而这样会没有reference spectra 。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q38: 单原子和颗粒共存可以单纯从同步辐射谱图看出来吗？是不是需要借助球差来看</p>
-</blockquote>
-<p><strong>A38:</strong></p>
-<ol>
-<li>单独看看不出来。主要取决于课题本身的性质或者是问题吧。HADDF-STEM + XAFS 确实是单原子常规操作，前者看局部，后者看平均。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q39: Athena里面那个phase correction是根据什么来校准的，我看不同物质应该偏移是不一样的，而这个软件就是自动校准，他是根据什么原则来的吗？</p>
-</blockquote>
-<p><strong>A39:</strong></p>
-<ol>
-<li><a href="https://twocircles24.com/post/xafs-principle/">「从应用出发，闲聊 EXAFS 的原理及思路」</a>我这里面讲过一点点关于phase是怎么出现的。这个不叫校准（calibration），而叫修正（correction）。偏移不一样是由于元素本身的造成的。原则就是利用FEFF算出来的。</li>
-</ol>
-<br/>
-<br/>
-<blockquote>
-<p>Q40: K-range选择必须要大于2吗？</p>
-</blockquote>
-<p><strong>A40:</strong></p>
-<ol>
-<li>必须大于2，k=0-2之间可能还有XANES的信息，而它形成的原理和EXAFS是完全脱轨的，如果你把这带有XANES信息算作了EXAFS，反而会让你的数据会出现问题。</li>
-</ol>
-<br/>
-<br/>
-<br/>
-<br/>
-<pre><code>感谢你的阅读。
-</code></pre>
 ]]></content>
     </entry>
 </feed>
