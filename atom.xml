@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twocircles24.github.io</id>
     <title>两个圈 Two Circles</title>
-    <updated>2021-05-24T00:28:35.849Z</updated>
+    <updated>2021-05-26T19:04:44.919Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twocircles24.github.io"/>
     <link rel="self" href="https://twocircles24.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://twocircles24.github.io/post/10.1038-s41467-021-22948-w/</id>
         <link href="https://twocircles24.github.io/post/10.1038-s41467-021-22948-w/">
         </link>
-        <updated>2021-05-23T09:22:48.000Z</updated>
+        <updated>2021-05-22T18:22:48.000Z</updated>
         <summary type="html"><![CDATA[<p>(8 min reading) 我和作者之间必须有一个是没学过 XAS 的。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>(8 min reading) 我和作者之间必须有一个是没学过 XAS 的。</p>
@@ -49,7 +49,7 @@
 <br/>
 <figure data-type="image" tabindex="2"><img src="https://i.loli.net/2021/05/23/T8ZfJvRYGdtaW2U.png" alt="image.png" loading="lazy"></figure>
 <p><strong>迷惑 5：(Table 1) 缺少拟合细节，以及一个样品中不应该有两个 ΔE 值。</strong></p>
-<p>首先， Pt foil 到底是拟合了还是没拟合？为什么没有对应 σ<sup>2</sup>，ΔE，R-facoter 呢？数据都去哪儿了呢？放了个寂寞</p>
+<p>首先， Pt foil 到底是拟合了还是没拟合？为   什么没有对应 σ<sup>2</sup>，ΔE，R-facoter 呢？数据都去哪儿了呢？放了个寂寞</p>
 <p>接着，对于每个样品中的每条 path 独自使用一个 ΔE，为什么呢？ 其中依据是什么？仅仅是为了降低 R-factor 吗？如果这么做（使用不同 ΔE），那么每条路径的距离是会受到影响的，这样更会导致数值更加不可信，因为 ΔE 和 R 共同影响 EXAFS 方程的 phase information。</p>
 <p>在我们没有阅读正文的情况下，我猜测 XAS 测试在室温下进行。如果是这样，  σ<sup>2</sup> 在 0.005 - 0.009 之间是偏大了，我不会拿这样的拟合结果当做可以发表文章的数据。</p>
 <br/>
@@ -58,7 +58,7 @@
 <p><img src="https://i.loli.net/2021/05/23/KfDYdyvAEpjPctl.png" alt="image.png" loading="lazy"><br>
 <strong>Figure S4.</strong> 各种 EXAFS 拟合数据拟合结果。</p>
 <p><strong>迷惑 6：前面那个小于 1 Å 的峰是个啥？</strong></p>
-<p>我可以猜测这个峰之所以出现，是因为在 Athena 软件里面处理背景的失误导致的。当然也有其他原因。这个峰在 1 Å以内，没有解释的话很难说服别人。在 EXAFS 中是不应该存在小于 1 Å，我只从 collaboration 那里听到过一个例子（但我忘了，非常罕见）。如果真的是由于背景处理失误所造成的，我更有理由认为 Figure 2a 中的 XANES 谱图强度是有问题的，不具有对比价值。要知道的是，背景处理同样会影响白线峰强度。</p>
+<p>我可以猜测这个峰之所以出现，是因为在 Athena 软件里面处理背景的失误导致的。当然也有其他原因。这个峰在 1 Å以内，没有解释的话很难说服别人。在 EXAFS 中是不应该存在小于 1 Å 的键长，我只从 collaboration 那里听到过一个例子（非常罕见，现在想起来是 H-F 键长 0.91 Å）。如果真的是由于背景处理失误所造成的，我更有理由认为 Figure 2a 中的 XANES 谱图强度是有问题的，不具有对比价值。要知道的是，背景处理同样会影响白线峰强度。</p>
 <p>还有这 y 轴是 FT(k<sup>2</sup>χ(<em>k</em>))，R 空间是 χ(<em>k</em>) 方程的傅里叶变换，叹气。以及为什么这时候的 y 轴跟之前 Figure 2b 离谱的 y 轴又不一样了呢？是因为不同的人处理的吗？哪怕是，也请统一一个错误选项也好。</p>
 <p><img src="https://i.loli.net/2021/05/23/TJcYHEnhG3ug2qx.png" alt="image.png" loading="lazy"><br>
 <strong>Figure S5.</strong> 各种 WT-EXAFS 图</p>
