@@ -1,0 +1,346 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>从应用出发，闲聊 EXAFS 的原理及思路 | 两个圈 Two Circles</title>
+
+<link rel="shortcut icon" href="https://twocircles24.github.io/favicon.ico?v=1718508375768">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://twocircles24.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9GGCLQK1YP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-9GGCLQK1YP');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            两个圈 Two Circles
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            Home
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            Archives
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            Tags
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://beta.workflowy.com/s/a02c4b94f6c8/rx6Wp2mWjO3dd8Hf" class="menu gt-a-link" target="_blank">
+                            Workflowy
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://anchor.fm/twocircles24" class="menu gt-a-link" target="_blank">
+                            Podcast
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            About
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1718508375768" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    从应用出发，闲聊 EXAFS 的原理及思路
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-09-12 ·
+                    </time>
+                    
+                        <a href="https://twocircles24.github.io/tag/rlW4tCnw9/" class="post-tags">
+                            # Introduction
+                        </a>
+                    
+                        <a href="https://twocircles24.github.io/tag/KWaizZOsZA/" class="post-tags">
+                            # XAFS
+                        </a>
+                    
+                        <a href="https://twocircles24.github.io/tag/-MRFJgz8G3/" class="post-tags">
+                            # Q&amp;A
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>(16 min 40 s reading) 想知道邻近原子的距离 (&lt; 5 Å) 和个数吗？不是不可以考虑下 EXAFS。</p>
+<!-- more -->
+<br/>
+<br/>
+<p><strong>阅读提示1：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
+<p><strong>阅读提示2：问题来源于B站 or 微博，问题有可能被重新整理。如果你的提问被收入但觉得不合适，请联系我。</strong></p>
+<p><strong>阅读提示3：我的一些回答可能会很有争议。如果你不喜欢，那就不喜欢。</strong></p>
+<hr>
+<p>这个题目来自于微博的一个提问。说起来有点好笑，做了几个月的 EXAFS 教程还没有讲过一点 EXAFS 能拿来干嘛。之所以没讲的原因有几个：</p>
+<ol>
+<li>网上很多课程或者是讲义已经提及了，我即使要讲也就是照本宣科，不会有多大区别；</li>
+<li>我本就一开始打算从软件使用做起。虽然讲理论的讲义网上一大把，实际操作的中文教程几乎为零，我要的是填补这块空白；</li>
+<li>就我自己的经验来看，这个问题的答案并不是三言两语能讲清楚的；</li>
+<li>其实这个问题，应该更多的是问你课题需要什么。</li>
+</ol>
+<p>这篇文章区别于网上正规的讲义，我会尝试用一个直白的方式聊聊“从 EXAFS 这里能获得什么”。</p>
+<br/>
+<br/>
+<h2 id="exafs-应用极为广泛">EXAFS 应用极为广泛</h2>
+<p>我随手 Google “XAFS 应用”得到了如下结果：</p>
+<ol>
+<li>
+<p>来自中科大韦世强老师的讲义<a href="http://ssrf.sinap.ac.cn/meeting/syjs/XAFS/pdf/06-%E9%9F%A6%E4%B8%96%E5%BC%BA.pdf">《XAFS技术及其应用》</a>：Zn<sub>1-x</sub>TM<sub>x</sub>O (TM=Co,Mn) DMS；Ge-Si/Si(001) 量子体系；研究Au纳米颗粒初期生长机理……</p>
+</li>
+<li>
+<p>材料牛的<a href="http://www.cailiaoniu.com/161530.html">《干货：X射线吸收谱（XAFS）在多相催化中的应用》</a>有一句在多相催化里面的描述：</p>
+<blockquote>
+<p>XAFS对催化剂的研究起始于无负载析出相，这是因为它代表了活性负载相的模型材料。由于它们的非晶相性，EXAFS谱是判定吸收原子附近局域结构的唯一结构技术。</p>
+</blockquote>
+</li>
+<li>
+<p>来自中科院张静老师的讲义<a href="http://bsrf.ihep.cas.cn/hezuojiaoliu/jiangxiban/201412/P020141207743896333247.pdf">《XAS 原理于应用》</a>：环境中的过渡金属氧化物纳米粒子转化；金属熔体中原子间距负膨胀现象；植物修复技术……</p>
+</li>
+</ol>
+<p>这只是摘取的部分 EXAFS 应用，可以发现涉及的范围非常大。我作为一名在读学生，没有像各位教授那样接触不同的课题，很难把应用讲得很完整。而在同步辐射实验室做实验的时候，也会遇到来自五湖四海的课题组进行着我从来都没听过的课题，甚至还在线站上看到有人在测牙齿的里钙的 XAFS （是的，就是直接把一颗人的牙齿架在样品台上面跑数据）。</p>
+<p>说这么多，只是为了想减轻一点你的焦虑。作为初学者，没有必要一开始去了解这门技术应用上的方方面面，反而更建议你从课题上出发：先提出问题，接着思考可能的对应方案，再考虑 XAFS 是不是能帮你回答问题。比如，我想知道我某一步合成的产物是否有杂质，如果是有机化合物有碳有氢，核磁直接安排上。我会下意识说用 XAFS 吗？当然不。</p>
+<blockquote>
+<p>可以最简单地解决问题的手段才是好手段。</p>
+</blockquote>
+<p>再者，XAFS 有着“灵活的适应性”，近来发展原位或是同其他表征联用的手段在文章上越来越多，数据处理方面则朝着大数据或机器学习方向发展。想起几年前去同步辐射实验室的时候，带我参观的工作人员是这么说的：</p>
+<blockquote>
+<p>不用问我们能做什么，只问你自己有什么想做的。只要够有意思，不存在的东西也可以整出来。</p>
+</blockquote>
+<p>我第一次听到这样的话觉得吹牛成分有占一半，混熟了发现……嗯，确实只要课题够有意思，真的可以为所欲为。不过这也是想说明 XAFS 这门技术处在一个发展的阶段，在这个基础上还有 XES、RIXS 等等高端技术，那怎么讲都讲不完的。然而万变不离其宗，当掌握了最基本的原理，现阶段应用相关的问题自然迎刃而解。</p>
+<br/>
+<br/>
+<h2 id="exafs-提供的是中心原子的结构信息">EXAFS 提供的是中心原子的结构信息</h2>
+<p>为了简化解释，需要指出几个关于大部分 XAFS 谱的核心要点。需要指出的是，<strong>低能谱线的谱图 (eg. S K-edge) 数据处理会和过渡金属一类的差距较大，有些要点并不适用</strong>，在这里主要以过渡金属的 XAFS 技术来讨论：</p>
+<ol>
+<li>X-ray <strong>absorption</strong> spectroscopy 是一项<strong>吸收光谱</strong>技术；</li>
+<li>通过改变<strong>入射光的能量</strong>来获得的<strong>目标元素</strong>的谱图；</li>
+<li>只看<strong>中心原子</strong>的周围结构环境信息；</li>
+<li>数据反映的是<strong>平均环境</strong>，也叫做 bulky technique；</li>
+</ol>
+<p>背后的“潜台词”包含但不限于：</p>
+<h3 id="与其他光谱技术类似性">与其他光谱技术类似性</h3>
+<p>吸收光谱里面的红外 (infrared spectroscopy, IR) 和紫外-可见光谱 (UV-vis spectroscopy) 在部分原理上是<strong>可以相互借鉴的</strong>。比如：</p>
+<ol>
+<li>均遵循 <a href="%5Bhttps://en.wikipedia.org/wiki/Beer%E2%80%93Lambert_law%5D(https://en.wikipedia.org/wiki/Beer%E2%80%93Lambert_law)">Beer-Lambert law</a>，数据来自测量于入射前和入射后的光强度，从而得到样品吸收多少光；</li>
+<li>光路是需要<strong>穿过样品</strong>，这与 XPS 一类的表面表征技术<strong>有区别</strong>；</li>
+<li>光路是有<strong>一定横截面积</strong>，测得的结构信息实质上是<strong>光斑的面积 × 样品厚度</strong>以内体积中的；</li>
+<li>如果在被入射光打到的体积内，出现了混合物的情况，出射光只能知道有多少光被吸收了，最后得到的是这个体积内的<strong>平均信息</strong>；</li>
+<li>你在测量样品的时候需要把光瞄准到样品上，以及在装样品的时候需要像红外片一样讲样品碾均匀了再压片放入样品片中。<s>（实验部分是以后要补的坑，不是所有的样品都是粉末）</s></li>
+</ol>
+<br/>
+<h3 id="能量是用于区分元素的手段">能量是用于区分元素的手段</h3>
+<p>所有 EXAFS 的原始数据中 x 轴均是能量，这是因为 EXAFS 是依靠能量来分辨元素的。很多人的第一印象认为 EXAFS 能精准地区分一个元素到另一个元素。可以这么理解，但是要加一个重要的前提：<strong>需要分辨的元素各自吸收边尽可能远离彼此</strong>。来举几个例子：</p>
+<ol>
+<li>一个铁负载在二氧化硅载体上的样品，需要测铁 K-edge。那么样品里面包含的元素有 Fe, Si &amp; O。由于前者的 K边吸收能量远超过剩下的元素，所以我只需要去 Fe K-edge 附近测量 XAFS 信息；</li>
+<li>一个 bimetallic 催化剂里面含有相近质量分数的钨 (Tungsten, W) 和铼 (Rhenium, Re) 。如果我想测量 W L<sub>III</sub>-edge （10,207 eV) ，EXAFS 谱图从 ~10,000 eV 开始扫起，到10,207 eV 附近会看到一个吸收；能量数值继续增加，在10,535 eV 附近还会看到第二个吸收，这是来自于 Re L<sub>III</sub>-edge 吸收。此时如果我希望得到的是一张 W L<sub>III</sub>-edge EXAFS <strong>吸收</strong>谱图，是会被 Re 的吸收而直接干扰，从吸收谱这里不能得到一张完整可用于处理的 EXAFS 图。</li>
+</ol>
+<p>正因为如此，得到一张目标元素的 EXAFS 谱图 = <strong>在吸收边 -100 eV ~ +1000 eV 中最好别有其他元素的吸收边落在这个范围内</strong>。我强调吸收谱是因为这个问题是可以依靠荧光谱来解决的，虽然一开始在实验计划上就应当避免。</p>
+<br/>
+<h3 id="邻近原子信息是依靠-exafs-方程获得">邻近原子信息是依靠 EXAFS 方程获得</h3>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>χ</mi><mo>(</mo><mi>k</mi><mo>)</mo><mo>=</mo><munderover><mo>∑</mo><mi>i</mi><mrow></mrow></munderover><mfrac><mrow><mo>(</mo><msub><mi>N</mi><mi>i</mi></msub><msubsup><mi>S</mi><mn>0</mn><mn>2</mn></msubsup><mo>)</mo><msub><mi>F</mi><mi>i</mi></msub><mo>(</mo><mi>k</mi><mo>)</mo></mrow><mrow><mi>k</mi><msubsup><mi>R</mi><mi>i</mi><mn>2</mn></msubsup></mrow></mfrac><mi>s</mi><mi>i</mi><mi>n</mi><mo>[</mo><mn>2</mn><mi>k</mi><msub><mi>R</mi><mi>i</mi></msub><mo>+</mo><msub><mi>δ</mi><mi>i</mi></msub><mo>(</mo><mi>k</mi><mo>)</mo><mo>]</mo><msup><mi>e</mi><mrow><mo>−</mo><mn>2</mn><msubsup><mi>σ</mi><mi>i</mi><mn>2</mn></msubsup><msup><mi>k</mi><mn>2</mn></msup></mrow></msup><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><mn>2</mn><msub><mi>R</mi><mi>i</mi></msub></mrow><mrow><mi>λ</mi><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mfrac></mrow></msup></mrow><annotation encoding="application/x-tex">\chi(k)= \sum_{i}^{}\frac{(N_{i}S_{0}^{2})F_{i}(k)}{kR_{i}^{2}}sin[2kR_{i} + \delta_{i}(k)]e^{-2\sigma _{i}^{2}k^{2}}e^{-\frac{2R_{i}}{\lambda (k)}}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">χ</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.768777em;vertical-align:-1.277669em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3500050000000003em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7959080000000001em;"><span style="top:-2.4231360000000004em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span style="top:-3.0448000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.27686399999999994em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4518920000000004em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.24810799999999997em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9628639999999999em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mopen">[</span><span class="mord">2</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.459675em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03785em;">δ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">)</span><span class="mclose">]</span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.0369199999999998em;"><span style="top:-3.1130000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">2</span><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8913142857142857em;"><span style="top:-2.214em;margin-left:-0.03588em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913142857142857em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.209675em;"><span style="top:-3.4842000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0363928571428573em;"><span style="top:-2.640785714285714em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">λ</span><span class="mopen mtight">(</span><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mclose mtight">)</span></span></span></span><span style="top:-3.2255000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.5483000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3448em;margin-left:-0.00773em;margin-right:0.1em;"><span class="pstrut" style="height:2.65952em;"></span><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.31472em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5377857142857143em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>注：这可是 EXAFS 的灵魂方程啊</p>
+<br/>
+<p>之前已经做了一个讨论 <a href="https://www.bilibili.com/video/BV1Mk4y1B7Vz">EXAFS 方程变量的视频</a>，简单来说从这个方程里面最直接的能够获得中心原子的两个信息：<strong>原子种类和距离</strong>。</p>
+<p>对于原子种类的分辨，其依据是来自于 <em>F(k)</em> 和 <em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03785em;">δ</span></span></span></span>(k)</em> 两个方程，分别对应 scattering amplitude 和 phase shift 方程。其中  <em>F(k)</em> 的形状和强度与原子质量相关，我们主要依赖于它来分辨邻近原子。下图是来自 <a href="https://millenia.cars.aps.anl.gov/xraylarch/downloads/2018Workshop/NewvilleEXAFS_RIMG78_ColorPreprint.pdf">Matthew Newville 的讲义</a>示例：O、Fe &amp; Pb 三者的 scattering amplitude 均不一样 （留意图中 x 轴也是 k 空间的 x 轴），这三者元素的质量相差甚远，对应的 <em>F(k)</em> 也不一样，反映到 EXAFS 数据处理中，就可以通过 <em>Artemis</em> 来拟合甄别是铁或氧或铅。<br>
+再者，右图代表了三个元素的 phase shift 方程，可以看到铁和氧比较类似，而铅的图像差距较大。如果有看过 <a href="https://www.bilibili.com/video/BV1yz411e7gu?p=6">phase correction 相关视频</a>，就知道在 R 空间中看到的 path 对应峰位置会比真实的原子距离要短 0.2 ~ 0.4 Å，这个误差就来自于 <em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03785em;">δ</span></span></span></span>(k)</em>。而对于轻元素而言，<em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03785em;">δ</span></span></span></span>(k)</em> 比较类似，而重元素则差距较大。反映到实际 EXAFS 图像中，就会发现<strong>氧或铁在 R 空间中显示的距离“偏移”会比铅要少</strong>。虽然是由原子不同序数导致的，但是远不如 <em>F(k)</em> 明显。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/09/14/BzpwRaybAs8cHGL.png" alt="fk.png" loading="lazy"></figure>
+<p><strong>Figure 1.</strong>  <em>F(k)</em> and <em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span></span></span></span>(k)</em> for oxygen K-edge, iron K-edge and Pb L<sub>III</sub>-edge from <a href="https://millenia.cars.aps.anl.gov/xraylarch/downloads/2018Workshop/NewvilleEXAFS_RIMG78_ColorPreprint.pdf">Matthew Newville</a>.</p>
+<br/>
+<p>然而，<strong>如果两者原子序数 Z = ± 5 以内</strong>，<em>F(k)</em> 方程会非常接近，直接结果就是<strong>无法在 EXAFS 中分辨</strong>。最简单的例子就是在在 EXAFS 中，<strong>作为邻近原子的碳氮氧在相同距离是无法区分的，钨和铼也没办法分辨</strong>。如果谁告诉你光用 EXAFS 可以在同一距离分辨碳氮氧，这篇文章下一秒可以进垃圾桶了。<s>我就是在说相当一部分的单原子文章</s></p>
+<p>费这么大力气讲这个就是希望在理解这一点之后回头看自己的课题中的问题，思考你是否会遭遇这样的难点。如果有，XAFS 很可能不是适合的手段，或者需要费大力气。</p>
+<br/>
+<p>对于原子距离，核心判定来自于方程中的 <em>R</em>。我一直强调：</p>
+<ol>
+<li>在 R 空间看到的图<strong>不能</strong>直接不经分析跳出来说是 xxx 原子在 xxx 距离，因为一个峰可以对应多个原子的可能性（如上讨论）；</li>
+<li>Multiple scattering 也可以在 R 空间中出现信号，它们对应的 R 值<strong>并不是原子距离</strong>；</li>
+<li>要理解距离的含义，多参考晶体结构里面的信息，例如键角、配位数、几何结构等等。</li>
+</ol>
+<p>如果已经阅读过多篇 EXAFS 相关的文献，就可以知道 EXAFS 测得的距离大多是 1 ~ 5 Å，换言之超过 5 Å 的原子很可能是看不到了（也有例外，今天不谈）。所以在我考虑想要测得某原子与中心原子距离的时候，我至少会先判断这个距离：</p>
+<ol>
+<li>有没有超过 5 Å，邻近原子是重原子还是轻原子（轻原子在距离较远的时候信号更弱）；</li>
+<li>出现的地方会不会有其他原子的干扰，我能不能通过原子序数区别来分辨；</li>
+<li>有没有参考的晶体结构或者计算出来的结果，帮助我分析我拟合得到的数据合理性。</li>
+</ol>
+<br/>
+<br/>
+<h2 id="把-exafs-的优势和课题中的痛点连接起来">把 EXAFS 的优势和课题中的痛点连接起来</h2>
+<p>EXAFS 的优势在我接触的课题中，大致可以分为原理和实验操作上的两大类：</p>
+<ol>
+<li>其他主流表征都无法提供原子距离和种类信息，比如 NMR、EPR、Raman、UV-vis 云云，能想到的技术都不能帮助我回答我课题的问题。比如我做过的 Re/Al<sub>2</sub>O<sub>3</sub> 催化剂，NMR 只可能测 <sup>27</sup>Al，EPR 测不了 d<sup>0</sup> 电子结构，因为负载量太低，Raman 和 UV-vis 都是废物，用 CO 吸收也是测了没用，用 IR 也是测载体。只有 XAFS 可以给我 Re 的信息；</li>
+<li>实验可以在常压高温下进行，能做 <em>Operando</em> 反应。XPS 做了直接没扫几圈就把样品给打还原了，HAADF-STEM 一打样品直接扑街结果，这两个技术号称有 <em>in-situ</em>，但是那气体要求的上限真是低的可怜。XAFS 能够发挥想象力，什么奇怪的样品都能测，我除了常规的常压高温的实验，高温高压、低温、易燃易爆、空气敏感、固液气等等实验都能做，上手很快，装备自己设计设计就能有。要做丙烷脱氢实验，直接挂一个气路 + GC-FID/MS 的仪器就可以开始了。反应上了几百度的时候，很多 IR 信号已经不能看了，XANES 再怎么样都能打，EXAFS 在把实验设计完善的情况下，六七百度也能拿到可用的谱图。</li>
+</ol>
+<p>所以说，先了解你自己课题的痛点再来决定用什么方案来解决。如果说核磁可以解决的，就用核磁，毕竟大多数学校核磁是能做的。如果是做 Rh 相关的催化剂，想看是否是单原子，CO 吸附会是一个不错的选择，因为红外的信号会比 EXAFS 更灵敏。<strong>一旦有其他解决方案，绝对不在第一时间选择 EXAFS</strong>。</p>
+<p>在介绍<a href="https://www.bilibili.com/audio/au1758284?type=1">《如何写 XAS 机时申请书》</a>的播客我提过的思路：</p>
+<blockquote>
+<p>在申请书里面，必须要提及这个课题已经有前期表征和初步的发现，并且要点出使用 EXAFS 能够给出什么样额外的信息，而这部分信息是其他任何表征手段都无法给出的。</p>
+</blockquote>
+<p>在做研究的漫漫长路上，不论使用何种手段，都要问自己：这是正确的解决方案吗？这是最简单可行的解决方案吗？</p>
+<br/>
+<br/>
+<h3 id="留心-xafs-的缺点">留心 XAFS 的缺点</h3>
+<p>缺点除了大家老说拿不到机时、学习来太难以外，技术自身还有很多缺点：</p>
+<ol>
+<li>给出的是平均信息；</li>
+<li>误差高达 10~15%；</li>
+<li>某些原子根本就分辨不了（比如碳氮氧）；</li>
+<li>必须依赖其他表征结果来理解数据；</li>
+<li>……</li>
+</ol>
+<p>所以，再次审视你的课题，问一些问题，像是：</p>
+<ol>
+<li>需要找到负载量为 10 wt% Re 的催化剂中 1% 的活性位点吗？(10 wt% Re × 1% = 0.1 wt% Re from 9.9 wt% Re)</li>
+<li>需要分辨在 1.9 Å 的氧原子 vs. 碳原子吗？</li>
+<li>验证氧平均配位数是从 6 变为了 5 个？</li>
+<li>其他表征能不能回答这个问题？</li>
+<li>……</li>
+</ol>
+<p>如果 1~3 问题回答的是 Yes，请再三慎重使用 XAFS。但 XAFS 限制绝对不止这几个点，建议多从文献里面比较和与老师多讨论。</p>
+<br/>
+<br/>
+<h2 id="xafs-的原理和应用联动">XAFS 的原理和应用联动</h2>
+<p>回到一开始那些列出的例子，比如研究金纳米粒子的生长机理。以一个金原子为中心，新的金原子一层一层开始包围最开始的原子。使用 XAFS 就能看到金原子的周围逐渐开始出现 Au-Au path，对 EXAFS 数据进行拟合，可以得到周围金原子有多少个，在多少的距离，会有几层金原子。配合原位反应，就可以动态的看到纳米粒子是以什么样的速度生产，获得动态数据。这个反应可以在液体里面进行。而这些结果是电镜一类技术无法实现的。</p>
+<p>再来个举烂了的例子，单原子催化剂。很多异相催化剂的载体是非晶相的，大部分表征都是没用的。如果你想知道 Fe 原子的配位数是多少，只能安排上 EXAFS了。至于怎么去解释这个催化反应的机理，这是通过动力学反应或是其他表征来得到的。XAFS 就一结构信息，没办法拿到催化数据。</p>
+<br/>
+<br/>
+<h2 id="番外">番外</h2>
+<p>要问 XANES 能干嘛吗？无可奉告 2333</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<pre><code>感谢你的阅读。
+</code></pre>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://twocircles24.github.io/post/multiple-scattering/" class="post-title gt-a-link">
+                    Multiple Scattering
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">My anger matters, so does yours. </div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+                <a href="https://weibo.com/xafs" target="_blank">
+                    <i class="fab fa-weibo gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://twocircles24.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

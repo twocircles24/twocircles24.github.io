@@ -1,0 +1,240 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>学习 XAFS 的困境 | 两个圈 Two Circles</title>
+
+<link rel="shortcut icon" href="https://twocircles24.github.io/favicon.ico?v=1718508375768">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://twocircles24.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9GGCLQK1YP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-9GGCLQK1YP');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            两个圈 Two Circles
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            Home
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            Archives
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            Tags
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://beta.workflowy.com/s/a02c4b94f6c8/rx6Wp2mWjO3dd8Hf" class="menu gt-a-link" target="_blank">
+                            Workflowy
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://anchor.fm/twocircles24" class="menu gt-a-link" target="_blank">
+                            Podcast
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            About
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1718508375768" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    学习 XAFS 的困境
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-08-11 ·
+                    </time>
+                    
+                        <a href="https://twocircles24.github.io/tag/rlW4tCnw9/" class="post-tags">
+                            # Introduction
+                        </a>
+                    
+                        <a href="https://twocircles24.github.io/tag/KWaizZOsZA/" class="post-tags">
+                            # XAFS
+                        </a>
+                    
+                        <a href="https://twocircles24.github.io/tag/-MRFJgz8G3/" class="post-tags">
+                            # Q&amp;A
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>(7 min 50 s reading) 写着写着变成了吐槽大会……</p>
+<!-- more -->
+<br/>
+<br/>
+<p><strong>阅读提示1：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
+<p><strong>阅读提示2：问题来源于B站 or 微博，问题有可能被重新整理。如果你的提问被收入但觉得不合适，请联系我。</strong></p>
+<p><strong>阅读提示3：我的一些回答可能会很有争议。如果你不喜欢，那就不喜欢。</strong></p>
+<hr>
+<br/>
+<br/>
+<br/>
+<h3 id="学-xafs-沉不住气">学 XAFS “沉不住气”</h3>
+<p>    XAFS 在我看来是高度集成的学科交叉技术，学习到位了你可以掌握的技能点包含但不限于化学，生物，环境，物理（量子，光学），工程（机械，电路，自动化，3D 打印），计算机（Python，算法，machine learning）等等等等。需要多维度的知识层面来了解这门技术，而且越学你觉得你越不懂，越不懂你会更想去学在你专业以外的知识。很多人看到要学这么多，就差没直接两眼一黑晕过去，下一秒就被劝退。<strong>这门技术耗时耗力，投入（尤其是前期）巨大，全凭自觉而且收效难以预估。</strong></p>
+<p>    每当有人问到“学 XAFS 要多久”、“我这套拟合是不是就完事了”这样的问题，我其实很难回答。因为我依然还在面对几年前处理的数据的时候可以得到更多的收获。可惜的是不少老板都对这个技术没什么概念，以为就跟自家实验室里面的红外谱一样，看看两三天就好了。从其他地方拿到数据张嘴就让学生处理出来一套能发文章的 EXAFS 拟合，接着又着急想发文章，随便凑合下感觉看着还行就发了。这种<strong>急功近利的浮躁心态</strong>会逼迫学生无法静下心来处理数据。我一直在重复说“<strong>看了我这几个视频根本就不能算作学会了 XAFS 数据处理</strong>”，这有很长的一段路要走。</p>
+<br/>
+<br/>
+<h3 id="同步辐射资源稀缺">同步辐射资源稀缺</h3>
+<p>    即使是在美国，同步辐射的资源也是削尖脑袋去竞争的。我对中国的情况不太了解，听说竞争相当惨烈。 以美国国家实验室为例，作为<a href="https://www.energy.gov/national-laboratories">美国能源部</a>砸钱开办的联邦设施，它们是需要每年被行政部门考核“业绩”。这所谓的 KPI 自然是用发表的文章来衡量的。如果做的不好也是有可能被关的，在 2017 - 2018 年遭遇的科研基金被 Trump Administration 削减时期，某个美国国家同步辐射实验室就被传闻要关闭掉，因为拼不过其他家的业绩。在这样“僧多粥少”和“KPI 压力”的双重因素下，国家实验室只可能选<strong>可以尽快发出重量级文章的课题</strong>。</p>
+<p>    B站用户 <a href="https://space.bilibili.com/240773439">@zzzzve</a> 也分享了一些<a href="https://www.bilibili.com/audio/au1758284?type=3">申请机时的经验</a>：</p>
+<blockquote>
+<p>国内目前测XAS的光源主要有合肥、北京、上海、台湾四个。其中合肥光源是软线，北京和上海主要是硬线，台湾光源是软硬都有。如果你现在想要申请测试XAS，以下几点供参考：<br>
+    1.合肥和北京你就不用费力扔本子了，拿不到的。<br>
+    2.上海可以一试，但是竞争很激烈，看本子的同时要看帽子和paper。<br>
+    3.台湾光源是个不错的选择，一是它的申请人没那么多，竞争压力小一些；二是那边能测XAS的beamline很多，而且有快扫模式。但是台湾申请也会看申请人的帽子(是的没错)，同时行程确实比较繁琐。</p>
+</blockquote>
+<p>    在自己都没机会见到仪器的情况下，又如何能真的学到其中的道道呢？</p>
+<br/>
+<br/>
+<h3 id="关系铸就了高门槛">“关系”铸就了高门槛</h3>
+<p>    既然资源稀缺又有时效考核，同步辐射实验室选课题的标准除了要有足够吸引 (broad social interest)，更要看课题组是否“熟练这门技术”。他们比任何人都清楚要培养一个能独立在国家实验室操作的学生成长周期是按年来计算的，实验室内的工作人员也不负责教导菜鸟。如果你所在的课题组从来就没有接触过同步辐射实际操作，对方审核课题 (proposal) 的时候也会留意到这一点的（扣分项）。</p>
+<p>    像是我的导师从 03 年的时候就跟同步辐射实验室打交道，再靠各位前辈们挣下来的名声，我一进组就不需要担忧“拿不拿得到机时”这样的问题。第一次去同步辐射实验室的时候工作人员对我说的就是”啊你是 xxx 组新来的啊，xxx 师兄/姐教你就好了，xxx 组老熟人了。“这样的”关系“不是所有课题组有条件建立起来的，于是另外一条路就是跟已经有跟同步辐射实验室稳定合作关系的人打交道了，这样门槛就会低一些。我隔壁的课题组也是一开始做催化剂，主要用低温 in-situ 红外的技术出了好几篇不错的文章。接着就跟同步辐射实验室的课题组打上了交道，发了 <em>JACS</em>、<em>Nature Material</em>、<em>Nature Chemistry</em> 等一打文章，这就彻底在同步辐射实验室里面建立起了非常稳固的合作关系。但无论”组内培养“还是”对外合作“，门槛都不低。前者要求多年的经验铺路，后者要求文章数量质量。</p>
+<br/>
+<br/>
+<h3 id="xafs-依赖实验经验">XAFS 依赖实验经验</h3>
+<p>    跟其他表征相比， XAFS 存在“实验影响数据处理”的难点。举个例子，假设样品浓度是 10 wt% 但用了荧光检测器 (fluorescence data)，谱图会存在荧光自吸收的问题 (<a href="https://bruceravel.github.io/demeter/aug/process/sa.html">self-absorption</a>)。这个来源于实验操作的问题是不会在数据处理的过程中轻易发现的。只学数据处理不顾实验细节，出来的结果很有误导性，或者拟合结果出现很诡异的数值。 同步辐射实验不像 <a href="https://en.wikipedia.org/wiki/Inductively_coupled_plasma_atomic_emission_spectroscopy">ICP-AES</a> 或者是 <a href="https://www.jeol.co.jp/en/products/nmr/basics.html#:~:text=NMR%20is%20an%20abbreviation%20for,in%20a%20powerful%20magnetic%20field.">solution-state NMR</a>，即使不亲手操作独自处理数据也不会出现太多问题。再结合之前的两个点，形成了一个闭环，外面的人很难能加入到这个“环”里面。</p>
+<p>    我也见过“A 做样品，B 采 XAFS数据，C 来拟合”的合作模式，中间出现了太多的问题。文章到最后发出来了，但是数据质量真是一言难尽……A 全程“我是谁，我在哪里，我在做什么”的状态。<br>
+  <br>
+<br/><br>
+<br/></p>
+<h3 id="迷信同步辐射技术">迷信“同步辐射技术”</h3>
+<p>    哎老生常谈了……完全理解文章指标这种不可抗力因素。不得不说，有些不了解同步辐射的人觉得用了一个同步辐射的数据就能把期刊质量给拉上去了，不在该用的地方用上那只能叫“灌水”好吗……这门技术没有想象中的那么厉害，能给出的信息也是有限的。</p>
+<p>    真的要发到高影响的文章，<strong>idea 始终是第一位，broad interest 是第二位</strong>。你见过有因为光做 EXAFS 的人发到 <em>Nature</em> 吗？<strong>一篇好的文章是一个好的故事</strong>，同步辐射只是其中服务故事剧情的一环，用的恰到好处那就是神剧情，硬塞进去那就算剧情崩坏。就跟“科幻特效”一样，塞到《流浪地球》和《上海堡垒》能是一回事？不要太迷信这门技术，不少人 XAFS 数据拿到后陷入了“这个到底有什么用”的灵魂拷问。这个问题应该是在做实验之前问，而非之后。花大力气处理得到 XAFS 能给你的和其他表征 (XPS，XRD，TEM etc.) 是同一个，甚至是更少。哎……真的没必要勉强自己上这套数据了，就像国产剧热衷于把 10 集的剧情注水成 80 集。</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://twocircles24.github.io/post/how-long-for-xafs/" class="post-title gt-a-link">
+                    学 XAFS 要多久
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">My anger matters, so does yours. </div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+                <a href="https://weibo.com/xafs" target="_blank">
+                    <i class="fab fa-weibo gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://twocircles24.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
