@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title> Athena新手教程 | 补充说明和讨论 | 两个圈 Two Circles</title>
+<script>
+(function() {
+  var s = localStorage.getItem('theme');
+  var m = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var t = s || (m ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+
+<link rel="stylesheet" href="/css/main.min.0677f7c8c7dea0ca8172cc72c1b76103dc0d451fc5eb5625b2194298e44c4127.css" integrity="sha256-Bnf3yMfeoMqBcsxywbdhA9wNRR/F61YlshlCmORMQSc=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+  <link href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (typeof renderMathInElement === 'function') {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false}
+        ],
+        throwOnError: false,
+        ignoredTags: ["script","noscript","style","textarea","pre","code"]
+      });
+    }
+  });
+  </script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+        <script src="/js/main.f2b85918d76ed992fd44333e06e475c6b58b77f6c86f2d9276db1056d86725c2.js" integrity="sha256-8rhZGNdu2ZL9RDM&#43;BuR1xrWLd/bIby2SdtsQVthnJcI=" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+  <header>
+    <div class="site-header">
+<div class="site-header__left">
+<a class="brand" href="/">两个圈 Two Circles</a>
+<button class="theme-toggle" type="button" aria-label="Toggle theme" data-theme-toggle>
+<svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" width="20" height="20">
+<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+<svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+<circle cx="12" cy="12" r="4"></circle>
+<path d="M12 2v2m0 16v2M22 12h-2M4 12H2m15.364 6.364-1.414-1.414M8.05 8.05 6.636 6.636m10.728 0L15.95 8.05M8.05 15.95 6.636 17.364"></path>
+</svg>
+</button>
+</div>
+<div class="site-header__right">
+<button class="nav-toggle" type="button" aria-controls="main-menu" aria-expanded="false" data-nav-toggle>Menu</button>
+
+  <nav id="main-menu" class="site-nav" data-nav aria-label="Primary">
+    <ul class="nav-list">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/archive/">Archive</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    <li>
+      <a href="/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+</div>
+</div>
+
+  </header>
+  <main>
+    
+  
+  
+  
+    
+    
+      
+    
+  
+  
+  <div class="page-with-toc">
+    <aside class="toc-sidebar" aria-label="Contents">
+  <nav class="toc-nav">
+    <h2>Contents</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#个人认为最容易出现问题的地方">个人认为最容易出现问题的地方</a>
+      <ul>
+        <li></li>
+        <li><a href="#2-去除图里面的尖刺参照视频-p7">2. 去除图里面的尖刺（参照视频 P7）</a></li>
+        <li><a href="#3-保存数据作图">3. 保存数据作图</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </nav>
+  </aside>
+
+
+
+
+    <article class="content">
+      <h1> Athena新手教程 | 补充说明和讨论</h1>
+      <p class="post-meta"><time datetime="2020-06-30T02:21:36&#43;00:00">June 30, 2020</time></p>
+
+
+
+
+
+      <details class="toc-dropdown">
+  <summary>Contents</summary>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#个人认为最容易出现问题的地方">个人认为最容易出现问题的地方</a>
+      <ul>
+        <li></li>
+        <li><a href="#2-去除图里面的尖刺参照视频-p7">2. 去除图里面的尖刺（参照视频 P7）</a></li>
+        <li><a href="#3-保存数据作图">3. 保存数据作图</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</details>
+
+
+
+
+      <p>(4 min 55 s reading) 为了可以更好的归档问题<del>懒得出视频</del>，在这里动态更新 Blog 记录大家的问题还有回复。</p>
+<!-- raw HTML omitted -->
+<p><strong>视频：Athena新手教程 | 同步辐射吸收谱(XAS)数据处理 <a href="https://www.bilibili.com/video/BV1yz411e7gu/">Bilibili</a>，<a href="https://www.youtube.com/playlist?list=PLpaQuvNA9-EvP_o9wSa336hveS1O46dtn">YouTube</a></strong></p>
+<!-- raw HTML omitted -->
+<h2 id="个人认为最容易出现问题的地方">
+  个人认为最容易出现问题的地方
+  <a class="heading-anchor" href="#%e4%b8%aa%e4%ba%ba%e8%ae%a4%e4%b8%ba%e6%9c%80%e5%ae%b9%e6%98%93%e5%87%ba%e7%8e%b0%e9%97%ae%e9%a2%98%e7%9a%84%e5%9c%b0%e6%96%b9" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h2>
+<!-- raw HTML omitted -->
+<h4 id="-1-敲黑板重点所有路径包括安装文件所有文件均使用英文且任何文件夹文件名使用下划线_来替代空格-space否则-demeter-系列的软件会报错无法处理数据">
+  -1. 敲黑板重点：所有路径（包括安装文件）所有文件均使用英文，且任何文件夹/文件名使用下划线&quot;_&ldquo;来替代空格 space。否则 Demeter 系列的软件会报错，无法处理数据
+  <a class="heading-anchor" href="#-1-%e6%95%b2%e9%bb%91%e6%9d%bf%e9%87%8d%e7%82%b9%e6%89%80%e6%9c%89%e8%b7%af%e5%be%84%e5%8c%85%e6%8b%ac%e5%ae%89%e8%a3%85%e6%96%87%e4%bb%b6%e6%89%80%e6%9c%89%e6%96%87%e4%bb%b6%e5%9d%87%e4%bd%bf%e7%94%a8%e8%8b%b1%e6%96%87%e4%b8%94%e4%bb%bb%e4%bd%95%e6%96%87%e4%bb%b6%e5%a4%b9%e6%96%87%e4%bb%b6%e5%90%8d%e4%bd%bf%e7%94%a8%e4%b8%8b%e5%88%92%e7%ba%bf_%e6%9d%a5%e6%9b%bf%e4%bb%a3%e7%a9%ba%e6%a0%bc-space%e5%90%a6%e5%88%99-demeter-%e7%b3%bb%e5%88%97%e7%9a%84%e8%bd%af%e4%bb%b6%e4%bc%9a%e6%8a%a5%e9%94%99%e6%97%a0%e6%b3%95%e5%a4%84%e7%90%86%e6%95%b0%e6%8d%ae" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h4>
+<!-- raw HTML omitted -->
+<h4 id="0-在-athena-中加载数据的前一步建议你去-main-window-下面的-plugin-registry-勾选上所有方框这样以后就可以加载大部分来自不同-beamline-的实验初始数据">
+  0. 在 <strong>Athena</strong> 中加载数据的前一步，建议你去 <em>Main window</em> 下面的 <em>Plugin registry</em> 勾选上所有方框，这样以后就可以加载大部分来自不同 beamline 的实验初始数据。
+  <a class="heading-anchor" href="#0-%e5%9c%a8-athena-%e4%b8%ad%e5%8a%a0%e8%bd%bd%e6%95%b0%e6%8d%ae%e7%9a%84%e5%89%8d%e4%b8%80%e6%ad%a5%e5%bb%ba%e8%ae%ae%e4%bd%a0%e5%8e%bb-main-window-%e4%b8%8b%e9%9d%a2%e7%9a%84-plugin-registry-%e5%8b%be%e9%80%89%e4%b8%8a%e6%89%80%e6%9c%89%e6%96%b9%e6%a1%86%e8%bf%99%e6%a0%b7%e4%bb%a5%e5%90%8e%e5%b0%b1%e5%8f%af%e4%bb%a5%e5%8a%a0%e8%bd%bd%e5%a4%a7%e9%83%a8%e5%88%86%e6%9d%a5%e8%87%aa%e4%b8%8d%e5%90%8c-beamline-%e7%9a%84%e5%ae%9e%e9%aa%8c%e5%88%9d%e5%a7%8b%e6%95%b0%e6%8d%ae" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h4>
+<p><a href="https://i.loli.net/2020/08/05/zVA4tOlgK67Wbcp.png" target="_blank">
+  <img src="https://i.loli.net/2020/08/05/zVA4tOlgK67Wbcp.png" alt="plug register.png" loading="lazy">
+</a></p>
+<p><strong>Figure 1.</strong> Athena 主界面
+<!-- raw HTML omitted -->
+<a href="https://i.loli.net/2020/08/05/nvu7Q4yjpImoHDF.png" target="_blank">
+  <img src="https://i.loli.net/2020/08/05/nvu7Q4yjpImoHDF.png" alt="plug register2.png" loading="lazy">
+</a></p>
+<p><strong>Figure2.</strong> Plugin registry 界面
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted --></p>
+<h4 id="1-加载数据时的若干细节-figure-3">
+  1. 加载数据时的若干细节 (<strong>Figure 3</strong>)
+  <a class="heading-anchor" href="#1-%e5%8a%a0%e8%bd%bd%e6%95%b0%e6%8d%ae%e6%97%b6%e7%9a%84%e8%8b%a5%e5%b9%b2%e7%bb%86%e8%8a%82-figure-3" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h4>
+<p><a href="https://i.loli.net/2020/08/05/BVS5DI2jbfZktXO.jpg" target="_blank">
+  <img src="https://i.loli.net/2020/08/05/BVS5DI2jbfZktXO.jpg" alt="import_li.jpg" loading="lazy">
+</a></p>
+<p><strong>Figure 3.</strong> Import data 界面</p>
+<!-- raw HTML omitted -->
+<p>    <!-- raw HTML omitted -->红线：<!-- raw HTML omitted --> 很多时候原始数据标注的名字，eg. I<del>t</del> 和 I<del>o</del>，并非是真的实验环境中的透射光或者是入射光。你需要：
+        (1) 如果是你负责采数据，你需要在实验的过程中记录每列数据的真正含义，询问 beamline staff 就可以得到答案；
+         (2) 如果是别人采集的数据，问 TA or 自己试。</p>
+<!-- raw HTML omitted -->
+<p>    <!-- raw HTML omitted -->蓝线：<!-- raw HTML omitted -->如果是透射谱，遵循 <a href="https://en.wikipedia.org/wiki/Beer%E2%80%93Lambert_law">Beer–Lambert law</a>，记得勾选上 <em>Natural log</em>。也可通过下放的 $\mu$(E) 表达式来确认是否勾选成功了。如果是荧光谱，则<strong>不要</strong>勾选 <em>Natural log</em>。</p>
+<!-- raw HTML omitted -->
+<p>    <!-- raw HTML omitted -->黄线：<!-- raw HTML omitted --> <em>Data type</em> 允许你加载不同的 XAFS 文件：
+       (1)  $\mu$(E)：XAFS 最原始的数据，你需要加减乘除来得到初始数据；
+       (2) XANES：顾名思义，能量范围比较短，没有 EXAFS region；
+       (3) norm(E)：已经归一化之后的数据，也就是说通过这样的形式加载，你无法做 XAFS 数据的背景调整，只能从 <em>k</em> 空间开始；
+       (4) chi(k)：<em>k</em> 空间数据，没有 <em>k^n^</em> 加权；
+       (5) xmu.dat：从 <em>FEFF</em> 软件里面导出的文件。</p>
+<!-- raw HTML omitted -->
+<p>    <!-- raw HTML omitted -->绿线：<!-- raw HTML omitted --> 一定一定一定要加载参照谱图 (reference spectra)，否则无法进行能量校正。</p>
+<!-- raw HTML omitted -->
+<h4 id="2-e0-的选择">
+  2. E<del>0</del> 的选择
+  <a class="heading-anchor" href="#2-e0-%e7%9a%84%e9%80%89%e6%8b%a9" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h4>
+<!-- raw HTML omitted -->
+<p>在这里先引用在 Bilibili 下面的 Q&amp;A，之后对 E<del>0</del> 有独立讨论。<del>又是一个 Flag</del></p>
+<blockquote>
+<p>Q：E0 和你 Calibrate 的 E 有啥区别呢
+A：Calibrate Energy 通常是指校正一个已知样品的 E<del>0</del>，比如金属。E<del>0</del> 理论来讲是样品中内层电子吸收光能逃逸出的阈值，然而在实际经验中大家是人为在Athena里面人为定义这个阈值，也就是 <em>Athena</em> 里面的 E<del>0</del>。完了之后去 <em>Artemis</em> 里面微调。</p>
+</blockquote>
+<blockquote>
+<p>Q：在能量矫正的时候，我的第一微分图里面第一个峰不是最强峰，那么我该选择第一个峰还是最强峰？
+A：E<del>0</del> 位置的定义是人为的，所以理论来说这两个地方都可以。你到后期做 <em>Artemis</em> 拟合会有修正项。如果第一个峰不是最强的，我猜测是有 pre-edge，那么我个人习惯是不用第一个峰，而是用最强的。因为 pre-edge 是由于 <strong>1s→nd</strong> 跃迁，而真正的 XANES 是 <strong>1s→np</strong> 跃迁。</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<h3 id="2-去除图里面的尖刺参照视频-p7">
+  2. 去除图里面的尖刺（参照视频 P7）
+  <a class="heading-anchor" href="#2-%e5%8e%bb%e9%99%a4%e5%9b%be%e9%87%8c%e9%9d%a2%e7%9a%84%e5%b0%96%e5%88%ba%e5%8f%82%e7%85%a7%e8%a7%86%e9%a2%91-p7" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h3>
+<p><a href="https://i.loli.net/2020/08/05/EDvVNwMdQ7sqYiU.jpg" target="_blank">
+  <img src="https://i.loli.net/2020/08/05/EDvVNwMdQ7sqYiU.jpg" alt="Inkedglitch_LI.jpg" loading="lazy">
+</a></p>
+<p><strong>Figure 4.</strong> Glitches at ca. 10 Å^-1^</p>
+<!-- raw HTML omitted -->
+<h3 id="3-保存数据作图">
+  3. 保存数据作图
+  <a class="heading-anchor" href="#3-%e4%bf%9d%e5%ad%98%e6%95%b0%e6%8d%ae%e4%bd%9c%e5%9b%be" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h3>
+<p><a href="https://i.loli.net/2020/08/05/WlzH48dOEKPIFbx.png" target="_blank">
+  <img src="https://i.loli.net/2020/08/05/WlzH48dOEKPIFbx.png" alt="export.png" loading="lazy">
+</a></p>
+<p><strong>Figure 5.</strong> 到左上角 <em>File</em> 去保存数据</p>
+<!-- raw HTML omitted -->
+<p>    <!-- raw HTML omitted -->红线：<!-- raw HTML omitted -->你可以保存的文件格式，包含了（从上往下）一阶微分 XANES，XANES，<em>k^3^</em> 加权 <em>k</em> 空间，EXAFS R空间，EXAFS R空间的虚部。</p>
+<p>    <!-- raw HTML omitted -->红线：<!-- raw HTML omitted -->如果从 <em>Save marked group as&hellip;</em> 选择数据，你会保存在右边所有勾选的数据。R空间的权重，是由右方 <em>Plotting k-weights</em> 决定的，建议在保存数据前先用右边的展示功能键刷新下。</p>
+<p>    <!-- raw HTML omitted -->蓝线：<!-- raw HTML omitted --> <em>Save current group as&hellip;</em> 代表你只会保存右边蓝色高亮的数据，比如图中的 <em>Fe_lepidocrocite.000</em>。</p>
+<!-- raw HTML omitted -->
+<p><a href="https://i.loli.net/2020/08/05/RemycGYiBVTg1WP.png" target="_blank">
+  <img src="https://i.loli.net/2020/08/05/RemycGYiBVTg1WP.png" alt="format.png" loading="lazy">
+</a></p>
+<p><strong>Figure 6.</strong> 保存文件为 .txt 后缀</p>
+<!-- raw HTML omitted -->
+<p>大部分输出的数据会有奇奇怪怪的后缀，这是作者为了区分数据的类型（XANES，k空间，R空间 and so on）。但是大部分数据都是可以通过 notepad（也就是经常读 .txt）打开的。建议直接保留数据类型，把后缀名改成 .txt，方便后续数据转移和画图，<strong>Figure. 6</strong>。</p>
+<!-- raw HTML omitted -->
+<pre><code>感谢你的阅读。
+</code></pre>
+
+      
+  <div class="post-tags">
+    <ul class="tag-list">
+        <li>
+          <a class="tag-chip tag-sm" href="/tags/athena/">athena</a>
+        </li>
+        <li>
+          <a class="tag-chip tag-sm" href="/tags/tutorial/">tutorial</a>
+        </li>
+        <li>
+          <a class="tag-chip tag-sm" href="/tags/xafs/">xafs</a>
+        </li>
+    </ul>
+  </div>
+
+    </article>
+  </div>
+  
+
+  </main>
+  <footer>
+    <p>My anger matters, so does yours.</p>
+<p style="font-size: 12px;">Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a
+        href="https://github.com/binbinsh/hugo-trainsh" target="_blank">trainsh</a></p>
+  </footer>
+  
+</body>
+</html>

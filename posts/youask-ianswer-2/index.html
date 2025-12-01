@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>你问我不一定答 | 第二期 | 两个圈 Two Circles</title>
+<script>
+(function() {
+  var s = localStorage.getItem('theme');
+  var m = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var t = s || (m ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+
+<link rel="stylesheet" href="/css/main.min.0677f7c8c7dea0ca8172cc72c1b76103dc0d451fc5eb5625b2194298e44c4127.css" integrity="sha256-Bnf3yMfeoMqBcsxywbdhA9wNRR/F61YlshlCmORMQSc=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+  <link href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (typeof renderMathInElement === 'function') {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false}
+        ],
+        throwOnError: false,
+        ignoredTags: ["script","noscript","style","textarea","pre","code"]
+      });
+    }
+  });
+  </script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+        <script src="/js/main.f2b85918d76ed992fd44333e06e475c6b58b77f6c86f2d9276db1056d86725c2.js" integrity="sha256-8rhZGNdu2ZL9RDM&#43;BuR1xrWLd/bIby2SdtsQVthnJcI=" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+  <header>
+    <div class="site-header">
+<div class="site-header__left">
+<a class="brand" href="/">两个圈 Two Circles</a>
+<button class="theme-toggle" type="button" aria-label="Toggle theme" data-theme-toggle>
+<svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" width="20" height="20">
+<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+<svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+<circle cx="12" cy="12" r="4"></circle>
+<path d="M12 2v2m0 16v2M22 12h-2M4 12H2m15.364 6.364-1.414-1.414M8.05 8.05 6.636 6.636m10.728 0L15.95 8.05M8.05 15.95 6.636 17.364"></path>
+</svg>
+</button>
+</div>
+<div class="site-header__right">
+<button class="nav-toggle" type="button" aria-controls="main-menu" aria-expanded="false" data-nav-toggle>Menu</button>
+
+  <nav id="main-menu" class="site-nav" data-nav aria-label="Primary">
+    <ul class="nav-list">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/archive/">Archive</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    <li>
+      <a href="/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+</div>
+</div>
+
+  </header>
+  <main>
+    
+  
+  
+  
+  
+  <article class="content">
+    <h1>你问我不一定答 | 第二期</h1>
+    <p class="post-meta"><time datetime="2020-08-18T17:15:10&#43;00:00">August 18, 2020</time></p>
+
+
+
+
+    <p>(5 min 22 s reading)</p>
+<!-- raw HTML omitted -->
+<p><strong>阅读提示1：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
+<p><strong>阅读提示2：问题来源于 B 站 or 微博，问题有可能被重新整理，先后顺序不代表任何重要程度，如果你的提问被收入但觉得不合适，请联系我。</strong></p>
+<hr>
+<blockquote>
+<p>Q11. 可不可以用简单的话说明一下，<em>Athena</em>和<em>Artemis</em>分别是做什么呢，<em>Athena</em>最后把我们数据变成什么样了，然后<em>Artemis</em>拟合又是最后变成什么样了？这个处理和拟合是个什么意思呢?</p>
+</blockquote>
+<p><strong>A11:</strong></p>
+<ol>
+<li><em>Athena</em>是把raw data处理成k空间和r空间。<em>Artemis</em>是把k空间的数据拿去拟合。所以前者处理数据，后者拟合EXAFS。处理的意思就是，让你看到k空间和R空间的数据。拟合的意思就是知道什么样的距离有多少个什么样的原子。</li>
+</ol>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Q12. Artemis拟合一个数据大概需要多久才能完成呢？</p>
+</blockquote>
+<p><strong>A12:</strong></p>
+<ol>
+<li>取决于你的需求还有你老板的要求。我自己手头有数据几年还没整完的事多了去了；</li>
+<li>数据拟合是一件很痛苦的事情，我一般都是吃好喝好睡好，<del>再焚香沐浴之后</del>开始坐下来处理数据；</li>
+<li>参考另外一篇文章<a href="https://twocircles24.com/post/how-long-for-xafs/">《学 XAFS 要多久》</a>。</li>
+</ol>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Q13. 张三拿到一个数据从一开始到完成到底需要什么样的步骤，是所有的数据都要<em>Athena</em>和<em>Artemis</em>双拳出击吗？还是说不同情况不同处理？</p>
+</blockquote>
+<p><strong>A13:</strong></p>
+<ol>
+<li>不同情况不同处理，始终取决于张三的需求。如果说你只想要 XANES 的对比或者是<a href="https://bruceravel.github.io/demeter/documents/Athena/analysis/lcf.html">LCF</a> 那么就没有必要用到 Artemis（only for EXAFS 拟合）。如果说你要 EXAFS 的原子距离和配位数，张三要问拿到的数据是 raw data 还是别人已经给你处理好的 .prj 文件呢？前者需要 <em>Athena</em> 处理，后者直接扔 <em>Artemis</em> （但最好在 <em>Athena</em> 中检查好参数）。</li>
+</ol>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Q14-1: 为什么张三的文献对（一个纯的化合物）同一中心原子拟合使用了不同的E<del>0</del></p>
+</blockquote>
+<p><strong>A14-1:</strong></p>
+<ol>
+<li>因为他们菜啊</li>
+<li>如果说你测的样品里面已经知道了是一个混合物（像50%Mn<del>2</del>O<del>3</del>50%Mn），你给两个E<del>0</del>不过分；</li>
+<li>如果是一个纯的化合物，大家都是从同一个原子跑出来，为什么会有两个E0？</li>
+</ol>
+<blockquote>
+<p>Q14-2: 复合物，类似于核壳结构的，就可能有多个E<del>0</del>吧？</p>
+</blockquote>
+<p><strong>A14-2:</strong></p>
+<ol>
+<li>我觉得看情况。优先还是先不要用那么多 E<del>0</del>，因为在拟合的过程中，可能要把变量多放在距离或者 DW factor (aka. $\sigma$^2^) 上面。</li>
+</ol>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Q15: 要想下载旧版本或是 32 位 Demeter 软件包怎么弄？</p>
+</blockquote>
+<p><strong>A15:</strong></p>
+<ol>
+<li><a href="https://bruceravel.github.io/demeter/#old">Demeter 官网 Old Releases</a> 就可以找到上个版本 (0.9.25) 的 32 位版本。.</li>
+</ol>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Q16: 拟合同种金属四配位六配位混合物的第一壳层，变量数很紧张，他们的σ2之间可以建立关联吗？能够假设他们相等或者其他关联吗？还有变量数一定要比independent points小2吗？</p>
+</blockquote>
+<p><strong>A16:</strong></p>
+<ol>
+<li>如果两种配位形式各自的距离 R 相差不大（比如差值小于 0.15 Å），建议用一条 path 来代表其平均值。如果不能够代替，再考虑用两条 paths 以及对其参数控制；</li>
+<li>关于 $\sigma$^2^：可以，这个时候采取对两条 path 的 $\sigma$^2^ 的值控制为一样 (define  $\sigma$<del>1</del>^2^ = $\sigma$<del>2</del>^2^)；</li>
+<li>除了 $\sigma$^2^，还可以尝试使 $\Delta$R<del>1</del> = $\Delta$R<del>2</del>。然而随着固定的变量数量增多，拟合的自由度降低，最终的结果可能不尽如人意，但不妨一试；</li>
+<li>变量数量 (number of variables) 需要小于 independent poitns 数量的 2/3。</li>
+</ol>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Q17: 信号质量与样品含量有关系吗？比如负载贵金属的催化剂可能负载量很低，这会影响信号强度及质量吗？</p>
+</blockquote>
+<p><strong>A17:</strong> 两个问题的答案均是：有，而且关系很大。但是完全可以通过使用不同的实验装置（主要是检测器）来拿到浓度很低的样品数据（到ppm级别）。这个考量比数据处理还要复杂。以后可能讲完软件操作会开始讲实验计划这一块，难度很大。</p>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Q18: 担担面提供的网站链接打不开怎么回事？</p>
+</blockquote>
+<p><strong>A18:</strong></p>
+<ol>
+<li>网站的服务器垃圾；</li>
+<li>需要科学上网。</li>
+</ol>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Q19: 多个壳层的path，可以从不同晶体文件里获得吗？</p>
+</blockquote>
+<p><strong>A19:</strong></p>
+<ol>
+<li>可以。思路以结构类似为准。优先一个晶体能全部拿下，拿不下再换。</li>
+</ol>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Q20: 有些元素，就像你b站视频演示的那个Fe铁的，这种前人做过很多的是不是能找到标准物质的数据呢？那在哪里可以找到这种标准物质的数据呢？</p>
+</blockquote>
+<p><strong>A20:</strong></p>
+<ol>
+<li>前几天 Matt Newwill 和他实习生的工作：<a href="https://xaslib.xrayabsorption.org/elem/">X-ray Absorption Data Library</a></li>
+<li>友情提示：只能拿做练习。不可以用作处理自己的数据，包括但不限于 PCA 和 LCF。</li>
+</ol>
+<!-- raw HTML omitted -->
+<pre><code>感谢你的阅读。
+</code></pre>
+
+    
+  <div class="post-tags">
+    <ul class="tag-list">
+        <li>
+          <a class="tag-chip tag-sm" href="/tags/qa/">q&amp;a</a>
+        </li>
+        <li>
+          <a class="tag-chip tag-sm" href="/tags/xafs/">xafs</a>
+        </li>
+    </ul>
+  </div>
+
+  </article>
+  
+
+  </main>
+  <footer>
+    <p>My anger matters, so does yours.</p>
+<p style="font-size: 12px;">Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a
+        href="https://github.com/binbinsh/hugo-trainsh" target="_blank">trainsh</a></p>
+  </footer>
+  
+</body>
+</html>

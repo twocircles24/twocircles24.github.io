@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Edge Energy &amp; 吸收边 | 两个圈 Two Circles</title>
+<script>
+(function() {
+  var s = localStorage.getItem('theme');
+  var m = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var t = s || (m ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+
+<link rel="stylesheet" href="/css/main.min.0677f7c8c7dea0ca8172cc72c1b76103dc0d451fc5eb5625b2194298e44c4127.css" integrity="sha256-Bnf3yMfeoMqBcsxywbdhA9wNRR/F61YlshlCmORMQSc=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+  <link href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (typeof renderMathInElement === 'function') {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false}
+        ],
+        throwOnError: false,
+        ignoredTags: ["script","noscript","style","textarea","pre","code"]
+      });
+    }
+  });
+  </script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+        <script src="/js/main.f2b85918d76ed992fd44333e06e475c6b58b77f6c86f2d9276db1056d86725c2.js" integrity="sha256-8rhZGNdu2ZL9RDM&#43;BuR1xrWLd/bIby2SdtsQVthnJcI=" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+  <header>
+    <div class="site-header">
+<div class="site-header__left">
+<a class="brand" href="/">两个圈 Two Circles</a>
+<button class="theme-toggle" type="button" aria-label="Toggle theme" data-theme-toggle>
+<svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" width="20" height="20">
+<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+<svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+<circle cx="12" cy="12" r="4"></circle>
+<path d="M12 2v2m0 16v2M22 12h-2M4 12H2m15.364 6.364-1.414-1.414M8.05 8.05 6.636 6.636m10.728 0L15.95 8.05M8.05 15.95 6.636 17.364"></path>
+</svg>
+</button>
+</div>
+<div class="site-header__right">
+<button class="nav-toggle" type="button" aria-controls="main-menu" aria-expanded="false" data-nav-toggle>Menu</button>
+
+  <nav id="main-menu" class="site-nav" data-nav aria-label="Primary">
+    <ul class="nav-list">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/archive/">Archive</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    <li>
+      <a href="/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+</div>
+</div>
+
+  </header>
+  <main>
+    
+  
+  
+  
+    
+    
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+  
+  <div class="page-with-toc">
+    <aside class="toc-sidebar" aria-label="Contents">
+  <nav class="toc-nav">
+    <h2>Contents</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-理论定义">1. 理论定义</a></li>
+    <li><a href="#2-e-出现的地方">2. <em>E<del>0</del></em> 出现的地方</a></li>
+    <li><a href="#3-选择-e">3. “选择” <em>E<del>0</del></em></a>
+      <ul>
+        <li><a href="#单质常用于校正目的">单质（常用于校正目的）</a></li>
+        <li><a href="#样品已知标准样品或未知样品">样品（已知标准样品或未知样品）</a></li>
+        <li><a href="#exafs中拟合-deltae">EXAFS中拟合 $\Delta$<em>E<del>0</del></em></a></li>
+      </ul>
+    </li>
+    <li><a href="#pre-edge-讨论以-k-edge-为主">Pre-edge (讨论以 K-edge 为主)</a>
+      <ul>
+        <li><a href="#主要跃迁-edge-形成光谱选择规则允许">主要跃迁 (<em>edge</em>) 形成：光谱选择规则允许</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </nav>
+  </aside>
+
+
+
+
+    <article class="content">
+      <h1>Edge Energy &amp; 吸收边</h1>
+      <p class="post-meta"><time datetime="2020-08-12T09:55:56&#43;00:00">August 12, 2020</time></p>
+
+
+
+
+
+      <details class="toc-dropdown">
+  <summary>Contents</summary>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-理论定义">1. 理论定义</a></li>
+    <li><a href="#2-e-出现的地方">2. <em>E<del>0</del></em> 出现的地方</a></li>
+    <li><a href="#3-选择-e">3. “选择” <em>E<del>0</del></em></a>
+      <ul>
+        <li><a href="#单质常用于校正目的">单质（常用于校正目的）</a></li>
+        <li><a href="#样品已知标准样品或未知样品">样品（已知标准样品或未知样品）</a></li>
+        <li><a href="#exafs中拟合-deltae">EXAFS中拟合 $\Delta$<em>E<del>0</del></em></a></li>
+      </ul>
+    </li>
+    <li><a href="#pre-edge-讨论以-k-edge-为主">Pre-edge (讨论以 K-edge 为主)</a>
+      <ul>
+        <li><a href="#主要跃迁-edge-形成光谱选择规则允许">主要跃迁 (<em>edge</em>) 形成：光谱选择规则允许</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</details>
+
+
+
+
+      <p>(16 min 37 s reading) 什么是 <em>E<del>0</del></em>？怎么选 <em>E<del>0</del></em>？</p>
+<!-- raw HTML omitted -->
+<p><strong>视频：E0, Edge Energy &amp; 吸收边 | XAFS数据处理参数讨论</strong> <a href="https://www.bilibili.com/video/BV1jK4y1Y71X/">Bilibili</a>, <a href="https://youtu.be/e0TwlNPTnik">YouTube</a></p>
+<!-- raw HTML omitted -->
+<p><strong>阅读提示1：参考阅读有 <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/xrs.1103"><em>X‐Ray Spectrom.</em>, 37: 572-584.</a>, <a href="https://www.amazon.com/XAFS-Everyone-Scott-Calvin/dp/1439878633">《XAFS for Everyone》</a> 和 <a href="https://www.amazon.com/Introduction-XAFS-Practical-Absorption-Spectroscopy-ebook/dp/B00AKE1WEY">《Introduction to XAFS: A Practical Guide to X-ray Absorption Fine Structure Spectroscopy》</a>。</strong></p>
+<p><strong>阅读提示2：该文只用于参考和建议，非标准。各个课题遭遇的数据差异巨大，我的建议不一定适合你的数据处理，请谨慎使用。</strong></p>
+<p><strong>阅读提示3：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
+<!-- raw HTML omitted -->
+<hr>
+<!-- raw HTML omitted -->
+<h1 id="如果来不及看完全文">
+  如果来不及看完全文
+  <a class="heading-anchor" href="#%e5%a6%82%e6%9e%9c%e6%9d%a5%e4%b8%8d%e5%8f%8a%e7%9c%8b%e5%ae%8c%e5%85%a8%e6%96%87" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h1>
+<!-- raw HTML omitted -->
+<ol>
+<li><em>E<del>0</del></em> 是指让电子离开原子的能量。这个定义模棱两可，看了等于没看。</li>
+<li>在 <em>Athena</em> 中，<em>E<del>0</del></em> 通常是可以自己人为来定义，没有固定套路。例如以下几类：
+a. 吸收先谱图跳起来的点；
+b. XANES <strong>一阶微分(first derivative)</strong> 中的第一个顶点；若有 <em>pre-edge</em> 存在，建议选择<strong>强度最高</strong>的顶点 （<strong>我个人最为推荐</strong>）；
+c. XANES 中起跳后第一个峰 (1st peak in white line region)。</li>
+</ol>
+<p><a href="https://i.loli.net/2020/08/10/YDiOoAUJhpbFG4Q.jpg" target="_blank">
+  <img src="https://i.loli.net/2020/08/10/YDiOoAUJhpbFG4Q.jpg" alt="" loading="lazy">
+</a></p>
+<p><strong>Figure 1.</strong> 选择<em>E<del>0</del></em> 的 a 点（一开始出现吸收）和 c 点（吸收最高）。</p>
+<!-- raw HTML omitted -->
+<p><a href="https://i.loli.net/2020/08/10/sw3vVZLWxEQKpSa.jpg" target="_blank">
+  <img src="https://i.loli.net/2020/08/10/sw3vVZLWxEQKpSa.jpg" alt="" loading="lazy">
+</a></p>
+<p><strong>Figure 2.</strong> 选择<em>E<del>0</del></em> 的 b 点（一阶微分中最高）。</p>
+<!-- raw HTML omitted -->
+<ol start="3">
+<li>严格来说，<em>E<del>0</del></em> <strong>不可以</strong>作为判断氧化态相对高低的<strong>唯一标准</strong>。</li>
+<li>在报告 edge energy 的时候，例如写文章，<strong>仍用 <em>Athena</em> 中选择的 <em>E<del>0</del></em> 数值</strong>。</li>
+<li>在 <em>Athena</em> 中使用任一标准理论上都可以，但要注意：
+    a. 在后续 <em>Artemis</em> 拟合时，|$\Delta$<em>E<del>0</del></em>| ≤ 10 eV；
+    b. 在写文章的时候需要明确指出自己选择的标准；
+    c. 在需要相互比较的 XAFS 数据时，尽可能使用同一标准。</li>
+<li>在 <em>Artemis</em> 中，$\Delta$<em>E<del>0</del></em> 是对在 <em>Athena</em> 中的 <em>E<del>0</del></em> 进行修正。这仅仅是出于对 EXAFS 拟合目的，不是对 <em>E<del>0</del></em> 本质上的修改。</li>
+<li>EXAFS 拟合中通常对不同的路径 (path) 只会有<strong>一个相同 $\Delta$<em>E<del>0</del></em> 变量</strong>，因为电子都是从同一个中心原子逃逸。除非存在样品中是两种及两种以上不同氧化态的混合物，对各自组分定义不同的 $\Delta$<em>E<del>0</del></em>。实际情况中需要考虑变量数量上限 (number of independent points)， 很难有给 $\Delta$<em>E<del>0</del></em> 多个变量的情况。</li>
+</ol>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<hr>
+<!-- raw HTML omitted -->
+<h1 id="进一步讨论">
+  进一步讨论
+  <a class="heading-anchor" href="#%e8%bf%9b%e4%b8%80%e6%ad%a5%e8%ae%a8%e8%ae%ba" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h1>
+<!-- raw HTML omitted -->
+<h2 id="1-理论定义">
+  1. 理论定义
+  <a class="heading-anchor" href="#1-%e7%90%86%e8%ae%ba%e5%ae%9a%e4%b9%89" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h2>
+<!-- raw HTML omitted -->
+<p>    <em>E<del>0</del></em> 的定义是来源于光电子相关公式的定义：</p>
+<p>$$
+k = \frac{\sqrt{2m_{e}(E-E_{0}))}}{ħ}
+$$
+​        注：<em>m<del>e</del></em> 电子质量， <em>ħ</em> 狄拉克常数。</p>
+<p>    我们关心的是<strong>入射光子能量（<em>E</em>）和波数（<em>k</em>，也就是 EXAFS 中 <em>k</em> 空间的 x 轴）</strong> 之间的关系。在入射光子能量 <em>E</em> 中，包含了两个部分：让内层电子逃离原子的能量和<strong>逃离之后剩余能量变为动能</strong>。而波数 <em>k</em> 只和动量相关，所以需要移除“让电子离开原子的”能量，也就是 <em>E<del>0</del></em> 。</p>
+<!-- raw HTML omitted -->
+<p>    <em>Edge</em> 的定义是：</p>
+<blockquote>
+<p>The e​nergy at which there is a sharp rise (discontinuity) in the (linear) absorption coefficient of X-rays by an element. (IUCr 2011.)</p>
+</blockquote>
+<p>    同样是一个说了等于没说的定义。因为这一个 &ldquo;sharp rise&rdquo;，从开始吸收能量到达到最高值，是发生在了<strong>一段能量距离</strong>，而不是精准的一个点。 很多时候我们也用“edge”来描述一个某个元素做的某个边。比如 Fe K-edge EXAFS 也就是铁元素的 K 边，那就是说测量的是 Fe 元素在 7,112 eV 附近的同步辐射精细衍射吸收谱（-150 ~ +1000 eV）。</p>
+<!-- raw HTML omitted -->
+<p><a href="https://i.loli.net/2020/08/10/mhJO347yxtkXWCe.jpg" target="_blank">
+  <img src="https://i.loli.net/2020/08/10/mhJO347yxtkXWCe.jpg" alt="InkedE0_xanes_range.jpg" loading="lazy">
+</a></p>
+<p><strong>Figure 3.</strong> 纤铁矿的 Fe K-edge XANES 有从大约 7,110 ~ 7,733 eV 都可以看作 <em>edge</em>。</p>
+<!-- raw HTML omitted -->
+<p>    <strong>给出 <em>E<del>0</del></em> 和 <em>Edge</em> 的定义后，我们在实际操作中常常把它们两个画上等号。</strong></p>
+<!-- raw HTML omitted -->
+<h2 id="2-e-出现的地方">
+  2. <em>E<del>0</del></em> 出现的地方
+  <a class="heading-anchor" href="#2-e-%e5%87%ba%e7%8e%b0%e7%9a%84%e5%9c%b0%e6%96%b9" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h2>
+<!-- raw HTML omitted -->
+<p>    ​我们需要把上述的理论定义具象化，在 XAFS 中常提及的 <em>E<del>0</del></em> 出现在：</p>
+<p>        1. 对参考金属单质 (reference spectra) 进行校正 (calibration) 的时候。例如：利用 Fe 金属来对含铁样品进行能量校正，那么 Fe 金属的 K-edge <em>E<del>0</del></em> 在 7,112 eV。
+        2.  在 <em>Athena</em> 中对样品选择在 XANES 一阶微分中的最高峰作为这个样品的 <em>E<del>0</del></em>。例如：对 Fe_lepidocrocite 样品（<a href="https://baike.baidu.com/item/%E7%BA%A4%E9%93%81%E7%9F%BF">纤铁矿</a>），选择了 7128.2 eV 作为 它的 <em>E<del>0</del></em>。
+        3. 在 <em>Artemis</em> 拟合中，会用到 $\Delta$<em>E<del>0</del></em> 来帮助 EXAFS 微调，使拟合结果更加吻合实验数据。</p>
+<p>    既然它们出现在了不同的地方，跟他人交流 &ldquo;E<del>0</del>&rdquo; 时有必要先讲明是什么 <em>E<del>0</del></em>，否则很容易出现误会。</p>
+<!-- raw HTML omitted -->
+<p><a href="https://i.loli.net/2020/08/10/DnkbFEIBSfVjQ5T.png" target="_blank">
+  <img src="https://i.loli.net/2020/08/10/DnkbFEIBSfVjQ5T.png" alt="E0_1st_deri.png" loading="lazy">
+</a></p>
+<p><strong>Figure 4.</strong> 在 XANES 一阶微分中选择了最高点（黄色小圆点）。</p>
+<!-- raw HTML omitted -->
+<p><a href="https://i.loli.net/2020/08/10/AM8OVzFXDyBbR5l.png" target="_blank">
+  <img src="https://i.loli.net/2020/08/10/AM8OVzFXDyBbR5l.png" alt="athnea.png" loading="lazy">
+</a></p>
+<p><strong>Figure 5.</strong> 在 <em>Athena</em> 界面中显示 7128.2 eV（对应 <strong>Figure 4</strong> 中的小黄点）。</p>
+<!-- raw HTML omitted -->
+<h2 id="3-选择-e">
+  3. “选择” <em>E<del>0</del></em>
+  <a class="heading-anchor" href="#3-%e9%80%89%e6%8b%a9-e" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h2>
+<!-- raw HTML omitted -->
+<h3 id="单质常用于校正目的">
+  单质（常用于校正目的）
+  <a class="heading-anchor" href="#%e5%8d%95%e8%b4%a8%e5%b8%b8%e7%94%a8%e4%ba%8e%e6%a0%a1%e6%ad%a3%e7%9b%ae%e7%9a%84" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h3>
+<p>​    在一阶微分中选择第一个峰，具体能量数值可以参考 <a href="http://skuld.bmsc.washington.edu/scatter/AS_periodic.html">X-ray Absorption Edges</a>。然而最近在 <a href="https://www.mail-archive.com/ifeffit@millenia.cars.aps.anl.gov/msg06914.html">Ifeffit 讨论</a>中有提及到 W L<del>2</del> 和 L<del>3</del>-edge 的能量不是 <a href="http://skuld.bmsc.washington.edu/scatter/AS_periodic.html">X-ray Absorption Edges</a> 标出的 11,544 和 10,207 eV。但不必太过惊慌，目前大部分人依然参考这些能量值作为标准，建议在发表文章的时候讲明用于校正的能量值即可。</p>
+<!-- raw HTML omitted -->
+<h3 id="样品已知标准样品或未知样品">
+  样品（已知标准样品或未知样品）
+  <a class="heading-anchor" href="#%e6%a0%b7%e5%93%81%e5%b7%b2%e7%9f%a5%e6%a0%87%e5%87%86%e6%a0%b7%e5%93%81%e6%88%96%e6%9c%aa%e7%9f%a5%e6%a0%b7%e5%93%81" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h3>
+<p>​    在 <em>Athena</em>，可以参考的标准有很多（不是以推荐顺序来列的）：</p>
+<p>   ​    1. 一阶微分中的第一个峰 (first inflection point)；</p>
+<p>   ​    2. 一阶微分中最高的峰 (largest peak in 1st derivative XANES)；</p>
+<p>   ​    3. 吸收最强区间 (<a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/X-ray_Spectroscopy/XANES_-_Theory">white line</a>) 的第一个峰，常常是吸收能量起跳后第一个峰；</p>
+<p>​   ​    4. （在归一化后）取 y = 0.5 时的能量数值 (halfway up the edge)；</p>
+<p>​   ​    5. 用其他（类似）样品得到的 <em>E<del>0</del></em> 来定义；</p>
+<p>​   ​    6. 在吸收发生开始的能量数值（onset of the edge）。</p>
+<p>​   ​    ……</p>
+<p>    不难想象，不同的定义会给出不同的 <em>E<del>0</del></em> 的数值。没有必要对于同一个化合物给出的不同<em>E<del>0</del></em> 值感到疑惑。正确做法是去在文中寻找作者是如何定义 <em>E<del>0</del></em>。在<a href="https://www.amazon.com/XAFS-Everyone-Scott-Calvin/dp/1439878633">《XAFS for Everyone》</a> Box 10.4 中写到：</p>
+<blockquote>
+<p>But the bottom line is that it (E<del>0</del>) WORKS! In the EXAFS region, the spectrum behaves as if there are electrons with a well-defined momentum, meaning <em>E<del>0</del></em> is well defined too.</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<p>    在<a href="https://www.amazon.com/Introduction-XAFS-Practical-Absorption-Spectroscopy-ebook/dp/B00AKE1WEY">《Introduction to XAFS: A Practical Guide to X-ray Absorption Fine Structure Spectroscopy》</a>中作者也说道：</p>
+<blockquote>
+<p>All of these metrics (<em>E<del>0</del></em>) are suﬃcient because we just need an initial guess; a few electron volts error doesn’t matter, because the energy zero is ﬁne-tuned in later analysis (meaning <em>Artemis</em>).</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<p>    <strong>说大白话就是：<em>E<del>0</del></em> 能使就行。比如让你老板觉得行，比如让你的  <em>Artemis</em> 里面拟合出来的 $\Delta$<em>E<del>0</del></em> 绝对值小于等于 10 eV。</strong></p>
+<!-- raw HTML omitted -->
+<h3 id="exafs中拟合-deltae">
+  EXAFS中拟合 $\Delta$<em>E<del>0</del></em>
+  <a class="heading-anchor" href="#exafs%e4%b8%ad%e6%8b%9f%e5%90%88-deltae" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h3>
+<p>    在视频《从 EXAFS 方程讨论拟合变量 | Artemis | 同步辐射吸收谱(XAS)数据处理》(<a href="https://www.bilibili.com/video/BV1Mk4y1B7Vz">Bilibili</a>, <a href="https://www.youtube.com/playlist?list=PLpaQuvNA9-Eunu6Nxmn4hc7oFE2FJ1pWR">YouTube</a>) 中讨论过 <em>E<del>0</del></em> 会影响 <em>k</em> 空间开始的地方 (<em>k</em> = 0)，从而影响相位 (phase)。在EXAFS中拟合的具体体现就是会影响<strong>原子距离 (<em>R</em>)</strong>。</p>
+<p>    <a href="https://speakerdeck.com/bruceravel/advanced-topics-in-exafs-analysis?slide=57">Bruce Ravel 的讲义</a>里面提到在 <em>Artemis</em> 中限制变量数量可以优先考虑 <em>S<del>0</del>^2^</em> 和 <em>E<del>0</del></em>，即对于同一个化合物或是样品，它们在每一条 path 中都假定是一样的：</p>
+<blockquote>
+<p><em>S<del>0</del>^2^</em>: This is a parameter of the central atom and has somthing to do with the relaxation of electrons around the core-hole. In copper metal (one of his presentation examples), <em>S<del>0</del>^2^</em> is the same for all paths.</p>
+</blockquote>
+<blockquote>
+<p><em>E<del>0</del></em>: In a single data set, single FEFF calculation fit, this parameter is used to align the wavenumber grids of the data and theory. In copper metal (one of this presentation examples), <em>E<del>0</del></em> is the same for all paths.</p>
+</blockquote>
+<p>    当有人问为什么谁谁谁的文献一个标准样品每一个 path 都有一个不同的  <em>E<del>0</del></em> 的时候，大约只会是两种答案：1. 他/她用的不是 <em>Artemis</em> 来拟合；2. 他/她是菜狗。</p>
+<p>    $\Delta$<em>E<del>0</del></em> 只出现在 <em>Artemis</em> 里面，目的只用来<strong>提高拟合结果</strong>，没有实际的物理意义。所以在汇报 <em>E<del>0</del></em> 的时候，仍选择在 <em>Athena</em> 里面的数值，例如 <strong>Figure ,5.</strong> 中的 7,128.2 eV。</p>
+<!-- raw HTML omitted -->
+<h2 id="pre-edge-讨论以-k-edge-为主">
+  Pre-edge (讨论以 K-edge 为主)
+  <a class="heading-anchor" href="#pre-edge-%e8%ae%a8%e8%ae%ba%e4%bb%a5-k-edge-%e4%b8%ba%e4%b8%bb" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h2>
+<!-- raw HTML omitted -->
+<p>    Pre-edge常见于过渡金属XANES中，顾名思义发生在 &ldquo;<strong>edge</strong>&rdquo; 之前，在主要的跃迁中间有较小的峰。因为其形状不一，pre-edge 经常用作于指纹信息 (fingerprint information)，可以快速定性地判定物种信息。这是因为 <em>pre-edge</em> 的形成条件与 <em>d</em> 轨道结构紧密相关，而 <em>d</em> 轨道上通常又承载了价电子 (<a href="https://en.wikipedia.org/wiki/Valence_electron">valence electron</a>)、配位数 (<a href="https://en.wikipedia.org/wiki/Coordination_number">coordination number</a>)和几何结构（四面体、八面体等）之类的结构信息。</p>
+<p>    针对一个具有某种<strong>几何结构</strong>的<strong>某种元素</strong>化合物，在<strong>某种价态</strong>上会有<em>pre-edge</em> 特征峰。如果拿未知样品和已知样品的 XANES 特征（包含 <em>edge</em> 和 <em>pre-edge</em>）进行比较，可以大致得到一个定性的结论。</p>
+<!-- raw HTML omitted -->
+<p><a href="https://i.loli.net/2020/08/11/AVOQsUkGciMPxtJ.png" target="_blank">
+  <img src="https://i.loli.net/2020/08/11/AVOQsUkGciMPxtJ.png" alt="Cr_preedge.png" loading="lazy">
+</a></p>
+<p><strong>Figure 6.</strong> Cr K-edge XANES for Cr<del>2</del>O<del>3</del> (+3, octahedral CrO<del>6</del> geometry) and  K<del>2</del>Cr<del>2</del>O<del>7</del> (+6, tetrahedral CrO<del>4</del> geometry).</p>
+<!-- raw HTML omitted -->
+<h3 id="主要跃迁-edge-形成光谱选择规则允许">
+  主要跃迁 (<em>edge</em>) 形成：光谱选择规则允许
+  <a class="heading-anchor" href="#%e4%b8%bb%e8%a6%81%e8%b7%83%e8%bf%81-edge-%e5%bd%a2%e6%88%90%e5%85%89%e8%b0%b1%e9%80%89%e6%8b%a9%e8%a7%84%e5%88%99%e5%85%81%e8%ae%b8" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h3>
+<!-- raw HTML omitted -->
+<h4 id="deltal--1主要跃迁">
+  <em>$\Delta$l</em>= ± 1：主要跃迁
+  <a class="heading-anchor" href="#deltal--1%e4%b8%bb%e8%a6%81%e8%b7%83%e8%bf%81" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h4>
+<p>​    Pre-edge 的形成原因与原子能级之间的跃迁存在选择定则 (<a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/Electronic_Spectroscopy/Selection_Rules_for_Electronic_Spectra_of_Transition_Metal_Complexes">selection rule</a>) 有关。简单来说，光谱跃迁需要满足 $\Delta$<em>l</em>= ± 1 和 <em>$\Delta$j</em> = 0, ± 1 两个标准，尤其是前者。</p>
+<p>    这个要求是要求两个轨道的量子数相差为1。量子数也就是原子轨道：<em>s</em>, <em>p</em>, <em>d</em>, <em>f</em>, <em>g</em>&hellip;对应的量子数是 0, 1, 2, 3, 4, 5&hellip; 按照这样的规则，如果是在 <em>s</em> 轨道 (<em>l</em> = 0) 的电子只能去 <em>p</em> 轨道 (<em>l</em> = 1)；如果是 <em>p</em> 轨道的电子则可以去 <em>s</em> 或者 <em>d</em> 轨道 (<em>l</em> = 2)。</p>
+<p>​    这一个规则是决定了<strong>主要吸收</strong>，也就是XANES中的 <em>edge</em>。对 K-edge，是 1<em>s</em> 电子跃迁到有空余位置的 n<em>p</em> 轨道，比如 Fe K-edge (1<em>s</em> → 4<em>p</em>)、Mo K-edge (1<em>s</em> → 5<em>p</em>)。另一方面按照这样的规则 <em>s</em> 轨道电子到 <em>d</em> 轨道是<strong>不允许的</strong>。</p>
+<!-- raw HTML omitted -->
+<h4 id="部分跃迁-pre-edge-形成对称性允许和-p-d-杂化">
+  部分跃迁 (<em>pre-edge</em>) 形成：对称性允许和 <em>p</em>-<em>d</em> “杂化”
+  <a class="heading-anchor" href="#%e9%83%a8%e5%88%86%e8%b7%83%e8%bf%81-pre-edge-%e5%bd%a2%e6%88%90%e5%af%b9%e7%a7%b0%e6%80%a7%e5%85%81%e8%ae%b8%e5%92%8c-p-d-%e6%9d%82%e5%8c%96" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h4>
+<p>​    根据分子轨道理论 (<a href="https://en.wikipedia.org/wiki/Molecular_orbital_theory">molecular orbital theory</a>)，分子轨道是由原子轨道线性组合得到。如果发生跃迁，需要满足对称性一致的要求。为了成键，主要考虑 <em>s</em>, <em>p</em>, <em>d</em> 轨道。其中 <em>s</em> 轨道的对称性最高（球形），可以自由满足跟其他轨道的条件，不用考虑对称性限制。剩下的就是考虑 <em>p</em> 和 <em>d</em> 轨道。 为了方便解释这个问题，我们可以借用“<a href="%5Bhttps://zh.wikipedia.org/zh-hans/Sp%E6%9D%82%E5%8C%96%5D(https://zh.wikipedia.org/zh-hans/Sp%E6%9D%82%E5%8C%96)">杂化</a>”的概念来进一步描述 <em>T<del>d</del></em>, <em>O<del>h</del></em> 和 <em>D<del>4h</del></em> 对称的分子轨道结构。</p>
+<!-- raw HTML omitted -->
+<p>    具有 <em>T<del>d</del></em> 对称性的分子为对称四面体（参考 CH<del>4</del>）。<em>p<del>x,y,z</del></em> 和 <em>d<del>xy,xz,yz</del></em> 属于 <em>T<del>2</del></em> 不可约对称性。因为对称性匹配，<em>p</em> 和 <em>d</em> 轨道发生“杂化”，形成分子轨道。<strong>1<em>s</em> 电子在这样的条件下可以发生 electric quadrupole transition，跃迁到 <em>p-d</em> “杂化”轨道上</strong>。核心仍然是 1<em>s</em> 电子跃迁到 <em>p</em> 轨道上，但由于与 <em>d</em> 轨道“杂化”（通常是 <strong>(n-1) d</strong> 轨道），能量比”未杂化“轨道高，<em>pre-edge</em> 会出现在 <em>edge</em> 之前。</p>
+<p>​    具有 <em>O<del>h</del></em> 对称性的分子为对称八面体（参考 SF<del>6</del>）。<em>p<del>x,y,z</del></em> 和 <em>d<del>xy,xz,yz</del></em>  没有共同的对称性所以无法形成“杂化”，也就是说<strong>完全对称的六配位化合物没有 <em>pre-edge</em></strong>。</p>
+<p>    具有 <em>D<del>4h</del></em> 对称性的分子通常是平面四配位（参考 [Ni(CN)<del>4</del>]^2-^）。<em>p<del>x,y,z</del></em> 和 <em>d<del>xy,xz,yz</del></em> 同属于 <em>E<del>g</del></em> 不可约对称性。所以同样也允许 1<em>s</em> 电子跃迁到 <em>p-d</em> “杂化”轨道，也会有 <em>pre-edge</em>。</p>
+<p>​    在上述介绍中，特地强调了是“完全对称”配位构型。这是因为在变形八面体 (distorted octahedral) 中，<em>p-d</em> “杂化”依然可以发生，出现很小的 <em>pre-edge</em>。所以<strong>六配位 ≠ no pre-edge</strong>。对于其他构型也是如此：如果几何结构存在变形 (distortion)，<em>pre-edge</em> 会受到影响。</p>
+<p>    <strong>对称性不是唯一的影响因素</strong>，<strong>d 轨道电子数量</strong>同样可以影响 <em>pre-edge</em>。如果 3<em>d</em> 轨道在发生跃迁前已经部分被价层电子占满，即使有 <em>p-d</em> “杂化”轨道，1<em>s</em> 电子的跃迁会受到价电子的影响。<strong>内层电子被激发前价电子越多的元素，1<em>s</em> 电子到 <em>p-d</em> “杂化”轨道的概率越小，<em>pre-edge</em> 的强度越小。</strong> 半充满的电子结构同样会受到影响，例如 Fe^3+^ (3d^5^) 的XANES只有很小的 <em>pre-edge</em>，但是 Fe^6+^ (3d^0^) 有明显 <em>pre-edge</em>。</p>
+<!-- raw HTML omitted -->
+<p>    由于 <em>pre-edge</em> 的变化和形状实在太大且复杂，不会在这篇文章里面展开讲了。如果需要了解，从同一元素开始（比如自己手头上关心的实验数据）。<em>Pre-edge</em> 一大便利是可以直接观察，但常常会出现“比较得不够仔细”或者“比较错了对象”。如果要保证严格的论述，建议留心如下细节：
+       a. 判断未知样品的几何结构还有价态；
+       b.在做实验前，阅读文献了解相同元素的 XANES 是如何随着几何结构和价态改变的，观察标准样品的晶体结构确认一致性；
+       c. 根据上述两步得到的信息，准备标准样品并跟随未知样品一起去同步辐射实验室测试；
+       d. 得到数据后，先确认标准样品的 XANES 是否和文献中一致，再去跟未知样品比较，甚至是可以做 <a href="https://bruceravel.github.io/demeter/documents/Athena/examples/aucl.html#using-xanes-data-and-lcf-to-study-system-kinetics">Linear combination fittings</a>。</p>
+<p>    （对于像 Fe 这样烂大街的元素，XANES 分析一抓一大把。但是像 Ga 比较冷门的元素，做破头都不知道在干嘛）</p>
+<!-- raw HTML omitted -->
+<p><em>还有更多具体的跨元素例子和讨论，可以去参考一开始列出来的文献。</em></p>
+<!-- raw HTML omitted -->
+<pre><code>感谢你的阅读。
+</code></pre>
+
+      
+  <div class="post-tags">
+    <ul class="tag-list">
+        <li>
+          <a class="tag-chip tag-sm" href="/tags/terminology/">terminology</a>
+        </li>
+        <li>
+          <a class="tag-chip tag-sm" href="/tags/tutorial/">tutorial</a>
+        </li>
+        <li>
+          <a class="tag-chip tag-sm" href="/tags/xafs/">xafs</a>
+        </li>
+    </ul>
+  </div>
+
+    </article>
+  </div>
+  
+
+  </main>
+  <footer>
+    <p>My anger matters, so does yours.</p>
+<p style="font-size: 12px;">Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a
+        href="https://github.com/binbinsh/hugo-trainsh" target="_blank">trainsh</a></p>
+  </footer>
+  
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>你问我不一定答 | 第三期 | 两个圈 Two Circles</title>
+<script>
+(function() {
+  var s = localStorage.getItem('theme');
+  var m = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var t = s || (m ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+
+<link rel="stylesheet" href="/css/main.min.0677f7c8c7dea0ca8172cc72c1b76103dc0d451fc5eb5625b2194298e44c4127.css" integrity="sha256-Bnf3yMfeoMqBcsxywbdhA9wNRR/F61YlshlCmORMQSc=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+        <script src="/js/main.f2b85918d76ed992fd44333e06e475c6b58b77f6c86f2d9276db1056d86725c2.js" integrity="sha256-8rhZGNdu2ZL9RDM&#43;BuR1xrWLd/bIby2SdtsQVthnJcI=" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+  <header>
+    <div class="site-header">
+<div class="site-header__left">
+<a class="brand" href="/">两个圈 Two Circles</a>
+<button class="theme-toggle" type="button" aria-label="Toggle theme" data-theme-toggle>
+<svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" width="20" height="20">
+<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+<svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+<circle cx="12" cy="12" r="4"></circle>
+<path d="M12 2v2m0 16v2M22 12h-2M4 12H2m15.364 6.364-1.414-1.414M8.05 8.05 6.636 6.636m10.728 0L15.95 8.05M8.05 15.95 6.636 17.364"></path>
+</svg>
+</button>
+</div>
+<div class="site-header__right">
+<button class="nav-toggle" type="button" aria-controls="main-menu" aria-expanded="false" data-nav-toggle>Menu</button>
+
+  <nav id="main-menu" class="site-nav" data-nav aria-label="Primary">
+    <ul class="nav-list">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/archive/">Archive</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    <li>
+      <a href="/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+</div>
+</div>
+
+  </header>
+  <main>
+    
+  
+  
+  
+  
+  <article class="content">
+    <h1>你问我不一定答 | 第三期</h1>
+    <p class="post-meta"><time datetime="2020-09-15T22:25:04&#43;00:00">September 15, 2020</time></p>
+
+
+
+
+    <p>(6 min 34 s reading) 提问是越来越有意思了~</p>
+<!-- raw HTML omitted -->
+<p><strong>阅读提示1：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
+<p><strong>阅读提示2：问题来源于 B 站 or 微博，问题有可能被重新整理，先后顺序不代表任何重要程度，如果你的提问被收入但觉得不合适，请联系我。</strong></p>
+<hr>
+<blockquote>
+<p>Q21. 能用网上分享的 XAFS 数据来拟合吗？（包括 XANES 或者 EXAFS）</p>
+</blockquote>
+<p><strong>A21:</strong></p>
+<ol>
+<li><strong>不可以拿来做任何的拟合，包含但不限于：LCF、PCA、EXAFS 拟合（Artemis）等等</strong>；</li>
+<li>具体原因参考<a href="https://twocircles24.com/post/energy-calibration/">《能量校正 Calibration》</a>。</li>
+</ol>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Q22. 比较不同批次得到的实验数据，应该如何选择 Alignment vs. Calibration？</p>
+</blockquote>
+<p><strong>A22:</strong></p>
+<ol>
+<li>比较不同批次的数据先把Fe foil(各自reference)先校正好到7112 eV，把校正后的Fe foil放在一起比较是不是一致的。</li>
+<li>如果确认Fe foil两次实验都是一致的，开始比较样品。</li>
+<li>Calibration相当于是用绝对值（reference的E0）来调整样品的位置，Alignment是利用同一样品（可reference可未知样品）的图像来对齐。</li>
+<li>更多讨论参考<a href="https://twocircles24.com/post/energy-calibration/">《能量校正 Calibration》</a>。</li>
+</ol>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Q23. 有没有关于过渡元素E0与价态之间关系的理论或者计算方面的文献啊，能在文章里引用的那种？</p>
+</blockquote>
+<p><strong>A23:</strong></p>
+<p>总的来说没有一个review可以直接能套所有的E<del>0</del> vs. 价态讨论。你可以直接引比较新，高IF 跟你课题类似（同一元素）的文章。另外一种是可以按照同一元素来搜关键词，比如搜索 Fe XANES oxidation states，找两篇比较详细讨论你需要论点文章的来引用，不一定限于类似结构。因为元素与元素之间的 XANES 和其氧化态的关联是有差异的。XANES 的解读目前是极其复杂又不完善，所以很难有 comprehensive review 来引用。</p>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Q24. 在 XANES 一阶微分中出现了两个峰，第一个峰一定是 pre-edge 造成的吗？</p>
+</blockquote>
+<p><strong>A24:</strong></p>
+<p>确实不一定是，在<a href="https://www.bilibili.com/video/BV1yz411e7gu">《Athena新手教程 | 同步辐射吸收谱(XAS)数据处理》</a>有人提出来了自己的课题里面出现了混合物情况，里面的 A 组分和 B 组分各贡献了一个峰，所以最后还是选择了第一个峰作为 E<del>0</del>。这种情况完全有可能出现。
+其实除了混合物的情况会混淆 E<del>0</del> 的选择，我自己知道的还可能有metal-Cl 的键也会影响 edge 位置，还要再出一个“假 pre-edge peak”，某些元素不会很明显，有的就会比如 Pt。不过说到底对于 EXAFS来 说，先定一个再去 Artemis 里面看就是了，不行再换。</p>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Q25. 视频<a href="https://www.bilibili.com/video/BV1364y1F7tw?pop_share=1">《能量校正 Calibration》</a>中提到S的能量较弱，短时间内仪器的能量偏移较小，需要用Na2SO3进行校正.如果我同一批测得标准样品和未知样品，他们的能量偏移应该是一致的，我可不可以直接用他们来拟合价态？</p>
+</blockquote>
+<p><strong>A25:</strong></p>
+<ol>
+<li>大写的不可以。</li>
+<li>如果不进行能量校正，得到的 E<del>0</del> 值会跟其他文献里面的对不上号。比如大部分人汇报 Fe foil 是 7,112 eV，我不校正就是 7113.3 eV。那我发文章出去报后面这个数不是被公开处刑？</li>
+<li>LCF 拟合更多是看强度的吻合程度，在假定偏移程度一样的前提下，确实不校正可能对拟合的结果（主要是每个组份的比例）影响不大；但是你图偏移了，把它写成文章发出去遇到懂的审稿人不会被处刑？</li>
+</ol>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Q26.为啥需要拟合数据呢？比如我拿到一组数据，直接通过 Athena 统一标定后，输出结果，应该就可以了吧？ 那么后续用Artemis拟合图以及搜寻cif卡片参比的意义在哪里呢？</p>
+</blockquote>
+<p><strong>A26:</strong></p>
+<ol>
+<li>Artemis 的作用是为了得到邻近原子数量+距离，Athena得不到。如果你只是寻求 XANES 信息或仅仅展示数据，Athena 足矣。</li>
+</ol>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Q27. 一旦保存（save as）后就显示软件假死，无法操作，这是什么情况呢？</p>
+</blockquote>
+<p><strong>A27:</strong></p>
+<ol>
+<li>重开，重启，清caches，重装，少加两个数据，换版本。</li>
+</ol>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Q28. xafs中的论文大概有百分之九十的垃圾。</p>
+</blockquote>
+<p><strong>A28:</strong></p>
+<ol>
+<li>我个人觉得是看出于什么样的目的发表的吧。对于这种表征，质量好的文章更多常见在小期刊上面，像 JPCC。要发IF高的刊物，表征只是一个必要不充分条件，讲的故事才是核心。但是站在不了解内情的局外人来看，以为表征是充分必要的，再加上学习成本较高，导致误解越来越深，越来越多的人对技术展开了盲目的追求。</li>
+</ol>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Q29. 对于单原子催化剂要通过建模得到原子坐标等数据来得到inp文件。有很多单原子催化剂给出R空间拟合数据之后都会给出催化剂的球棍模型，而这个球棍模型大多是平面的，但是张三自己作图的时候边缘不可避免的会自动加入氢原子而保证碳四键，最后得到就是非平面的，不知道 x 教授是如何操作的？请问如何得到平面的构型？我用chemdraw画的，有没有容易上手的软件推荐一下来得到单原子的inp。</p>
+</blockquote>
+<p><strong>A29:</strong></p>
+<ol>
+<li>单原子催化剂 EXAFS 拟合不需要建模拟合，借鉴现有的分子晶体结构就行；.</li>
+<li>催化剂球棍模型是通过其他拟合计算得到的，EXAFS 的拟合数据 R 只是辅助说明理论计算和EXAFS证据是相互吻合的；</li>
+<li>单原子结构比如 Fe-N4 @ C 在 graphite 上面结构，一般是从 pure graphite 改过来的，从零开始画肯定难；3. ChemDraw 可以画，应该需要 disable 掉某些自动功能；</li>
+<li>如果画 3D，我反而推荐用 xyz 文件去 Vesta 画。</li>
+</ol>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Q30. 张三根据教程对数据进行了分析，得到的结果是接近绿色的，但是其中s0的平方和N都是负数，其他的一些数据满足您讲的条件，请问这样的数据配位数N可以取绝对值来使用嘛？如果不行，我需要调什么参数呢。</p>
+</blockquote>
+<p><strong>A30:</strong></p>
+<ol>
+<li>不可以，绿色只是代表你出来的线符合实验数据，但是并不说明每个参数有意义。所以绿色 ≠ 好 fitting；</li>
+<li>你可以尝试固定 S<del>0</del>^2^ 或者是 N 为正数里面一个合理的数值再看另外一个拟合得到的结果；</li>
+<li>关于变量调整相关视频，请参考<a href="https://www.bilibili.com/video/BV1Mk4y1B7Vz">《从EXAFS方程讨论拟合变量》</a>。</li>
+</ol>
+<!-- raw HTML omitted -->
+<pre><code>感谢你的阅读。
+</code></pre>
+
+    
+  <div class="post-tags">
+    <ul class="tag-list">
+        <li>
+          <a class="tag-chip tag-sm" href="/tags/qa/">q&amp;a</a>
+        </li>
+        <li>
+          <a class="tag-chip tag-sm" href="/tags/xafs/">xafs</a>
+        </li>
+    </ul>
+  </div>
+
+  </article>
+  
+
+  </main>
+  <footer>
+    <p>My anger matters, so does yours.</p>
+<p style="font-size: 12px;">Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a
+        href="https://github.com/binbinsh/hugo-trainsh" target="_blank">trainsh</a></p>
+  </footer>
+  
+</body>
+</html>

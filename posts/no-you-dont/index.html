@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>做单原子催化需要懂 XAS 吗？ | 两个圈 Two Circles</title>
+<script>
+(function() {
+  var s = localStorage.getItem('theme');
+  var m = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var t = s || (m ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+
+<link rel="stylesheet" href="/css/main.min.0677f7c8c7dea0ca8172cc72c1b76103dc0d451fc5eb5625b2194298e44c4127.css" integrity="sha256-Bnf3yMfeoMqBcsxywbdhA9wNRR/F61YlshlCmORMQSc=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+        <script src="/js/main.f2b85918d76ed992fd44333e06e475c6b58b77f6c86f2d9276db1056d86725c2.js" integrity="sha256-8rhZGNdu2ZL9RDM&#43;BuR1xrWLd/bIby2SdtsQVthnJcI=" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+  <header>
+    <div class="site-header">
+<div class="site-header__left">
+<a class="brand" href="/">两个圈 Two Circles</a>
+<button class="theme-toggle" type="button" aria-label="Toggle theme" data-theme-toggle>
+<svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" width="20" height="20">
+<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+<svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+<circle cx="12" cy="12" r="4"></circle>
+<path d="M12 2v2m0 16v2M22 12h-2M4 12H2m15.364 6.364-1.414-1.414M8.05 8.05 6.636 6.636m10.728 0L15.95 8.05M8.05 15.95 6.636 17.364"></path>
+</svg>
+</button>
+</div>
+<div class="site-header__right">
+<button class="nav-toggle" type="button" aria-controls="main-menu" aria-expanded="false" data-nav-toggle>Menu</button>
+
+  <nav id="main-menu" class="site-nav" data-nav aria-label="Primary">
+    <ul class="nav-list">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/archive/">Archive</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    <li>
+      <a href="/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+</div>
+</div>
+
+  </header>
+  <main>
+    
+  
+  
+  
+  
+  <article class="content">
+    <h1>做单原子催化需要懂 XAS 吗？</h1>
+    <p class="post-meta"><time datetime="2022-02-17T08:23:05&#43;00:00">February 17, 2022</time></p>
+
+
+
+
+    <p>(6 min reading) 你猜到底懂不懂。</p>
+<p>为什么写这篇文章呢？ 当然不是因为我今天没吃到炸鸡。只是很单纯地看到一篇国内商业机时机构的推广文章，题目是「<a href="https://mp.weixin.qq.com/s/ExQlvc-HAB2hbip1lX57-A">8篇JACS！做单原子催化，你需要懂一点同步辐射XAS！</a>」。我看了心里一想，做单原子催化的，有懂那么一点同步辐射 XAS 吗？为一探究竟，决定拜读这里面 8 篇 JACS 文章。先说明这个机构跟我没有关系，我对这 8 篇文章也没什么利益关联。仅仅是今天天气不好，然后我看到了这篇推广而已。 以下是我的读后感。</p>
+<ol>
+<li><a href="https://pubs.acs.org/doi/10.1021/jacs.0c04231">Dynamic Evolution of Solid−Liquid Electrochemical Interfaces over Single-Atom Active Sites</a></li>
+</ol>
+<p>Figure S7 和 S12：用的 q 空间来代表拟合结果，有误导嫌疑</p>
+<p><a href="https://s2.loli.net/2022/02/18/fEhzXGHdjqDNunC.png" target="_blank">
+  <img src="https://s2.loli.net/2022/02/18/fEhzXGHdjqDNunC.png" alt="Untitled.png" loading="lazy">
+</a></p>
+<p>(Figure S12)</p>
+<p>Table S1 两条 path 只相差了 0.05 Å 还能有这么小的不确定值？这真的是在做传说中 10 - 15% 不确定值的 EXAFS 拟合吗？</p>
+<p><a href="https://s2.loli.net/2022/02/18/aygouP65VwX1ZEp.png" target="_blank">
+  <img src="https://s2.loli.net/2022/02/18/aygouP65VwX1ZEp.png" alt="Untitled 1.png" loading="lazy">
+</a></p>
+<ol start="2">
+<li><a href="https://pubs.acs.org/doi/10.1021/jacs.9b13865">Isolated Indium Hydrides in CHA Zeolites: Speciation and Catalysis for Nonoxidative Dehydrogenation of Ethane</a></li>
+</ol>
+<p>这篇文章对 XAS 的使用让我有点不知道从哪里评价起来。明明是 In 催化剂，做的是 In K-edge，但处处用 Ga K-edge 结论来做类比。然而很不幸的是 Ga K-edge XANES 可能是元素周期表里面最不按套路出牌的元素，做 Ga XAS 的这一帮人至今都没搞懂谁跟谁。这篇文章对 Ga XAS 有争议的解读总结反而是意外的精炼准确，但这到自己研究的 In 催化剂的时候什么结论都没有。我不知道为什么 XAS 还能在正文里面有一席之地，这到底是在做 In 催化剂的文章还是 Ga 催化剂。这篇文章连拟合都没有，为什么要用 EXAFS？</p>
+<p><a href="https://s2.loli.net/2022/02/18/s9AHwhoTUDxz4mj.png" target="_blank">
+  <img src="https://s2.loli.net/2022/02/18/s9AHwhoTUDxz4mj.png" alt="Untitled 2.png" loading="lazy">
+</a></p>
+<p>(Figure 4)</p>
+<ol start="3">
+<li><a href="https://pubs.acs.org/doi/10.1021/ja401847c">CO Oxidation on Supported Single Pt Atoms: Experimental and ab Initio Density Functional Studies of CO Interaction with Pt Atom on θ-Al2O3(010) Surface</a></li>
+</ol>
+<p>Table 3 里面 EXAFS 拟合 ∆E0 能有 17,18 eV 也是让我搞不清楚我和作者到底是谁没学过 XAS。</p>
+<p><a href="https://s2.loli.net/2022/02/18/PQgkD4mV5jIyA8T.png" target="_blank">
+  <img src="https://s2.loli.net/2022/02/18/PQgkD4mV5jIyA8T.png" alt="Untitled 3.png" loading="lazy">
+</a></p>
+<ol start="4">
+<li><a href="https://pubs.acs.org/doi/10.1021/jacs.6b06819">Kinetic Studies of the Pt Carbonate-Mediated, Room-Temperature Oxidation of Carbon Monoxide by Oxygen over Pt/Al2O3 Using Combined, Time-Resolved XAFS, DRIFTS, and Mass Spectrometry</a></li>
+</ol>
+<p>这篇文章里面除了用到 Pt XANES 做氧化态解释外没有其他任何 XAS 相关了，虽然写了 EXAFS 处理但也没看到 EXAFS 数据来着。就算是 XANES，这里面不仅峰高变了，而且白线峰位置变了，这也能用来讲氧化态的吗？</p>
+<p><a href="https://s2.loli.net/2022/02/18/q84YFAOTnobzgJX.png" target="_blank">
+  <img src="https://s2.loli.net/2022/02/18/q84YFAOTnobzgJX.png" alt="Untitled 4.png" loading="lazy">
+</a></p>
+<p>（Figure 2）</p>
+<ol start="5">
+<li><a href="https://pubs.acs.org/doi/10.1021/jacs.1c11331">Altering Ligand Fields in Single-Atom Sites through Second-Shell Anion Modulation Boosts the Oxygen Reduction Reaction</a></li>
+</ol>
+<p>啪，用 XAS，然后一看 EXAFS 图，也就看一图了，数据拟合不做就开始比划下结论了。要是 EXAFS 这么简单，我两年就能毕业了。</p>
+<ol start="6">
+<li><a href="https://pubs.acs.org/doi/10.1021/jacs.1c03788">Dynamic Behavior of Single-Atom Catalysts in Electrocatalysis: Identification of Cu-N3 as an Active Site for the Oxygen Reduction Reaction</a></li>
+</ol>
+<p>硬夸的话还得表扬下能把 k 空间放出来，但这一看到 Table 的拟合数据范围是 1 到 1.9 Å，这就有点尴尬了。为了做到 R-factor 到 0.01%，大家可真的是很努力的在精准掐点拟合范围而不是思考下怎么做个像样点的合成，不至于在做拟合的时候如此自己折磨自己。还有这一排排的 XANES 拟合，图N 乐。（有一说一，这篇文章是这八篇文章里面的高子了，我真的努力过）</p>
+<p><a href="https://s2.loli.net/2022/02/18/bzxwFrUGcjPEARp.png" target="_blank">
+  <img src="https://s2.loli.net/2022/02/18/bzxwFrUGcjPEARp.png" alt="Untitled 5.png" loading="lazy">
+</a></p>
+<p><a href="https://s2.loli.net/2022/02/18/rRQyuDVlU3jSInA.png" target="_blank">
+  <img src="https://s2.loli.net/2022/02/18/rRQyuDVlU3jSInA.png" alt="Untitled 6.png" loading="lazy">
+</a></p>
+<p><a href="https://s2.loli.net/2022/02/18/PUzLWxTJfv63rtM.png" target="_blank">
+  <img src="https://s2.loli.net/2022/02/18/PUzLWxTJfv63rtM.png" alt="Untitled 7.png" loading="lazy">
+</a></p>
+<ol start="7">
+<li><a href="https://pubs.acs.org/doi/10.1021/jacs.8b05378">Highly Productive Propane Dehydrogenation Catalyst Using Silica-Supported Ga–Pt Nanoparticles Generated from Single-Sites</a></li>
+</ol>
+<p>鉴于立场上跟这篇文章里面的团队有对立因素存在，我不想说文章本身了，就讲个无关的事情。微博大 V 林瘦猫（现上海科技大学助理教授）的博后导师是这篇文章的通讯作者，我觉得网上冲浪时不时能给我一些我不想要的惊喜，比如 mansplaining。当然，这个言论和这篇文章有什么关系吗？当然没有，我只是思维发散而已，我希望你不要学我这点。</p>
+<p><a href="https://s2.loli.net/2022/02/18/JbFLirNAP3yfMWe.png" target="_blank">
+  <img src="https://s2.loli.net/2022/02/18/JbFLirNAP3yfMWe.png" alt="Untitled 8.png" loading="lazy">
+</a></p>
+<ol start="8">
+<li><a href="https://pubs.acs.org/doi/10.1021/jacs.1c12117">Leveraging Chiral Zr(IV)-Based Metal–Organic Frameworks To Elucidate Catalytically Active Rh Species in Asymmetric Hydrogenation Reactions</a></li>
+</ol>
+<p>这篇文章画了自己做拟合的图，但又不给拟合出来的数据，完了只在文章里面说了句：</p>
+<blockquote>
+<p>The experimental EXAFS spectra obtained from the recovered sample are nearly identical to that of the pristine one (Figure S14), illustrating that the coordination environment of Rh is maintained throughout the catalytic reaction.</p>
+</blockquote>
+<p>补充下正经 XAS 的基本知识，比例低的组分在 XAS 中是看不出来的。如果有 10% 的金属位点改变了， XAS 可以完全没有变化。这是非常典型的错误用法。</p>
+<p><a href="https://s2.loli.net/2022/02/18/YWSuZ3k2CjsP9Gw.png" target="_blank">
+  <img src="https://s2.loli.net/2022/02/18/YWSuZ3k2CjsP9Gw.png" alt="Untitled 9.png" loading="lazy">
+</a></p>
+<hr>
+<p>结论：做单原子催化一点同步辐射 XAS 都不需要懂。</p>
+<p>不严谨结论：做商业机时一点同步辐射 XAS 也不需要懂。</p>
+<p>给大家拜个晚年呢。</p>
+
+    
+  <div class="post-tags">
+    <ul class="tag-list">
+        <li>
+          <a class="tag-chip tag-sm" href="/tags/xafs/">xafs</a>
+        </li>
+        <li>
+          <a class="tag-chip tag-sm" href="/tags/%E8%BF%B7%E6%83%91/">迷惑</a>
+        </li>
+    </ul>
+  </div>
+
+  </article>
+  
+
+  </main>
+  <footer>
+    <p>My anger matters, so does yours.</p>
+<p style="font-size: 12px;">Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a
+        href="https://github.com/binbinsh/hugo-trainsh" target="_blank">trainsh</a></p>
+  </footer>
+  
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading on 两个圈 Two Circles</title>
+    <link>http://localhost:1313/tags/reading/</link>
+    <description>Recent content in Reading on 两个圈 Two Circles</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Aug 2020 12:18:10 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/reading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安利一些XAFS读物</title>
+      <link>http://localhost:1313/posts/xafs-reading/</link>
+      <pubDate>Sat, 01 Aug 2020 12:18:10 +0000</pubDate>
+      <guid>http://localhost:1313/posts/xafs-reading/</guid>
+      <description>&lt;p&gt;(2 min 56 s reading) There is a high learning curve for XAFS technique, be patient.&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;由于我自己在外面读书，接触到的中文教材不多，大部分推荐的都是英文读物。请不必太过害怕阅读英文教材，作者们的讲得真的很透彻。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;&lt;strong&gt;阅读提醒：对书籍和文章的评价仅代表我个人的看法， 属于安利向，没有网盘。&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;讲义-computer&#34;&gt;&#xA;  讲义 :computer:&#xA;  &lt;a class=&#34;heading-anchor&#34; href=&#34;#%e8%ae%b2%e4%b9%89-computer&#34; aria-label=&#34;Link to this section&#34;&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to this section&lt;/span&gt;&#xA;    &lt;span aria-hidden=&#34;true&#34;&gt;#&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;目前觉得比较系统还比较新的就是北京同步辐射的课件了，&lt;a href=&#34;http://bsrf.ihep.cas.cn/hezuojiaoliu/jiangxiban/201412/t20141207_4270844.html&#34;&gt;链接在这里&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;书籍-books&#34;&gt;&#xA;  书籍 :books:&#xA;  &lt;a class=&#34;heading-anchor&#34; href=&#34;#%e4%b9%a6%e7%b1%8d-books&#34; aria-label=&#34;Link to this section&#34;&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to this section&lt;/span&gt;&#xA;    &lt;span aria-hidden=&#34;true&#34;&gt;#&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.amazon.com/XAFS-Everyone-Scott-Calvin/dp/1439878633&#34;&gt;XAFS for Everyone&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;    居家必备，从实验准备到数据处理，一步到位。画风卡通，内容深入浅出。如果你的课题组只需要一本参考书，这本可以有。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

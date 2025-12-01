@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>肝 XAFS 实验的小细节 | Podcast Ep. 3 | 两个圈 Two Circles</title>
+<script>
+(function() {
+  var s = localStorage.getItem('theme');
+  var m = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var t = s || (m ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+
+<link rel="stylesheet" href="/css/main.min.0677f7c8c7dea0ca8172cc72c1b76103dc0d451fc5eb5625b2194298e44c4127.css" integrity="sha256-Bnf3yMfeoMqBcsxywbdhA9wNRR/F61YlshlCmORMQSc=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+        <script src="/js/main.f2b85918d76ed992fd44333e06e475c6b58b77f6c86f2d9276db1056d86725c2.js" integrity="sha256-8rhZGNdu2ZL9RDM&#43;BuR1xrWLd/bIby2SdtsQVthnJcI=" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+  <header>
+    <div class="site-header">
+<div class="site-header__left">
+<a class="brand" href="/">两个圈 Two Circles</a>
+<button class="theme-toggle" type="button" aria-label="Toggle theme" data-theme-toggle>
+<svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" width="20" height="20">
+<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+<svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+<circle cx="12" cy="12" r="4"></circle>
+<path d="M12 2v2m0 16v2M22 12h-2M4 12H2m15.364 6.364-1.414-1.414M8.05 8.05 6.636 6.636m10.728 0L15.95 8.05M8.05 15.95 6.636 17.364"></path>
+</svg>
+</button>
+</div>
+<div class="site-header__right">
+<button class="nav-toggle" type="button" aria-controls="main-menu" aria-expanded="false" data-nav-toggle>Menu</button>
+
+  <nav id="main-menu" class="site-nav" data-nav aria-label="Primary">
+    <ul class="nav-list">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/archive/">Archive</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    <li>
+      <a href="/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+</div>
+</div>
+
+  </header>
+  <main>
+    
+  
+  
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+  
+  <div class="page-with-toc">
+    <aside class="toc-sidebar" aria-label="Contents">
+  <nav class="toc-nav">
+    <h2>Contents</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#保持通讯畅通">保持通讯畅通</a></li>
+    <li><a href="#认真看待睡眠">认真看待睡眠</a></li>
+    <li><a href="#吃好喝好">吃好喝好</a></li>
+    <li><a href="#记录实验和拷贝数据">记录实验和拷贝数据</a></li>
+    <li><a href="#粗略的处理数据">粗略的处理数据</a></li>
+    <li><a href="#记录实验操作步骤">记录实验操作步骤</a></li>
+    <li><a href="#多问问题问思考过的问题">多问问题，问思考过的问题</a></li>
+    <li><a href="#相互帮助">相互帮助</a></li>
+    <li><a href="#不要看xas的理论知识">不要看XAS的理论知识</a></li>
+    <li><a href="#深呼吸暂停一下">深呼吸，暂停一下</a></li>
+    <li><a href="#更多阅读">更多阅读</a></li>
+  </ul>
+</nav>
+  </nav>
+  </aside>
+
+
+
+
+    <article class="content">
+      <h1>肝 XAFS 实验的小细节 | Podcast Ep. 3</h1>
+      <p class="post-meta"><time datetime="2020-08-30T21:46:12&#43;00:00">August 30, 2020</time></p>
+
+
+
+
+
+      <details class="toc-dropdown">
+  <summary>Contents</summary>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#保持通讯畅通">保持通讯畅通</a></li>
+    <li><a href="#认真看待睡眠">认真看待睡眠</a></li>
+    <li><a href="#吃好喝好">吃好喝好</a></li>
+    <li><a href="#记录实验和拷贝数据">记录实验和拷贝数据</a></li>
+    <li><a href="#粗略的处理数据">粗略的处理数据</a></li>
+    <li><a href="#记录实验操作步骤">记录实验操作步骤</a></li>
+    <li><a href="#多问问题问思考过的问题">多问问题，问思考过的问题</a></li>
+    <li><a href="#相互帮助">相互帮助</a></li>
+    <li><a href="#不要看xas的理论知识">不要看XAS的理论知识</a></li>
+    <li><a href="#深呼吸暂停一下">深呼吸，暂停一下</a></li>
+    <li><a href="#更多阅读">更多阅读</a></li>
+  </ul>
+</nav>
+</details>
+
+
+
+
+      <p>(8 min 27 s reading) 爱惜身体，爆肝做实验不可取。</p>
+<!-- raw HTML omitted -->
+<p><strong>阅读提示1：该文是<a href="https://www.bilibili.com/audio/au1818517">B站音频</a>的文字版本，内容会有少量出入。</strong></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="保持通讯畅通">
+  保持通讯畅通
+  <a class="heading-anchor" href="#%e4%bf%9d%e6%8c%81%e9%80%9a%e8%ae%af%e7%95%85%e9%80%9a" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h2>
+<p>    出门在外，<strong>安全第一</strong>。保持通讯畅通能够让同行人随时掌握情况，一旦有任何意外情况可以第一时间发现。另一方面，在需要同事远程帮忙的时候可以及时解决。同步辐射实验室对手机信号的屏蔽比较厉害，建议使用网络通讯软件，比如微信、WhatsApp 等等。在醒目的地方留下你的手机联系方式还有暂住的酒店地址。</p>
+<!-- raw HTML omitted -->
+<h2 id="认真看待睡眠">
+  认真看待睡眠
+  <a class="heading-anchor" href="#%e8%ae%a4%e7%9c%9f%e7%9c%8b%e5%be%85%e7%9d%a1%e7%9c%a0" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h2>
+<p>    同步辐射相关实验常常是 24 小时营业，作息跟在自家学校的很不一样。熬夜的危害包含但不限于身体健康还有心理压力，更要命的是，缺乏休息会让人反应力降低。即使努力打起精神实验也会越做越差，最后心态崩溃。</p>
+<p>    在提刀熬夜之前，要先问问自己是不是那种“可以肝”的人？不得不承认有一部分人是无法熬夜的，如果被强迫，效果只会适得其反。当确认自己无法完成任务的时候，就平静地放弃吧。这类实验更多的是靠自我驱使完成的。<strong>不要害怕放弃，身体才是革命的本钱</strong>，离开了这门技术依然可以活得很精彩。</p>
+<p>    一旦确定可以“肝”，我们也要尽可能控制住熬夜带来的危害。最重要的是要判断“什么时候不能再继续熬夜”了，这种判断就像是“喝醉的人说自己没喝醉，没喝醉的人已经说喝醉了”。在做实验的过程中，我们就要做那个“没喝醉的人”，比如发现自己装样品老装不进去、软件操作开始出低级错误、头晕等等。<strong>逞强是摧毁实验的一大因素</strong>，不要把自己压迫到极限，后续的身体伤害实在太大。</p>
+<p>    睡觉也是可以是调整心态的一种方式。做实验上头是经常的事情，我自己遭遇大半夜 beam 直接崩掉，还有什么老鼠跑进了 spear ring 里面。没经验的时候老想着是不是再等十分钟光就能回来继续做实验了，结果快等到快天亮的时候才修好。这种时间拿去睡觉不好吗？偶尔还有玄学事件发生，大晚上仪器崩掉了第二天醒来就自己恢复了。人得到了休息之后再静下心来思考解决对策，比困得睁不开眼睛脑子一团浆糊要好得多。</p>
+<p>    如果你跟同事一起做实验，恭喜你可以跟他们轮班了。如果是晚班，白天就不要瞎溜达了，好好休息。如果你一个人 solo 实验，对自己睡眠的控制需要更加小心。根据实验天数来考虑睡眠时间，牺牲部分实验时间是注定的，不要觉得可惜就不睡觉伤害自己。</p>
+<!-- raw HTML omitted -->
+<h2 id="吃好喝好">
+  吃好喝好
+  <a class="heading-anchor" href="#%e5%90%83%e5%a5%bd%e5%96%9d%e5%a5%bd" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h2>
+<p>    饮食方面几乎可以照抄健身食谱了：<strong>多蛋白、摄入低 GI 碳水，多喝水；少油腻，少糖，少精致碳水</strong>。这是因为蛋白质和低 GI 碳水的食物释放能量比较持久且不会段时间大幅度提高血糖水平，可以持续平衡功能。另一方面熬夜对肌肉的消耗速度极快，补充蛋白质也能小小地弥补下。</p>
+<p>    为了能长时间保持清醒，需要保持一点点饥饿感。好多人想着能出去吃的可以报销，就大鱼大肉操办起来了。但是一吃什么牛油火锅 + 米饭，直接分分钟就要迷糊过去了。我自己出差的时候，通常是买蛋白零食，像是蛋白棒还有蛋白饮料，喝一瓶基本上可以抵过大半天。点外卖就会选择味道比较清淡酸甜，有优质肉类的，最好是冷食。之所以说是冷食，是因为实验的事情一来就得先去解决问题，并不能保证饭能到了就能吃。也可能吃到一半去做实验，这个时候冷食就不存在还要加热的问题了。<a href="https://en.wikipedia.org/wiki/Poke_(Hawaiian_dish)">Poke Bowl</a> 就是我的最爱了，把里面的sushi rice 换成 brown rice 吃一碗可以抵一晚上工作。</p>
+<!-- raw HTML omitted -->
+<h2 id="记录实验和拷贝数据">
+  记录实验和拷贝数据
+  <a class="heading-anchor" href="#%e8%ae%b0%e5%bd%95%e5%ae%9e%e9%aa%8c%e5%92%8c%e6%8b%b7%e8%b4%9d%e6%95%b0%e6%8d%ae" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h2>
+<p>    不仅仅是使用实验记录本，灵活运用拍照和音频可以留存更多的实验细节。记录下时间戳 (time stamp) 能在你忘记记录实验信息后帮你回忆当时的情景。尤其是 in-situ 实验，有的可以 1 分钟内出来好几张图，根本来不及一一记录。利用手机把这些细节随时随地记录下来，等稍微闲点再把文字记录补上。</p>
+<p>    备份数据建议 U 盘一份，电脑本地一份，网盘一份。频率可以考虑一轮实验之后转移，或者是一天实验结束后。这样可以动态地保护数据，不要等到最后一天再来保存数据。丢失了数据空手回家真的是惨又麻烦的一件事。</p>
+<!-- raw HTML omitted -->
+<h2 id="粗略的处理数据">
+  粗略的处理数据
+  <a class="heading-anchor" href="#%e7%b2%97%e7%95%a5%e7%9a%84%e5%a4%84%e7%90%86%e6%95%b0%e6%8d%ae" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h2>
+<p>    在 Athena 用熟了看一张图不会超过 2 分钟。但是这两分钟能告诉你这图质量行不行，够不够用在 Artemis 里面。当发现数据有问题。可以立刻再重新规划做样品。如果只是为了完成任务而完成，那么回去了发现数据不能用或者是有问题的话，下一次实验又遥遥无期，那不得哭死。</p>
+<p>     不要对自己的数据自信过头的，翻车的不在少数。</p>
+<!-- raw HTML omitted -->
+<h2 id="记录实验操作步骤">
+  记录实验操作步骤
+  <a class="heading-anchor" href="#%e8%ae%b0%e5%bd%95%e5%ae%9e%e9%aa%8c%e6%93%8d%e4%bd%9c%e6%ad%a5%e9%aa%a4" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h2>
+<p>    因为涉及到复杂操作，实验做起来时间可能就几天，但是下次做可能是几个月后了。每一步是怎么装样品的，怎么调试参数，怎么跟工作人员打交道的都要记录下来。中间偶尔会有 trouble shooting 操作，今天遇到的可能下次遇到。麻烦人家一次就不要麻烦第二次了。<strong>不要相信自己的记忆力</strong>。</p>
+<p>    把实验细节记录下来，下次再来做类似的实验上手会更快。XAS 实验就是吃经验这碗饭，你对细节的积累就是从菜鸟转变成大佬的关键因素。我自己甚至是会把 sample holder 的图纸都画好备一份以防需要换材料重做。</p>
+<!-- raw HTML omitted -->
+<h2 id="多问问题问思考过的问题">
+  多问问题，问思考过的问题
+  <a class="heading-anchor" href="#%e5%a4%9a%e9%97%ae%e9%97%ae%e9%a2%98%e9%97%ae%e6%80%9d%e8%80%83%e8%bf%87%e7%9a%84%e9%97%ae%e9%a2%98" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h2>
+<p>    学到新知识都是靠有问题问出来的。有时候非母语的学生有点害怕或者是害羞。但是不问就没机会学，没机会学到了大半夜实验仪器出现问题不会修，就只有浪费机时了。<strong>一个有经验的 XAS 选手 = 贼会修 beam or 知道找谁来修</strong>。在实验室里面的工作人员大多人美心善，我问一些很弱智的问题他们都能讲的深入浅出，从物理讲到机械，从自动化到算法，实在是大开眼界。</p>
+<p>    问思考过的问题。“助人者自助”，寻求帮助是基于尊重，真诚和同理。先花时间尝试解决再去问其他人，这是有诚意的。不动脑子是不会有人来帮助的。</p>
+<!-- raw HTML omitted -->
+<h2 id="相互帮助">
+  相互帮助
+  <a class="heading-anchor" href="#%e7%9b%b8%e4%ba%92%e5%b8%ae%e5%8a%a9" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h2>
+<p>    在实验室蹲过的多多少少都是有经验，也比较清楚到底有多少问题。如果你真的遇到麻烦，尤其是在深夜里面，很可能他们是你唯一可以帮忙的人了。若是其他人遇到了问题也不要甩脸色只顾自己的，毕竟大半夜谁都不愿意看到实验出现问题，你在帮助他人的同时也可以了解其他人的课题。我见过靠这样的方式认识人找到合作者一起发文章，甚至是找到了工作。你也可以搭把手给staff，这样的话就可以学习实际操作经验。</p>
+<!-- raw HTML omitted -->
+<h2 id="不要看xas的理论知识">
+  不要看XAS的理论知识
+  <a class="heading-anchor" href="#%e4%b8%8d%e8%a6%81%e7%9c%8bxas%e7%9a%84%e7%90%86%e8%ae%ba%e7%9f%a5%e8%af%86" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h2>
+<p>    没用的，不要自欺欺人，越看越容易睡觉。在这么紧张的实验里，老老实实是把数据拿到才是王道。理论知识离实际操作太远，在正确的时间做正确的事情。看看 Jojo 不香吗？</p>
+<!-- raw HTML omitted -->
+<h2 id="深呼吸暂停一下">
+  深呼吸，暂停一下
+  <a class="heading-anchor" href="#%e6%b7%b1%e5%91%bc%e5%90%b8%e6%9a%82%e5%81%9c%e4%b8%80%e4%b8%8b" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h2>
+<p>    实验再紧张，也要给自己一点缓冲空间。尤其是在做操作难度大的实验时，先问问自己心跳有没有过快、手抖不抖、脑子够清醒不。如果答案是“不”，出去吹吹风再回来问问自己。还不行就回去睡觉。</p>
+<p>    有时候心里面着急想做好实验，结果事与愿违，陷入恶性循环。学会如何把自己从恶性循环的泥潭中拽出来，是一名成熟的 senior graduate student 的标志之一。缓冲也许只要五分钟，但搞砸实验可能两个小时都挽回不了，实在是不值 。</p>
+<!-- raw HTML omitted -->
+<h2 id="更多阅读">
+  更多阅读
+  <a class="heading-anchor" href="#%e6%9b%b4%e5%a4%9a%e9%98%85%e8%af%bb" aria-label="Link to this section">
+    <span class="sr-only">Link to this section</span>
+    <span aria-hidden="true">#</span>
+  </a>
+</h2>
+<ul>
+<li>丁香医生：<a href="https://dxy.com/column/331">警惕熬夜对身体的危害</a></li>
+<li>丁香医生：<a href="https://mp.weixin.qq.com/s/EpuDgNVa-kDdo5Sp73coWw">经常熬夜记性会变差，真的</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<pre><code>感谢你的阅读。
+</code></pre>
+
+      
+  <div class="post-tags">
+    <ul class="tag-list">
+        <li>
+          <a class="tag-chip tag-sm" href="/tags/podcast/">podcast</a>
+        </li>
+    </ul>
+  </div>
+
+    </article>
+  </div>
+  
+
+  </main>
+  <footer>
+    <p>My anger matters, so does yours.</p>
+<p style="font-size: 12px;">Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a
+        href="https://github.com/binbinsh/hugo-trainsh" target="_blank">trainsh</a></p>
+  </footer>
+  
+</body>
+</html>

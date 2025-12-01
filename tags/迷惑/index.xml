@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>迷惑 on 两个圈 Two Circles</title>
+    <link>http://localhost:1313/tags/%E8%BF%B7%E6%83%91/</link>
+    <description>Recent content in 迷惑 on 两个圈 Two Circles</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Feb 2022 08:23:05 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%BF%B7%E6%83%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>做单原子催化需要懂 XAS 吗？</title>
+      <link>http://localhost:1313/posts/no-you-dont/</link>
+      <pubDate>Thu, 17 Feb 2022 08:23:05 +0000</pubDate>
+      <guid>http://localhost:1313/posts/no-you-dont/</guid>
+      <description>&lt;p&gt;(6 min reading) 你猜到底懂不懂。&lt;/p&gt;&#xA;&lt;p&gt;为什么写这篇文章呢？ 当然不是因为我今天没吃到炸鸡。只是很单纯地看到一篇国内商业机时机构的推广文章，题目是「&lt;a href=&#34;https://mp.weixin.qq.com/s/ExQlvc-HAB2hbip1lX57-A&#34;&gt;8篇JACS！做单原子催化，你需要懂一点同步辐射XAS！&lt;/a&gt;」。我看了心里一想，做单原子催化的，有懂那么一点同步辐射 XAS 吗？为一探究竟，决定拜读这里面 8 篇 JACS 文章。先说明这个机构跟我没有关系，我对这 8 篇文章也没什么利益关联。仅仅是今天天气不好，然后我看到了这篇推广而已。 以下是我的读后感。&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://pubs.acs.org/doi/10.1021/jacs.0c04231&#34;&gt;Dynamic Evolution of Solid−Liquid Electrochemical Interfaces over Single-Atom Active Sites&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Figure S7 和 S12：用的 q 空间来代表拟合结果，有误导嫌疑&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://s2.loli.net/2022/02/18/fEhzXGHdjqDNunC.png&#34; target=&#34;_blank&#34;&gt;&#xA;  &lt;img src=&#34;https://s2.loli.net/2022/02/18/fEhzXGHdjqDNunC.png&#34; alt=&#34;Untitled.png&#34; loading=&#34;lazy&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;(Figure S12)&lt;/p&gt;&#xA;&lt;p&gt;Table S1 两条 path 只相差了 0.05 Å 还能有这么小的不确定值？这真的是在做传说中 10 - 15% 不确定值的 EXAFS 拟合吗？&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://s2.loli.net/2022/02/18/aygouP65VwX1ZEp.png&#34; target=&#34;_blank&#34;&gt;&#xA;  &lt;img src=&#34;https://s2.loli.net/2022/02/18/aygouP65VwX1ZEp.png&#34; alt=&#34;Untitled 1.png&#34; loading=&#34;lazy&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://pubs.acs.org/doi/10.1021/jacs.9b13865&#34;&gt;Isolated Indium Hydrides in CHA Zeolites: Speciation and Catalysis for Nonoxidative Dehydrogenation of Ethane&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;这篇文章对 XAS 的使用让我有点不知道从哪里评价起来。明明是 In 催化剂，做的是 In K-edge，但处处用 Ga K-edge 结论来做类比。然而很不幸的是 Ga K-edge XANES 可能是元素周期表里面最不按套路出牌的元素，做 Ga XAS 的这一帮人至今都没搞懂谁跟谁。这篇文章对 Ga XAS 有争议的解读总结反而是意外的精炼准确，但这到自己研究的 In 催化剂的时候什么结论都没有。我不知道为什么 XAS 还能在正文里面有一席之地，这到底是在做 In 催化剂的文章还是 Ga 催化剂。这篇文章连拟合都没有，为什么要用 EXAFS？&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>那些治好了我多年低血压的文章 | 学 XAS 不要看 Nat. Commnun.</title>
+      <link>http://localhost:1313/posts/10.1038-s41467-021-22948-w/</link>
+      <pubDate>Sun, 23 May 2021 02:22:48 +0000</pubDate>
+      <guid>http://localhost:1313/posts/10.1038-s41467-021-22948-w/</guid>
+      <description>&lt;p&gt;(8 min reading) 我和作者之间必须有一个是没学过 XAS 的。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;前情提要：本来打算做成视频的，但组织了下语言后发现还是写成文字会文明一点。&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;本次要做分析的文章来自于 Nature Communication，原文题目是 Regulating coordination number in atomically dispersed Pt species on defect-rich graphene for n-butane dehydrogenation reaction，&lt;a href=&#34;https://www.nature.com/articles/s41467-021-22948-w&#34;&gt;原文跳转可以点这里&lt;/a&gt;。对于这篇文章，我会直接从图开始分析。因为图片会比文字留下更深的印象，所以我看别人的文章都是从图开始然后再阅读我需要的文字部分。下面的图片均使用原文的排序，方便对应。&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;这是一篇能打开正文-10-秒内血压起飞的文章&#34;&gt;&#xA;  这是一篇能打开正文 10 秒内血压起飞的文章&#xA;  &lt;a class=&#34;heading-anchor&#34; href=&#34;#%e8%bf%99%e6%98%af%e4%b8%80%e7%af%87%e8%83%bd%e6%89%93%e5%bc%80%e6%ad%a3%e6%96%87-10-%e7%a7%92%e5%86%85%e8%a1%80%e5%8e%8b%e8%b5%b7%e9%a3%9e%e7%9a%84%e6%96%87%e7%ab%a0&#34; aria-label=&#34;Link to this section&#34;&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to this section&lt;/span&gt;&#xA;    &lt;span aria-hidden=&#34;true&#34;&gt;#&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://i.loli.net/2021/05/23/85IVwUDd7bhYBiZ.png&#34; target=&#34;_blank&#34;&gt;&#xA;  &lt;img src=&#34;https://i.loli.net/2021/05/23/85IVwUDd7bhYBiZ.png&#34; alt=&#34;image.png&#34; loading=&#34;lazy&#34;&gt;&#xA;&lt;/a&gt;&#xA;&lt;strong&gt;Figure 2.&lt;/strong&gt; Synchrotron XAFS measurements of catalysts. &lt;strong&gt;a&lt;/strong&gt; Pt L&lt;del&gt;3&lt;/del&gt; XANES spectra of above as-prepared catalysts, Pt foil and PtO&lt;del&gt;2&lt;/del&gt;. &lt;strong&gt;b&lt;/strong&gt; &lt;em&gt;k^3^&lt;/em&gt;-weighted EXAFS spectra of above as-prepared catalysts, Pt foil and PtO&lt;del&gt;2&lt;/del&gt;. &lt;strong&gt;c&lt;/strong&gt; WT analysis of Pt&lt;del&gt;1.7&lt;/del&gt;Sn/ND@G.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
