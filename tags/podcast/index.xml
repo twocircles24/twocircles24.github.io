@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Podcast on 两个圈 Two Circles</title>
-    <link>http://localhost:1313/tags/podcast/</link>
+    <link>https://twocircles24.com/tags/podcast/</link>
     <description>Recent content in Podcast on 两个圈 Two Circles</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 30 Aug 2020 21:46:12 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/podcast/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://twocircles24.com/tags/podcast/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>肝 XAFS 实验的小细节 | Podcast Ep. 3</title>
-      <link>http://localhost:1313/posts/podcast-ep3/</link>
+      <link>https://twocircles24.com/posts/podcast-ep3/</link>
       <pubDate>Sun, 30 Aug 2020 21:46:12 +0000</pubDate>
-      <guid>http://localhost:1313/posts/podcast-ep3/</guid>
+      <guid>https://twocircles24.com/posts/podcast-ep3/</guid>
       <description>&lt;p&gt;(8 min 27 s reading) 爱惜身体，爆肝做实验不可取。&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;&lt;strong&gt;阅读提示1：该文是&lt;a href=&#34;https://www.bilibili.com/audio/au1818517&#34;&gt;B站音频&lt;/a&gt;的文字版本，内容会有少量出入。&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;hr&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;保持通讯畅通&#34;&gt;&#xA;  保持通讯畅通&#xA;  &lt;a class=&#34;heading-anchor&#34; href=&#34;#%e4%bf%9d%e6%8c%81%e9%80%9a%e8%ae%af%e7%95%85%e9%80%9a&#34; aria-label=&#34;Link to this section&#34;&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to this section&lt;/span&gt;&#xA;    &lt;span aria-hidden=&#34;true&#34;&gt;#&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;    出门在外，&lt;strong&gt;安全第一&lt;/strong&gt;。保持通讯畅通能够让同行人随时掌握情况，一旦有任何意外情况可以第一时间发现。另一方面，在需要同事远程帮忙的时候可以及时解决。同步辐射实验室对手机信号的屏蔽比较厉害，建议使用网络通讯软件，比如微信、WhatsApp 等等。在醒目的地方留下你的手机联系方式还有暂住的酒店地址。&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;认真看待睡眠&#34;&gt;&#xA;  认真看待睡眠&#xA;  &lt;a class=&#34;heading-anchor&#34; href=&#34;#%e8%ae%a4%e7%9c%9f%e7%9c%8b%e5%be%85%e7%9d%a1%e7%9c%a0&#34; aria-label=&#34;Link to this section&#34;&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to this section&lt;/span&gt;&#xA;    &lt;span aria-hidden=&#34;true&#34;&gt;#&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;    同步辐射相关实验常常是 24 小时营业，作息跟在自家学校的很不一样。熬夜的危害包含但不限于身体健康还有心理压力，更要命的是，缺乏休息会让人反应力降低。即使努力打起精神实验也会越做越差，最后心态崩溃。&lt;/p&gt;&#xA;&lt;p&gt;    在提刀熬夜之前，要先问问自己是不是那种“可以肝”的人？不得不承认有一部分人是无法熬夜的，如果被强迫，效果只会适得其反。当确认自己无法完成任务的时候，就平静地放弃吧。这类实验更多的是靠自我驱使完成的。&lt;strong&gt;不要害怕放弃，身体才是革命的本钱&lt;/strong&gt;，离开了这门技术依然可以活得很精彩。&lt;/p&gt;&#xA;&lt;p&gt;    一旦确定可以“肝”，我们也要尽可能控制住熬夜带来的危害。最重要的是要判断“什么时候不能再继续熬夜”了，这种判断就像是“喝醉的人说自己没喝醉，没喝醉的人已经说喝醉了”。在做实验的过程中，我们就要做那个“没喝醉的人”，比如发现自己装样品老装不进去、软件操作开始出低级错误、头晕等等。&lt;strong&gt;逞强是摧毁实验的一大因素&lt;/strong&gt;，不要把自己压迫到极限，后续的身体伤害实在太大。&lt;/p&gt;&#xA;&lt;p&gt;    睡觉也是可以是调整心态的一种方式。做实验上头是经常的事情，我自己遭遇大半夜 beam 直接崩掉，还有什么老鼠跑进了 spear ring 里面。没经验的时候老想着是不是再等十分钟光就能回来继续做实验了，结果快等到快天亮的时候才修好。这种时间拿去睡觉不好吗？偶尔还有玄学事件发生，大晚上仪器崩掉了第二天醒来就自己恢复了。人得到了休息之后再静下心来思考解决对策，比困得睁不开眼睛脑子一团浆糊要好得多。&lt;/p&gt;&#xA;&lt;p&gt;    如果你跟同事一起做实验，恭喜你可以跟他们轮班了。如果是晚班，白天就不要瞎溜达了，好好休息。如果你一个人 solo 实验，对自己睡眠的控制需要更加小心。根据实验天数来考虑睡眠时间，牺牲部分实验时间是注定的，不要觉得可惜就不睡觉伤害自己。&lt;/p&gt;</description>
     </item>
   </channel>
