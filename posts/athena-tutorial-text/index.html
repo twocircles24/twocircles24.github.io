@@ -143,9 +143,11 @@
 
 
       <p>(9 min 30 s reading) 如果看过视频了就不必看这篇了，只是作为保存。</p>
+<!-- more -->
 <p><strong>首发于“研之成理”微信公众号，我是原作者。</strong></p>
 <p>同步辐射吸收光谱 （X-ray Absorption Spectroscopy）是一项常见的结构表征技术，可以提供中心原子的邻近信息，例如配位原子和数量。虽然在网上有很多介绍同步辐射的理论知识，但用于数据处理的软件教程相对较少。今天来跟大家分享下如何使用 Demeter 软件中的 Athena 来处理同步辐射吸收谱数据。</p>
-<!-- raw HTML omitted -->
+<br/>
+<br/>
 <h2 id="1-demeter-软件简短介绍">
   1. Demeter 软件简短介绍
   <a class="heading-anchor" href="#1-demeter-%e8%bd%af%e4%bb%b6%e7%ae%80%e7%9f%ad%e4%bb%8b%e7%bb%8d" aria-label="Link to this section">
@@ -161,7 +163,7 @@
   <img src="https://i.loli.net/2020/10/29/NYKijkyFVxMhd8z.png" alt="Demeter Website.png" loading="lazy">
 </a>
 图1. Demeter 官方网站，左侧为下载链接。</p>
-<!-- raw HTML omitted -->
+<br/>
 <h2 id="2-athena-界面介绍">
   2. Athena 界面介绍
   <a class="heading-anchor" href="#2-athena-%e7%95%8c%e9%9d%a2%e4%bb%8b%e7%bb%8d" aria-label="Link to this section">
@@ -184,9 +186,9 @@
   <img src="https://i.loli.net/2020/10/29/986qSYQijrUA4DG.png" alt="2AthenaMain_blank.png" loading="lazy">
 </a>
 图 2. Athena 主界面。</p>
-<!-- raw HTML omitted -->
+<br/>
 <p><strong>注：以下<a href="http://bruceravel.github.io/XAS-Education/">演示数据</a>来源于 Demeter 官网教程，由 Bruce Ravel 教授提供。</strong></p>
-<!-- raw HTML omitted -->
+<br/>
 <h2 id="3-数据加载">
   3. 数据加载
   <a class="heading-anchor" href="#3-%e6%95%b0%e6%8d%ae%e5%8a%a0%e8%bd%bd" aria-label="Link to this section">
@@ -199,19 +201,19 @@
   <img src="https://i.loli.net/2020/10/29/Die7LYt8srAP1Fw.png" alt="3importdata_.png" loading="lazy">
 </a>
 图 3. 加载原始数据界面。</p>
-<!-- raw HTML omitted -->
-<p>首先我们需要先从实验中知道哪些数据是入射光、透射光还有荧光。左上方选择的是样品谱图。Energy 是 x 轴，y 轴是 μ(E) 通常由两组或两组以上的数据进行简单加减乘除得到。由于各个线站录入数据的格式会有所不同，请大家结合具体情况分析。我以这套数据为例，我们希望得到样品透射谱 (transmission spectrum)，那么会根据公式 ln(入射光I<del>0</del> /透射光 I<del>1</del>) ，选择分子为 I<del>0</del>，分母为 I<del>t</del> 并且勾选上 Natural log。由于这套数据中还有参考谱图 (reference)，在左下方勾选上 import reference channel，勾选上分子为 I<del>t</del>，分母为 I<del>f</del>。</p>
+<br/>
+<p>首先我们需要先从实验中知道哪些数据是入射光、透射光还有荧光。左上方选择的是样品谱图。Energy 是 x 轴，y 轴是 μ(E) 通常由两组或两组以上的数据进行简单加减乘除得到。由于各个线站录入数据的格式会有所不同，请大家结合具体情况分析。我以这套数据为例，我们希望得到样品透射谱 (transmission spectrum)，那么会根据公式 ln(入射光I<sub>0</sub> /透射光 I<sub>1</sub>) ，选择分子为 I<sub>0</sub>，分母为 I<sub>t</sub> 并且勾选上 Natural log。由于这套数据中还有参考谱图 (reference)，在左下方勾选上 import reference channel，勾选上分子为 I<sub>t</sub>，分母为 I<sub>f</sub>。</p>
 <p>点击 OK ,三张 Fe_lepidocrocite.(000, 100, 200)原始数据就加载好出现在了右上方的空白区域。通常来说，Athena 软件在加载好数据后就会自动选择参数粗略处理好数据，大部分参数不需要过多改动。</p>
 <p><a href="https://i.loli.net/2020/10/29/JVRmweBdE5jyDSY.png" target="_blank">
   <img src="https://i.loli.net/2020/10/29/JVRmweBdE5jyDSY.png" alt="4Athenawdata - Copy.png" loading="lazy">
 </a>
 图 4. 加载数据后大部分参数 Athena 已经自动给出。</p>
-<!-- raw HTML omitted -->
+<br/>
 <p><a href="https://i.loli.net/2020/10/29/YcpGWSC7xA6DXh5.png" target="_blank">
   <img src="https://i.loli.net/2020/10/29/YcpGWSC7xA6DXh5.png" alt="5dataAthena.png" loading="lazy">
 </a>
 图 5. 加载数据后就可以大致看到 E, k, R, q 空间的样子。</p>
-<!-- raw HTML omitted -->
+<br/>
 <h2 id="4-能量校正和汇合">
   4. 能量校正和汇合
   <a class="heading-anchor" href="#4-%e8%83%bd%e9%87%8f%e6%a0%a1%e6%ad%a3%e5%92%8c%e6%b1%87%e5%90%88" aria-label="Link to this section">
@@ -224,29 +226,29 @@
   <img src="https://i.loli.net/2020/10/29/cqkYzL9g8UTZsyM.png" alt="6caliratestart - Copy.png" loading="lazy">
 </a>
 图 6. 点击 Main Window 出现菜单，选择 Calibrate data。</p>
-<!-- raw HTML omitted -->
+<br/>
 <p>能量校正的原理是通过校正参考谱图 (Reference) 到正确能量位置来校正样品谱图。所以先选择带 Ref 的谱图，以 deriv(E) 形式展示。点击 select point，用鼠标在图像中取最高峰顶点（黄色十字圈处），点击 Calibrate 就完成了对第一张谱图 (.000) 能量校正。对剩下的 .100 和 .200 数据做同样操作。</p>
 <p><a href="https://i.loli.net/2020/10/29/otQlGfuKY7X3nAm.png" target="_blank">
   <img src="https://i.loli.net/2020/10/29/otQlGfuKY7X3nAm.png" alt="7calibratepage.png" loading="lazy">
 </a>
 图 7. Calibrate data 界面。</p>
-<!-- raw HTML omitted -->
+<br/>
 <p><a href="https://i.loli.net/2020/10/29/IJVgHMDYp4O7Kjc.png" target="_blank">
   <img src="https://i.loli.net/2020/10/29/IJVgHMDYp4O7Kjc.png" alt="8calibrationgraph - Copy.png" loading="lazy">
 </a>
 图 8. 利用一阶微分 XANES 来矫正谱图</p>
-<!-- raw HTML omitted -->
+<br/>
 <p>接着回到 Main window，到右上方数据区域勾选上所有样品数据。点击上方工具栏中的 Merge ，使用 Merge norm(E) 得到由这三张实验数据图共同得到的一张同步辐射吸收图。这么做的主要原因是为了提高数据信噪比。在这里选择 Merge norm (E) 仅仅是基于这一套数据。不同的数据处理方式会略有不同。</p>
 <p><a href="https://i.loli.net/2020/10/29/98ofAwXmVEKY2Iu.png" target="_blank">
   <img src="https://i.loli.net/2020/10/29/98ofAwXmVEKY2Iu.png" alt="9merge.png" loading="lazy">
 </a>
 图 9. 在 Athena 上面工具栏中 Merge 选项的位置。</p>
-<!-- raw HTML omitted -->
+<br/>
 <p><a href="https://i.loli.net/2020/10/29/WMuE2wI49q6Ljh3.png" target="_blank">
   <img src="https://i.loli.net/2020/10/29/WMuE2wI49q6Ljh3.png" alt="10newmerge.png" loading="lazy">
 </a>
 图 10. 点击 Merge norm(E) 后出现新的图，名字为 “merge”。</p>
-<!-- raw HTML omitted -->
+<br/>
 <h2 id="5-展示-xanes-k-空间和-r-空间">
   5. 展示 XANES, k 空间和 R 空间
   <a class="heading-anchor" href="#5-%e5%b1%95%e7%a4%ba-xanes-k-%e7%a9%ba%e9%97%b4%e5%92%8c-r-%e7%a9%ba%e9%97%b4" aria-label="Link to this section">
@@ -261,22 +263,22 @@
   <img src="https://i.loli.net/2020/10/29/4rBdSCTvnjbgUis.png" alt="11Emin - Copy.png" loading="lazy">
 </a>
 图 11. 利用右下方 Emin, Emax 调整数据展示区间。</p>
-<!-- raw HTML omitted -->
+<br/>
 <p><a href="https://i.loli.net/2020/10/29/CIcTqvk2YJGV3gs.png" target="_blank">
   <img src="https://i.loli.net/2020/10/29/CIcTqvk2YJGV3gs.png" alt="12mousecursor.png" loading="lazy">
 </a>
 图 12. 利用鼠标直接框选想放大的区域。</p>
-<!-- raw HTML omitted -->
+<br/>
 <p><a href="https://i.loli.net/2020/10/29/iLmFEGpgj7D13No.png" target="_blank">
   <img src="https://i.loli.net/2020/10/29/iLmFEGpgj7D13No.png" alt="13k - Copy.png" loading="lazy">
 </a>
 图 13. 点击紫色 k 按键可展示所有的 k 空间数据。</p>
-<!-- raw HTML omitted -->
+<br/>
 <p><a href="https://i.loli.net/2020/10/29/3iSDIZGOEcaArX6.png" target="_blank">
   <img src="https://i.loli.net/2020/10/29/3iSDIZGOEcaArX6.png" alt="14R - Copy.png" loading="lazy">
 </a>
 图 14. 点击紫色 k 按键可展示所有的 k 空间数据。</p>
-<!-- raw HTML omitted -->
+<br/>
 <h2 id="6-保存和输出数据">
   6. 保存和输出数据
   <a class="heading-anchor" href="#6-%e4%bf%9d%e5%ad%98%e5%92%8c%e8%be%93%e5%87%ba%e6%95%b0%e6%8d%ae" aria-label="Link to this section">
@@ -289,13 +291,13 @@
   <img src="https://i.loli.net/2020/10/29/GHJk7jWgbOosn28.png" alt="15save - Copy.png" loading="lazy">
 </a>
 图 15. 保存数据的多种选项。</p>
-<!-- raw HTML omitted -->
+<br/>
 <p>Athena 软件会根据不同的数据形式使用不同的后缀名来命名。例如我想保存这四张勾选上的图为 k 空间，依次选择 File → Save marked groups as → k3χ(k)，跳出保存窗口看到数据会被保存为 .chik3 的文件形式。不用惊慌，可以直接保存后用笔记本 Notepad打开看到所有数据以及备注信息，十分方便。若要加载到 OriginLab 里面，可以删掉所有文本信息只留下数列，拖入 OriginLab 窗口中即可。</p>
 <p><a href="https://i.loli.net/2020/10/29/chS68OTuJPnXl7v.png" target="_blank">
   <img src="https://i.loli.net/2020/10/29/chS68OTuJPnXl7v.png" alt="16chik3 - Copy.png" loading="lazy">
 </a>
 图 16. 保存为 .chik3 格式，也可以直接在后面改为 .txt 后缀方便打开。</p>
-<!-- raw HTML omitted -->
+<br/>
 <p><a href="https://i.loli.net/2020/10/29/ImQdiJ7RWwlAzqj.png" target="_blank">
   <img src="https://i.loli.net/2020/10/29/ImQdiJ7RWwlAzqj.png" alt="17notepad.png" loading="lazy">
 </a>
@@ -308,7 +310,10 @@
   </a>
 </h2>
 <p>这一篇只是非常简单地介绍基本功能处理，还有更多有关参数选择的讨论已经发布在 Bilibili 上，搜索“担子菌的担担面”就可以找到我，也欢迎你通过邮件和我交流 (<a href="mailto:licouplings@gmail.com">licouplings@gmail.com</a>)。</p>
-<!-- raw HTML omitted -->
+<br/>
+<br/>
+<br/>
+<br/>
 <pre><code>感谢你的阅读
 </code></pre>
 

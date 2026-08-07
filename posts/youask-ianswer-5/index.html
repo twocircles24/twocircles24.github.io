@@ -86,7 +86,8 @@
 
 
     <p>(4 min 36 s reading) 学会如何提问哦</p>
-<!-- raw HTML omitted -->
+<!-- more -->
+<br/>
 <p><strong>阅读提示1：回答仅代表我一个人的看法，不代表正确解决问题的办法。我有不知道答案的问题，也有不懂回答错误的问题。如果我有讲错地方，请告诉我还有其他人。</strong></p>
 <p><strong>阅读提示2：问题来源于 B 站 or 微博，问题有可能被重新整理，先后顺序不代表任何重要程度，如果你的提问被收入但觉得不合适，请联系我。</strong></p>
 <hr>
@@ -98,7 +99,8 @@
 <li>这个可能会存在，因为你拟合的是delta R （差值），而最后汇报的是path+deltaR和uncertainty。</li>
 <li>还有种可能性，这个参数跟其他参数关联性（correlation）很大，导致uncertainty大。</li>
 </ol>
-<!-- raw HTML omitted -->
+<br/>
+<br/>
 <blockquote>
 <p>Q42: 拟合完的距离数据后面那个正负多少的误差范围正常应该是误差比拟合值小一位小数吗？</p>
 </blockquote>
@@ -106,7 +108,8 @@
 <ol>
 <li>距离基本上都是小数点后两位，比如1.81 ± 0.01 Å。</li>
 </ol>
-<!-- raw HTML omitted -->
+<br/>
+<br/>
 <blockquote>
 <p>Q43: 发现两个标准样品 Mo 的吸收能量要比 MoO3 还要高，其中 MoO3 使用荧光谱，Mo foil 实用的透射谱。这种情况是不是荧光模式需要做吸收矫正？</p>
 </blockquote>
@@ -115,7 +118,8 @@
 <li>绝对不建议利用 Athena 做自吸收校正，必翻车！</li>
 <li>真正的解决方案：重测；以及需要跟文献比较一下到底哪个样品看着更不正常，metal foil 时间久了也会被氧化而不被人察觉。</li>
 </ol>
-<!-- raw HTML omitted -->
+<br/>
+<br/>
 <blockquote>
 <p>Q44: 单原子和颗粒共存可以单纯从同步辐射谱图看出来吗？</p>
 </blockquote>
@@ -124,7 +128,8 @@
 <li>单独看看不出来。EXAFS 是需要其他表征来一起佐证结构的；</li>
 <li>HADDF-STEM + XAFS 确实是单原子常规操作</li>
 </ol>
-<!-- raw HTML omitted -->
+<br>
+<br/>
 <blockquote>
 <p>Q45: 样品中同时含有Ge （11103 eV）和Pt （11564 eV），质量分数均约1%。如果采 energy-dispersive detector 测量Ge的EXAFS （荧光），能量扫描到Pt的吸收峰附近时，Pt对入射光的吸收肯定会造成Ge信号变化（Pt吸收了入射光，影响了入射光强），这种影响一般是可以忽略不计吗？</p>
 </blockquote>
@@ -132,15 +137,17 @@
 <ol>
 <li>建议先学习接触下理论知识（网上资料很多），答案是不会影响。</li>
 </ol>
-<!-- raw HTML omitted -->
+<br/>
+<br/>
 <blockquote>
-<p>Q46: 在artemis中add Cu的prj文件和inp文件的时候 会报错如下 error writing zip-style project at C:/users/dememter/DemeterPerl/perl/site/lib/Demeter/UI/Artemis Projiect.pm line 124, <!-- raw HTML omitted --> line 8. 如何解决</p>
+<p>Q46: 在artemis中add Cu的prj文件和inp文件的时候 会报错如下 error writing zip-style project at C:/users/dememter/DemeterPerl/perl/site/lib/Demeter/UI/Artemis Projiect.pm line 124, <F> line 8. 如何解决</p>
 </blockquote>
 <p><strong>A46:</strong></p>
 <ol>
 <li>应该是电脑用户名的问题，如果电脑用户名是汉字就会报错，但是用户名换成英文，保证全路径为英文就行了。（此回答由提问者自己解决的）</li>
 </ol>
-<!-- raw HTML omitted -->
+<br/>
+<br/>
 <blockquote>
 <p>Q47: 线性拟合页面的左下角的Use at most 4 standards。我看软件里默认的是4，我是有8个标准品来拟合，我选most为6的时候也可以。我看文献里好多most选择4个，只拟合4个及以下的标品含量，如何选择？</p>
 </blockquote>
@@ -148,7 +155,8 @@
 <ol>
 <li>这个应该是跟你课题相关，以及你在同步辐射数据以外对样品的预先判断。比如说你认为你通过 XRD，ICP，NMR （各种各样的前期表征）知道了这个里面可能包含了最多 8 种样品组成，但是你可能未知样品里面只有其中的一种，或者是多个样品组成，最多只可能会包含 4 种。所以你会加载 8 个标准样品谱图，但是只会user at most 4 standards。如果你认为可能最多有 6 种，那就是 use at most 6。use at most 的数量越多，计算出来的可能性越多，软件负荷越大。所以我建议你根据其他表征先判断，然后选一个合理的值。</li>
 </ol>
-<!-- raw HTML omitted -->
+<br/>
+<br/>
 <blockquote>
 <p>Q48: 单原子催化剂拟合比如Fe-Nx，扔进去的cif是猜想并且vasp结构优化好的cif，还是只要在mp晶体网站上下载比如氮化铁的cif一个个去试？</p>
 </blockquote>
@@ -156,7 +164,8 @@
 <ol>
 <li>后者。</li>
 </ol>
-<!-- raw HTML omitted -->
+<br/>
+<br/>
 <blockquote>
 <p>49: 文献基本都是测金属元素的EXAFS，比如氧化铝，一般都测Al，那为什么不测O呢，假如想知道键长等信息，通过O的EXAFS应该也可以得到Al-O键长信息吧？</p>
 </blockquote>
@@ -165,7 +174,8 @@
 <li>可以测，但是低能能量太低可能测到XANES数据质量就差不多快不行了。</li>
 <li>O一般不测EXAFS是因为EXAFS测试的震荡信号，覆盖能量一般在吸收峰后500eV-800eV的范围。在这个范围内不能有其他的K，L1，L2，L3等吸收峰，O是五百多，后面有别的信号。（提问者自己的回答）</li>
 </ol>
-<!-- raw HTML omitted -->
+<br/>
+<br/>
 <blockquote>
 <p>Q50: 关于 Fe-N-C 等一系列单原子催化剂拟合策略</p>
 </blockquote>
